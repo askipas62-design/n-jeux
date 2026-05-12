@@ -13,12 +13,15 @@ export default function Footer() {
       </div>
 
       <div className="flex flex-col sm:flex-row items-center gap-8 text-[10px] font-bold uppercase tracking-widest">
-        <div className="flex items-center gap-2 text-brand-green">
+        <Link to="/securite-virement" className="flex items-center gap-2 text-brand-green hover:text-brand-orange transition-all">
           <ShieldCheck size={16} /> PAIEMENT VIREMENT SÉCURISÉ
-        </div>
-        <div className="flex items-center gap-2 opacity-80">
+        </Link>
+        <Link to="/cgv#livraison" className="flex items-center gap-2 opacity-80 hover:opacity-100 transition-all">
           <Truck size={16} /> LIVRAISON 48H
-        </div>
+        </Link>
+        <Link to="/securite-virement" className="px-4 py-2 bg-white/5 rounded-full hover:bg-white/10 transition-all">
+          POURQUOI UN VIREMENT ?
+        </Link>
       </div>
 
       <div className="flex gap-6 text-xs font-medium">

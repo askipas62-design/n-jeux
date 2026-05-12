@@ -46,7 +46,11 @@ export default function Cart() {
                   className="bg-white rounded-[40px] p-8 shadow-xl flex items-center gap-8 border border-gray-100 hover:border-brand-orange/30 transition-all group"
                 >
                   <div className="w-24 h-24 bg-gray-50 rounded-3xl flex items-center justify-center shrink-0 border border-gray-100 overflow-hidden relative">
-                     <Package size={40} className="text-gray-200" />
+                     {item.image ? (
+                       <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+                     ) : (
+                       <Package size={40} className="text-gray-200" />
+                     )}
                   </div>
                   <div className="flex-grow text-left">
                     <div className="flex justify-between items-start mb-2">

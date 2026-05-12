@@ -1,9 +1,65 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Truck, ShieldCheck, Star, Users, Phone, Loader2, Gamepad2, Trophy, Zap, CircleDot, Orbit, Headset, Sparkles, Timer, Mail, MapPin } from "lucide-react";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useMemo } from "react";
 import ProductCard from "../components/ProductCard";
+import CountdownTimer from "../components/CountdownTimer";
 import { BabyFootIcon, PingPongIcon, BillardIcon, TrampolineIcon, AccessoriesIcon, ConsoleIcon } from "../components/CategoryIcons";
+
+import { products as allProducts } from "../data/products";
+import { reviewService } from "../services/reviewService";
+
+function ReviewCarousel() {
+  const [reviews, setReviews] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    reviewService.getAll().then(data => {
+      // Add some default reviews if none in DB
+      if (data.length === 0) {
+        setReviews([
+          { id: "1", userName: "Jean Dupont", rating: 5, comment: "Le baby-foot est de super qualité, livraison au top !", createdAt: new Date().toISOString() },
+          { id: "2", userName: "Marie Curie", rating: 5, comment: "Table de ping-pong robuste, mes enfants l'adorent !", createdAt: new Date().toISOString() },
+          { id: "3", userName: "Pierre Gasly", rating: 4, comment: "Très bon service client de Hervé. Je recommande.", createdAt: new Date().toISOString() }
+        ]);
+      } else {
+        setReviews(data);
+      }
+    }).finally(() => setLoading(false));
+  }, []);
+
+  if (loading) return null;
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {reviews.slice(0, 3).map((review, idx) => (
+        <motion.div 
+          key={review.id}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ delay: idx * 0.1 }}
+          className="bg-brand-cream/50 p-10 rounded-[48px] border border-brand-orange/5 relative"
+        >
+          <div className="flex gap-1 mb-6">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} size={16} className={i < review.rating ? "fill-brand-yellow text-brand-yellow" : "text-gray-200"} />
+            ))}
+          </div>
+          <p className="text-brand-dark font-medium italic mb-8 leading-relaxed">"{review.comment}"</p>
+          <div className="flex items-center gap-4">
+             <div className="w-12 h-12 bg-brand-orange text-white rounded-2xl flex items-center justify-center font-black">
+                {review.userName.charAt(0)}
+             </div>
+             <div>
+                <p className="font-black text-brand-dark uppercase tracking-tight">{review.userName}</p>
+                <p className="text-[10px] font-black text-brand-orange uppercase tracking-widest">Client Vérifié</p>
+             </div>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  );
+}
 
 export default function Home() {
   const [featuredProducts, setFeaturedProducts] = useState<any[]>([]);
@@ -13,13 +69,19 @@ export default function Home() {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
+  const bestSellers = useMemo(() => {
+    return [...allProducts]
+      .filter(p => p.badge === "Bestseller" || p.rating >= 4.8)
+      .sort((a, b) => b.rating - a.rating)
+      .slice(0, 4);
+  }, []);
+
   useEffect(() => {
-    fetch("/api/products")
-      .then(res => res.json())
-      .then(data => {
-        setFeaturedProducts(data.slice(0, 8)); // Just top 8
-        setLoading(false);
-      });
+    // Simuler chargement
+    setTimeout(() => {
+      setFeaturedProducts(allProducts.slice(0, 8));
+      setLoading(false);
+    }, 200);
   }, []);
 
   const categories = [
@@ -31,10 +93,17 @@ export default function Home() {
     { name: "Consoles", slug: "consoles", icon: <ConsoleIcon className="w-8 h-8" />, image: "/images/categories/consoles.jpg", count: 6, gradient: "from-[#7B2FBE] to-[#1B1B2F]" },
   ];
 
+  const flashSaleEndDate = useMemo(() => {
+    const date = new Date();
+    date.setDate(date.getDate() + 3);
+    date.setHours(23, 59, 59);
+    return date;
+  }, []);
+
   return (
     <div className="overflow-x-hidden">
       {/* 4.1 Hero Banner */}
-      <section ref={heroRef} className="relative h-[650px] flex items-center justify-between overflow-hidden bg-brand-dark p-8 lg:p-20 text-white">
+      <section ref={heroRef} className="relative min-h-[650px] py-20 flex items-center justify-between overflow-hidden bg-brand-dark px-8 lg:px-20 text-white">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -43,10 +112,10 @@ export default function Home() {
             className="w-full h-full object-cover opacity-70 scale-105"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/60 via-brand-dark/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/80 via-brand-dark/40 to-transparent lg:from-brand-dark/60 lg:via-brand-dark/20" />
         </div>
 
-        <div className="z-10 max-w-2xl">
+        <div className="z-10 max-w-2xl relative">
           <motion.span 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -58,7 +127,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-6xl md:text-8xl font-black mb-6 leading-[0.9] font-display uppercase tracking-tighter"
+            className="text-5xl sm:text-6xl md:text-8xl font-black mb-6 leading-[0.9] font-display uppercase tracking-tighter"
           >
             LE PARADIS <br /><span className="text-brand-orange">DU JEU</span>
           </motion.h1>
@@ -74,12 +143,12 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="flex flex-wrap gap-4"
+            className="flex flex-col sm:flex-row gap-4"
           >
-            <Link to="/boutique" className="bg-brand-orange text-white px-10 py-4 rounded-2xl font-black hover:scale-105 transition-transform shadow-xl shadow-brand-orange/20 text-lg uppercase tracking-widest">
+            <Link to="/boutique" className="bg-brand-orange text-white px-10 py-4 rounded-2xl font-black hover:scale-105 transition-transform shadow-xl shadow-brand-orange/20 text-lg uppercase tracking-widest text-center">
               Catalogue
             </Link>
-            <Link to="/boutique?badge=PROMO" className="bg-white/10 backdrop-blur-md px-10 py-4 rounded-2xl font-black text-white border border-white/20 shadow-xl hover:scale-105 transition-transform text-lg uppercase tracking-widest">
+            <Link to="/boutique?badge=PROMO" className="bg-white/10 backdrop-blur-md px-10 py-4 rounded-2xl font-black text-white border border-white/20 shadow-xl hover:scale-105 transition-transform text-lg uppercase tracking-widest text-center">
               Offres Flash
             </Link>
           </motion.div>
@@ -173,6 +242,51 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 4.2.5 Produits les plus vendus - New Section */}
+      <section className="py-24 bg-brand-cream/30 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+          <div className="absolute top-[-10%] right-[-5%] w-[30%] h-[30%] bg-brand-orange/5 rounded-full blur-[120px]" />
+          <div className="absolute bottom-[-10%] left-[-5%] w-[30%] h-[30%] bg-brand-yellow/5 rounded-full blur-[120px]" />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="flex flex-col items-center mb-16">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              className="w-16 h-16 bg-brand-orange/10 rounded-3xl flex items-center justify-center text-brand-orange mb-6"
+            >
+              <Trophy size={32} />
+            </motion.div>
+            <h2 className="text-4xl md:text-6xl font-black text-brand-dark font-display uppercase tracking-tighter text-center leading-none">
+              Les <span className="text-brand-orange">Plus Vendus</span>
+            </h2>
+            <p className="mt-4 text-gray-500 font-medium uppercase tracking-[0.2em] text-[10px]">La crème de la crème — validé par la communauté</p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {bestSellers.map((product, idx) => (
+              <motion.div
+                key={product.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <ProductCard product={product} />
+              </motion.div>
+            ))}
+          </div>
+          
+          <div className="mt-16 flex justify-center">
+            <Link to="/boutique" className="group flex items-center gap-4 bg-brand-dark text-white px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-brand-orange transition-all shadow-2xl">
+              Voir tout le catalogue
+              <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* 4.3 Produits à la Une */}
       <section id="promos" className="py-24 bg-white relative overflow-hidden">
         {/* Abstract background shapes */}
@@ -237,6 +351,23 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 4.5.5 Avis Clients Section */}
+      <section className="py-32 bg-white relative">
+        <div className="container mx-auto px-4">
+           <div className="flex flex-col items-center mb-24">
+              <h2 className="text-5xl md:text-7xl font-black text-brand-dark mb-6 font-display uppercase tracking-tighter text-center">
+                Ils nous font <br /><span className="text-brand-orange">Confiance</span>
+              </h2>
+              <div className="flex items-center gap-2">
+                 {[...Array(5)].map((_, i) => <Star key={i} size={24} className="fill-brand-yellow text-brand-yellow" />)}
+                 <span className="ml-4 font-black uppercase text-xs tracking-widest text-brand-dark">4.9/5 sur +500 avis</span>
+              </div>
+           </div>
+
+           <ReviewCarousel />
+        </div>
+      </section>
+
       {/* 4.6 Flash Sale Banner */}
       <section className="py-12 bg-gradient-to-r from-brand-orange to-brand-yellow relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
@@ -255,7 +386,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="bg-brand-dark text-white p-6 rounded-3xl shadow-2xl min-w-[240px]">
                <div className="text-[10px] font-black uppercase mb-2 tracking-[0.3em] text-brand-yellow text-center">Fin de l'offre dans :</div>
-               <div className="text-4xl font-black font-mono tracking-tighter text-center">71:59:59</div>
+               <CountdownTimer targetDate={flashSaleEndDate} />
             </div>
             <Link to="/boutique?category=trampoline" className="bg-brand-dark text-white px-12 py-6 rounded-2xl font-black text-sm uppercase tracking-[0.2em] hover:scale-105 active:scale-95 transition-transform shadow-2xl">
                Profiter de l'offre

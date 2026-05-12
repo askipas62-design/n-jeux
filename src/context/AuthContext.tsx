@@ -1,7 +1,9 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { supabase } from "../lib/supabase";
+import { User as SupabaseUser } from "@supabase/supabase-js";
 
 interface User {
+  id: string;
   email: string;
   firstName: string;
   lastName: string;
@@ -10,94 +12,82 @@ interface User {
 
 interface AuthContextType {
   user: User | null;
-  token: string | null;
+  session: any;
   loading: boolean;
-  login: (token: string, user: User) => void;
-  logout: () => void;
+  logout: () => Promise<void>;
+  updateProfile: (firstName: string, lastName: string) => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
-  const [token, setToken] = useState<string | null>(null);
+  const [session, setSession] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // 1. Initial check: Local Storage (for backward compatibility if needed)
-    const savedToken = localStorage.getItem("token");
-    const savedUser = localStorage.getItem("user");
-    if (savedToken && savedUser) {
-      setToken(savedToken);
-      setUser(JSON.parse(savedUser));
-    }
-
-    // 2. Real-time Supabase Check
-    const checkSession = async () => {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (session) {
-        const metadata = session.user.user_metadata;
-        const isAdmin = session.user.email === "askipas62@gmail.com";
-        const currentUser = {
-          email: session.user.email || "",
-          firstName: metadata?.firstName || "Client",
-          lastName: metadata?.lastName || "Appiotti",
-          isAdmin
-        };
-        setToken(session.access_token);
-        setUser(currentUser);
-        // Persist for page reloads
-        localStorage.setItem("token", session.access_token);
-        localStorage.setItem("user", JSON.stringify(currentUser));
-      }
-      setLoading(false);
+  const mapUser = (supabaseUser: SupabaseUser | null): User | null => {
+    if (!supabaseUser) return null;
+    return {
+      id: supabaseUser.id,
+      email: supabaseUser.email || "",
+      firstName: supabaseUser.user_metadata?.firstName || "",
+      lastName: supabaseUser.user_metadata?.lastName || "",
+      isAdmin: supabaseUser.email === "askipas62@gmail.com"
     };
+  };
 
-    checkSession();
+  useEffect(() => {
+    // Check active session
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+      setUser(mapUser(session?.user ?? null));
+      setLoading(false);
+    });
 
-    // 3. Listen for changes (Sign in, Sign out, etc.)
+    // Listen for changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      if (session) {
-        const metadata = session.user.user_metadata;
-        const isAdmin = session.user.email === "askipas62@gmail.com";
-        const currentUser = {
-          email: session.user.email || "",
-          firstName: metadata?.firstName || "Client",
-          lastName: metadata?.lastName || "Appiotti",
-          isAdmin
-        };
-        setToken(session.access_token);
-        setUser(currentUser);
+      setSession(session);
+      setUser(mapUser(session?.user ?? null));
+      if (session?.access_token) {
         localStorage.setItem("token", session.access_token);
-        localStorage.setItem("user", JSON.stringify(currentUser));
       } else {
-        setToken(null);
-        setUser(null);
         localStorage.removeItem("token");
-        localStorage.removeItem("user");
       }
     });
 
     return () => subscription.unsubscribe();
   }, []);
 
-  const login = (newToken: string, newUser: User) => {
-    setToken(newToken);
-    setUser(newUser);
-    localStorage.setItem("token", newToken);
-    localStorage.setItem("user", JSON.stringify(newUser));
-  };
-
   const logout = async () => {
     await supabase.auth.signOut();
-    setToken(null);
-    setUser(null);
     localStorage.removeItem("token");
-    localStorage.removeItem("user");
+    setUser(null);
+    setSession(null);
+  };
+
+  const updateProfile = async (firstName: string, lastName: string) => {
+    const { data, error } = await supabase.auth.updateUser({
+      data: { firstName, lastName }
+    });
+    
+    if (error) throw error;
+    
+    // Also sync with our local JSON backend if needed for orders/reviews consistency
+    const token = localStorage.getItem("token");
+    await fetch("/api/auth/me", {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`
+      },
+      body: JSON.stringify({ firstName, lastName })
+    });
+    
+    setUser(mapUser(data.user));
   };
 
   return (
-    <AuthContext.Provider value={{ user, token, loading, login, logout }}>
+    <AuthContext.Provider value={{ user, session, loading, logout, updateProfile }}>
       {children}
     </AuthContext.Provider>
   );

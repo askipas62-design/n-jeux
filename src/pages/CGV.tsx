@@ -35,8 +35,8 @@ export default function CGV() {
                 <strong>IMPORTANT :</strong> Appiotti Game Shop accepte exclusivement les règlements par <strong>VIREMENT BANCAIRE</strong>. 
               </p>
               <ul className="list-disc pl-6 mt-4 space-y-2 text-gray-400">
-                <li>La commande est validée après réception d'une preuve de virement.</li>
-                <li>L'expédition n'a lieu qu'après réception effective des fonds sur le compte de l'entreprise.</li>
+                <li>La commande est validée après réception de la preuve de virement.</li>
+                <li>L'expédition n'a lieu qu'après réception effective des fonds sur le compte du gestionnaires charger du traitement des commandes.</li>
                 <li>Le client dispose de 72h pour effectuer son virement avant annulation automatique de la commande.</li>
               </ul>
             </section>

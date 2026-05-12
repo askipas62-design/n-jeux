@@ -5,6 +5,8 @@ import ProductCard from "../components/ProductCard";
 import { motion, AnimatePresence } from "motion/react";
 import { BabyFootIcon, PingPongIcon, BillardIcon, TrampolineIcon, AccessoriesIcon, ConsoleIcon } from "../components/CategoryIcons";
 
+import { products as allProducts } from "../data/products";
+
 export default function Shop() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [products, setProducts] = useState<any[]>([]);
@@ -15,22 +17,47 @@ export default function Shop() {
   const minPrice = searchParams.get("min") || "";
   const maxPrice = searchParams.get("max") || "";
   const query = searchParams.get("q") || "";
+  const sortBy = searchParams.get("sort") || "default";
 
   useEffect(() => {
     setLoading(true);
-    const params = new URLSearchParams();
-    if (category) params.append("category", category);
-    if (minPrice) params.append("minPrice", minPrice);
-    if (maxPrice) params.append("maxPrice", maxPrice);
-    if (query) params.append("q", query);
+    
+    // Simuler un léger chargement pour l'effet UX
+    setTimeout(() => {
+      let filtered = [...allProducts];
 
-    fetch(`/api/products?${params.toString()}`)
-      .then(res => res.json())
-      .then(data => {
-        setProducts(data);
-        setLoading(false);
-      });
-  }, [category, minPrice, maxPrice, query]);
+      if (category) {
+        filtered = filtered.filter(p => p.category === category);
+      }
+
+      if (minPrice) {
+        filtered = filtered.filter(p => p.priceHT * 1.2 >= Number(minPrice));
+      }
+
+      if (maxPrice) {
+        filtered = filtered.filter(p => p.priceHT * 1.2 <= Number(maxPrice));
+      }
+
+      if (query) {
+        filtered = filtered.filter(p => 
+          p.name.toLowerCase().includes(query.toLowerCase()) || 
+          p.desc.toLowerCase().includes(query.toLowerCase())
+        );
+      }
+
+      // Sorting
+      if (sortBy === "price-asc") {
+        filtered.sort((a, b) => (a.priceHT * 1.2) - (b.priceHT * 1.2));
+      } else if (sortBy === "price-desc") {
+        filtered.sort((a, b) => (b.priceHT * 1.2) - (a.priceHT * 1.2));
+      } else if (sortBy === "popularity") {
+        filtered.sort((a, b) => b.rating - a.rating);
+      }
+
+      setProducts(filtered);
+      setLoading(false);
+    }, 300);
+  }, [category, minPrice, maxPrice, query, sortBy]);
 
   const categories = [
     { id: "baby-foot", name: "Baby-Foot", icon: <BabyFootIcon className="w-5 h-5 text-brand-orange" /> },
@@ -151,6 +178,39 @@ export default function Shop() {
                       className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 font-bold focus:outline-none focus:border-brand-orange"
                     />
                  </div>
+               </div>
+            </div>
+
+            {/* Sorting Filter */}
+            <div className="bg-white p-8 rounded-[32px] shadow-xl border border-gray-100">
+               <h3 className="text-lg font-black mb-8 border-b pb-4 flex items-center gap-2 font-display">
+                 <SlidersHorizontal size={20} className="text-brand-orange" /> Tri & Ordre
+               </h3>
+               <div className="space-y-3">
+                 {[
+                   { id: "default", label: "Par défaut" },
+                   { id: "popularity", label: "Les plus populaires" },
+                   { id: "price-asc", label: "Prix croissant" },
+                   { id: "price-desc", label: "Prix décroissant" }
+                 ].map((option) => (
+                   <button
+                     key={option.id}
+                     onClick={() => {
+                        const next = new URLSearchParams(searchParams);
+                        if (option.id === "default") next.delete("sort");
+                        else next.set("sort", option.id);
+                        setSearchParams(next);
+                     }}
+                     className={`w-full text-left px-4 py-3 rounded-xl font-bold transition-all text-sm flex items-center justify-between ${
+                        sortBy === option.id || (sortBy === "" && option.id === "default") 
+                          ? "bg-brand-orange/10 text-brand-orange" 
+                          : "text-gray-500 hover:bg-gray-50"
+                     }`}
+                   >
+                     {option.label}
+                     {(sortBy === option.id || (sortBy === "" && option.id === "default")) && <CircleDot size={14} />}
+                   </button>
+                 ))}
                </div>
             </div>
 
