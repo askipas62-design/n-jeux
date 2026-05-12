@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat:wght@700;900&family=Nunito:wght@800;900&family=Poppins:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Nunito", sans-serif;
+  --font-fredoka: "Fredoka One", sans-serif;
+  --font-mono: "Montserrat", ui-monospace, SFMono-Regular, monospace;
+
+  --color-brand-orange: #FF6B35;
+  --color-brand-yellow: #FFD23F;
+  --color-brand-green: #06D6A0;
+  --color-brand-dark: #1B1B2F;
+  --color-brand-purple: #7B2FBE;
+  --color-brand-cream: #FFF8F0;
+
+  --shadow-card-orange: 0 10px 20px rgba(255, 107, 53, 0.1);
+  --shadow-card-green: 0 10px 20px rgba(6, 214, 160, 0.1);
+  --shadow-card-purple: 0 10px 20px rgba(123, 47, 190, 0.1);
+  --shadow-card-yellow: 0 10px 20px rgba(255, 210, 63, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-brand-cream text-brand-dark font-sans;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-brand-orange to-brand-yellow text-white px-8 py-4 rounded-full font-black shadow-xl hover:scale-105 active:scale-95 transition-all;
+  }
+}
