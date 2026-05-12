@@ -22,7 +22,10 @@ export const orderService = {
       },
       body: JSON.stringify(orderData)
     });
-    if (!res.ok) throw new Error("Erreur lors de la création de la commande");
+    if (!res.ok) {
+      const errorData = await res.json().catch(() => ({}));
+      throw new Error(errorData.error || "Erreur lors de la création de la commande");
+    }
     return res.json();
   },
 

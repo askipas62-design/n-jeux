@@ -1,3 +1,4 @@
+import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import path from "path";
@@ -184,7 +185,7 @@ async function startServer() {
                   ${newOrder.items.map((item: any) => `
                     <li style="padding: 10px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between;">
                       <span>${item.name} x${item.quantity}</span>
-                      <strong>${(item.price * item.quantity).toFixed(2)}€</strong>
+                      <strong>${(item.priceHT * 1.2 * item.quantity).toFixed(2)}€</strong>
                     </li>
                   `).join('')}
                 </ul>
@@ -201,8 +202,9 @@ async function startServer() {
       }
 
       res.json(newOrder);
-    } catch (e) {
-      res.status(500).json({ error: "Erreur serveur" });
+    } catch (e: any) {
+      console.error("POST /api/orders error:", e);
+      res.status(500).json({ error: "Erreur serveur: " + (e.message || "Inconnue") });
     }
   });
 
@@ -213,8 +215,9 @@ async function startServer() {
     try {
       const orders = readDB(ORDERS_FILE);
       res.json(orders.filter((o: any) => o.userId === user.id));
-    } catch (e) {
-      res.status(500).json({ error: "Erreur serveur" });
+    } catch (e: any) {
+      console.error("GET /api/orders/me error:", e);
+      res.status(500).json({ error: "Erreur lors du chargement de vos commandes" });
     }
   });
 

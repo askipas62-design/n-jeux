@@ -50,6 +50,7 @@ export default function Payment() {
       setOrderCreated(true);
       addToast("Commande réservée ! Vous pouvez maintenant effectuer le virement.", "success");
     } catch (err: any) {
+      console.error("Order creation error:", err);
       addToast(err.message || "Erreur lors de la création de la commande", "error");
     } finally {
       setLoading(false);
@@ -66,29 +67,11 @@ export default function Payment() {
     try {
       await orderService.uploadProof(orderId, file);
       
-      // Envoi de l'email via notre API locale qui utilise Resend
-      try {
-        await fetch("/api/send-email", {
-          method: "POST",
-          headers: { 
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${localStorage.getItem("token")}`
-          },
-          body: JSON.stringify({ 
-            orderId, 
-            totalTTC, 
-            userEmail: user?.email,
-            userName: `${user?.firstName} ${user?.lastName}`
-          }),
-        });
-      } catch (emailErr) {
-        console.error("Email send failed", emailErr);
-      }
-
       addToast("Preuve de virement reçue ! Nous validons cela rapidement.", "success");
       clearCart();
       setTimeout(() => navigate("/dashboard"), 1500);
     } catch (err) {
+      console.error("Upload proof error:", err);
       addToast("Erreur lors de l'envoi de la preuve", "error");
     } finally {
       setLoading(false);
