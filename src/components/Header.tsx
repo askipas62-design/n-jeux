@@ -144,9 +144,18 @@ export default function Header() {
                   className="bg-transparent border-none outline-none text-white placeholder:text-white/40 font-black w-full text-lg"
                 />
               </form>
-              <Link to="/" onClick={() => setIsMenuOpen(false)}>Accueil</Link>
-              <Link to="/boutique" onClick={() => setIsMenuOpen(false)}>Boutique</Link>
-              <Link to="/panier" onClick={() => setIsMenuOpen(false)}>Panier ({itemCount})</Link>
+              <Link to="/" onClick={() => setIsMenuOpen(false)} className="hover:text-brand-orange transition-colors">Accueil</Link>
+              <Link to="/boutique" onClick={() => setIsMenuOpen(false)} className="hover:text-brand-orange transition-colors">Boutique</Link>
+              <Link to="/panier" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-4 hover:text-brand-orange transition-colors">
+                <ShoppingCart size={24} className="text-brand-orange" />
+                <span>Panier ({itemCount})</span>
+              </Link>
+              {user && (
+                <Link to="/client/dashboard" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-4 hover:text-brand-orange transition-colors">
+                  <Heart size={24} className="text-brand-orange" />
+                  <span>Favoris</span>
+                </Link>
+              )}
               {!user ? (
                 <Link to="/connexion" onClick={() => setIsMenuOpen(false)} className="text-brand-orange">Connexion</Link>
               ) : (
