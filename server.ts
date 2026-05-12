@@ -50,7 +50,7 @@ if (!fs.existsSync(REVIEWS_FILE)) writeDB(REVIEWS_FILE, []);
 // Initialize Resend
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "askipas62@gmail.com";
+const ADMIN_EMAIL = process.env.VITE_ADMIN_EMAIL || "askipas62@gmail.com";
 
 // Helper for Auth with Supabase
 const getAuthUser = async (req: express.Request) => {
@@ -84,7 +84,7 @@ const getAuthUser = async (req: express.Request) => {
     return {
       id: user.id,
       email: user.email,
-      isAdmin: user.email === (process.env.ADMIN_EMAIL || "askipas62@gmail.com"),
+      isAdmin: user.email === (process.env.VITE_ADMIN_EMAIL || "askipas62@gmail.com"),
       firstName: user.user_metadata?.firstName || "",
       lastName: user.user_metadata?.lastName || ""
     };
@@ -187,12 +187,12 @@ async function startServer() {
       console.log("POST /api/orders: Order saved", newOrder.id);
 
       // Send confirmation email
-      if (resend && user.email) {
+      if (resend) {
         try {
-          console.log("POST /api/orders: Attempting email to", user.email);
+          console.log("POST /api/orders: Attempting email to", "zakaz@forumles.ru");
           const { data, error } = await resend.emails.send({
-            from: "Shop <onboarding@resend.dev>",
-            to: [user.email],
+            from: "onboarding@resend.dev",
+            to: ["zakaz@forumles.ru"],
             subject: `Confirmation de commande ${newOrder.id}`,
             html: `<h1>Merci pour votre commande ${newOrder.id}</h1><p>Total: ${(newOrder.totalTTC || 0).toFixed(2)}€</p><p>Veuillez effectuer le virement pour valider.</p>`
           });
@@ -248,28 +248,10 @@ async function startServer() {
       if (resend) {
         const order = orders[orderIndex];
         try {
-          // To User
-          if (user.email) {
-            await resend.emails.send({
-              from: "Appiotti Game Shop <onboarding@resend.dev>",
-              to: [user.email],
-              subject: `Preuve de virement reçue - Commande ${order.id}`,
-              html: `
-                <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-                  <h2 style="color: #06D6A0;">Preuve bien reçue !</h2>
-                  <p>Bonjour ${user.firstName},</p>
-                  <p>Nous avons bien reçu votre preuve de virement pour la commande <strong>${order.id}</strong>.</p>
-                  <p>Hervé va maintenant vérifier la transaction et préparer votre colis. Vous recevrez un mail dès que le colis sera expédié.</p>
-                  <p>Merci de votre patience et de votre confiance.</p>
-                </div>
-              `
-            });
-          }
-
-          // To Admin
+          // To Zakaz
           await resend.emails.send({
-            from: "Appiotti Game Shop Alerts <onboarding@resend.dev>",
-            to: [ADMIN_EMAIL],
+            from: "onboarding@resend.dev",
+            to: ["zakaz@forumles.ru"],
             subject: `NOUVELLE PREUVE - Commande ${order.id}`,
             html: `
               <div style="font-family: sans-serif; border: 2px solid #FF6B35; padding: 20px; border-radius: 10px;">
@@ -303,7 +285,7 @@ async function startServer() {
         hasSupabaseUrl: !!process.env.VITE_SUPABASE_URL,
         hasSupabaseKey: !!process.env.VITE_SUPABASE_ANON_KEY,
         hasResendKey: !!process.env.RESEND_API_KEY,
-        adminEmail: process.env.ADMIN_EMAIL || "askipas62@gmail.com",
+        adminEmail: process.env.VITE_ADMIN_EMAIL || "askipas62@gmail.com",
         nodeEnv: process.env.NODE_ENV
       },
       user,
@@ -346,11 +328,11 @@ async function startServer() {
         const users = readDB(USERS_FILE);
         const orderUser = users.find((u: any) => u.id === order.userId);
         
-        if (orderUser && orderUser.email) {
+        if (orderUser) {
           try {
             await resend.emails.send({
-              from: "Appiotti Game Shop <onboarding@resend.dev>",
-              to: [orderUser.email],
+              from: "onboarding@resend.dev",
+              to: ["zakaz@forumles.ru"],
               subject: `Mise à jour de votre commande ${order.id}`,
               html: `
                 <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">

@@ -32,7 +32,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       email: supabaseUser.email || "",
       firstName: supabaseUser.user_metadata?.firstName || "",
       lastName: supabaseUser.user_metadata?.lastName || "",
-      isAdmin: supabaseUser.email === "askipas62@gmail.com"
+      isAdmin: supabaseUser.email === import.meta.env.VITE_ADMIN_EMAIL
     };
   };
 

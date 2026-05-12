@@ -216,6 +216,12 @@ export default function ProductDetail() {
                     <p className="text-xl text-gray-600 leading-relaxed font-medium italic border-l-8 border-brand-orange pl-8 py-2">
                        {product.desc}
                     </p>
+                    {product.dimensions && (
+                       <div className="flex items-center gap-4 text-gray-500 font-bold border-l-8 border-transparent pl-8">
+                          <span className="bg-gray-100 rounded-lg p-2 text-brand-orange"><Orbit size={20} /></span> 
+                          <span>Dimensions : {product.dimensions}</span>
+                       </div>
+                    )}
                     <div className="flex items-center gap-4 py-6 border-y border-gray-100">
                        <div className={`w-4 h-4 rounded-full animate-pulse ${product.stock > 0 ? 'bg-brand-green shadow-[0_0_15px_rgba(6,214,160,0.5)]' : 'bg-red-500 shadow-[0_0_15px_rgba(239,68,68,0.5)]'}`} />
                        <span className={`text-sm font-black uppercase tracking-widest ${product.stock > 0 ? 'text-brand-green' : 'text-red-500'}`}>
