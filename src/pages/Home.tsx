@@ -206,7 +206,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 whileHover={{ y: -10 }}
               >
-                <Link to={`/boutique?category=${cat.slug}`} className="group relative block h-[550px] rounded-[60px] overflow-hidden shadow-2xl transition-all duration-500">
+                <Link to={`/boutique?category=${cat.slug}`} className="group relative block h-[550px] rounded-[60px] overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-brand-orange/20 active:scale-[0.98]">
                   {/* Category Image */}
                   <img 
                     src={cat.image} 
@@ -215,19 +215,19 @@ export default function Home() {
                     referrerPolicy="no-referrer"
                   />
                   {/* Gradient Overlay */}
-                  <div className={`absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent opacity-40 group-hover:opacity-50 transition-opacity`} />
+                  <div className={`absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-brand-dark/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500`} />
                   
                   {/* Content Overlay */}
                   <div className="absolute inset-0 flex flex-col items-center justify-end text-center p-12 z-10 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <div className="w-20 h-20 bg-white/10 backdrop-blur-xl rounded-[32px] flex items-center justify-center text-white mb-8 border border-white/20 group-hover:bg-brand-orange group-hover:border-brand-orange transition-all duration-500 shadow-2xl group-hover:rotate-12">
                        {cat.icon}
                     </div>
-                    <span className="text-brand-orange text-[10px] font-black uppercase tracking-[0.4em] mb-4 opacity-0 group-hover:opacity-100 transition-all duration-700">Découvrir</span>
+                    <span className="text-brand-orange text-[10px] font-black uppercase tracking-[0.4em] mb-4 opacity-0 group-hover:opacity-100 transition-all duration-700">Découvrir l'univers</span>
                     <h3 className="text-4xl md:text-5xl font-black text-white mb-3 font-display tracking-tight uppercase leading-none">{cat.name}</h3>
-                    <p className="text-white/60 text-[10px] font-black uppercase tracking-[0.3em] mb-10">{cat.count} articles premium</p>
+                    <p className="text-white/80 text-[10px] font-black uppercase tracking-[0.3em] mb-10">{cat.count} articles premium</p>
                     
                     <div className="w-full bg-white text-brand-dark py-5 rounded-[24px] font-black text-xs uppercase tracking-[0.2em] group-hover:bg-brand-orange group-hover:text-white transition-all shadow-2xl flex items-center justify-center gap-3">
-                      Entrer dans l'univers <ArrowRight size={16} />
+                      Voir la collection <ArrowRight size={16} />
                     </div>
                   </div>
 

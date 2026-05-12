@@ -45,6 +45,10 @@ export default function ProductDetail() {
     }
   };
 
+  const sortedReviews = useMemo(() => {
+    return [...reviews].sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+  }, [reviews]);
+
   useEffect(() => {
     setLoading(true);
     

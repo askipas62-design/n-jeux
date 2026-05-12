@@ -12,22 +12,22 @@ export default function Footer() {
         18 Route de Marillac, 16220 Saint-Sornin, France
       </div>
 
-      <div className="flex flex-col sm:flex-row items-center gap-8 text-[10px] font-bold uppercase tracking-widest">
-        <Link to="/securite-virement" className="flex items-center gap-2 text-brand-green hover:text-brand-orange transition-all">
-          <ShieldCheck size={16} /> PAIEMENT VIREMENT SÉCURISÉ
+      <div className="flex flex-col sm:flex-row items-center gap-10 text-[11px] font-black uppercase tracking-widest">
+        <Link to="/securite-virement" className="flex items-center gap-3 text-brand-green hover:text-brand-orange hover:scale-105 transition-all">
+          <ShieldCheck size={18} /> PAIEMENT VIREMENT SÉCURISÉ
         </Link>
-        <Link to="/cgv#livraison" className="flex items-center gap-2 opacity-80 hover:opacity-100 transition-all">
-          <Truck size={16} /> LIVRAISON 48H
+        <Link to="/cgv#livraison" className="flex items-center gap-3 text-brand-cream/90 hover:text-brand-yellow hover:scale-105 transition-all">
+          <Truck size={18} /> LIVRAISON 48H
         </Link>
-        <Link to="/securite-virement" className="px-4 py-2 bg-white/5 rounded-full hover:bg-white/10 transition-all">
+        <Link to="/securite-virement" className="px-6 py-2.5 bg-brand-orange text-white rounded-xl hover:bg-brand-yellow hover:text-brand-dark transition-all shadow-lg shadow-brand-orange/10">
           POURQUOI UN VIREMENT ?
         </Link>
       </div>
 
-      <div className="flex gap-6 text-xs font-medium">
-        <Link to="/mentions-legales" className="opacity-60 hover:opacity-100 hover:text-brand-orange transition-all">Mentions Légales</Link>
-        <Link to="/cgv" className="opacity-60 hover:opacity-100 hover:text-brand-orange transition-all">CGV</Link>
-        <span className="opacity-40 cursor-default">© 2016-{currentYear}</span>
+      <div className="flex gap-8 text-sm font-bold">
+        <Link to="/mentions-legales" className="text-brand-cream/60 hover:text-brand-orange transition-all border-b border-transparent hover:border-brand-orange">Mentions Légales</Link>
+        <Link to="/cgv" className="text-brand-cream/60 hover:text-brand-orange transition-all border-b border-transparent hover:border-brand-orange">CGV</Link>
+        <span className="opacity-40 cursor-default font-medium">© 2016-{currentYear}</span>
       </div>
     </footer>
   );
