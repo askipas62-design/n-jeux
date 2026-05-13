@@ -15,16 +15,13 @@ function ReviewCarousel() {
 
   useEffect(() => {
     reviewService.getAll().then(data => {
-      const defaultReviews = [
-        { id: "1", userName: "Marc L.", rating: 5, comment: "La table de billard a métamorphosé notre salon. Livraison nickel et produit de qualité pro, merci !", createdAt: new Date().toISOString() },
-        { id: "2", userName: "Sophie T.", rating: 5, comment: "Super table de ping-pong, robuste et facile à monter. Mes enfants y jouent tous les jours, je recommande à 100%.", createdAt: new Date().toISOString() },
-        { id: "3", userName: "Julien R.", rating: 5, comment: "Le baby-foot est sensationnel. Service client très à l'écoute pour nous conseiller.", createdAt: new Date().toISOString() },
-        { id: "4", userName: "Antoine D.", rating: 4, comment: "Le trampoline est génial et sécurisé. Seul bémol : le camion du transporteur a eu une panne, retardant la livraison d'un jour, mais Appiotti a géré le suivi parfaitement. Produit intact !", createdAt: new Date().toISOString() }
-      ];
-      
-      // Si on a moins de 4 avis en base de données, on complète avec nos avis mis en avant
-      if (data.length < 4) {
-        setReviews([...data, ...defaultReviews].slice(0, 4));
+      // Add some default reviews if none in DB
+      if (data.length === 0) {
+        setReviews([
+          { id: "1", userName: "Jean Dupont", rating: 5, comment: "Le baby-foot est de super qualité, livraison au top !", createdAt: new Date().toISOString() },
+          { id: "2", userName: "Marie Curie", rating: 5, comment: "Table de ping-pong robuste, mes enfants l'adorent !", createdAt: new Date().toISOString() },
+          { id: "3", userName: "Pierre Gasly", rating: 4, comment: "Très bon service client de Hervé. Je recommande.", createdAt: new Date().toISOString() }
+        ]);
       } else {
         setReviews(data);
       }
@@ -34,8 +31,8 @@ function ReviewCarousel() {
   if (loading) return null;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {reviews.slice(0, 4).map((review, idx) => (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {reviews.slice(0, 3).map((review, idx) => (
         <motion.div 
           key={review.id}
           initial={{ opacity: 0, scale: 0.9 }}

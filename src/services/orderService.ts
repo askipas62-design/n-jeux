@@ -14,7 +14,6 @@ export interface Order {
 export const orderService = {
   async create(orderData: { items: any[]; totalTTC: number; status?: string; id?: string }) {
     const token = localStorage.getItem("token");
-    console.log(`Fetching: ${API_URL}/api/orders`, { method: "POST" });
     const res = await fetch(`${API_URL}/api/orders`, {
       method: "POST",
       headers: {
@@ -23,20 +22,9 @@ export const orderService = {
       },
       body: JSON.stringify(orderData)
     });
-    console.log(`Response status: ${res.status}`);
-
     if (!res.ok) {
-      let errorMessage = "Erreur lors de la création de la commande";
-      try {
-        const errorData = await res.json();
-        errorMessage = errorData.error || errorMessage;
-      } catch (e) {
-        // Si ce n'est pas du JSON, c'est probablement une erreur 404/500 HTML (ex: Netlify redirect)
-        if (res.status === 401) errorMessage = "Session expirée ou non autorisée. Veuillez vous reconnecter.";
-        else if (res.status === 404) errorMessage = "Service de commande indisponible (404).";
-        else errorMessage = `Erreur serveur (${res.status}).`;
-      }
-      throw new Error(errorMessage);
+      const errorData = await res.json().catch(() => ({}));
+      throw new Error(errorData.error || "Erreur lors de la création de la commande");
     }
     return res.json();
   },

@@ -106,6 +106,23 @@ export default function ProductCard({ product }: ProductCardProps) {
             >
               Vue Rapide
             </button>
+            <button 
+              onClick={handleWishlist}
+              disabled={isWishlistLoading}
+              className={`p-4 rounded-xl transform translate-y-10 group-hover:translate-y-0 transition-all shadow-xl hover:scale-110 active:scale-95 disabled:opacity-50 disabled:cursor-wait ${
+                isFavorite 
+                  ? "bg-brand-orange text-white" 
+                  : "bg-white/90 backdrop-blur-sm text-brand-orange hover:bg-brand-orange hover:text-white"
+              }`}
+            >
+               {isWishlistLoading ? (
+                 <motion.div animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 1, ease: "linear" }}>
+                   <RefreshCw size={20} />
+                 </motion.div>
+               ) : (
+                 <Heart size={20} fill={isFavorite ? "currentColor" : "none"} className={isFavorite ? "" : "group-hover:fill-current"} />
+               )}
+            </button>
          </div>
       </Link>
 
@@ -135,32 +152,14 @@ export default function ProductCard({ product }: ProductCardProps) {
              <span className="text-[10px] text-gray-400 font-medium tracking-tight">TTC</span>
           </div>
 
-          <div className="flex items-center gap-2">
-            <button 
-              onClick={handleAddToCart}
-              disabled={isAdding}
-              className="flex-grow bg-gradient-to-r from-brand-orange to-brand-yellow text-white py-2.5 rounded-xl font-bold text-xs shadow-lg hover:shadow-brand-orange/40 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-wait"
-            >
-              {isAdding ? <Loader2 className="animate-spin" size={14} /> : null}
-              {isAdding ? "AJOUT EN COURS..." : "AJOUTER AU PANIER"}
-            </button>
-            
-            <button 
-              onClick={handleWishlist}
-              disabled={isWishlistLoading}
-              className={`p-2.5 rounded-xl border transition-all flex-shrink-0 disabled:opacity-50 disabled:cursor-wait shadow-sm ${
-                isFavorite 
-                  ? "bg-brand-orange/10 border-brand-orange/20 text-brand-orange hover:bg-brand-orange/20" 
-                  : "bg-white border-gray-200 text-gray-400 hover:text-brand-orange hover:border-brand-orange/30"
-              }`}
-            >
-               {isWishlistLoading ? (
-                 <Loader2 size={16} className="animate-spin" />
-               ) : (
-                 <Heart size={16} fill={isFavorite ? "currentColor" : "none"} />
-               )}
-            </button>
-          </div>
+          <button 
+            onClick={handleAddToCart}
+            disabled={isAdding}
+            className="w-full bg-gradient-to-r from-brand-orange to-brand-yellow text-white py-2.5 rounded-xl font-bold text-xs shadow-lg hover:shadow-brand-orange/40 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-wait"
+          >
+            {isAdding ? <Loader2 className="animate-spin" size={14} /> : null}
+            {isAdding ? "AJOUT EN COURS..." : "AJOUTER AU PANIER"}
+          </button>
         </div>
       </div>
     </motion.div>

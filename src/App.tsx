@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -23,16 +23,12 @@ const CGV = lazy(() => import("./pages/CGV"));
 const ClientDashboard = lazy(() => import("./pages/ClientDashboard"));
 const SafetyAndPayment = lazy(() => import("./pages/SafetyAndPayment"));
 const ResetPassword = lazy(() => import("./pages/ResetPassword"));
-const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
-const CookiesPolicy = lazy(() => import("./pages/CookiesPolicy"));
-const DeliveryReturns = lazy(() => import("./pages/DeliveryReturns"));
 
 // Protected Route components
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const { user, loading } = useAuth();
-  const location = useLocation();
   if (loading) return <div className="min-h-screen flex items-center justify-center">Chargement...</div>;
-  if (!user) return <Navigate to={`/connexion?redirect=${encodeURIComponent(location.pathname)}`} />;
+  if (!user) return <Navigate to="/connexion" />;
   return <>{children}</>;
 };
 
@@ -55,9 +51,9 @@ export default function App() {
                 <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-[#FF6B35] font-bold">Chargement de l'univers Appiotti...</div>}>
                   <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/boutique" element={<Shop />} />
-                    <Route path="/boutique/:id" element={<ProductDetail />} />
-                    <Route path="/panier" element={<Cart />} />
+                    <Route path="/boutique" element={<ProtectedRoute><Shop /></ProtectedRoute>} />
+                    <Route path="/boutique/:id" element={<ProtectedRoute><ProductDetail /></ProtectedRoute>} />
+                    <Route path="/panier" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
                     <Route path="/paiement" element={<ProtectedRoute><Payment /></ProtectedRoute>} />
                     <Route path="/client/dashboard" element={<ProtectedRoute><ClientDashboard /></ProtectedRoute>} />
                     <Route path="/securite-virement" element={<SafetyAndPayment />} />
@@ -69,9 +65,6 @@ export default function App() {
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/mentions-legales" element={<Legal />} />
                     <Route path="/cgv" element={<CGV />} />
-                    <Route path="/politique-de-confidentialite" element={<PrivacyPolicy />} />
-                    <Route path="/politique-de-cookies" element={<CookiesPolicy />} />
-                    <Route path="/livraisons-et-retours" element={<DeliveryReturns />} />
                     <Route path="*" element={<Navigate to="/" />} />
                   </Routes>
                 </Suspense>

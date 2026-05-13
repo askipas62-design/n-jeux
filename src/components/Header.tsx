@@ -2,15 +2,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { ShoppingCart, User, LogOut, LayoutDashboard, Menu, X, Sparkles, Search, Heart } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 import { useCart } from "../context/CartContext";
-import { useWishlist } from "../context/WishlistContext";
 import { motion, AnimatePresence } from "motion/react";
 import React, { useState } from "react";
 
 export default function Header() {
   const { user, logout } = useAuth();
   const { itemCount } = useCart();
-  const { wishlist } = useWishlist();
-  const favoriteCount = wishlist.length;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
@@ -41,20 +38,17 @@ export default function Header() {
               <Sparkles className="text-white" size={18} />
             </motion.div>
             <span className="text-lg sm:text-2xl font-black font-display tracking-tight whitespace-nowrap">
-              <span>APPIOTTI </span><span className="text-brand-yellow">game shop</span>
+              <span className="hidden xs:inline">Appiotti </span><span className="text-brand-yellow">Game Shop</span>
             </span>
           </Link>
 
           {/* Mobile Action Icons */}
           <div className="flex md:hidden items-center gap-1">
-            <Link to={user ? "/client/dashboard" : "/connexion"} className="relative p-1.5 hover:bg-white/10 rounded-full transition-all text-brand-orange">
-              <Heart size={20} />
-              {favoriteCount > 0 && (
-                <span className="absolute -top-0.5 -right-0.5 bg-white text-brand-orange text-[8px] w-3.5 h-3.5 rounded-full flex items-center justify-center font-black border-2 border-[#1B1B2F]">
-                  {favoriteCount}
-                </span>
-              )}
-            </Link>
+            {user && (
+              <Link to="/client/dashboard" className="p-1.5 hover:bg-white/10 rounded-full transition-all text-brand-orange">
+                <Heart size={20} />
+              </Link>
+            )}
             <Link to="/panier" className="relative p-1.5 hover:bg-white/10 rounded-full transition-all text-brand-orange">
               <ShoppingCart size={20} />
               {itemCount > 0 && (
@@ -103,23 +97,20 @@ export default function Header() {
               )}
             </Link>
 
-            <Link 
-              to={user ? "/client/dashboard" : "/connexion"}
-              className="relative p-2.5 hover:bg-white/10 rounded-full transition-all group"
-              title="Ma Liste de Souhaits"
-            >
-              <Heart size={22} className="group-hover:text-brand-orange transition-colors" />
-              {favoriteCount > 0 && (
-                <motion.span 
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  key={favoriteCount}
-                  className="absolute top-1 right-1 bg-brand-orange text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-black"
-                >
-                  {favoriteCount}
-                </motion.span>
-              )}
-            </Link>
+            {user && (
+              <Link 
+                to="/client/dashboard" 
+                onClick={(e) => {
+                  // This is a bit hacky but works for a quick jump: we could set a state in dashboard if needed
+                  // but just going to dashboard is fine for now as it's the first tab.
+                  // Actually let's just go to dashboard.
+                }}
+                className="relative p-2.5 hover:bg-white/10 rounded-full transition-all group"
+                title="Ma Liste de Souhaits"
+              >
+                <Heart size={22} className="group-hover:text-brand-orange transition-colors" />
+              </Link>
+            )}
 
             {user ? (
               <div className="flex items-center gap-3">

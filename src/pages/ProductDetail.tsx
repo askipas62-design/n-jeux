@@ -216,12 +216,6 @@ export default function ProductDetail() {
                     <p className="text-xl text-gray-600 leading-relaxed font-medium italic border-l-8 border-brand-orange pl-8 py-2">
                        {product.desc}
                     </p>
-                    {product.dimensions && (
-                       <div className="flex items-center gap-4 text-gray-500 font-bold border-l-8 border-transparent pl-8">
-                          <span className="bg-gray-100 rounded-lg p-2 text-brand-orange"><Orbit size={20} /></span> 
-                          <span>Dimensions : {product.dimensions}</span>
-                       </div>
-                    )}
                     <div className="flex items-center gap-4 py-6 border-y border-gray-100">
                        <div className={`w-4 h-4 rounded-full animate-pulse ${product.stock > 0 ? 'bg-brand-green shadow-[0_0_15px_rgba(6,214,160,0.5)]' : 'bg-red-500 shadow-[0_0_15px_rgba(239,68,68,0.5)]'}`} />
                        <span className={`text-sm font-black uppercase tracking-widest ${product.stock > 0 ? 'text-brand-green' : 'text-red-500'}`}>
@@ -249,26 +243,25 @@ export default function ProductDetail() {
                        {updatingCart ? <Loader2 className="animate-spin" size={20} /> : <ShoppingCart size={20} />}
                        {updatingCart ? "Traitement..." : "Ajouter au panier"}
                     </button>
-                    <button 
-                      onClick={() => toggleWishlist(id || "")}
-                      disabled={isWishlistLoading}
-                      className={`p-6 rounded-[24px] border-2 transition-all flex-shrink-0 disabled:opacity-50 disabled:cursor-wait shadow-sm ${
-                        isFavorite 
-                          ? "bg-brand-orange/10 border-brand-orange/30 text-brand-orange hover:bg-brand-orange/20" 
-                          : "bg-white border-gray-200 text-gray-400 hover:text-brand-orange hover:border-brand-orange/30"
-                      }`}
-                    >
-                       {isWishlistLoading ? (
-                         <Loader2 size={24} className="animate-spin" />
-                       ) : (
-                         <Heart size={24} fill={isFavorite ? "currentColor" : "none"} />
-                       )}
-                    </button>
                  </div>
 
                  <div className="flex items-center gap-10 text-gray-400 text-[10px] font-black uppercase tracking-[0.3em] border-t pt-10">
+                    <button 
+                      onClick={() => toggleWishlist(id || "")}
+                      disabled={isWishlistLoading}
+                      className={`flex items-center gap-2 transition-all p-3 rounded-2xl disabled:opacity-50 disabled:cursor-wait ${
+                        isFavorite ? "text-brand-orange bg-brand-orange/10" : "hover:text-brand-orange hover:bg-gray-50"
+                      }`}
+                    >
+                       {isWishlistLoading ? (
+                         <Loader2 size={18} className="animate-spin" />
+                       ) : (
+                         <Heart size={18} fill={isFavorite ? "currentColor" : "none"} />
+                       )}
+                       {isFavorite ? "Dans mes favoris" : "Ajouter aux favoris"}
+                    </button>
                     <button className="flex items-center gap-2 hover:text-brand-orange hover:bg-gray-50 p-3 rounded-2xl transition-all">
-                       <Share2 size={18} /> Partager cet article
+                       <Share2 size={18} /> Partager
                     </button>
                  </div>
               </div>

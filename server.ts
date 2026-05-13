@@ -50,7 +50,7 @@ if (!fs.existsSync(REVIEWS_FILE)) writeDB(REVIEWS_FILE, []);
 // Initialize Resend
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
-const ADMIN_EMAIL = process.env.VITE_ADMIN_EMAIL || "askipas62@gmail.com";
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "askipas62@gmail.com";
 
 // Helper for Auth with Supabase
 const getAuthUser = async (req: express.Request) => {
@@ -84,7 +84,7 @@ const getAuthUser = async (req: express.Request) => {
     return {
       id: user.id,
       email: user.email,
-      isAdmin: user.email === (process.env.VITE_ADMIN_EMAIL || "askipas62@gmail.com"),
+      isAdmin: user.email === (process.env.ADMIN_EMAIL || "askipas62@gmail.com"),
       firstName: user.user_metadata?.firstName || "",
       lastName: user.user_metadata?.lastName || ""
     };
@@ -109,11 +109,6 @@ async function startServer() {
     }
   });
   const upload = multer({ storage });
-
-  // Health Check
-  app.get("/api/health", (req, res) => {
-    res.json({ status: "ok", time: new Date().toISOString() });
-  });
 
   // Auth Sync (Legacy consistency, used for local storage logic if needed)
   app.patch("/api/auth/me", async (req, res) => {
@@ -167,12 +162,8 @@ async function startServer() {
 
   // Orders Routes
   app.post("/api/orders", async (req, res) => {
-    console.log("POST /api/orders: Request received");
     const user = await getAuthUser(req);
-    if (!user) {
-      console.warn("POST /api/orders: Auth failed");
-      return res.status(401).json({ error: "Non autorisé" });
-    }
+    if (!user) return res.status(401).json({ error: "Non autorisé" });
     
     try {
       console.log("POST /api/orders: starting for user", user.id);
@@ -196,12 +187,12 @@ async function startServer() {
       console.log("POST /api/orders: Order saved", newOrder.id);
 
       // Send confirmation email
-      if (resend) {
+      if (resend && user.email) {
         try {
           console.log("POST /api/orders: Attempting email to", user.email);
           const { data, error } = await resend.emails.send({
-            from: "onboarding@resend.dev",
-            to: [user.email || ADMIN_EMAIL], // Send to user or admin if email missing
+            from: "Shop <onboarding@resend.dev>",
+            to: [user.email],
             subject: `Confirmation de commande ${newOrder.id}`,
             html: `<h1>Merci pour votre commande ${newOrder.id}</h1><p>Total: ${(newOrder.totalTTC || 0).toFixed(2)}€</p><p>Veuillez effectuer le virement pour valider.</p>`
           });
@@ -209,18 +200,6 @@ async function startServer() {
           else console.log("Email sent successfully:", data?.id);
         } catch (mailErr) {
           console.error("Email send critical error:", mailErr);
-        }
-
-        // Also notify Admin
-        try {
-          await resend.emails.send({
-            from: "onboarding@resend.dev",
-            to: [ADMIN_EMAIL],
-            subject: `NOUVELLE COMMANDE - ${newOrder.id}`,
-            html: `<h1>Nouvelle commande de ${user.firstName} ${user.lastName}</h1><p>Total: ${(newOrder.totalTTC || 0).toFixed(2)}€</p>`
-          });
-        } catch (adminMailErr) {
-          console.error("Admin notification error:", adminMailErr);
         }
       } else {
         console.warn("Resend skipped: no client or no user email", { hasResend: !!resend, email: user.email });
@@ -269,9 +248,27 @@ async function startServer() {
       if (resend) {
         const order = orders[orderIndex];
         try {
+          // To User
+          if (user.email) {
+            await resend.emails.send({
+              from: "Appiotti Game Shop <onboarding@resend.dev>",
+              to: [user.email],
+              subject: `Preuve de virement reçue - Commande ${order.id}`,
+              html: `
+                <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+                  <h2 style="color: #06D6A0;">Preuve bien reçue !</h2>
+                  <p>Bonjour ${user.firstName},</p>
+                  <p>Nous avons bien reçu votre preuve de virement pour la commande <strong>${order.id}</strong>.</p>
+                  <p>Hervé va maintenant vérifier la transaction et préparer votre colis. Vous recevrez un mail dès que le colis sera expédié.</p>
+                  <p>Merci de votre patience et de votre confiance.</p>
+                </div>
+              `
+            });
+          }
+
           // To Admin
           await resend.emails.send({
-            from: "onboarding@resend.dev",
+            from: "Appiotti Game Shop Alerts <onboarding@resend.dev>",
             to: [ADMIN_EMAIL],
             subject: `NOUVELLE PREUVE - Commande ${order.id}`,
             html: `
@@ -306,7 +303,7 @@ async function startServer() {
         hasSupabaseUrl: !!process.env.VITE_SUPABASE_URL,
         hasSupabaseKey: !!process.env.VITE_SUPABASE_ANON_KEY,
         hasResendKey: !!process.env.RESEND_API_KEY,
-        adminEmail: ADMIN_EMAIL,
+        adminEmail: process.env.ADMIN_EMAIL || "askipas62@gmail.com",
         nodeEnv: process.env.NODE_ENV
       },
       user,
@@ -349,10 +346,10 @@ async function startServer() {
         const users = readDB(USERS_FILE);
         const orderUser = users.find((u: any) => u.id === order.userId);
         
-        if (orderUser) {
+        if (orderUser && orderUser.email) {
           try {
             await resend.emails.send({
-              from: "onboarding@resend.dev",
+              from: "Appiotti Game Shop <onboarding@resend.dev>",
               to: [orderUser.email],
               subject: `Mise à jour de votre commande ${order.id}`,
               html: `
@@ -493,7 +490,7 @@ async function startServer() {
     });
   }
 
-  const PORT = process.env.PORT ? parseInt(process.env.PORT) : 3001;
+  const PORT = 3000;
   app.listen(PORT, "0.0.0.0", () => {
     console.log(`Server running at http://localhost:${PORT}`);
   });
