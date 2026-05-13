@@ -189,15 +189,24 @@ async function configureApp() {
     if (!user) return res.status(401).json({ error: "Non autorisé" });
     
     try {
-      const orderId = req.body.id || ("ORD-" + Math.random().toString(36).substr(2, 9).toUpperCase());
-      const newOrder = {
-        id: orderId,
+      const { items, totalTTC, id: customId } = req.body;
+      const orderId = customId || ("ORD-" + Math.random().toString(36).substr(2, 9).toUpperCase());
+      
+      const newOrder: any = {
         user_id: user.id,
-        items: req.body.items || [],
-        total_ttc: req.body.totalTTC || 0,
+        items: items || [],
+        total_ttc: Number(totalTTC) || 0,
         status: "En attente de virement",
-        proof_uploaded: false
+        proof_uploaded: false,
+        created_at: new Date().toISOString()
       };
+
+      // Only include ID if it's not a UUID-only table
+      // If we're not sure, we can try to insert and see. 
+      // But usuallyORD-XXX is a string ID.
+      if (orderId) {
+        newOrder.id = orderId;
+      }
       
       const { data, error } = await supabase
         .from("orders")
@@ -205,7 +214,10 @@ async function configureApp() {
         .select()
         .single();
 
-      if (error) throw error;
+      if (error) {
+        console.error("Supabase order insert error:", error);
+        return res.status(400).json({ error: `Erreur base de données: ${error.message}` });
+      }
 
       // Send confirmation email
       if (resend && user.email) {
@@ -555,23 +567,31 @@ async function configureApp() {
 
     try {
       const { rating, comment, userName, productId } = req.body;
+      if (!rating || !comment) {
+        return res.status(400).json({ error: "Note et commentaire requis" });
+      }
+
       const { data, error } = await supabase
         .from("reviews")
         .insert({
           user_id: user.id,
           product_id: productId || null,
           user_name: userName || `${user.firstName} ${user.lastName}`,
-          rating,
-          comment
+          rating: Number(rating),
+          comment: comment.toString(),
+          created_at: new Date().toISOString()
         })
         .select()
         .single();
-
-      if (error) throw error;
+ 
+      if (error) {
+        console.error("Supabase review insert error:", error);
+        return res.status(400).json({ error: `Erreur base de données: ${error.message}` });
+      }
       res.json(data);
-    } catch (e) {
+    } catch (e: any) {
       console.error("POST /api/reviews error:", e);
-      res.status(500).json({ error: "Erreur serveur" });
+      res.status(500).json({ error: "Erreur serveur: " + (e.message || "Unknown error") });
     }
   });
 
