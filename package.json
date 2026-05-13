@@ -43,4 +43,12 @@
     "typescript": "~5.8.2",
     "vite": "^6.2.3"
   }
+
+  {
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "vite preview"
+  }
+}
 }
