@@ -9,26 +9,23 @@ import multer from "multer";
 import { createClient } from "@supabase/supabase-js";
 import { Resend } from "resend";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const APP_ROOT = process.cwd();
+console.log(`[Startup] APP_ROOT: ${APP_ROOT}`);
 
 // Supabase Server Client
 const supabaseUrl = process.env.VITE_SUPABASE_URL || "";
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.VITE_SUPABASE_ANON_KEY || "";
+
+if (!supabaseUrl) console.warn("[Startup] VITE_SUPABASE_URL is missing!");
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
 // Data paths
-const DATA_DIR = path.join(__dirname, "data");
+const DATA_DIR = path.join(APP_ROOT, "data");
 const USERS_FILE = path.join(DATA_DIR, "users.json");
 const PRODUCTS_FILE = path.join(DATA_DIR, "products.json");
 const ORDERS_FILE = path.join(DATA_DIR, "orders.json");
 const REVIEWS_FILE = path.join(DATA_DIR, "reviews.json");
-const UPLOADS_DIR = path.join(__dirname, "public", "uploads", "proofs");
-
-// Ensure directories exist
-[DATA_DIR, UPLOADS_DIR].forEach((dir) => {
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-});
+const UPLOADS_DIR = path.join(APP_ROOT, "public", "uploads", "proofs");
 
 // Helper for DB
 const readDB = (file: string) => {
@@ -51,12 +48,29 @@ const writeDB = (file: string, data: any) => {
   }
 };
 
-// Initialize files if they don't exist
-if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-if (!fs.existsSync(USERS_FILE)) writeDB(USERS_FILE, []);
-if (!fs.existsSync(PRODUCTS_FILE)) writeDB(PRODUCTS_FILE, []);
-if (!fs.existsSync(ORDERS_FILE)) writeDB(ORDERS_FILE, []);
-if (!fs.existsSync(REVIEWS_FILE)) writeDB(REVIEWS_FILE, []);
+// Ensure directories and files exist
+try {
+  [DATA_DIR, UPLOADS_DIR].forEach((dir) => {
+    if (!fs.existsSync(dir)) {
+      console.log(`[Startup] Creating directory: ${dir}`);
+      fs.mkdirSync(dir, { recursive: true });
+    }
+  });
+
+  const initFile = (file: string) => {
+    if (!fs.existsSync(file)) {
+      console.log(`[Startup] Initializing file: ${file}`);
+      fs.writeFileSync(file, "[]");
+    }
+  };
+
+  initFile(USERS_FILE);
+  initFile(PRODUCTS_FILE);
+  initFile(ORDERS_FILE);
+  initFile(REVIEWS_FILE);
+} catch (err: any) {
+  console.error("[Startup] CRITICAL: Failed to initialize file system:", err.message);
+}
 
 // Initialize Resend
 const resendApiKey = process.env.RESEND_API_KEY;
@@ -116,6 +130,20 @@ async function configureApp() {
   app.use((req, res, next) => {
     console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
     next();
+  });
+
+  // Health check
+  app.get("/api/health", (req, res) => {
+    res.json({ 
+      status: "ok", 
+      time: new Date().toISOString(),
+      appRoot: APP_ROOT,
+      env: {
+        hasSupabaseUrl: !!process.env.VITE_SUPABASE_URL,
+        hasSupabaseKey: !!(process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.VITE_SUPABASE_ANON_KEY),
+        hasResendKey: !!process.env.RESEND_API_KEY
+      }
+    });
   });
 
   // Multer config for proof uploads
@@ -639,7 +667,7 @@ async function configureApp() {
   });
 
   // Static files for uploads
-  app.use("/uploads", express.static(path.join(__dirname, "public", "uploads")));
+  app.use("/uploads", express.static(path.join(APP_ROOT, "public", "uploads")));
 
   // Global Error Handler
   app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
