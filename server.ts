@@ -185,47 +185,30 @@ async function configureApp() {
 
   // Orders Routes
   app.post("/api/orders", async (req, res) => {
-    const authHeader = req.headers.authorization;
-    const token = authHeader?.split(" ")[1];
     const user = await getAuthUser(req);
-    
-    if (!user || !token) return res.status(401).json({ error: "Non autorisé" });
+    if (!user) return res.status(401).json({ error: "Non autorisé" });
     
     try {
       const { items, totalTTC, id: customId } = req.body;
       const orderId = customId || ("ORD-" + Math.random().toString(36).substr(2, 9).toUpperCase());
       
-      const newOrder: any = {
+      const orders = readDB(ORDERS_FILE);
+      
+      const newOrder = {
         id: orderId,
         user_id: user.id,
         items: items || [],
         total_ttc: Number(totalTTC) || 0,
         status: "En attente de virement",
         proof_uploaded: false,
+        proof_url: null,
         created_at: new Date().toISOString()
       };
 
-      console.log(`[Order] Creating ${orderId} for user ${user.id}`);
-      
-      // Use a client with the user's token to satisfy RLS if we're not using service_role
-      const client = createClient(supabaseUrl, supabaseServiceKey, {
-        global: { headers: { Authorization: `Bearer ${token}` } }
-      });
+      orders.push(newOrder);
+      writeDB(ORDERS_FILE, orders);
 
-      const { data, error } = await client
-        .from("orders")
-        .insert(newOrder)
-        .select()
-        .maybeSingle();
-
-      if (error) {
-        console.error("Supabase order insert error:", error);
-        return res.status(400).json({ error: `Erreur base de données: ${error.message}` });
-      }
-
-      if (!data) {
-        throw new Error("La commande a été insérée mais aucune donnée n'a été retournée.");
-      }
+      console.log(`[Local Order] Created ${orderId} for user ${user.id}`);
 
       // Send confirmation email
       if (resend && user.email) {
@@ -233,13 +216,13 @@ async function configureApp() {
           await resend.emails.send({
             from: "Appiotti <onboarding@resend.dev>",
             to: [user.email],
-            subject: `Confirmation de commande ${orderId.split('-')[1]}`,
+            subject: `Confirmation de commande ${orderId.split('-')[1] || orderId}`,
             html: `
               <div style="font-family: sans-serif; padding: 20px;">
                 <h2>Merci pour votre commande !</h2>
-                <p>Votre commande <strong>#${orderId.split('-')[1]}</strong> est bien enregistrée.</p>
+                <p>Votre commande <strong>#${orderId.split('-')[1] || orderId}</strong> est bien enregistrée.</p>
                 <p>Montant total : <strong>${Number(totalTTC).toFixed(2)}€</strong></p>
-                <p>Veuillez effectuer le virement avec le motif <strong>#${orderId.split('-')[1]}</strong>.</p>
+                <p>Veuillez effectuer le virement avec le motif <strong>#${orderId.split('-')[1] || orderId}</strong>.</p>
               </div>
             `
           });
@@ -248,15 +231,14 @@ async function configureApp() {
         }
       }
 
-      const mapped = {
-        ...data,
-        userId: data.user_id,
-        totalTTC: data.total_ttc,
-        proofUploaded: data.proof_uploaded,
-        proofUrl: data.proof_url,
-        createdAt: data.created_at
-      };
-      res.json(mapped);
+      res.json({
+        ...newOrder,
+        userId: newOrder.user_id,
+        totalTTC: newOrder.total_ttc,
+        proofUploaded: newOrder.proof_uploaded,
+        proofUrl: newOrder.proof_url,
+        createdAt: newOrder.created_at
+      });
     } catch (e: any) {
       console.error("POST /api/orders error:", e);
       res.status(500).json({ error: "Erreur serveur lors de la création de la commande" });
@@ -264,25 +246,15 @@ async function configureApp() {
   });
 
   app.get("/api/orders/me", async (req, res) => {
-    const authHeader = req.headers.authorization;
-    const token = authHeader?.split(" ")[1];
     const user = await getAuthUser(req);
-    if (!user || !token) return res.status(401).json({ error: "Non autorisé" });
+    if (!user) return res.status(401).json({ error: "Non autorisé" });
     
     try {
-      const client = createClient(supabaseUrl, supabaseServiceKey, {
-        global: { headers: { Authorization: `Bearer ${token}` } }
-      });
-
-      const { data, error } = await client
-        .from("orders")
-        .select("*")
-        .eq("user_id", user.id)
-        .order("created_at", { ascending: false });
+      const orders = readDB(ORDERS_FILE);
+      const userOrders = orders.filter((o: any) => o.user_id === user.id)
+        .sort((a: any, b: any) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
       
-      if (error) throw error;
-      
-      const mapped = (data || []).map((o: any) => ({
+      const mapped = userOrders.map((o: any) => ({
         ...o,
         userId: o.user_id,
         totalTTC: o.total_ttc,
@@ -298,31 +270,22 @@ async function configureApp() {
   });
 
   app.post("/api/orders/:id/proof", upload.single("proof"), async (req, res) => {
-    const authHeader = req.headers.authorization;
-    const token = authHeader?.split(" ")[1];
     const user = await getAuthUser(req);
-    if (!user || !token) return res.status(401).json({ error: "Non autorisé" });
+    if (!user) return res.status(401).json({ error: "Non autorisé" });
     
     try {
       const proofUrl = req.file ? `/uploads/proofs/${req.file.filename}` : null;
+      const orders = readDB(ORDERS_FILE);
+      const orderIdx = orders.findIndex((o: any) => o.id === req.params.id && o.user_id === user.id);
       
-      const client = createClient(supabaseUrl, supabaseServiceKey, {
-        global: { headers: { Authorization: `Bearer ${token}` } }
-      });
+      if (orderIdx === -1) return res.status(404).json({ error: "Commande non trouvée" });
 
-      const { data, error } = await client
-        .from("orders")
-        .update({
-          proof_uploaded: true,
-          status: "En cours de validation",
-          proof_url: proofUrl
-        })
-        .eq("id", req.params.id)
-        .eq("user_id", user.id)
-        .select()
-        .single();
+      orders[orderIdx].proof_uploaded = true;
+      orders[orderIdx].status = "En cours de validation";
+      if (proofUrl) orders[orderIdx].proof_url = proofUrl;
 
-      if (error) throw error;
+      writeDB(ORDERS_FILE, orders);
+      const data = orders[orderIdx];
 
       // Notify Admin and User
       if (resend) {
@@ -362,15 +325,14 @@ async function configureApp() {
         }
       }
 
-      const mapped = {
+      res.json({
         ...data,
         userId: data.user_id,
         totalTTC: data.total_ttc,
         proofUploaded: data.proof_uploaded,
         proofUrl: data.proof_url,
         createdAt: data.created_at
-      };
-      res.json(mapped);
+      });
     } catch (e) {
       console.error("POST /api/orders/:id/proof error:", e);
       res.status(500).json({ error: "Erreur serveur" });
@@ -383,48 +345,27 @@ async function configureApp() {
     if (!user || !user.isAdmin) return res.status(403).json({ error: "Accès refusé" });
     
     try {
-      // Safer fetching: fetch orders and profiles separately to avoid join errors if relations aren't perfectly set up
-      const { data: orders, error: ordersError } = await supabase
-        .from("orders")
-        .select("*");
+      const orders = readDB(ORDERS_FILE);
+      const { data: profiles } = await supabase.from("profiles").select("*");
       
-      if (ordersError) {
-        console.error("Supabase orders fetch error:", ordersError);
-        throw ordersError;
-      }
-
-      const { data: profiles, error: profilesError } = await supabase
-        .from("profiles")
-        .select("*");
-      
-      if (profilesError) {
-        console.error("Supabase profiles fetch error:", profilesError);
-      }
-
-      // Sort manually if DB order fails or to be sure
-      const sortedOrders = (orders || []).sort((a: any, b: any) => {
-        return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
-      });
-      
-      const mapped = sortedOrders.map((o: any) => {
-        const profile = (profiles || []).find((p: any) => p.id === o.user_id);
-        return {
-          ...o,
-          id: o.id || "N/A",
-          userId: o.user_id,
-          totalTTC: o.total_ttc || 0,
-          status: o.status || "Inconnu",
-          proofUploaded: o.proof_uploaded || false,
-          proofUrl: o.proof_url,
-          createdAt: o.created_at || new Date().toISOString(),
-          userName: profile ? `${profile.first_name || ""} ${profile.last_name || ""}`.trim() : "Acheteur",
-          userEmail: profile?.email || "N/A"
-        };
-      });
+      const mapped = orders.sort((a: any, b: any) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
+        .map((o: any) => {
+          const profile = (profiles || []).find((p: any) => p.id === o.user_id);
+          return {
+            ...o,
+            userId: o.user_id,
+            totalTTC: o.total_ttc,
+            proofUploaded: o.proof_uploaded,
+            proofUrl: o.proof_url,
+            createdAt: o.created_at,
+            userName: profile ? `${profile.first_name || ""} ${profile.last_name || ""}`.trim() : "Acheteur",
+            userEmail: profile?.email || "N/A"
+          };
+        });
       res.json(mapped);
     } catch (e: any) {
       console.error("GET /api/admin/orders error:", e);
-      res.status(500).json({ error: "Erreur serveur: " + (e.message || "Unknown error") });
+      res.status(500).json({ error: "Erreur serveur" });
     }
   });
 
@@ -434,14 +375,14 @@ async function configureApp() {
     
     try {
       const { status } = req.body;
-      const { data: order, error } = await supabase
-        .from("orders")
-        .update({ status })
-        .eq("id", req.params.id)
-        .select("*")
-        .single();
+      const orders = readDB(ORDERS_FILE);
+      const orderIdx = orders.findIndex((o: any) => o.id === req.params.id);
+      
+      if (orderIdx === -1) return res.status(404).json({ error: "Commande non trouvée" });
 
-      if (error) throw error;
+      orders[orderIdx].status = status;
+      writeDB(ORDERS_FILE, orders);
+      const order = orders[orderIdx];
 
       // Fetch user profile for email notification
       const { data: profile } = await supabase
