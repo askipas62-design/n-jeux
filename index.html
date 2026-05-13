@@ -9,7 +9,7 @@
         console.error("Critial Error:", msg, error);
         var div = document.createElement('div');
         div.style.cssText = 'position:fixed;top:0;left:0;right:0;background:#ff4444;color:white;padding:20px;z-index:9999;font-family:sans-serif;font-weight:bold;';
-        div.innerHTML = 'Erreur au chargement : ' + msg + '<br/><small>Vérifiez vos variables d\'environnement Netlify (SUPABASE_URL, etc.)</small>';
+        div.innerHTML = 'Erreur au chargement : ' + msg + '<br/><small>Vérifiez vos variables d\'environnement Vercel (SUPABASE_URL, etc.)</small>';
         document.body.appendChild(div);
       };
     </script>

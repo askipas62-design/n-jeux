@@ -17,6 +17,9 @@ export default defineConfig(({mode}) => {
       },
     },
     server: {
+      watch: {
+        ignored: ['**/data/*.json', '**/public/uploads/**', '**/server.ts'],
+      },
       // HMR is disabled via DISABLE_HMR env var.
       // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
       hmr: process.env.DISABLE_HMR !== 'true',

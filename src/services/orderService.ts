@@ -46,9 +46,23 @@ export const orderService = {
   },
 
   async getMyOrders() {
-    // Read from localStorage (Stateless solution)
-    const orders = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-    return orders;
+    const token = localStorage.getItem("token");
+    if (!token) return [];
+
+    try {
+      const res = await fetch(`${API_URL}/api/orders/my`, {
+        headers: {
+          "Authorization": `Bearer ${token}`
+        }
+      });
+      
+      if (!res.ok) throw new Error("Erreur lors de la récupération des commandes");
+      
+      return res.json();
+    } catch (e) {
+      console.error("Error fetching orders from API:", e);
+      return [];
+    }
   },
 
   async uploadProof(orderId: string, file: File) {

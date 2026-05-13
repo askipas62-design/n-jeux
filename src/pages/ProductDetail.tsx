@@ -38,11 +38,7 @@ export default function ProductDetail() {
     setReviewsLoading(true);
     try {
       const dynamicData = await reviewService.getAll(id);
-      const staticData = getStaticReviewsForProduct(id);
-      
-      // Combiner et dédupliquer par ID si nécessaire (bien que les IDs sr- soient uniques)
-      const merged = [...dynamicData, ...staticData];
-      setReviews(merged);
+      setReviews(dynamicData);
     } catch (err) {
       console.error("Fetch reviews error:", err);
       // En cas d'erreur API, on garde au moins les avis statiques

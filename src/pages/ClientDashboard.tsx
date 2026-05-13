@@ -317,7 +317,7 @@ export default function ClientDashboard() {
 
                           <div className="flex flex-col items-start lg:items-end w-full lg:w-auto">
                             <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Total TTC</p>
-                            <p className="text-4xl font-black text-brand-orange font-mono tracking-tighter leading-none mb-4">{order.totalTTC.toFixed(2)}€</p>
+                            <p className="text-4xl font-black text-brand-orange font-mono tracking-tighter leading-none mb-4">{(order.totalTTC || 0).toFixed(2)}€</p>
                             <button 
                               onClick={() => setExpandedOrder(expandedOrder === order.id ? null : order.id)}
                               className={`flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] transition-all px-6 py-3 rounded-2xl border-2 ${
