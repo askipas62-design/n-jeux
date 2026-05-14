@@ -1,6 +1,6 @@
 import { Product } from "../data/products";
 
-const API_URL = "";
+const API_URL = window.location.origin;
 
 export const productService = {
   async getAll(filters?: { category?: string; minPrice?: number; maxPrice?: number; q?: string }): Promise<Product[]> {

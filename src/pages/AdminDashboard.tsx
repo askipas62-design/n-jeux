@@ -143,6 +143,12 @@ export default function AdminDashboard() {
     }
   };
 
+  const getImageUrl = (path: string) => {
+    if (!path) return null;
+    if (path.startsWith("http")) return path;
+    return `${window.location.origin}${path.startsWith('/') ? '' : '/'}${path}`;
+  };
+
   return (
     <div className="bg-[#1B1B2F] min-h-screen text-white pt-12 pb-24">
       <div className="container mx-auto px-4 max-w-7xl">
@@ -467,8 +473,8 @@ export default function AdminDashboard() {
                 <div className="aspect-video bg-gray-50 rounded-[40px] border-4 border-gray-100 mb-10 overflow-hidden flex items-center justify-center shadow-2xl relative group">
                    {selectedOrder.proofUrl ? (
                      <>
-                        <img src={selectedOrder.proofUrl} alt="Preuve" className="w-full h-full object-contain" />
-                        <a href={selectedOrder.proofUrl} target="_blank" rel="noreferrer" className="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-all flex items-center justify-center backdrop-blur-sm">
+                        <img src={getImageUrl(selectedOrder.proofUrl)} alt="Preuve" className="w-full h-full object-contain" />
+                        <a href={getImageUrl(selectedOrder.proofUrl)} target="_blank" rel="noreferrer" className="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-all flex items-center justify-center backdrop-blur-sm">
                            <button className="bg-white text-brand-dark px-8 py-4 rounded-2xl font-black text-xs uppercase tracking-widest flex items-center gap-3">Agrandir <Download size={18} /></button>
                         </a>
                      </>

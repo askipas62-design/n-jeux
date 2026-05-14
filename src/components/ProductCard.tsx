@@ -19,6 +19,14 @@ export default function ProductCard({ product }: ProductCardProps) {
   const [quickViewOpen, setQuickViewOpen] = useState(false);
   const [isAdding, setIsAdding] = useState(false);
 
+  // Ensure image path is correct
+  const getImageUrl = (path: string) => {
+    if (!path) return "/images/placeholder.jpg";
+    if (path.startsWith("http")) return path;
+    // For Railway, we serve from window.location.origin
+    return `${window.location.origin}${path.startsWith('/') ? '' : '/'}${path}`;
+  };
+
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
     setIsAdding(true);
@@ -89,7 +97,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       <Link to={`/boutique/${product.id}`} className="relative h-56 overflow-hidden bg-gray-100 flex items-center justify-center group-hover:bg-brand-cream transition-colors duration-500">
          {/* Background Subtle Image */}
          <img 
-           src={product.image || getCategoryImage(product.category)} 
+           src={getImageUrl(product.image || getCategoryImage(product.category))} 
            alt={product.name} 
            className="absolute inset-0 w-full h-full object-cover transition-all duration-700" 
            referrerPolicy="no-referrer"

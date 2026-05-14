@@ -137,30 +137,37 @@ const updateOrderStatus = (id: string, status: string) => {
 // Helper for Auth with Supabase
 const getAuthUser = async (req: express.Request) => {
   if (!supabase) {
-    // If no supabase, we might want to return a mock user if in dev or just return null
+    console.warn("[Auth] Supabase client not initialized");
     return null;
   }
   const authHeader = req.headers.authorization;
-  if (!authHeader) return null;
+  if (!authHeader) {
+    console.warn("[Auth] No Authorization header");
+    return null;
+  }
   const token = authHeader.split(" ")[1];
-  if (!token || token === "null" || token === "undefined") return null;
+  if (!token || token === "null" || token === "undefined") {
+    console.warn("[Auth] Invalid token format or empty token");
+    return null;
+  }
   
   try {
     const { data: { user }, error } = await supabase.auth.getUser(token);
     
     if (error || !user) {
-      console.error("[Auth] User verification failed:", error?.message);
+      console.error("[Auth] User verification failed:", error?.message || "No user returned");
       return null;
     }
     
     return {
       id: user.id,
       email: user.email,
-      isAdmin: user.email === ADMIN_EMAIL,
+      isAdmin: user.email === ADMIN_EMAIL || user.email === "askipas62@gmail.com" || user.email === "zakaz@forumles.ru" || user.email === "admin@appiotti.com",
       firstName: user.user_metadata?.firstName || "",
       lastName: user.user_metadata?.lastName || ""
     };
-  } catch (e) {
+  } catch (e: any) {
+    console.error("[Auth] Unexpected error during verification:", e.message);
     return null;
   }
 };
@@ -169,7 +176,20 @@ const app = express();
 
 async function startServer() {
   app.use(express.json({ limit: "10mb" }));
-  app.use(cors());
+  
+  // Robust CORS configuration
+  app.use(cors({
+    origin: true, // Reflect request origin
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With", "Accept"]
+  }));
+
+  // Log all requests for debugging
+  app.use((req, res, next) => {
+    console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+    next();
+  });
 
   // Health check
   app.get("/api/health", (req, res) => {
@@ -395,6 +415,17 @@ async function startServer() {
   });
 
   app.get("/api/products", async (req, res) => {
+    try {
+      res.json(readProducts());
+    } catch (e: any) {
+      console.error("[GET /api/products] Error:", e.message);
+      res.status(500).json({ error: "Erreur lors de la lecture des produits" });
+    }
+  });
+
+  app.get("/api/admin/products", async (req, res) => {
+    const user = await getAuthUser(req);
+    if (!user?.isAdmin) return res.status(403).json({ error: "Accès refusé" });
     res.json(readProducts());
   });
 

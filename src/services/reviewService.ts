@@ -2,7 +2,7 @@ import { getStaticReviewsForProduct } from "../data/staticReviews";
 
 const STORAGE_KEY = "appiotti_local_reviews";
 
-const API_URL = "";
+const API_URL = window.location.origin;
 
 export const reviewService = {
   async getAll(productId?: string) {

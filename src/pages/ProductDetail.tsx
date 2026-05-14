@@ -33,6 +33,13 @@ export default function ProductDetail() {
   const isFavorite = isInWishlist(id || "");
   const isWishlistLoading = processingId === (id || "");
 
+  // Ensure image path is correct
+  const getImageUrl = (path: string) => {
+    if (!path) return "/images/placeholder.jpg";
+    if (path.startsWith("http")) return path;
+    return `${window.location.origin}${path.startsWith('/') ? '' : '/'}${path}`;
+  };
+
   const fetchReviews = async () => {
     if (!id) return;
     setReviewsLoading(true);
@@ -167,7 +174,7 @@ export default function ProductDetail() {
                    className="relative w-full aspect-square rounded-[48px] overflow-hidden shadow-2xl border-4 border-white"
                  >
                     <img 
-                      src={product.image || getProductImage(product.category)} 
+                      src={getImageUrl(product.image || getProductImage(product.category))} 
                       alt={product.name} 
                       className="absolute inset-0 w-full h-full object-cover"
                       referrerPolicy="no-referrer"

@@ -50,6 +50,13 @@ export default function ClientDashboard() {
   const [reviewForm, setReviewForm] = useState({ rating: 5, comment: "", productId: "" });
   const [submittingReview, setSubmittingReview] = useState(false);
 
+  // Ensure image path is correct
+  const getImageUrl = (path: string) => {
+    if (!path) return null;
+    if (path.startsWith("http")) return path;
+    return `${window.location.origin}${path.startsWith('/') ? '' : '/'}${path}`;
+  };
+
   const favoriteProducts = useMemo(() => {
     return allProducts.filter(p => wishlist.includes(p.id));
   }, [wishlist]);
@@ -352,7 +359,7 @@ export default function ClientDashboard() {
                                          <div className="flex items-center gap-6">
                                            <div className="w-20 h-20 bg-gray-50 rounded-2xl overflow-hidden flex items-center justify-center shrink-0 border border-gray-50">
                                              {itemImage ? (
-                                               <img src={itemImage} alt={item.name} className="w-full h-full object-cover" />
+                                               <img src={getImageUrl(itemImage) || ""} alt={item.name} className="w-full h-full object-cover" />
                                              ) : (
                                                <Package size={24} className="text-gray-200" />
                                              )}

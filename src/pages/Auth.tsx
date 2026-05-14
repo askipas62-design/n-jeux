@@ -37,9 +37,14 @@ export default function Auth({ mode: initialMode }: { mode: "login" | "signup" }
         throw error;
       }
 
+      if (data.session) {
+        localStorage.setItem("token", data.session.access_token);
+      }
+
       addToast(`Bienvenue ${data.user.user_metadata?.firstName || 'Aventurier'} ! Heureux de vous revoir !`, "success");
       
-      const isAdmin = data.user.email === "askipas62@gmail.com" || data.user.email === "zakaz@forumles.ru";
+      const userEmail = data.user.email || "";
+      const isAdmin = userEmail === "askipas62@gmail.com" || userEmail === "zakaz@forumles.ru" || userEmail === "admin@appiotti.com";
       navigate(isAdmin ? "/admin/dashboard" : from, { replace: true });
     } catch (err: any) {
       addToast(err.message || "Erreur de connexion", "error");
@@ -69,6 +74,12 @@ export default function Auth({ mode: initialMode }: { mode: "login" | "signup" }
       }
 
       addToast("Bienvenue dans l'univers Appiotti ! Vérifiez vos emails si nécessaire.", "success");
+      
+      // Auto-login after signup if possible
+      if (data.session) {
+        localStorage.setItem("token", data.session.access_token);
+      }
+      
       navigate(from, { replace: true });
     } catch (err: any) {
       addToast(err.message || "Erreur d'inscription", "error");

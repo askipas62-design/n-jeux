@@ -1,4 +1,4 @@
-const API_URL = ""; // Relative to the same domain
+const API_URL = window.location.origin; // Relative to the same domain
 
 const getHeaders = () => ({
   "Content-Type": "application/json",
@@ -55,8 +55,10 @@ export const adminService = {
 
   // Products
   getProducts: async () => {
-    const res = await fetch(`${API_URL}/api/products`);
-    if (!res.ok) throw new Error("Erreur chargement produits");
+    const res = await fetch(`${API_URL}/api/admin/products`, {
+      headers: getHeaders()
+    });
+    if (!res.ok) throw new Error("Erreur chargement produits admin");
     return res.json();
   },
   updateProduct: async (id: string, data: any) => {
