@@ -9,14 +9,22 @@ import { Resend } from "resend";
 const APP_ROOT = process.cwd();
 console.log(`[Startup] APP_ROOT: ${APP_ROOT}`);
 
-// Helper to clean environment variables (remove quotes, backticks and all types of spaces)
+// Helper to clean environment variables (extremely aggressive)
 const cleanEnv = (val: string | undefined) => {
   if (!val) return "";
-  // Remove all quotes, backticks, and any whitespace character
-  return val.replace(/['"`\s]+/g, '').trim();
+  let s = val.trim();
+  
+  // If it's a URL, find the first 'http' and take everything until a space or quote
+  if (s.includes("http")) {
+    const match = s.match(/https?:\/\/[^\s'"`]+/);
+    if (match) return match[0];
+  }
+  
+  // For keys or other values, remove all quotes, backticks, and whitespace
+  return s.replace(/['"`\s\u200B-\u200D\uFEFF]+/g, '');
 };
 
-const BUILD_ID = "v3.1-clean-env"; // To verify deployment status
+const BUILD_ID = "v3.2-ultra-clean"; // To verify deployment status
 
 // Initialize Supabase
 let supabaseUrl = cleanEnv(process.env.VITE_SUPABASE_URL);
@@ -257,7 +265,8 @@ async function startServer() {
       hasResend: !!resend,
       adminEmailConfig: ADMIN_EMAIL,
       configCheck: {
-        urlStart: supabaseUrl.substring(0, 20),
+        urlStart: supabaseUrl.substring(0, 25),
+        urlCodes: Array.from(supabaseUrl.substring(0, 5)).map(c => c.charCodeAt(0)),
         keyLength: supabaseServiceKey.length,
         isServiceKey: supabaseServiceKey.length > 100
       }
