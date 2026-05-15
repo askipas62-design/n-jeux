@@ -5,6 +5,7 @@ import path from "path";
 import fs from "fs";
 import { createClient } from "@supabase/supabase-js";
 import { Resend } from "resend";
+import ws from "ws";
 
 const APP_ROOT = process.cwd();
 console.log(`[Startup] APP_ROOT: ${APP_ROOT}`);
@@ -24,7 +25,7 @@ const cleanEnv = (val: string | undefined) => {
   return s.replace(/['"`\s\u200B-\u200D\uFEFF]+/g, '');
 };
 
-const BUILD_ID = "v3.3-debug-init"; // To verify deployment status
+const BUILD_ID = "v3.4-ws-fix"; // To verify deployment status
 
 // Initialize Supabase
 let supabaseUrl = cleanEnv(process.env.VITE_SUPABASE_URL);
@@ -42,6 +43,12 @@ if (supabaseUrl && supabaseUrl.startsWith("http")) {
         autoRefreshToken: false,
         persistSession: false,
         detectSessionInUrl: false
+      },
+      global: {
+        fetch: (url, options) => fetch(url, options),
+      },
+      realtime: {
+        transport: ws,
       }
     });
     
