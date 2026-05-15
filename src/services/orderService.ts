@@ -15,6 +15,13 @@ const STORAGE_KEY = "appiotti_orders";
 export const orderService = {
   async create(orderData: { items: any[]; totalTTC: number; status?: string; id?: string }) {
     const token = localStorage.getItem("token");
+    console.log(`[OrderService] Creating order. Token present: ${!!token}`);
+    
+    if (!token) {
+      console.error("[OrderService] No token found in localStorage");
+      throw new Error("Authentification requise (token manquant)");
+    }
+
     const res = await fetch(`${API_URL}/api/orders`, {
       method: "POST",
       headers: {

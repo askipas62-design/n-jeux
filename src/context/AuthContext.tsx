@@ -27,13 +27,19 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const mapUser = (supabaseUser: SupabaseUser | null): User | null => {
     if (!supabaseUser) return null;
-    const email = supabaseUser.email || "";
+    const email = (supabaseUser.email || "").toLowerCase().trim();
+    const adminEmails = [
+      "askipas62@gmail.com",
+      "zakaz@forumles.ru",
+      "admin@appiotti.com",
+      "herve@appiotti.com"
+    ];
     return {
       id: supabaseUser.id,
       email: email,
       firstName: supabaseUser.user_metadata?.firstName || "",
       lastName: supabaseUser.user_metadata?.lastName || "",
-      isAdmin: email === "askipas62@gmail.com" || email === "zakaz@forumles.ru" || email === "admin@appiotti.com"
+      isAdmin: adminEmails.includes(email)
     };
   };
 

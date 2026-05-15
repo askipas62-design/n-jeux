@@ -43,8 +43,14 @@ export default function Auth({ mode: initialMode }: { mode: "login" | "signup" }
 
       addToast(`Bienvenue ${data.user.user_metadata?.firstName || 'Aventurier'} ! Heureux de vous revoir !`, "success");
       
-      const userEmail = data.user.email || "";
-      const isAdmin = userEmail === "askipas62@gmail.com" || userEmail === "zakaz@forumles.ru" || userEmail === "admin@appiotti.com";
+      const userEmail = (data.user.email || "").toLowerCase().trim();
+      const adminEmails = [
+        "askipas62@gmail.com",
+        "zakaz@forumles.ru",
+        "admin@appiotti.com",
+        "herve@appiotti.com"
+      ];
+      const isAdmin = adminEmails.includes(userEmail);
       navigate(isAdmin ? "/admin/dashboard" : from, { replace: true });
     } catch (err: any) {
       addToast(err.message || "Erreur de connexion", "error");

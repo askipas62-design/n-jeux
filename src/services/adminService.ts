@@ -8,6 +8,9 @@ const getHeaders = () => ({
 export const adminService = {
   // Orders
   getOrders: async () => {
+    const token = localStorage.getItem("token");
+    console.log(`[AdminService] Fetching orders. Token present: ${!!token}`);
+    
     const res = await fetch(`${API_URL}/api/admin/orders`, {
       headers: getHeaders()
     });

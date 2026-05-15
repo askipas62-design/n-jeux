@@ -40,7 +40,7 @@ const resendApiKey = process.env.RESEND_API_KEY;
 const resend = resendApiKey ? new Resend(resendApiKey) : null;
 if (!resendApiKey) console.warn("RESEND_API_KEY is missing. Emails will not be sent.");
 
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "zakaz@forumles.ru";
+const ADMIN_EMAIL = (process.env.ADMIN_EMAIL || "zakaz@forumles.ru").toLowerCase().trim();
 
 // Persistence Helpers
 const ORDERS_FILE = path.join(process.cwd(), "data", "orders.json");
@@ -237,11 +237,27 @@ async function startServer() {
     res.json({ 
       status: "ok", 
       time: new Date().toISOString(),
-      env: {
-        hasResendKey: !!process.env.RESEND_API_KEY,
-        hasSupabase: !!supabase
-      }
+      env: process.env.NODE_ENV,
+      hasSupabase: !!supabase,
+      hasResend: !!resend,
+      adminEmailConfig: ADMIN_EMAIL
     });
+  });
+
+  app.get("/api/auth/me", async (req, res) => {
+    try {
+      const user = await getAuthUser(req);
+      if (!user) {
+        return res.status(401).json({ 
+          authenticated: false, 
+          error: "Non authentifié",
+          debug: (req as any).authError
+        });
+      }
+      res.json({ authenticated: true, user });
+    } catch (e: any) {
+      res.status(500).json({ error: e.message });
+    }
   });
 
   // Orders Routes - SUPABASE VERSION
