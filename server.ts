@@ -137,32 +137,53 @@ const updateOrderStatus = (id: string, status: string) => {
 // Helper for Auth with Supabase
 const getAuthUser = async (req: express.Request) => {
   if (!supabase) {
-    console.warn("[Auth] Supabase client not initialized");
+    console.warn("[Auth] Supabase client not initialized. Check VITE_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY.");
     return null;
   }
+  
   const authHeader = req.headers.authorization;
   if (!authHeader) {
-    console.warn("[Auth] No Authorization header");
+    console.warn(`[Auth] No Authorization header for ${req.method} ${req.url}`);
     return null;
   }
+  
   const token = authHeader.split(" ")[1];
   if (!token || token === "null" || token === "undefined") {
-    console.warn("[Auth] Invalid token format or empty token");
+    console.warn(`[Auth] Invalid token format or empty token: "${token}"`);
     return null;
   }
   
   try {
+    // console.log(`[Auth] Verifying token for ${req.method} ${req.url}...`);
     const { data: { user }, error } = await supabase.auth.getUser(token);
     
     if (error || !user) {
-      console.error("[Auth] User verification failed:", error?.message || "No user returned");
+      console.error("[Auth] User verification failed:", error?.message || "No user returned from Supabase");
       return null;
+    }
+    
+    const email = user.email?.toLowerCase().trim() || "";
+    const adminEmails = [
+      (process.env.ADMIN_EMAIL || "zakaz@forumles.ru").toLowerCase().trim(),
+      "askipas62@gmail.com",
+      "zakaz@forumles.ru",
+      "admin@appiotti.com"
+    ];
+    
+    const isAdmin = adminEmails.includes(email);
+    
+    if (req.url.includes("/admin/") && !isAdmin) {
+      console.warn(`[Auth] Forbidden: User ${email} is not in admin whitelist:`, adminEmails);
+    } else if (isAdmin) {
+      console.log(`[Auth] Admin user verified: ${email}`);
+    } else {
+      console.log(`[Auth] Regular user verified: ${email}`);
     }
     
     return {
       id: user.id,
       email: user.email,
-      isAdmin: user.email === ADMIN_EMAIL || user.email === "askipas62@gmail.com" || user.email === "zakaz@forumles.ru" || user.email === "admin@appiotti.com",
+      isAdmin,
       firstName: user.user_metadata?.firstName || "",
       lastName: user.user_metadata?.lastName || ""
     };
@@ -187,7 +208,9 @@ async function startServer() {
 
   // Log all requests for debugging
   app.use((req, res, next) => {
-    console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+    const authHeader = req.headers.authorization;
+    const hasToken = !!authHeader && authHeader.startsWith("Bearer ");
+    console.log(`[${new Date().toISOString()}] ${req.method} ${req.url} (Auth: ${hasToken ? 'YES' : 'NO'})`);
     next();
   });
 
