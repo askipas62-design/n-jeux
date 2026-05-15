@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ShieldCheck, Truck, Instagram, Facebook, Mail, Phone, MapPin, CreditCard, RefreshCcw } from "lucide-react";
+import { ShieldCheck, Truck, Mail, Phone, MapPin, CreditCard, RefreshCcw } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -26,14 +26,6 @@ export default function Footer() {
                 <Mail size={18} className="text-brand-orange shrink-0" />
                 <span>contact@appiotti-jeux.fr</span>
               </p>
-            </div>
-            <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center hover:bg-brand-orange transition-all group">
-                <Instagram size={20} className="text-brand-cream group-hover:scale-110" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center hover:bg-brand-orange transition-all group">
-                <Facebook size={20} className="text-brand-cream group-hover:scale-110" />
-              </a>
             </div>
           </div>
 
