@@ -9,10 +9,16 @@ import { Resend } from "resend";
 const APP_ROOT = process.cwd();
 console.log(`[Startup] APP_ROOT: ${APP_ROOT}`);
 
+// Helper to clean environment variables (remove quotes and spaces)
+const cleanEnv = (val: string | undefined) => {
+  if (!val) return "";
+  return val.replace(/['"]+/g, '').trim();
+};
+
 // Initialize Supabase
-let supabaseUrl = (process.env.VITE_SUPABASE_URL || "").trim();
+let supabaseUrl = cleanEnv(process.env.VITE_SUPABASE_URL);
 if (supabaseUrl.endsWith("/")) supabaseUrl = supabaseUrl.slice(0, -1);
-const supabaseServiceKey = (process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.VITE_SUPABASE_ANON_KEY || "").trim();
+const supabaseServiceKey = cleanEnv(process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.VITE_SUPABASE_ANON_KEY);
 
 let supabase: any = null;
 if (supabaseUrl && supabaseUrl.startsWith("http")) {
@@ -24,23 +30,26 @@ if (supabaseUrl && supabaseUrl.startsWith("http")) {
         detectSessionInUrl: false
       }
     });
-    console.log(`[Startup] Supabase initialized with URL: ${supabaseUrl}`);
+    
+    // Masked logs for verification in Railway console
+    const maskedUrl = supabaseUrl.substring(0, 15) + "...";
+    const maskedKey = supabaseServiceKey.substring(0, 10) + "..." + supabaseServiceKey.substring(supabaseServiceKey.length - 5);
+    console.log(`[Startup] Supabase initialized. URL: ${maskedUrl}, Key: ${maskedKey}`);
+    
     if (!process.env.SUPABASE_SERVICE_ROLE_KEY) {
-      console.warn("[Startup] WARNING: SUPABASE_SERVICE_ROLE_KEY is missing, falling back to ANON_KEY. Admin routes might be unstable.");
+      console.warn("[Startup] WARNING: SUPABASE_SERVICE_ROLE_KEY is missing. Using ANON_KEY for server-side auth. This may fail for getUser().");
     }
   } catch (err) {
     console.error("[Startup] Failed to initialize Supabase:", err);
   }
-} else {
-  console.warn("[Startup] Supabase URL is missing or invalid. Auth might not work.");
 }
 
 // Initialize Resend
-const resendApiKey = process.env.RESEND_API_KEY;
+const resendApiKey = cleanEnv(process.env.RESEND_API_KEY);
 const resend = resendApiKey ? new Resend(resendApiKey) : null;
 if (!resendApiKey) console.warn("RESEND_API_KEY is missing. Emails will not be sent.");
 
-const ADMIN_EMAIL = (process.env.ADMIN_EMAIL || "zakaz@forumles.ru").toLowerCase().trim();
+const ADMIN_EMAIL = cleanEnv(process.env.ADMIN_EMAIL || "zakaz@forumles.ru").toLowerCase();
 
 // Persistence Helpers
 const ORDERS_FILE = path.join(process.cwd(), "data", "orders.json");
@@ -224,8 +233,8 @@ async function startServer() {
   // Runtime environment config for frontend
   app.get("/env.js", (req, res) => {
     const config = {
-      VITE_SUPABASE_URL: process.env.VITE_SUPABASE_URL,
-      VITE_SUPABASE_ANON_KEY: process.env.VITE_SUPABASE_ANON_KEY,
+      VITE_SUPABASE_URL: cleanEnv(process.env.VITE_SUPABASE_URL),
+      VITE_SUPABASE_ANON_KEY: cleanEnv(process.env.VITE_SUPABASE_ANON_KEY),
       NODE_ENV: process.env.NODE_ENV
     };
     res.setHeader("Content-Type", "application/javascript");
@@ -240,7 +249,12 @@ async function startServer() {
       env: process.env.NODE_ENV,
       hasSupabase: !!supabase,
       hasResend: !!resend,
-      adminEmailConfig: ADMIN_EMAIL
+      adminEmailConfig: ADMIN_EMAIL,
+      configCheck: {
+        urlStart: supabaseUrl.substring(0, 15),
+        keyLength: supabaseServiceKey.length,
+        isServiceKey: supabaseServiceKey.length > 100 // Service role keys are very long
+      }
     });
   });
 
