@@ -118,10 +118,25 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Mobile Toggle */}
-        <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
-        </button>
+        {/* Mobile Actions & Toggle */}
+        <div className="flex md:hidden items-center gap-2">
+          <Link to="/panier" className="relative p-2 hover:bg-white/10 rounded-full transition-all group">
+            <ShoppingCart size={24} className="group-hover:text-brand-orange transition-colors" />
+            {itemCount > 0 && (
+              <motion.span 
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                key={itemCount}
+                className="absolute top-0 right-0 bg-brand-orange text-white text-[8px] w-4 h-4 rounded-full flex items-center justify-center font-black border-2 border-[#1B1B2F]"
+              >
+                {itemCount}
+              </motion.span>
+            )}
+          </Link>
+          <button className="p-2 hover:bg-white/10 rounded-full transition-all" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -146,10 +161,6 @@ export default function Header() {
               </form>
               <Link to="/" onClick={() => setIsMenuOpen(false)} className="hover:text-brand-orange transition-colors">Accueil</Link>
               <Link to="/boutique" onClick={() => setIsMenuOpen(false)} className="hover:text-brand-orange transition-colors">Boutique</Link>
-              <Link to="/panier" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-4 hover:text-brand-orange transition-colors">
-                <ShoppingCart size={24} className="text-brand-orange" />
-                <span>Panier ({itemCount})</span>
-              </Link>
               {user && (
                 <Link to="/client/dashboard" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-4 hover:text-brand-orange transition-colors">
                   <Heart size={24} className="text-brand-orange" />
