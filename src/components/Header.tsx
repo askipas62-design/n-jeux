@@ -5,6 +5,23 @@ import { useCart } from "../context/CartContext";
 import { motion, AnimatePresence } from "motion/react";
 import React, { useState } from "react";
 
+const shopCategories = [
+  { label: "Baby-foot", slug: "baby-foot", href: "/boutique?category=baby-foot" },
+  { label: "Billard", slug: "billard", href: "/boutique?category=billard" },
+  { label: "Tennis de table", slug: "ping-pong", href: "/boutique?category=ping-pong" },
+  { label: "Trampoline", slug: "trampoline", href: "/boutique?category=trampoline" },
+  { label: "Accessoires", slug: "accessoires", href: "/boutique?category=accessoires" },
+];
+
+const shopBrands = [
+  { label: "Cornilleau", value: "Cornilleau", href: "/boutique?brand=Cornilleau" },
+  { label: "Bonzini", value: "Bonzini", href: "/boutique?brand=Bonzini" },
+  { label: "Kettler", value: "Kettler", href: "/boutique?brand=Kettler" },
+  { label: "Garlando", value: "Garlando", href: "/boutique?brand=Garlando" },
+  { label: "Sponeta", value: "Sponeta", href: "/boutique?brand=Sponeta" },
+  { label: "René Pierre", value: "René Pierre", href: "/boutique?brand=Ren%C3%A9%20Pierre" },
+];
+
 export default function Header() {
   const { user, logout } = useAuth();
   const { itemCount } = useCart();
@@ -42,8 +59,53 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide uppercase text-brand-cream/80">
-          <Link to="/boutique" className="hover:text-brand-orange transition-colors">Boutique</Link>
+        <nav className="hidden lg:flex items-center gap-6 text-sm font-medium tracking-wide uppercase text-brand-cream/80">
+          <div className="relative group">
+            <Link to="/boutique" className="flex items-center gap-2 hover:text-brand-orange transition-colors">
+              Boutique
+              <span className="text-[10px]">▼</span>
+            </Link>
+            <AnimatePresence>
+              <motion.div
+                initial={{ opacity: 0, y: 10, scale: 0.98 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 10, scale: 0.98 }}
+                className="pointer-events-none absolute left-0 top-full mt-4 hidden w-[760px] rounded-[28px] border border-white/10 bg-[#1B1B2F]/95 p-6 text-left shadow-2xl backdrop-blur-xl group-hover:pointer-events-auto group-hover:block"
+              >
+                <div className="grid grid-cols-2 gap-8">
+                  <div>
+                    <p className="mb-3 text-[10px] font-black uppercase tracking-[0.3em] text-brand-orange">Catégories</p>
+                    <div className="space-y-2">
+                      {shopCategories.map((item) => (
+                        <Link
+                          key={item.slug}
+                          to={item.href}
+                          className="flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-bold text-brand-cream/90 transition-all hover:bg-white/5 hover:text-brand-orange"
+                        >
+                          <span>{item.label}</span>
+                          <span className="text-[10px] text-brand-orange/80">Découvrir</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <p className="mb-3 text-[10px] font-black uppercase tracking-[0.3em] text-brand-orange">Marques</p>
+                    <div className="grid grid-cols-2 gap-2">
+                      {shopBrands.map((item) => (
+                        <Link
+                          key={item.value}
+                          to={item.href}
+                          className="rounded-2xl bg-white/5 px-3 py-3 text-xs font-bold uppercase tracking-wide text-brand-cream/90 transition-all hover:bg-brand-orange hover:text-white"
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
           <Link to="/offres" className="hover:text-brand-orange transition-colors">Offres Été</Link>
           <Link to="/a-propos" className="hover:text-brand-orange transition-colors">L'Entreprise</Link>
           <Link to="/contact" className="hover:text-brand-orange transition-colors">Contact</Link>
@@ -161,6 +223,32 @@ export default function Header() {
               </form>
               <Link to="/" onClick={() => setIsMenuOpen(false)} className="hover:text-brand-orange transition-colors">Accueil</Link>
               <Link to="/boutique" onClick={() => setIsMenuOpen(false)} className="hover:text-brand-orange transition-colors">Boutique</Link>
+              <div className="ml-4 border-l border-white/10 pl-4 space-y-2">
+                <p className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-orange">Catégories</p>
+                {shopCategories.map((item) => (
+                  <Link
+                    key={`mobile-category-${item.slug}`}
+                    to={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block text-base text-brand-cream/80 hover:text-brand-orange transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+              <div className="ml-4 border-l border-white/10 pl-4 space-y-2">
+                <p className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-orange">Marques</p>
+                {shopBrands.map((item) => (
+                  <Link
+                    key={`mobile-brand-${item.value}`}
+                    to={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block text-base text-brand-cream/80 hover:text-brand-orange transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
               {user && (
                 <Link to="/client/dashboard" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-4 hover:text-brand-orange transition-colors">
                   <Heart size={24} className="text-brand-orange" />

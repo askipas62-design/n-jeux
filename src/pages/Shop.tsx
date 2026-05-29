@@ -7,6 +7,39 @@ import { BabyFootIcon, PingPongIcon, BillardIcon, TrampolineIcon, AccessoriesIco
 
 import { products as allProducts } from "../data/products";
 
+const productBrandMap: Record<string, string> = {
+  "bf-1": "Bonzini",
+  "bf-2": "Bonzini",
+  "bf-3": "Garlando",
+  "bf-4": "Kettler",
+  "bf-5": "Garlando",
+  "bf-6": "Bonzini",
+  "tp-1": "Cornilleau",
+  "tp-2": "Sponeta",
+  "tp-3": "Cornilleau",
+  "tp-4": "Sponeta",
+  "tp-5": "Kettler",
+  "tp-6": "Kettler",
+  "bi-1": "Bonzini",
+  "bi-2": "Kettler",
+  "bi-3": "Bonzini",
+  "bi-4": "Garlando",
+  "bi-5": "Kettler",
+  "bi-6": "Sponeta",
+  "tr-1": "Kettler",
+  "tr-2": "Garlando",
+  "tr-3": "Kettler",
+  "tr-4": "Garlando",
+  "tr-5": "Bonzini",
+  "tr-6": "Sponeta",
+  "ac-1": "Garlando",
+  "ac-2": "Kettler",
+  "ac-3": "Cornilleau",
+  "ac-4": "Sponeta",
+};
+
+const getProductBrand = (product: { id: string }) => productBrandMap[product.id] || "Autres";
+
 export default function Shop() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [products, setProducts] = useState<any[]>([]);
@@ -14,6 +47,7 @@ export default function Shop() {
   const [showFilters, setShowFilters] = useState(false);
 
   const category = searchParams.get("category") || "";
+  const brand = searchParams.get("brand") || "";
   const minPrice = searchParams.get("min") || "";
   const maxPrice = searchParams.get("max") || "";
   const query = searchParams.get("q") || "";
@@ -28,6 +62,10 @@ export default function Shop() {
 
       if (category) {
         filtered = filtered.filter(p => p.category === category);
+      }
+
+      if (brand) {
+        filtered = filtered.filter(p => getProductBrand(p) === brand);
       }
 
       if (minPrice) {
@@ -57,7 +95,7 @@ export default function Shop() {
       setProducts(filtered);
       setLoading(false);
     }, 300);
-  }, [category, minPrice, maxPrice, query, sortBy]);
+  }, [category, brand, minPrice, maxPrice, query, sortBy]);
 
   const categories = [
     { id: "baby-foot", name: "Baby-Foot", icon: <BabyFootIcon className="w-5 h-5 text-brand-orange" /> },
