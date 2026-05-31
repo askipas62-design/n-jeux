@@ -69,11 +69,11 @@ export default function Home() {
   }, []);
 
   const categories = [
-    { name: "Baby-Foot", slug: "baby-foot", icon: <BabyFootIcon className="w-8 h-8" />, image: "/images/categories/baby-foot.jpg", count: 14, gradient: "from-[#FF6B35] to-[#FF8C42]" },
-    { name: "Tennis de Table", slug: "ping-pong", icon: <PingPongIcon className="w-8 h-8" />, image: "/images/categories/tennis-de-table.jpg", count: 3, gradient: "from-[#06D6A0] to-[#0EA5E9]" },
-    { name: "Billard", slug: "billard", icon: <BillardIcon className="w-8 h-8" />, image: "/images/categories/billard.jpg", count: 7, gradient: "from-[#1B1B2F] to-[#3D3D6B]" },
-    { name: "Trampoline", slug: "trampoline", icon: <TrampolineIcon className="w-8 h-8" />, image: "/images/categories/trampoline.jpg", count: 5, gradient: "from-[#FFD23F] to-[#FF6B35]" },
-    { name: "Accessoires", slug: "accessoires", icon: <AccessoriesIcon className="w-8 h-8" />, image: "/images/categories/accessoires.jpg", count: 14, gradient: "from-[#06D6A0] to-[#7B2FBE]" },
+    { name: "Baby-Foot", slug: "baby-foot", icon: <BabyFootIcon className="w-8 h-8" />, image: "/images/categories/baby-foot.jpg", count: 12, gradient: "from-[#FF6B35] to-[#FF8C42]" },
+    { name: "Tennis de Table", slug: "ping-pong", icon: <PingPongIcon className="w-8 h-8" />, image: "/images/categories/tennis-de-table.jpg", count: 10, gradient: "from-[#06D6A0] to-[#0EA5E9]" },
+    { name: "Billard", slug: "billard", icon: <BillardIcon className="w-8 h-8" />, image: "/images/categories/billard.jpg", count: 8, gradient: "from-[#1B1B2F] to-[#3D3D6B]" },
+    { name: "Trampoline", slug: "trampoline", icon: <TrampolineIcon className="w-8 h-8" />, image: "/images/categories/trampoline.jpg", count: 14, gradient: "from-[#FFD23F] to-[#FF6B35]" },
+    { name: "Accessoires", slug: "accessoires", icon: <AccessoriesIcon className="w-8 h-8" />, image: "/images/categories/accessoires.jpg", count: 12, gradient: "from-[#06D6A0] to-[#7B2FBE]" },
     { name: "Consoles", slug: "consoles", icon: <ConsoleIcon className="w-8 h-8" />, image: "/images/categories/consoles.jpg", count: 6, gradient: "from-[#7B2FBE] to-[#1B1B2F]" },
   ];
 
