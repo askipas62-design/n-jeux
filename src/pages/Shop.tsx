@@ -7,38 +7,7 @@ import { BabyFootIcon, PingPongIcon, BillardIcon, TrampolineIcon, AccessoriesIco
 
 import { products as allProducts } from "../data/products";
 
-const productBrandMap: Record<string, string> = {
-  "bf-1": "Bonzini",
-  "bf-2": "Bonzini",
-  "bf-3": "Garlando",
-  "bf-4": "Kettler",
-  "bf-5": "Garlando",
-  "bf-6": "Bonzini",
-  "tp-1": "Cornilleau",
-  "tp-2": "Sponeta",
-  "tp-3": "Cornilleau",
-  "tp-4": "Sponeta",
-  "tp-5": "Kettler",
-  "tp-6": "Kettler",
-  "bi-1": "Bonzini",
-  "bi-2": "Kettler",
-  "bi-3": "Bonzini",
-  "bi-4": "Garlando",
-  "bi-5": "Kettler",
-  "bi-6": "Sponeta",
-  "tr-1": "Kettler",
-  "tr-2": "Garlando",
-  "tr-3": "Kettler",
-  "tr-4": "Garlando",
-  "tr-5": "Bonzini",
-  "tr-6": "Sponeta",
-  "ac-1": "Garlando",
-  "ac-2": "Kettler",
-  "ac-3": "Cornilleau",
-  "ac-4": "Sponeta",
-};
-
-const getProductBrand = (product: { id: string }) => productBrandMap[product.id] || "Autres";
+const getProductBrand = (product: { id: string; brand?: string }) => product.brand || "Autres";
 
 export default function Shop() {
   const [searchParams, setSearchParams] = useSearchParams();
