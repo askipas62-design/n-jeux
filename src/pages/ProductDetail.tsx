@@ -184,7 +184,7 @@ export default function ProductDetail() {
                     <div className="absolute top-8 left-8 bg-brand-orange text-white px-6 py-2.5 rounded-2xl font-black text-xs shadow-2xl uppercase tracking-widest border border-white/20">
                        {product.category}
                     </div>
-                    {product.badge && (
+                    {product?.badge && (
                       <div className="absolute bottom-8 right-8 bg-brand-yellow text-brand-dark px-6 py-2.5 rounded-2xl font-black text-xs shadow-2xl uppercase tracking-widest border border-white/20">
                          {product.badge}
                       </div>

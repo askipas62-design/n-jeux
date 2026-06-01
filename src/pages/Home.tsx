@@ -56,15 +56,15 @@ export default function Home() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   const bestSellers = useMemo(() => {
-    return [...allProducts]
-      .filter(p => p.badge === "Bestseller" || p.rating >= 4.8)
+    return allProducts
+      .filter(p => p && (p.badge === "Bestseller" || p.rating >= 4.8))
       .sort((a, b) => b.rating - a.rating)
       .slice(0, 4);
   }, []);
 
   useEffect(() => {
     // Les produits sont locaux
-    setFeaturedProducts(allProducts.slice(0, 8));
+    setFeaturedProducts(allProducts.filter(Boolean).slice(0, 8));
     setLoading(false);
   }, []);
 
