@@ -281,7 +281,7 @@ export const products: Product[] = [
     rating: 4.6,
     desc: "La TIBHAR 3000 est une table int\u00e9rieure con\u00e7ue pour un usage r\u00e9gulier \u00e0 domicile. Son plateau en bois de 19 mm offre un rebond pr\u00e9cis et agr\u00e9able, id\u00e9al pour progresser tout en prenant du plaisir. Sa structure robuste assure une excellente stabilit\u00e9. Facile \u00e0 plier et \u00e0 d\u00e9placer gr\u00e2ce \u00e0 ses roulettes, elle permet \u00e9galement un entra\u00eenement en solo. \ud83d\udc49 Parfaite pour : maison salle de jeux entra\u00eenement r\u00e9gulier \u2699\ufe0f Caract\u00e9ristiques techniques Plateau : 19 mm bois (indoor) Surface : panneau de particu",
     image: "/images/products/table-de-ping-pong-tibhar-3000-stable-precise-ideale-usage-r-108.png",
-  },,
+  },
   {
     id: "ba-50",
     name: "Baby-foot Leonhart Tournament ITSF – Table professionnelle homologuée compétition",
