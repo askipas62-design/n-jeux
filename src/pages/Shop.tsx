@@ -34,7 +34,7 @@ export default function Shop() {
   );
 
   const products = useMemo(() => {
-    const filtered = [...allProducts];
+    const filtered = allProducts.filter(Boolean) as Product[];
 
     const q = normalizeQuery(query);
 
