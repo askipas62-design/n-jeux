@@ -13,12 +13,13 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
-  if (!product) return null;
   const { addToCart } = useCart();
   const { toggleWishlist, isInWishlist, processingId } = useWishlist();
   const { addToast } = useToast();
   const [quickViewOpen, setQuickViewOpen] = useState(false);
   const [isAdding, setIsAdding] = useState(false);
+
+  if (!product) return null;
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
