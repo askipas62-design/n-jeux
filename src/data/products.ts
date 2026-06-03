@@ -22,7 +22,7 @@ export const products: Product[] = [
     badge: "Nouveau",
     rating: 4.8,
     desc: "Le baby-foot Stella Star Outdoor incarne l\u2019alliance parfaite entre design haut de gamme, r\u00e9sistance et plaisir de jeu. Con\u00e7u sp\u00e9cialement pour une utilisation ext\u00e9rieure, il r\u00e9siste aux intemp\u00e9ries, UV et variations climatiques, tout en conservant ses performances et son esth\u00e9tique. Son design \u00e9l\u00e9gant en fait un v\u00e9ritable \u00e9l\u00e9ment d\u00e9coratif pour terrasse, jardin ou espace premium. \ud83d\udc49 Id\u00e9al pour les particuliers exigeants ou les professionnels souhaitant offrir une exp\u00e9rience de jeu haut de gamme. ",
-    image: "/images/products/baby-foot-stella-star-outdoor-design-premium-exterieur-131.png",
+    image: "",
   },
   {
     id: "ba-130",
@@ -224,7 +224,7 @@ export const products: Product[] = [
     stock: 10,
     rating: 4.8,
     desc: "Le baby-foot Tahiti 6 joueurs Ren\u00e9 Pierre est un mod\u00e8le ext\u00e9rieur haut de gamme pens\u00e9 pour les grands moments de convivialit\u00e9. La fiche officielle le pr\u00e9sente comme un baby-foot d\u2019ext\u00e9rieur pour des moments d\u2019\u00e9t\u00e9 conviviaux, en version 6 joueurs, avec grande r\u00e9sistance aux intemp\u00e9ries et fabrication fran\u00e7aise. Son meuble est en poly\u00e9thyl\u00e8ne haute densit\u00e9, ce qui le rend imputrescible et r\u00e9sistant \u00e0 l\u2019eau, aux UV, aux insectes, ainsi qu\u2019aux temp\u00e9ratures basses ou \u00e9lev\u00e9es. C\u2019est donc un vrai produ",
-    image: "/images/products/baby-foot-exterieur-rene-pierre-tahiti-6-joueurs-ultra-resis-113.png",
+    image: "",
   },
   {
     id: "ba-112",
@@ -235,7 +235,7 @@ export const products: Product[] = [
     stock: 10,
     rating: 4.8,
     desc: "Le baby-foot Bora Bora Ren\u00e9 Pierre est con\u00e7u pour une utilisation ext\u00e9rieure r\u00e9guli\u00e8re. Son meuble en bois stratifi\u00e9 trait\u00e9 de 25 mm r\u00e9siste : \u00e0 l\u2019humidit\u00e9 aux UV aux variations de temp\u00e9rature Ses barres t\u00e9lescopiques en acier chrom\u00e9 anticorrosion assurent s\u00e9curit\u00e9 et durabilit\u00e9. \ud83d\udc49 R\u00e9sultat : un baby-foot fiable, solide et durable pour le jardin ou la terrasse. \u2699\ufe0f CARACT\u00c9RISTIQUES Structure : bois stratifi\u00e9 trait\u00e9 ext\u00e9rieur Pieds : acier laqu\u00e9 r\u00e9sine Barres : t\u00e9lescopiques 16 mm anticorrosion Jo",
-    image: "/images/products/baby-foot-exterieur-bora-bora-rene-pierre-robuste-classique--112.png",
+    image: "",
   },
   {
     id: "ba-111",
@@ -247,7 +247,7 @@ export const products: Product[] = [
     badge: "Promo",
     rating: 4.6,
     desc: "Le baby-foot Tahiti Ren\u00e9 Pierre est con\u00e7u pour une utilisation ext\u00e9rieure intensive. Son meuble en poly\u00e9thyl\u00e8ne haute densit\u00e9 le rend totalement r\u00e9sistant : \u00e0 la pluie aux UV aux variations de temp\u00e9rature aux insectes \ud83d\udc49 R\u00e9sultat : un baby-foot que tu peux laisser dehors toute l\u2019ann\u00e9e. Ses barres en acier chrom\u00e9 et ses joueurs en m\u00e9tal offrent une excellente pr\u00e9cision de jeu. \u2699\ufe0f CARACT\u00c9RISTIQUES Mat\u00e9riau : poly\u00e9thyl\u00e8ne haute densit\u00e9 R\u00e9sistance : eau / UV / gel / chaleur Barres : acier triple chro",
-    image: "/images/products/baby-foot-exterieur-tahiti-rene-pierre-resistant-durable-ide-111.png",
+    image: "",
   },
   {
     id: "pi-110",
@@ -258,7 +258,7 @@ export const products: Product[] = [
     stock: 10,
     rating: 4.6,
     desc: "La TIBHAR Smash 28 Black Line est une table de comp\u00e9tition haut de gamme qui allie performance et design premium. Son plateau de 28 mm offre un rebond ultra pr\u00e9cis, conforme aux standards ITTF. Son design noir \u00e9l\u00e9gant en fait une table unique, parfaite pour : clubs premium salles modernes installations haut de gamme \ud83d\udc49 Une table qui impressionne autant par son look que par ses performances. \u2699\ufe0f Caract\u00e9ristiques techniques Plateau : 28 mm (comp\u00e9tition) Norme : ITTF (comp\u00e9tition officielle) Structur",
-    image: "/images/products/table-de-ping-pong-tibhar-smash-28-black-line-competition-pr-110.png",
+    image: "",
   },
   {
     id: "pi-109",
@@ -269,7 +269,7 @@ export const products: Product[] = [
     stock: 10,
     rating: 4.6,
     desc: "La TIBHAR Smash 28 est une table haut de gamme con\u00e7ue pour la comp\u00e9tition et l\u2019entra\u00eenement intensif. Son plateau en bois de 28 mm offre un rebond extr\u00eamement pr\u00e9cis et rapide, proche des standards professionnels. Sa structure renforc\u00e9e garantit une stabilit\u00e9 parfaite. \ud83d\udc49 Id\u00e9ale pour : clubs comp\u00e9titions joueurs avanc\u00e9s \u2699\ufe0f Caract\u00e9ristiques techniques Plateau : 28 mm (niveau comp\u00e9tition) Norme : agr\u00e9\u00e9e ITTF Surface : bois haute densit\u00e9 trait\u00e9 polyester Cadre : acier renforc\u00e9 A60 Mobilit\u00e9 : demi-ta",
-    image: "/images/products/table-de-ping-pong-tibhar-smash-28-qualite-competition-ittf--109.png",
+    image: "",
   },
   {
     id: "pi-108",
