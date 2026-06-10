@@ -12,7 +12,7 @@ const navigationMenu = [
     slug: "baby-foot",
     href: "/boutique?category=baby-foot",
     brands: [
-      { label: "Bonzini", href: "/boutique?category=baby-foot&brand=Bonzini" },
+      
       { label: "René Pierre", href: "/boutique?category=baby-foot&brand=Ren%C3%A9%20Pierre" },
       { label: "Stella", href: "/boutique?category=baby-foot&brand=Stella" },
       { label: "Leonhart", href: "/boutique?category=baby-foot&brand=Leonhart" },
