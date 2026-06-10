@@ -14,7 +14,6 @@ const navigationMenu = [
     brands: [
       { label: "Bonzini", href: "/boutique?category=baby-foot&brand=Bonzini" },
       { label: "René Pierre", href: "/boutique?category=baby-foot&brand=Ren%C3%A9%20Pierre" },
-      { label: "Garlando", href: "/boutique?category=baby-foot&brand=Garlando" },
       { label: "Stella", href: "/boutique?category=baby-foot&brand=Stella" },
       { label: "Leonhart", href: "/boutique?category=baby-foot&brand=Leonhart" },
     ]
