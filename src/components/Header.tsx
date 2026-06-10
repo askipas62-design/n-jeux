@@ -48,6 +48,7 @@ const navigationMenu = [
       { label: "BERG", href: "/boutique?category=trampoline&brand=BERG" },
       { label: "Jump'In", href: "/boutique?category=trampoline&brand=Jump%27In" },
       { label: "Springfree", href: "/boutique?category=trampoline&brand=Springfree" },
+      { label: "Kettler", href: "/boutique?category=ping-pong&brand=Kettler" },
     ]
   },
   {
