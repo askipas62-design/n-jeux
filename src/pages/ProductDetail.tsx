@@ -117,12 +117,12 @@ export default function ProductDetail() {
 
   const getProductImage = (category: string) => {
     switch (category) {
-      case "baby-foot": return "https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?auto=format&fit=crop&q=80&w=1200";
-      case "ping-pong": return "https://images.unsplash.com/photo-1629731629232-e5470d061511?auto=format&fit=crop&q=80&w=1200";
-      case "billard": return "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=1200";
-      case "trampoline": return "https://images.unsplash.com/photo-1510332859919-056efec29676?auto=format&fit=crop&q=80&w=1200";
-      case "consoles": return "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&q=80&w=1200";
-      default: return "https://images.unsplash.com/photo-1546433194-6d517f77b73b?auto=format&fit=crop&q=80&w=1200";
+      case "baby-foot": return "/images/products/baby-foot-classique-2-joueurs.jpg";
+      case "ping-pong": return "/images/hero-bg.jpg";
+      case "billard": return "/images/products/table-de-billard-americain-7-pieds.jpg";
+      case "trampoline": return "/images/products/trampoline-jardin-244cm-8-pieds.jpg";
+      case "consoles": return "/images/products/playstation-5-pro.jpg";
+      default: return "/images/hero-bg.jpg";
     }
   };
 
@@ -277,6 +277,25 @@ export default function ProductDetail() {
             </div>
           </div>
         </div>
+
+        {/* Specs Section */}
+        {product?.specs && Object.keys(product.specs).length > 0 && (
+          <div className="bg-white rounded-[32px] shadow-xl border border-gray-100 overflow-hidden mt-6">
+            <div className="p-6 md:p-8">
+              <h2 className="text-lg font-black text-brand-dark font-display uppercase tracking-tighter mb-5">
+                Caractéristiques <span className="text-brand-orange">Techniques</span>
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
+                {Object.entries(product.specs).map(([key, val], idx) => (
+                  <div key={idx} className="flex items-center justify-between py-2.5 border-b border-gray-50 last:border-0">
+                    <span className="text-[11px] font-black text-gray-400 uppercase tracking-wider shrink-0 mr-4">{key}</span>
+                    <span className="text-[12px] font-bold text-brand-dark text-right">{val}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Reviews Section */}
         <div id="reviews" className="bg-white rounded-[32px] shadow-xl border border-gray-100 overflow-hidden mt-6 mb-12">

@@ -9,7 +9,16 @@
     "badge": "Nouveau",
     "rating": 4.8,
     "desc": "Le baby-foot Stella Star Outdoor incarne l’alliance parfaite entre design haut de gamme, résistance et plaisir de jeu. Conçu spécialement pour une utilisation extérieure, il résiste aux intempéries, UV et variations climatiques, tout en conservant ses performances et son esthétique. Son design élégant en fait un véritable élément décoratif pour terrasse, jardin ou espace premium. 👉 Idéal pour les particuliers exigeants ou les professionnels souhaitant offrir une expérience de jeu haut de gamme. ",
-    "image": ""
+    "image": "",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Premium",
+      "Matière": "Polyéthylène",
+      "Nombre de joueurs": "4",
+      "Barres": "Télescopiques",
+      "Garantie": "5 ans",
+      "Dimensions": "143 x 74 x 92 cm"
+    }
   },
   {
     "id": "ba-130",
@@ -20,7 +29,16 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "Le baby-foot Stella Home Outdoor est spécialement conçu pour une utilisation en extérieur toute l’année. Grâce à ses matériaux résistants aux intempéries (pluie, soleil, UV), il conserve ses performances et son esthétique dans le temps. Son design élégant en blanc s’intègre parfaitement dans un jardin, une terrasse ou au bord d’une piscine. Il offre également les sensations de jeu emblématiques Stella : balles sautées, jeu de tête et bandes latérales inclinées pour un gameplay dynamique et authe",
-    "image": "/images/products/baby-foot-stella-home-outdoor-modele-exterieur-ultra-resista-130.png"
+    "image": "/images/products/baby-foot-stella-home-outdoor-modele-exterieur-ultra-resista-130.png",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Standard",
+      "Matière": "Polyéthylène",
+      "Nombre de joueurs": "4",
+      "Barres": "Télescopiques",
+      "Garantie": "5 ans",
+      "Dimensions": "143 x 74 x 92 cm"
+    }
   },
   {
     "id": "ba-129",
@@ -31,7 +49,16 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "Le baby-foot Stella Champion Outdoor est un modèle haut de gamme conçu spécialement pour une utilisation en extérieur. Grâce à sa structure ultra résistante et ses matériaux de qualité professionnelle, il peut rester toute l’année sur une terrasse, dans un jardin ou un espace professionnel sans craindre les intempéries. Son design blanc moderne s’intègre parfaitement dans tous les environnements, tout en conservant l’ADN des baby-foot Stella : robustesse, sensations de jeu authentiques et précis",
-    "image": "/images/products/baby-foot-stella-champion-outdoor-modele-exterieur-premium-r-129.png"
+    "image": "/images/products/baby-foot-stella-champion-outdoor-modele-exterieur-premium-r-129.png",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Premium",
+      "Matière": "Polyéthylène",
+      "Nombre de joueurs": "4",
+      "Barres": "Télescopiques",
+      "Garantie": "5 ans",
+      "Dimensions": "143 x 74 x 92 cm"
+    }
   },
   {
     "id": "bi-42",
@@ -43,7 +70,17 @@
     "badge": "Premium",
     "rating": 4.7,
     "desc": "🏆 Le billard extérieur le plus haut de gamme\nLe Cornilleau Origin Outdoor représente le sommet du design et de la qualité chez Cornilleau.\n👉 C'est un produit pensé pour les clients qui veulent le meilleur, sans compromis.\n✔️ Design minimaliste ultra premium\n✔️ Finition haut de gamme (effet mobilier luxe)\n✔️ Fabriqué en France 🇫🇷 \n\n🌧️ Résistance extrême (extérieur toute l'année)\n✔️ Résiste pluie, UV, neige, humidité \n✔️ Structure acier ultra durable\n✔️ Garantie 5 ans + réparabilité 20 ans \n👉 Aucun entretien lourd → parfait extérieur permanent\n\n🎯 Qualité de jeu (niveau premium)\n✔️ Plateau HPL 12 mm → précision professionnelle \n✔️ Bandes caoutchouc naturel → rebond réaliste \n✔️ Pieds réglables → stabilité parfaite\n👉 Sensation proche billard intérieur haut de gamme\n\n🍽️ Fonction 2-EN-1 (ARGUMENT MASSIF 🔥)\n👉 Avec les plateaux (option) :\n➡️ devient une table à manger design pour 8–10 personnes \n✔️ terrasse\n✔️ villa moderne\n✔️ Airbnb haut de gamme\n\n⚙️ Caractéristiques techniques\n\nDimensions : 215 x 120 x 78 cm \n\nPoids : ≈ 110 kg \n\nStructure : acier + ardoise HPL\n\nUtilisation : intérieur & extérieur\n\nAccessoires inclus : queues, billes, triangle, craies, brosse \n\n⭐ Pourquoi choisir ce modèle ?\n\n✔️ Produit ultra luxe (image de marque maximale)\n\n✔️ 2-en-1 → énorme valeur perçue\n\n✔️ Design architecte (marché Allemagne 🔥🔥🔥)\n\n✔️ Très différenciant\n\n✔️ Produit \"coup de cœur premium\"",
-    "image": "/images/products/billard-cornilleau-origin-outdoor-luxe-absolu-table-2-en-1-d-42.png"
+    "image": "/images/products/billard-cornilleau-origin-outdoor-luxe-absolu-table-2-en-1-d-42.png",
+    "specs": {
+      "Usage": "Intérieur & Extérieur",
+      "Type": "Américain",
+      "Taille": "7 pieds",
+      "Matière du plateau": "Ardoise naturelle",
+      "Dimensions": "215 x 120 x 78 cm",
+      "Poids": "110 kg",
+      "Convertible": "Oui (table à manger)",
+      "Garantie": "5 ans + réparabilité 20 ans"
+    }
   },
   {
     "id": "bi-41",
@@ -54,7 +91,17 @@
     "stock": 10,
     "rating": 4.6,
     "desc": "🎨 Le billard extérieur le plus design du marché\nLe Cornilleau Hyphen Outdoor est un billard d'exception conçu pour allier design contemporain, performance et polyvalence.\n👉 C'est clairement un produit haut de gamme qui attire immédiatement l'attention.\n✔️ Design moderne et minimaliste (effet wow immédiat)\n✔️ Personnalisable (plus de 20 combinaisons de couleurs) \n✔️ Utilisation intérieur & extérieur\n\n🌧️ Résistance totale outdoor\n✔️ Résiste à la pluie, UV, neige et humidité \n✔️ Structure acier anticorrosion ultra durable \n✔️ Tapis déperlant et lavable \n👉 Tu peux le laisser dehors toute l'année sans problème.\n\n🎯 Qualité de jeu (niveau sérieux)\n✔️ Plateau HPL 12 mm → roulement précis \n✔️ Bandes caoutchouc naturel → rebond réaliste \n✔️ Pieds réglables → stabilité parfaite \n👉 Résultat : vrai billard, pas un gadget décoratif\n\n🍽️ Fonction 2-EN-1 (ARGUMENT MASSIF 🔥)\n👉 Avec les plateaux (option) :\n➡️ le billard devient une table à manger design pour 8–10 personnes \n✔️ idéal terrasse\n✔️ parfait Airbnb / villa\n✔️ énorme argument vente Allemagne\n\n🎁 Accessoires inclus\n✔️ 2 queues\n✔️ billes\n✔️ triangle + losange\n✔️ craies + brosse \n\n⭐ Pourquoi choisir ce modèle ?\n\n✔️ Produit ultra premium (image de marque)\n\n✔️ Design unique (différenciation totale)\n\n✔️ 2-en-1 → ultra pratique\n\n✔️ Résistance extérieure totale\n\n✔️ Produit \"coup de cœur\"",
-    "image": "/images/products/billard-cornilleau-hyphen-outdoor-design-premium-convertible-41.png"
+    "image": "/images/products/billard-cornilleau-hyphen-outdoor-design-premium-convertible-41.png",
+    "specs": {
+      "Usage": "Intérieur & Extérieur",
+      "Type": "Américain",
+      "Taille": "7 pieds",
+      "Matière du plateau": "HPL",
+      "Convertible": "Oui (table à manger)",
+      "Garantie": "5 ans",
+      "Dimensions": "234 x 122 cm",
+      "Poids": "~280 kg"
+    }
   },
   {
     "id": "bi-40",
@@ -66,7 +113,17 @@
     "badge": "Nouveau",
     "rating": 4.6,
     "desc": "🎯 Le billard extérieur qui devient une table design\nLe Cornilleau Classic In & Outdoor est bien plus qu'un billard :\n👉 il se transforme en table à manger élégante grâce à ses plateaux en option.\n➡️ C'est un produit ultra premium + ultra utile.\n✔️ Utilisation intérieur & extérieur\n✔️ Résistant aux chocs, pluie, UV et froid \n✔️ Convertible en table repas (argument clé 🔥) \n\n⚡ Qualité de jeu (très important)\n✔️ Plateau HPL 12 mm → roulement précis type billard pro \n✔️ Bandes en caoutchouc naturel → rebond réaliste \n✔️ Surface parfaitement plane + pieds réglables \n👉 Résultat : vraie expérience billard, pas gadget.\n\n⚙️ Caractéristiques techniques\n\nDimensions : 215 x 120 x 78 cm \n\nPoids : ≈ 102 kg \n\nStructure : acier + ardoise composite HPL \n\nRéglage pieds : 5 cm \n\nGarantie : 5 ans / réparabilité 20 ans \n\n🎁 Accessoires inclus\n✔️ 2 queues\n✔️ Jeu de billes\n✔️ Triangle + losange\n✔️ Craies + brosse\n➡️ Produit prêt à jouer directement \n\n⭐ Pourquoi choisir ce billard ?\n\n✔️ Produit ultra premium (image de marque)\n\n✔️ 2-en-1 (billard + table) → énorme argument\n\n✔️ Design moderne (marché Allemagne 🔥)\n\n✔️ Utilisable toute l'année\n\n✔️ Très différenciant sur ton site",
-    "image": "/images/products/billard-cornilleau-classic-in-outdoor-table-2-en-1-design-ex-40.png"
+    "image": "/images/products/billard-cornilleau-classic-in-outdoor-table-2-en-1-design-ex-40.png",
+    "specs": {
+      "Usage": "Intérieur & Extérieur",
+      "Type": "Américain",
+      "Taille": "7 pieds",
+      "Matière du plateau": "Ardoise naturelle",
+      "Dimensions": "215 x 120 x 78 cm",
+      "Poids": "102 kg",
+      "Convertible": "Oui (table à manger)",
+      "Garantie": "5 ans / réparabilité 20 ans"
+    }
   },
   {
     "id": "bi-123",
@@ -77,7 +134,17 @@
     "stock": 10,
     "rating": 4.7,
     "desc": "Le Garlando King 9FT est une table de billard haut de gamme conçue pour les joueurs exigeants, les salles de jeux, bars et établissements professionnels. Avec ses dimensions imposantes de 9 pieds, ce modèle offre une expérience de jeu proche des standards de compétition. Son plateau en ardoise monobloc garantit une précision exceptionnelle et une parfaite planéité, idéale pour les parties techniques. Sa structure ultra robuste, combinée à un système de monnayeur sécurisé, en fait une solution parfaite pour l'exploitation commerciale.",
-    "image": "/images/products/billard-americain-garlando-king-9ft-table-professionnelle-av-123.png"
+    "image": "/images/products/billard-americain-garlando-king-9ft-table-professionnelle-av-123.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Américain",
+      "Taille": "9 pieds",
+      "Matière du plateau": "Ardoise naturelle",
+      "Convertible": "Non",
+      "Garantie": "3 ans",
+      "Dimensions": "274 x 137 cm",
+      "Poids": "~400 kg"
+    }
   },
   {
     "id": "bi-124",
@@ -88,7 +155,17 @@
     "stock": 10,
     "rating": 4.7,
     "desc": "Le Garlando Consul 8 Pro est le plus grand modèle de la gamme Consul, avec des dimensions de 258 x 146 cm et une surface de jeu de 224 x 112 cm. Il est pensé pour les joueurs qui recherchent plus d'espace, plus de précision et de vraies sensations de jeu. Sa construction repose sur des matériaux solides, conçus pour offrir une bonne résistance aux rayures, au feu et à l'usure liée à un usage intensif. Le site officiel met aussi en avant son ardoise et son tissu de haute qualité, qui améliorent l'expérience de jeu.",
-    "image": "/images/products/billard-garlando-consul-8-pro-table-professionnelle-en-ardoi-124.png"
+    "image": "/images/products/billard-garlando-consul-8-pro-table-professionnelle-en-ardoi-124.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Américain",
+      "Taille": "8 pieds",
+      "Matière du plateau": "Ardoise naturelle",
+      "Dimensions": "258 x 146 cm",
+      "Convertible": "Non",
+      "Garantie": "3 ans",
+      "Poids": "~300 kg"
+    }
   },
   {
     "id": "bi-122",
@@ -100,7 +177,17 @@
     "badge": "Promo",
     "rating": 4.7,
     "desc": "Le billard Garlando Ambassador 6 ft est une table professionnelle haut de gamme conçue pour les environnements intensifs : bars, hôtels, salles de jeux ou usage privé premium. Doté d'une structure robuste avec finition effet acajou, ce billard allie élégance et performance. Sa surface de jeu en ardoise garantit une précision parfaite et un roulement fluide, comparable aux tables utilisées en compétition. Grâce à son système de monnayeur intégré, il est idéal pour une exploitation commerciale, tout en offrant une expérience de jeu premium.",
-    "image": "/images/products/billard-garlando-ambassador-6-ft-avec-monnayeur-table-profes-122.png"
+    "image": "/images/products/billard-garlando-ambassador-6-ft-avec-monnayeur-table-profes-122.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Américain",
+      "Taille": "6 pieds",
+      "Matière du plateau": "Ardoise naturelle",
+      "Convertible": "Non",
+      "Garantie": "3 ans",
+      "Dimensions": "183 x 91 cm",
+      "Poids": "~180 kg"
+    }
   },
   {
     "id": "bi-132",
@@ -112,7 +199,17 @@
     "badge": "Bestseller",
     "rating": 4.7,
     "desc": "La table de billard américain 7 pieds Rene Pierre est une table professionnelle conçue pour les joueurs exigeants. Son plateau en ardoise naturelle offre un jeu précis et fluide.\n⚡ Points forts\n✔️ Plateau ardoise naturelle 19 mm\n✔️ Structure massifs d'épiné\n✔️ Remise en place automatique\n✔️ Bandes élastiques K-66\n✔️ Fabrication française\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nTaille : 7 pieds (234 x 122 cm)\nPlateau : Ardoise 19 mm\nPoids : 280 kg\nGarantie : 5 ans",
-    "image": "/images/products/table-de-billard-americain-7-pieds.jpg"
+    "image": "/images/products/table-de-billard-americain-7-pieds.jpg",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Américain",
+      "Taille": "7 pieds",
+      "Matière du plateau": "Ardoise naturelle",
+      "Dimensions": "234 x 122 cm",
+      "Poids": "280 kg",
+      "Convertible": "Non",
+      "Garantie": "5 ans"
+    }
   },
   {
     "id": "bi-134",
@@ -123,7 +220,16 @@
     "stock": 10,
     "rating": 4.7,
     "desc": "La table de billard mixte pool snooker est une table polyvalente permettant de jouer à la fois au pool et au snooker. Un véritable double jeu pour les passionnés.\n⚡ Points forts\n✔️ Double usage : Pool & Snooker\n✔️ Plateau de compétition\n✔️ Conversion rapide du plateau\n✔️ Bandes K-66 professionnelles\n✔️ Inclinaisons réglables\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nTaille : 9 pieds (274 x 137 cm)\nPlateau : Ardoise 20 mm\nPoids : 400 kg\nNormes WPA",
-    "image": "/images/products/table-de-billard-mixte-pool-snooker.jpg"
+    "image": "/images/products/table-de-billard-mixte-pool-snooker.jpg",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Américain",
+      "Taille": "9 pieds",
+      "Matière du plateau": "Ardoise naturelle",
+      "Dimensions": "274 x 137 cm",
+      "Poids": "400 kg",
+      "Convertible": "Non"
+    }
   },
   {
     "id": "bi-125",
@@ -134,7 +240,17 @@
     "stock": 10,
     "rating": 4.7,
     "desc": "Le Garlando Miami Birch est un billard moderne et élégant conçu pour un usage polyvalent. Grâce à ses plaques de recouvrement incluses, il se transforme facilement en table à manger, ce qui en fait une solution idéale pour optimiser l'espace. Avec ses dimensions confortables (225 x 125 cm), il permet de jouer dans des conditions proches du billard classique tout en restant adapté à un usage domestique. Sa structure robuste en bois multicouche, combinée à un plateau de jeu en MDF haute qualité, garantit une excellente stabilité.",
-    "image": "/images/products/billard-garlando-miami-birch-table-2-en-1-convertible-billar-125.png"
+    "image": "/images/products/billard-garlando-miami-birch-table-2-en-1-convertible-billar-125.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Américain",
+      "Taille": "7 pieds",
+      "Matière du plateau": "MDF",
+      "Dimensions": "225 x 125 cm",
+      "Convertible": "Oui (table à manger)",
+      "Garantie": "3 ans",
+      "Poids": "~280 kg"
+    }
   },
   {
     "id": "bi-133",
@@ -145,7 +261,17 @@
     "stock": 10,
     "rating": 4.6,
     "desc": "La table de billard anglais 6 pieds offre un style classique et intemporel. Idéale pour les salons et jeux, elle combine esthétique et performance.\n⚡ Points forts\n✔️ Design classique élégant\n✔️ Plateau de qualité competition\n✔️ Bandes de rebond précises\n✔️ Pieds sculptés traditionnels\n✔️ Facile à déplacer sur roulettes\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nTaille : 6 pieds (183 x 91 cm)\nPoids : 180 kg\nStructure massif d'épiné\nGarantie : 3 ans",
-    "image": "/images/products/table-de-billard-anglais-6-pieds.jpg"
+    "image": "/images/products/table-de-billard-anglais-6-pieds.jpg",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Anglais",
+      "Taille": "6 pieds",
+      "Matière du plateau": "Ardoise",
+      "Dimensions": "183 x 91 cm",
+      "Poids": "180 kg",
+      "Convertible": "Non",
+      "Garantie": "3 ans"
+    }
   },
   {
     "id": "bi-126",
@@ -157,7 +283,17 @@
     "badge": "Promo",
     "rating": 4.7,
     "desc": "Le Garlando Las Vegas 7 est un billard américain au design classique inspiré des salles de jeux traditionnelles, avec une finition élégante en noyer et détails chromés. Conçu pour être robuste et polyvalent, il convient aussi bien à un usage domestique qu'à des environnements collectifs (bars, clubs, associations). Sa structure solide garantit une excellente stabilité, tandis que son tapis de jeu de qualité assure une expérience fluide et précise. 👉 Un modèle idéal pour ceux qui recherchent un billard fiable et élégant.",
-    "image": "/images/products/billard-americain-garlando-las-vegas-7-design-classique-noye-126.png"
+    "image": "/images/products/billard-americain-garlando-las-vegas-7-design-classique-noye-126.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Américain",
+      "Taille": "7 pieds",
+      "Matière du plateau": "Ardoise",
+      "Convertible": "Non",
+      "Garantie": "3 ans",
+      "Dimensions": "234 x 122 cm",
+      "Poids": "~280 kg"
+    }
   },
   {
     "id": "bi-128",
@@ -168,7 +304,17 @@
     "stock": 10,
     "rating": 4.7,
     "desc": "Le Garlando Virginia est un billard élégant et polyvalent conçu pour s'intégrer parfaitement dans votre intérieur. Grâce à son système convertible, il se transforme facilement en table à manger, vous permettant d'optimiser votre espace sans compromis sur le plaisir du jeu. Avec sa finition bois effet noyer et ses coins chromés, il apporte une touche moderne et raffinée à votre salon. Sa structure robuste et ses matériaux de qualité garantissent une excellente stabilité et un confort de jeu optimal.",
-    "image": "/images/products/billard-convertible-garlando-virginia-6-7-ft-table-de-billar-128.png"
+    "image": "/images/products/billard-convertible-garlando-virginia-6-7-ft-table-de-billar-128.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Américain",
+      "Taille": "7 pieds",
+      "Matière du plateau": "Ardoise",
+      "Convertible": "Oui (table à manger)",
+      "Garantie": "3 ans",
+      "Dimensions": "234 x 122 cm",
+      "Poids": "~280 kg"
+    }
   },
   {
     "id": "bi-127",
@@ -179,7 +325,17 @@
     "stock": 10,
     "rating": 4.7,
     "desc": "Le billard Garlando Chicago 4 est la solution idéale pour initier les enfants au billard tout en profitant de moments conviviaux en famille. Grâce à ses dimensions compactes, il s'intègre facilement dans les petits espaces tout en offrant de véritables sensations de jeu. Sa structure robuste en MDF garantit une excellente stabilité et une bonne durabilité dans le temps. Son tapis de jeu de qualité et ses bandes en caoutchouc assurent un rebond précis pour une expérience proche d'un billard classique.",
-    "image": "/images/products/billard-enfant-garlando-chicago-4-compact-familial-127.png"
+    "image": "/images/products/billard-enfant-garlando-chicago-4-compact-familial-127.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Américain",
+      "Taille": "4 pieds",
+      "Matière du plateau": "MDF",
+      "Convertible": "Non",
+      "Garantie": "3 ans",
+      "Dimensions": "122 x 66 cm",
+      "Poids": "~45 kg"
+    }
   },
   {
     "id": "bi-135",
@@ -191,7 +347,16 @@
     "badge": "Nouveau",
     "rating": 4.5,
     "desc": "Le mini billard de salon 4 pieds est la solution idéale pour les petits espaces. Compact et léger, il s'intègre facilement dans un salon, un bureau ou une chambre.\n⚡ Points forts\n✔️ Compact et pratique\n✔️ Mise en place rapide\n✔️ Plateau de jeu qualité\n✔️ Accessoires inclus\n✔️ Prix accessible\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nTaille : 4 pieds (122 x 66 cm)\nPoids : 45 kg\nPlateau : MDF 12 mm\nAccessoires : queues, boules, craie\nFacile à monter",
-    "image": "/images/products/mini-billard-de-salon-4-pieds.jpg"
+    "image": "/images/products/mini-billard-de-salon-4-pieds.jpg",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Américain",
+      "Taille": "4 pieds",
+      "Matière du plateau": "MDF",
+      "Dimensions": "122 x 66 cm",
+      "Poids": "45 kg",
+      "Convertible": "Non"
+    }
   },
   {
     "id": "ba-121",
@@ -202,7 +367,16 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "Le baby-foot Onyx Noir de René Pierre est bien plus qu’un simple jeu : c’est une véritable pièce de design haut de gamme. Conçu avec des matériaux innovants et une finition noir mat ultra élégante, il s’intègre parfaitement dans les intérieurs modernes tout en offrant une expérience de jeu digne des modèles professionnels. Grâce à son panneau Fenix nouvelle génération, ce baby-foot est résistant aux rayures, aux traces de doigts et aux taches. Son toucher doux et sa finition super mate en font u",
-    "image": "/images/products/baby-foot-rene-pierre-onyx-design-premium-qualite-profession-121.png"
+    "image": "/images/products/baby-foot-rene-pierre-onyx-design-premium-qualite-profession-121.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Premium",
+      "Matière": "Fenix",
+      "Nombre de joueurs": "4",
+      "Barres": "Télescopiques",
+      "Garantie": "5 ans",
+      "Dimensions": "145 x 76 x 93 cm"
+    }
   },
   {
     "id": "ba-120",
@@ -213,7 +387,16 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "Le baby-foot Sixties de René Pierre est une véritable pièce de décoration inspirée des années 60, combinant parfaitement style rétro et performance moderne. Avec ses lignes droites, ses finitions vintage et ses détails métalliques élégants, ce modèle rend hommage aux baby-foot emblématiques de l’époque tout en intégrant les standards actuels de qualité. Fabriqué en France, ce baby-foot offre une expérience de jeu fluide et dynamique grâce à ses barres télescopiques en acier chromé, ses joueurs e",
-    "image": "/images/products/baby-foot-rene-pierre-sixties-design-vintage-annees-60-style-120.png"
+    "image": "/images/products/baby-foot-rene-pierre-sixties-design-vintage-annees-60-style-120.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Premium",
+      "Matière": "Acier",
+      "Nombre de joueurs": "4",
+      "Barres": "Télescopiques",
+      "Garantie": "5 ans",
+      "Dimensions": "145 x 76 x 93 cm"
+    }
   },
   {
     "id": "ba-119",
@@ -224,7 +407,16 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "Le baby-foot Compétition René Pierre incarne l’authenticité du véritable baby-foot de café, revisité avec une finition moderne et élégante. Entièrement fabriqué en France, ce modèle haut de gamme est conçu en hêtre massif, garantissant une robustesse exceptionnelle et une stabilité parfaite, même lors des parties les plus intenses. Inspiré des modèles emblématiques présents dans les bars, il offre des sensations de jeu professionnelles grâce à ses barres télescopiques en acier chromé, ses joueur",
-    "image": "/images/products/baby-foot-competition-rene-pierre-modele-cafe-professionnel--119.png"
+    "image": "/images/products/baby-foot-competition-rene-pierre-modele-cafe-professionnel--119.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Compétition",
+      "Matière": "Hêtre massif",
+      "Nombre de joueurs": "4",
+      "Barres": "Télescopiques",
+      "Garantie": "5 ans",
+      "Dimensions": "145 x 76 x 93 cm"
+    }
   },
   {
     "id": "ba-118",
@@ -235,7 +427,16 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "Le baby-foot Club de René Pierre est une véritable référence inspirée des modèles de café, conçu pour offrir une expérience de jeu authentique à domicile. Alliant robustesse, précision et design moderne, ce baby-foot est parfait pour les passionnés comme pour un usage familial intensif. Grâce à sa fabrication française et ses matériaux de qualité, il garantit des sensations de jeu proches des tables professionnelles. Sa structure solide et ses finitions soignées en font également un élément déco",
-    "image": "/images/products/baby-foot-club-rene-pierre-style-cafe-professionnel-made-in--118.png"
+    "image": "/images/products/baby-foot-club-rene-pierre-style-cafe-professionnel-made-in--118.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Standard",
+      "Matière": "MDF",
+      "Nombre de joueurs": "4",
+      "Barres": "Télescopiques",
+      "Garantie": "5 ans",
+      "Dimensions": "145 x 76 x 93 cm"
+    }
   },
   {
     "id": "ba-117",
@@ -247,7 +448,16 @@
     "badge": "Promo",
     "rating": 4.8,
     "desc": "Le baby-foot Color Chêne Sablé de René Pierre est bien plus qu’un simple jeu : c’est une véritable pièce de décoration moderne qui s’intègre parfaitement dans un intérieur contemporain. Avec sa finition bois clair élégante et apaisante, il apporte une touche chaleureuse et design à votre espace tout en conservant les sensations authentiques du baby-foot de café. Ce modèle associe parfaitement esthétique haut de gamme et qualité de jeu professionnelle, fidèle au savoir-faire français depuis plus ",
-    "image": "/images/products/baby-foot-rene-pierre-color-chene-sable-design-moderne-fabri-117.png"
+    "image": "/images/products/baby-foot-rene-pierre-color-chene-sable-design-moderne-fabri-117.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Premium",
+      "Matière": "MDF",
+      "Nombre de joueurs": "4",
+      "Barres": "Télescopiques",
+      "Garantie": "5 ans",
+      "Dimensions": "145 x 76 x 93 cm"
+    }
   },
   {
     "id": "ba-116",
@@ -259,7 +469,16 @@
     "badge": "Promo",
     "rating": 4.8,
     "desc": "Plongez dans l’ambiance des cafés français avec le baby-foot Leader Châtaignier de René Pierre. Ce modèle emblématique allie design traditionnel, robustesse professionnelle et plaisir de jeu authentique. Avec sa finition bois châtaignier chaleureuse et ses pieds renforcés, il recrée parfaitement l’expérience du baby-foot de bistrot à domicile. Idéal pour les parties entre amis ou en famille, il offre précision, puissance et sensations réalistes. Fabriqué en France avec un savoir-faire reconnu, c",
-    "image": "/images/products/baby-foot-rene-pierre-leader-chataignier-style-cafe-authenti-116.png"
+    "image": "/images/products/baby-foot-rene-pierre-leader-chataignier-style-cafe-authenti-116.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Standard",
+      "Matière": "MDF",
+      "Nombre de joueurs": "4",
+      "Barres": "Télescopiques",
+      "Garantie": "5 ans",
+      "Dimensions": "145 x 76 x 93 cm"
+    }
   },
   {
     "id": "ba-115",
@@ -270,7 +489,16 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "Le baby-foot Match Noir de René Pierre incarne l’équilibre parfait entre design contemporain et sensations authentiques de café. Avec sa finition noire élégante et ses lignes modernes, il s’intègre aussi bien dans un salon design que dans un espace professionnel.Conçu pour offrir une expérience de jeu réaliste, ce baby-foot reprend les codes des modèles traditionnels de bistrot tout en apportant une touche esthétique premium. Sa robustesse et sa précision en font un choix idéal pour les amateurs",
-    "image": "/images/products/baby-foot-rene-pierre-match-noir-design-moderne-sensations-d-115.png"
+    "image": "/images/products/baby-foot-rene-pierre-match-noir-design-moderne-sensations-d-115.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Premium",
+      "Matière": "MDF",
+      "Nombre de joueurs": "4",
+      "Barres": "Télescopiques",
+      "Garantie": "5 ans",
+      "Dimensions": "145 x 76 x 93 cm"
+    }
   },
   {
     "id": "ba-114",
@@ -281,7 +509,16 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "Le baby-foot Color Noyer Vénice René Pierre est un modèle intérieur haut de gamme qui combine parfaitement design moderne et sensations de jeu authentiques. La marque le présente comme un véritable objet de décoration, conçu pour s’intégrer élégamment dans un salon ou une pièce de vie. Sa finition bois noyer Vénice apporte une touche chaleureuse et premium, tout en conservant l’ADN du baby-foot de café : tapis Gerflex, barres télescopiques en acier, joueurs en métal et une excellente stabilité. ",
-    "image": "/images/products/baby-foot-rene-pierre-color-noyer-venice-design-premium-bois-114.png"
+    "image": "/images/products/baby-foot-rene-pierre-color-noyer-venice-design-premium-bois-114.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Premium",
+      "Matière": "Acier",
+      "Nombre de joueurs": "4",
+      "Barres": "Télescopiques",
+      "Garantie": "5 ans",
+      "Dimensions": "145 x 76 x 93 cm"
+    }
   },
   {
     "id": "ba-113",
@@ -292,7 +529,16 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "Le baby-foot Tahiti 6 joueurs René Pierre est un modèle extérieur haut de gamme pensé pour les grands moments de convivialité. La fiche officielle le présente comme un baby-foot d’extérieur pour des moments d’été conviviaux, en version 6 joueurs, avec grande résistance aux intempéries et fabrication française. Son meuble est en polyéthylène haute densité, ce qui le rend imputrescible et résistant à l’eau, aux UV, aux insectes, ainsi qu’aux températures basses ou élevées. C’est donc un vrai produ",
-    "image": ""
+    "image": "",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Premium",
+      "Matière": "Polyéthylène",
+      "Nombre de joueurs": "6",
+      "Barres": "Télescopiques",
+      "Garantie": "5 ans",
+      "Dimensions": "150 x 80 x 95 cm"
+    }
   },
   {
     "id": "ba-112",
@@ -303,7 +549,16 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "Le baby-foot Bora Bora René Pierre est conçu pour une utilisation extérieure régulière. Son meuble en bois stratifié traité de 25 mm résiste : à l’humidité aux UV aux variations de température Ses barres télescopiques en acier chromé anticorrosion assurent sécurité et durabilité. 👉 Résultat : un baby-foot fiable, solide et durable pour le jardin ou la terrasse. ⚙️ CARACTÉRISTIQUES Structure : bois stratifié traité extérieur Pieds : acier laqué résine Barres : télescopiques 16 mm anticorrosion Jo",
-    "image": ""
+    "image": "",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Standard",
+      "Matière": "Acier",
+      "Nombre de joueurs": "4",
+      "Barres": "Télescopiques",
+      "Garantie": "5 ans",
+      "Dimensions": "150 x 80 x 95 cm"
+    }
   },
   {
     "id": "ba-111",
@@ -315,7 +570,16 @@
     "badge": "Promo",
     "rating": 4.6,
     "desc": "Le baby-foot Tahiti René Pierre est conçu pour une utilisation extérieure intensive. Son meuble en polyéthylène haute densité le rend totalement résistant : à la pluie aux UV aux variations de température aux insectes 👉 Résultat : un baby-foot que tu peux laisser dehors toute l’année. Ses barres en acier chromé et ses joueurs en métal offrent une excellente précision de jeu. ⚙️ CARACTÉRISTIQUES Matériau : polyéthylène haute densité Résistance : eau / UV / gel / chaleur Barres : acier triple chro",
-    "image": ""
+    "image": "",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Standard",
+      "Matière": "Polyéthylène",
+      "Nombre de joueurs": "4",
+      "Barres": "Télescopiques",
+      "Garantie": "5 ans",
+      "Dimensions": "150 x 80 x 95 cm"
+    }
   },
   {
     "id": "pi-110",
@@ -326,7 +590,17 @@
     "stock": 10,
     "rating": 4.6,
     "desc": "La TIBHAR Smash 28 Black Line est une table de compétition haut de gamme qui allie performance et design premium. Son plateau de 28 mm offre un rebond ultra précis, conforme aux standards ITTF. Son design noir élégant en fait une table unique, parfaite pour : clubs premium salles modernes installations haut de gamme 👉 Une table qui impressionne autant par son look que par ses performances. ⚙️ Caractéristiques techniques Plateau : 28 mm (compétition) Norme : ITTF (compétition officielle) Structur",
-    "image": ""
+    "image": "",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Compétition",
+      "Épaisseur du plateau": "28 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Oui",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~100 kg"
+    }
   },
   {
     "id": "pi-109",
@@ -337,7 +611,17 @@
     "stock": 10,
     "rating": 4.6,
     "desc": "La TIBHAR Smash 28 est une table haut de gamme conçue pour la compétition et l’entraînement intensif. Son plateau en bois de 28 mm offre un rebond extrêmement précis et rapide, proche des standards professionnels. Sa structure renforcée garantit une stabilité parfaite. 👉 Idéale pour : clubs compétitions joueurs avancés ⚙️ Caractéristiques techniques Plateau : 28 mm (niveau compétition) Norme : agréée ITTF Surface : bois haute densité traité polyester Cadre : acier renforcé A60 Mobilité : demi-ta",
-    "image": ""
+    "image": "",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Compétition",
+      "Épaisseur du plateau": "28 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Oui",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~100 kg"
+    }
   },
   {
     "id": "pi-108",
@@ -348,7 +632,17 @@
     "stock": 10,
     "rating": 4.6,
     "desc": "La TIBHAR 3000 est une table intérieure conçue pour un usage régulier à domicile. Son plateau en bois de 19 mm offre un rebond précis et agréable, idéal pour progresser tout en prenant du plaisir. Sa structure robuste assure une excellente stabilité. Facile à plier et à déplacer grâce à ses roulettes, elle permet également un entraînement en solo. 👉 Parfaite pour : maison salle de jeux entraînement régulier ⚙️ Caractéristiques techniques Plateau : 19 mm bois (indoor) Surface : panneau de particu",
-    "image": "/images/products/table-de-ping-pong-tibhar-3000-stable-precise-ideale-usage-r-108.png"
+    "image": "/images/products/table-de-ping-pong-tibhar-3000-stable-precise-ideale-usage-r-108.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "19 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~80 kg"
+    }
   },
   {
     "id": "ba-50",
@@ -360,7 +654,16 @@
     "badge": "Nouveau",
     "rating": 4.6,
     "desc": "Le baby-foot Leonhart Tournament ITSF est une référence mondiale dans le domaine du football de table. Conçu en Allemagne, ce modèle est utilisé dans les compétitions officielles et reconnu pour sa précision, sa stabilité et sa qualité de jeu exceptionnelle.\nAvec son poids de plus de 100 kg, cette table offre une stabilité parfaite, même lors des parties les plus intenses. Les barres professionnelles montées sur roulements à billes garantissent une fluidité de jeu incomparable.\nLes joueurs équilibrés avec tête lestée permettent un contrôle précis de la balle, tandis que les buts arrondis offrent des trajectoires plus dynamiques et réalistes. Ce baby-foot est conçu pour les passionnés exigeants, les clubs et les compétitions.\n👉 C’est tout simplement le baby-foot des champions du monde ⚙️ CARACTÉRISTIQUES TECHNIQUES\nTable homologuée ITSF (compétition officielle) \n\nDimensions : 143 x 74 x 92 cm \n\nPoids : env. 110 kg \n\nStructure ultra robuste (qualité professionnelle)\n\nBarres sortantes compétition avec roulements à billes\n\nJoueurs avec tête lestée (contrôle précis)\n\nButs arrondis pour effet de balle amélioré\n\nGardien avec mobilité avancée\n\nJeu rapide, fluide et précis\n\nFabrication allemande 🇩🇪",
-    "image": "/images/products/baby-foot-leonhart-tournament-itsf-table-professionnelle-hom-50.png"
+    "image": "/images/products/baby-foot-leonhart-tournament-itsf-table-professionnelle-hom-50.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Compétition",
+      "Matière": "MDF",
+      "Nombre de joueurs": "4",
+      "Barres": "Télescopiques",
+      "Dimensions": "143 x 74 x 92 cm",
+      "Garantie": "3 ans"
+    }
   },
   {
     "id": "ba-51",
@@ -372,7 +675,16 @@
     "badge": "Promo",
     "rating": 4.6,
     "desc": "Le baby-foot Leonhart Sport est une table haut de gamme conçue pour les joueurs souhaitant progresser et se rapprocher des sensations de compétition.\nFabriqué en Allemagne, ce modèle reprend l’ADN du célèbre Tournament ITSF, avec une qualité de fabrication exceptionnelle, mais dans une version plus accessible. Il offre une précision de jeu remarquable, idéale pour l’entraînement et les parties intensives.\nGrâce à sa structure robuste et ses composants professionnels, le Leonhart Sport garantit un jeu fluide, rapide et précis. C’est le choix parfait pour transformer votre maison en véritable espace de compétition.\n👉 Positionnement clé :\n\nentre loisir et compétition\n\nparfait pour progresser sérieusement\n\n👉 Comme le souligne Leonhart, c’est un modèle conçu pour “s’entraîner comme en compétition”⚙️ CARACTÉRISTIQUES TECHNIQUES\nFabrication allemande 🇩🇪\n\nStructure robuste et durable\n\nBarres professionnelles avec roulements (jeu fluide)\n\nJoueurs équilibrés (meilleur contrôle)\n\nSurface de jeu haute précision\n\nTable adaptée à un usage intensif\n\nIdéale pour entraînement régulier\n\nDesign moderne et premium\n\nVersion simplifiée du modèle Tournament\n\nConvient pour maison, club ou salle de jeu\n\n👉 Important :\n\nMoins équipé que le Tournament\n\nMais même qualité de base Leonhart",
-    "image": "/images/products/baby-foot-leonhart-sport-table-premium-pour-entra-nement-et--51.png"
+    "image": "/images/products/baby-foot-leonhart-sport-table-premium-pour-entra-nement-et--51.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Premium",
+      "Matière": "MDF",
+      "Nombre de joueurs": "4",
+      "Barres": "Télescopiques",
+      "Garantie": "3 ans",
+      "Dimensions": "143 x 74 x 92 cm"
+    }
   },
   {
     "id": "ba-52",
@@ -383,7 +695,16 @@
     "stock": 10,
     "rating": 4.7,
     "desc": "Le baby-foot Leonhart Soccer Home est conçu pour offrir une expérience de jeu premium à domicile, tout en conservant un design moderne et élégant parfaitement adapté à un salon ou une salle de jeu.\nInspiré des modèles professionnels Leonhart, il offre une jouabilité fluide et précise, idéale pour les parties en famille comme pour les joueurs exigeants. Sa construction robuste garantit une excellente stabilité et une durabilité optimale.\nCe modèle se distingue par sa polyvalence : il peut être utilisé aussi bien en intérieur qu’en extérieur (terrasse, jardin), grâce à sa surface résistante et ses matériaux de qualité.\n👉 C’est le baby-foot parfait pour :\n\nmaison moderne\n\nfamille\n\nusage régulier\n\ncompromis parfait entre loisir et qualité pro\n\n👉 Il combine esthétique + performance, ce qui en fait un choix idéal pour intégrer un baby-foot dans un espace de vie⚙️ CARACTÉRISTIQUES TECHNIQUES\nDimensions : 143 x 74 x 92 cm \n\nSurface de jeu : 120 x 68 cm \n\nUtilisation : intérieur + extérieur \n\nStructure robuste en MDF monobloc \n\nPieds en métal solides\n\nBarres télescopiques (sécurité enfants) \n\nPoignées ergonomiques antidérapantes \n\nJoueurs en plastique haute densité avec tête lestée \n\nJeu fluide et précis\n\nDesign moderne adapté salon",
-    "image": "/images/products/baby-foot-leonhart-soccer-home-table-premium-design-pour-mai-52.png"
+    "image": "/images/products/baby-foot-leonhart-soccer-home-table-premium-design-pour-mai-52.png",
+    "specs": {
+      "Usage": "Intérieur & Extérieur",
+      "Type": "Premium",
+      "Matière": "MDF",
+      "Nombre de joueurs": "4",
+      "Barres": "Télescopiques",
+      "Dimensions": "143 x 74 x 92 cm",
+      "Garantie": "3 ans"
+    }
   },
   {
     "id": "ba-53",
@@ -394,7 +715,17 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "Le baby-foot Leonhart S4P Sport Edition est une excellente porte d’entrée dans l’univers Leonhart, offrant une qualité de fabrication allemande à un prix plus accessible.\nConçu pour un usage familial et intensif, il reprend l’essentiel du savoir-faire des modèles professionnels : robustesse, stabilité et fluidité de jeu. Sa structure solide en MDF épais garantit une excellente résistance dans le temps, même lors d’une utilisation régulière.\nGrâce à ses barres en acier chromé et ses joueurs Leonhart, il offre une expérience de jeu précise et agréable, idéale pour les parties entre amis ou en famille.\n👉 C’est le baby-foot parfait pour :\n\nmaison\n\nclubs / MJC\n\nécoles\n\nusage intensif non compétitif\n\n👉 Il est considéré comme un excellent compromis entre loisir et qualité pro⚙️ CARACTÉRISTIQUES TECHNIQUES\nFabrication allemande 🇩🇪\n\nStructure MDF monobloc 31,5 mm (ultra solide) \n\nBarres sortantes en acier chromé \n\nJoueurs Leonhart (qualité premium) \n\nDimensions : 143 x 74 x 92 cm \n\nSurface de jeu : 111 x 68 cm \n\nPoids : 72 kg \n\nPieds métalliques avec hauteur réglable \n\nCompteurs de points intégrés\n\nRemise en jeu latérale\n\nLivré avec 4 balles",
-    "image": "/images/products/baby-foot-leonhart-s4p-sport-edition-table-robuste-premium-i-53.png"
+    "image": "/images/products/baby-foot-leonhart-s4p-sport-edition-table-robuste-premium-i-53.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Premium",
+      "Matière": "MDF",
+      "Nombre de joueurs": "4",
+      "Barres": "Télescopiques",
+      "Dimensions": "143 x 74 x 92 cm",
+      "Poids": "72 kg",
+      "Garantie": "3 ans"
+    }
   },
   {
     "id": "ba-54",
@@ -405,7 +736,17 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "Le baby-foot Leonhart Professional ITSF représente l’excellence absolue en matière de football de table. Conçu pour les compétitions officielles, il est utilisé comme table professionnelle de référence dans de nombreux tournois.\nSa structure ultra robuste et son poids élevé garantissent une stabilité parfaite, même lors des matchs les plus intenses. Les barres professionnelles plus légères permettent une vitesse de jeu exceptionnelle et un contrôle précis de la balle.\nCe modèle se distingue par un niveau de finition et de performance inégalé, offrant une expérience de jeu identique à celle des compétitions internationales.\n👉 C’est une table officielle de tournoi (ITSF) \n👉 Idéal pour :\n\nclubs professionnels\n\njoueurs avancés\n\ncompétitions\n\nentraînement intensif⚙️ CARACTÉRISTIQUES TECHNIQUES\nDimensions : 143 x 74 x 92 cm \n\nPoids : ≈ 120 kg (ultra stable) \n\nStructure : MDF mélaminé haute densité \n\nPieds en acier robustes\n\nBarres sortantes compétition (plus légères, plus rapides) \n\nJoueurs haute précision\n\nSurface de jeu : ≈ 111 x 68 cm \n\nLivré avec balles ITSF\n\nQualité allemande 🇩🇪\n\n👉 Particularité :\n\nGardien avec accès complet derrière le but → contrôle total",
-    "image": "/images/products/baby-foot-leonhart-professional-itsf-table-comp-tition-offic-54.png"
+    "image": "",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Compétition",
+      "Matière": "MDF",
+      "Nombre de joueurs": "4",
+      "Barres": "Télescopiques",
+      "Dimensions": "143 x 74 x 92 cm",
+      "Poids": "120 kg",
+      "Garantie": "3 ans"
+    }
   },
   {
     "id": "pi-100",
@@ -416,7 +757,17 @@
     "stock": 10,
     "rating": 4.6,
     "desc": "La JOOLA Aluterna est une table de ping-pong conçue pour l’extérieur, parfaite pour profiter du jeu en plein air.\nSon plateau en aluminium composite de 6 mm résiste aux intempéries tout en offrant un rebond agréable. Sa structure robuste assure une excellente stabilité.\nFacile à plier et à déplacer, elle permet également un entraînement en solo.\n👉 Idéale pour les jardins, terrasses et moments en famille.\n\n⚙️ Caractéristiques techniques\n\nPlateau : 6 mm aluminium composite (extérieur) \n\nRésistance : 100% intempéries (pluie, soleil) \n\nStructure : acier peint ultra robuste \n\nRoues : 4 roues verrouillables par moitié \n\nMode solo : oui (demi-table relevable) \n\nPieds réglables : oui (terrain irrégulier) \n\nDimensions : 274 x 152,5 x 76 cm \n\nPoids : ~67 kg \n\nUtilisation : extérieur",
-    "image": "/images/products/table-de-ping-pong-ext-rieure-joola-aluterna-r-sistante-aux--100.png"
+    "image": "/images/products/table-de-ping-pong-ext-rieure-joola-aluterna-r-sistante-aux--100.png",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "6 mm",
+      "Matière du plateau": "Aluminium composite",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "67 kg"
+    }
   },
   {
     "id": "pi-101",
@@ -427,7 +778,17 @@
     "stock": 10,
     "rating": 4.6,
     "desc": "La JOOLA Rally TL Outdoor est une table conçue pour jouer toute l’année en extérieur, quelles que soient les conditions.\nSon plateau en aluminium composite de 6 mm offre un rebond régulier et une excellente résistance aux intempéries. \nSa structure robuste et ses pieds réglables assurent une stabilité optimale, même sur un terrain irrégulier.\n👉 Idéale pour les jardins, terrasses, campings ou collectivités.\n\n⚙️ Caractéristiques techniques\n\nPlateau : 6 mm aluminium composite (outdoor) \n\nRésistance : intempéries (pluie, soleil, humidité) \n\nStructure : acier renforcé robuste \n\nPieds réglables : oui (terrain irrégulier) \n\nMode solo : oui (demi-table relevable) \n\nFilet : inclus et résistant aux intempéries \n\nMontage : ~15 minutes \n\nUtilisation : extérieur toute l’année",
-    "image": "/images/products/table-de-ping-pong-ext-rieure-joola-rally-tl-r-sistante-stab-101.png"
+    "image": "",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "6 mm",
+      "Matière du plateau": "Aluminium composite",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~67 kg"
+    }
   },
   {
     "id": "pi-102",
@@ -438,7 +799,17 @@
     "stock": 10,
     "rating": 4.7,
     "desc": "La JOOLA J500X Outdoor est une table extérieure haut de gamme conçue pour durer.\nSon plateau en aluminium composite résiste aux intempéries et garantit un rebond régulier. Elle peut être utilisée toute l’année, quelles que soient les conditions météo. \nSa structure renforcée assure une stabilité optimale, idéale pour un usage fréquent.\n👉 Parfaite pour les jardins, familles et utilisateurs exigeants.\n\n⚙️ Caractéristiques techniques\n\nPlateau : aluminium composite (outdoor) \n\nRésistance : pluie / soleil / humidité \n\nStructure : acier robuste renforcé \n\nSystème pliable : oui\n\nMode solo : oui\n\nRoues : mobilité facile\n\nUtilisation : extérieur toute l’année\n\nDimensions standard compétition : 274 x 152,5 x 76 cm",
-    "image": "/images/products/table-de-ping-pong-ext-rieure-joola-j500x-qualit-premium-r-s-102.png"
+    "image": "",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Premium",
+      "Épaisseur du plateau": "6 mm",
+      "Matière du plateau": "Aluminium composite",
+      "Norme ITTF": "Oui",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~67 kg"
+    }
   },
   {
     "id": "pi-103",
@@ -449,7 +820,17 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "La JOOLA Nova Pro combine design moderne et performance pour une utilisation extérieure optimale.\nSon plateau en aluminium composite de 6 mm garantit un rebond régulier et une résistance aux intempéries, idéal pour jouer toute l’année. \nSa structure robuste, ses roues et ses pieds réglables assurent une stabilité parfaite sur tous les terrains.\n👉 Une table parfaite pour allier style, plaisir et durabilité.\n\n⚙️ Caractéristiques techniques\n\nPlateau : 6 mm aluminium composite outdoor \n\nRésistance : pluie / soleil / humidité \n\nRoues : 8 grandes roulettes verrouillables \n\nMode solo : oui (demi-table relevable) \n\nPieds réglables : oui (terrain irrégulier) \n\nFilet : inclus et résistant aux intempéries \n\nUtilisation : extérieur toute l’année",
-    "image": "/images/products/table-de-ping-pong-ext-rieure-joola-nova-pro-design-moderne--103.png"
+    "image": "",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "6 mm",
+      "Matière du plateau": "Aluminium composite",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~67 kg"
+    }
   },
   {
     "id": "pi-104",
@@ -460,7 +841,17 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "La JOOLA Midsize FA est la solution idéale pour jouer au ping-pong même dans un espace réduit.\nSon format compact (152 cm) permet de l’utiliser facilement en intérieur sans avoir besoin d’une grande pièce. Elle se plie rapidement et se transporte comme une valise. \n👉 Parfaite pour :\n\nappartement\n\nbureau\n\nsalle de jeux\n\nmoments entre amis\n\n⚙️ Caractéristiques techniques\n\nFormat : table compacte (midsize) \n\nDimensions : ~152 x 76 x 71,5 cm \n\nPliable : oui (format valise) \n\nTransport : poignée intégrée \n\nMontage : ultra rapide\n\nUtilisation : intérieur uniquement\n\nDesign : moderne (noir / gris / accents orange)",
-    "image": "/images/products/table-de-ping-pong-joola-midsize-fa-compacte-pliable-id-ale--104.png"
+    "image": "",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "6 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "152 x 76 x 71,5 cm",
+      "Poids": "~67 kg"
+    }
   },
   {
     "id": "pi-105",
@@ -472,7 +863,17 @@
     "badge": "Promo",
     "rating": 4.6,
     "desc": "La TIBHAR 9000W est une table conçue pour un usage intensif en club, école ou compétition.\nElle offre un rebond précis et rapide, proche des standards professionnels. Sa structure robuste garantit une stabilité optimale même lors d’échanges intensifs.\n👉 Idéale pour les joueurs exigeants et les environnements professionnels.\n\n⚙️ Caractéristiques techniques (typique compétition)\n\nPlateau : 22 mm ou 25 mm (selon version)\n\nNorme : ITTF / compétition\n\nStructure : acier renforcé professionnel\n\nRoulettes : transport facile\n\nSystème pliable : oui\n\nUtilisation : intérieur\n\nNiveau : club / compétition\n\n💡 Les tables compétition ont souvent :\n\nrebond plus rapide\n\nmeilleure précision\n\ndurabilité élevée",
-    "image": "/images/products/table-de-ping-pong-tibhar-9000w-qualit-comp-tition-norme-itt-105.png"
+    "image": "",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Compétition",
+      "Épaisseur du plateau": "22 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Oui",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~80 kg"
+    }
   },
   {
     "id": "pi-106",
@@ -483,7 +884,17 @@
     "stock": 10,
     "rating": 4.6,
     "desc": "La TIBHAR 8000W est une table robuste et résistante aux intempéries, idéale pour un usage régulier.\nSon plateau en résine mélamine de 6 mm garantit un rebond régulier et une excellente durabilité. Sa structure en acier et ses grandes roues permettent une utilisation facile et stable.\n👉 Parfaite pour :\n\njardin\n\nécole\n\ncollectivités\n\nusage intensif\n\n👉 Conçue pour durer dans le temps. \n\n⚙️ Caractéristiques techniques\n\nPlateau : 6 mm mélamine (outdoor) \n\nRésistance : pluie / soleil / humidité \n\nStructure : acier renforcé\n\nRoues : 150 mm (grandes roues pro) \n\nPoids : ~80 kg \n\nSystème pliable : oui\n\nMode solo : oui\n\nPieds réglables : oui\n\nUtilisation : intérieur + extérieur",
-    "image": "/images/products/table-de-ping-pong-tibhar-8000w-r-sistante-polyvalente-int-r-106.png"
+    "image": "/images/products/table-de-ping-pong-tibhar-8000w-r-sistante-polyvalente-int-r-106.png",
+    "specs": {
+      "Usage": "Intérieur & Extérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "6 mm",
+      "Matière du plateau": "Résine mélamine",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Poids": "80 kg",
+      "Dimensions": "274 x 152,5 x 76 cm"
+    }
   },
   {
     "id": "pi-107",
@@ -494,7 +905,17 @@
     "stock": 10,
     "rating": 4.7,
     "desc": "La TIBHAR 6000W est une table de ping-pong ultra robuste conçue pour une installation permanente en extérieur.\nSon plateau en résine mélamine de 10 mm offre une excellente qualité de jeu tout en résistant aux intempéries. Sa structure massive avec filet en acier intégré garantit une durabilité exceptionnelle. \n👉 C’est l’alternative moderne aux tables en béton.\n\n⚙️ Caractéristiques techniques\n\nPlateau : 10 mm mélamine (très épais) \n\nRésistance : pluie / UV / humidité \n\nStructure : acier galvanisé thermolaqué \n\nFilet : acier intégré (anti-vandalisme) \n\nInstallation : fixe / ancrable au sol \n\nPoids : ~120 kg \n\nUtilisation : extérieur permanent",
-    "image": "/images/products/table-de-ping-pong-tibhar-6000w-ultra-robuste-fixe-id-ale-es-107.png"
+    "image": "",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "10 mm",
+      "Matière du plateau": "Résine mélamine",
+      "Norme ITTF": "Non",
+      "Pliable": "Non",
+      "Poids": "120 kg",
+      "Dimensions": "274 x 152,5 x 76 cm"
+    }
   },
   {
     "id": "pi-36",
@@ -505,7 +926,18 @@
     "stock": 10,
     "rating": 4.6,
     "desc": "🏆 Le haut niveau en extérieur\nLa Cornilleau 700X Outdoor est l’une des meilleures tables outdoor du marché, offrant une qualité de jeu proche d’une table de compétition.\n👉 On est ici sur un produit premium ultra complet.\n✔️ Plateau 8 mm → rebond exceptionnel (niveau quasi compétition) \n✔️ Encadrement 60 mm → stabilité maximale \n✔️ Revêtement MATTOP → anti-reflet (idéal soleil) \n✔️ Résistance totale intempéries (pluie, UV, froid) \n\n⚡ Équipements premium (gros point de vente)\n✔️ Compteurs de points intégrés \n✔️ Porte-gobelets rétractables \n✔️ Rangements raquettes + distributeur de balles \n✔️ Filet automatique réglable \n✔️ 16 points de verrouillage + 4 freins \n\n⚙️ Caractéristiques techniques\n\nPlateau : résine stratifiée 8 mm (haut niveau) \n\nEncadrement : 60 mm Aluzinc (ultra robuste) \n\nPoids : ≈ 90 kg \n\nUtilisation : extérieur intensif\n\nGarantie : 10 ans / réparabilité 20 ans \n\n⭐ Pourquoi choisir ce modèle ?\n\n✔️ Meilleure table outdoor loisir 🔥\n\n✔️ Sensation proche compétition\n\n✔️ Ultra complète (équipements)\n\n✔️ Produit premium qui valorise ton site\n\n✔️ Très forte valeur perçue",
-    "image": "/images/products/table-de-ping-pong-cornilleau-700x-outdoor-niveau-comp-titio-36.png"
+    "image": "",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Compétition",
+      "Épaisseur du plateau": "8 mm",
+      "Matière du plateau": "Résine stratifiée",
+      "Norme ITTF": "Oui",
+      "Pliable": "Oui",
+      "Poids": "90 kg",
+      "Garantie": "10 ans / réparabilité 20 ans",
+      "Dimensions": "274 x 152,5 x 76 cm"
+    }
   },
   {
     "id": "pi-37",
@@ -517,7 +949,18 @@
     "badge": "Promo",
     "rating": 4.7,
     "desc": "🎨 La table design qui fait la différence\nLa Cornilleau Black Code ID Outdoor est une table unique qui combine design moderne, personnalisation et robustesse outdoor.\n👉 C’est un modèle parfait pour les clients qui veulent un produit beau + performant.\n✔️ Plateau stratifié 5 mm → rebond adapté loisir avancé \n✔️ Encadrement 50 mm → excellente stabilité \n✔️ Design personnalisable (couleurs des éléments) \n✔️ Résistance totale aux intempéries + garantie 10 ans \n\n⚡ Points forts\n✔️ 16 points de verrouillage → sécurité maximale \n✔️ Filet rabattable réglable → pratique et compact \n✔️ Rangements intégrés (raquettes + balles) \n✔️ Pieds réglables → s’adapte à tous terrains \n✔️ Grandes roues → déplacement facile \n\n⚙️ Caractéristiques techniques\n\nPlateau : résine stratifiée 5 mm\n\nEncadrement : 50 mm Aluzinc\n\nUtilisation : extérieur (jardin, terrasse, Airbnb…)\n\nSécurité : 16 verrous + freins\n\nGarantie : 10 ans / réparabilité 20 ans \n\n⭐ Pourquoi choisir ce modèle ?\n\n✔️ Design moderne (gros argument marketing 🔥)\n\n✔️ Personnalisable → effet premium\n\n✔️ Idéal clients “maison moderne / villa”\n\n✔️ Très bon rapport style / prix\n\n✔️ Produit différenciant (moins banal que 300X)",
-    "image": "/images/products/table-de-ping-pong-cornilleau-black-code-id-outdoor-design-p-37.png"
+    "image": "",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Premium",
+      "Épaisseur du plateau": "5 mm",
+      "Matière du plateau": "Résine stratifiée",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Garantie": "10 ans",
+      "Dimensions": "152 x 76 x 71,5 cm",
+      "Poids": "~55 kg"
+    }
   },
   {
     "id": "pi-38",
@@ -528,7 +971,18 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "🌧️ La valeur sûre pour jouer en extérieur\nLa Cornilleau 200X Outdoor est une table conçue pour offrir fiabilité, simplicité et durabilité, idéale pour une utilisation régulière en extérieur.\n👉 C’est le choix parfait pour ceux qui veulent un bon produit sans monter trop en prix.\n✔️ Plateau 5 mm → bon rebond loisir \n✔️ Structure Aluzinc → anticorrosion ultra durable \n✔️ Résiste à la pluie, au soleil et au gel \n✔️ Garantie 10 ans → gros argument confiance \n\n⚡ Points forts\n✔️ Revêtement anti-reflet → jeu confortable en plein soleil \n✔️ 8 points de verrouillage → sécurité optimale \n✔️ 2 freins → stabilité pendant le jeu \n✔️ Pieds réglables → s’adapte à tous les terrains \n✔️ Rangement raquettes + balles intégré \n\n⚙️ Caractéristiques techniques\n\nPlateau : résine stratifiée 5 mm \n\nEncadrement : 40 mm Aluzinc \n\nUtilisation : extérieur (jardin, terrasse)\n\nRoues : doubles roues pour déplacement facile \n\nSécurité : 8 verrous\n\nGarantie : 10 ans / réparabilité 20 ans \n\n⭐ Pourquoi choisir ce modèle ?\n\n✔️ Excellent rapport qualité/prix 🔥\n\n✔️ Parfait pour usage régulier\n\n✔️ Très robuste extérieur\n\n✔️ Facile à vendre (marché Allemagne)\n\n✔️ Produit rassurant (marque Cornilleau leader)",
-    "image": "/images/products/table-de-ping-pong-cornilleau-200x-outdoor-fiable-r-sistante-38.png"
+    "image": "/images/products/table-de-ping-pong-cornilleau-200x-outdoor-fiable-r-sistante-38.png",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "5 mm",
+      "Matière du plateau": "Résine stratifiée",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Garantie": "10 ans → gros argument confiance",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~55 kg"
+    }
   },
   {
     "id": "pi-43",
@@ -540,7 +994,17 @@
     "badge": "Promo",
     "rating": 4.8,
     "desc": "🌧️ Une table extérieure simple et efficace\nLa Kettler Basic Outdoor est conçue pour une utilisation occasionnelle en extérieur, avec un excellent rapport qualité/prix.\n👉 Parfaite pour les familles ou les débutants.\n✔️ Plateau aluminium composite 4 mm → rebond loisir \n✔️ Résistance aux intempéries (pluie, soleil) \n✔️ Table pliable → gain de place \n✔️ Roues avec frein → déplacement facile \n\n⚡ Points forts\n✔️ Facile à utiliser\n✔️ Installation rapide\n✔️ Idéal enfants / famille\n✔️ Prix très attractif 🔥\n✔️ Bonne durabilité pour usage occasionnel\n\n⚙️ Caractéristiques techniques\n\nPlateau : 4 mm aluminium composite \n\nUtilisation : extérieur (jardin, terrasse)\n\nStructure : pliable\n\nPieds réglables\n\nRoues : transport facile\n\n👉 Rebond correct mais moins performant que Cornilleau 200X / 300X \n\n⭐ Pourquoi choisir ce modèle ?\n\n✔️ Prix d’entrée très compétitif\n\n✔️ Idéal pour débuter\n\n✔️ Parfait pour enfants\n\n✔️ Facile à vendre en Allemagne (prix 🔥)\n\n✔️ Produit d’appel",
-    "image": "/images/products/table-de-ping-pong-kettler-basic-outdoor-prix-accessible-id--43.png"
+    "image": "/images/products/table-de-ping-pong-kettler-basic-outdoor-prix-accessible-id--43.png",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "4 mm",
+      "Matière du plateau": "Aluminium composite",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~55 kg"
+    }
   },
   {
     "id": "pi-44",
@@ -551,7 +1015,17 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "🇩🇪 Qualité allemande & robustesse\nLa Kettler K5 Outdoor est une table conçue pour offrir une excellente durabilité et un bon niveau de jeu, idéale pour un usage régulier.\n👉 Positionnement parfait entre entrée et premium.\n✔️ Fabriquée en Allemagne 🇩🇪 \n✔️ Plateau mélaminé 5 mm → bon rebond \n✔️ Résistante à la pluie, UV et variations de température \n\n⚡ Points forts (TRÈS vendeur)\n✔️ Structure robuste (cadre 50 mm) \n✔️ Système de pliage sécurisé SMS \n✔️ 4 grandes roues doubles → déplacement facile \n✔️ Pieds réglables → stabilité parfaite même terrain irrégulier \n✔️ Support raquettes + balles intégré \n\n⚙️ Caractéristiques techniques\n\nPlateau : résine mélamine 5 mm \n\nEncadrement : 50 mm\n\nPoids : ≈ 59 kg \n\nUtilisation : extérieur / intérieur\n\nRoues : 4 doubles roues pivotantes\n\nSystème : pliage Smart Manual System (SMS)\n\n⭐ Pourquoi choisir ce modèle ?\n\n✔️ Meilleur que Basic Outdoor 🔥\n\n✔️ Très bon compromis prix / qualité\n\n✔️ Marque allemande reconnue\n\n✔️ Idéal famille + joueurs réguliers\n\n✔️ Très bon produit pour marché Allemagne\n\n👉 La K5 est clairement le produit à pousser après la Basic",
-    "image": "/images/products/table-de-ping-pong-kettler-k5-outdoor-robuste-stable-id-ale--44.png"
+    "image": "/images/products/table-de-ping-pong-kettler-k5-outdoor-robuste-stable-id-ale--44.png",
+    "specs": {
+      "Usage": "Intérieur & Extérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "5 mm",
+      "Matière du plateau": "Résine mélamine",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Poids": "59 kg",
+      "Dimensions": "274 x 152,5 x 76 cm"
+    }
   },
   {
     "id": "pi-45",
@@ -562,7 +1036,17 @@
     "stock": 10,
     "rating": 4.6,
     "desc": "La Kettler K15 Outdoor est une table de ping-pong haut de gamme conçue pour les joueurs exigeants, les familles, les hôtels, les espaces loisirs et les collectivités qui recherchent une table extérieure robuste, stable et durable. Fabriquée en Allemagne, elle est pensée pour offrir une excellente qualité de jeu tout en résistant aux intempéries, aux UV et aux variations de température. Son plateau en résine mélamine de 10 mm assure un rebond précis, tandis que sa structure renforcée garantit une très bonne stabilité pendant le jeu. Elle arrive prémontée, ce qui permet une mise en service rapide, sans montage complexe. \nGrâce à ses 4 roulettes pivotantes de 125 mm, dont 2 avec frein, la K15 peut être déplacée facilement puis immobilisée en toute sécurité. Son système de pliage SMS (Smart Manual System) permet d’ouvrir et de refermer la table de façon simple et fiable. Les pieds arrière sont réglables pour compenser les irrégularités du sol jusqu’à 25 mm, ce qui est très utile sur une terrasse, dans une cour ou dans un jardin. Le filet stationnaire de haute qualité est réglable en hauteur et résiste lui aussi aux conditions extérieures. \nCaractéristiques techniques \n\nTable de tennis de table outdoor, résistante aux intempéries\n\nTable prémontée, prête à jouer en quelques étapes\n\nPlateau en résine de mélamine de 10 mm\n\nSurface résistante à l’humidité\n\nDouble renforcement du plateau\n\nChâssis en tubes ronds 60 mm et 45 mm + tubes ovales 60 x 20 mm, avec revêtement par poudre\n\n4 roulettes de 125 mm, toutes pivotantes, dont 2 verrouillables\n\nCompensation des irrégularités du sol jusqu’à 25 mm\n\nPorte-balles intégré\n\nSystème de pliage SMS (Smart Manual System)\n\nDéverrouillage simultané des deux sécurités via barre de traction sous le plateau\n\nVerrouillage automatique en position de jeu et de rangement\n\nFilet stationnaire de haute qualité, réglable en hauteur\n\nDimensions du filet : env. 180 cm x 15,2 cm\n\nDimensions en position de jeu : 274 x 185 x 76 cm\n\nDimensions en position de rangement : 185 x 64 x 159 cm\n\nPoids : 113 kg\n\nFabrication : Made in Germany",
-    "image": "/images/products/table-de-ping-pong-ext-rieure-kettler-k15-outdoor-10-mm-pr-m-45.png"
+    "image": "/images/products/table-de-ping-pong-ext-rieure-kettler-k15-outdoor-10-mm-pr-m-45.png",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Premium",
+      "Épaisseur du plateau": "10 mm",
+      "Matière du plateau": "Résine mélamine",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "60 x 20 mm",
+      "Poids": "113 kg"
+    }
   },
   {
     "id": "pi-46",
@@ -573,7 +1057,17 @@
     "stock": 10,
     "rating": 4.6,
     "desc": "La table de ping-pong Kettler Eden Outdoor est conçue pour un usage intensif en extérieur, idéale pour les parcs, écoles, hôtels ou jardins privés recherchant une solution durable et sécurisée.\nContrairement aux tables classiques, ce modèle est fixe (non pliable) et peut être solidement ancré au sol, garantissant une stabilité maximale et une résistance exceptionnelle face à une utilisation fréquente ou au vandalisme.\nSon plateau en résine mélamine de 10 mm offre une excellente qualité de jeu tout en étant totalement résistant aux intempéries : pluie, UV et variations de température.\nSa structure en acier galvanisé avec revêtement poudré assure une longévité optimale, même dans des conditions extérieures extrêmes. \n👉 C’est une alternative premium aux tables en béton, avec un design moderne et une meilleure qualité de rebond.\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n🇫🇷 Français\n\nTable extérieure 100 % résistante aux intempéries\n\nModèle fixe (stationnaire, non pliable)\n\nPlateau en résine mélamine 10 mm\n\nRésistance à l’humidité, UV et variations climatiques\n\nStructure en acier galvanisé + revêtement poudre\n\nConstruction ultra robuste (usage intensif / public)\n\nPossibilité d’ancrage au sol pour sécurité maximale\n\nFilet métallique fixe anti-vandalisme\n\nSurface renforcée avec double structure\n\nDimensions : env. 274 x 152,5 x 76 cm \n\nLivraison en kit (montage requis)",
-    "image": "/images/products/table-de-ping-pong-ext-rieure-kettler-eden-fixe-ultra-r-sist-46.png"
+    "image": "/images/products/table-de-ping-pong-ext-rieure-kettler-eden-fixe-ultra-r-sist-46.png",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "10 mm",
+      "Matière du plateau": "Résine mélamine",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~90 kg"
+    }
   },
   {
     "id": "pi-47",
@@ -585,7 +1079,17 @@
     "badge": "Promo",
     "rating": 4.7,
     "desc": "La Kettler K5 Indoor est une table de ping-pong haut de gamme conçue pour une utilisation en intérieur, idéale pour les particuliers, les familles et les joueurs réguliers souhaitant une excellente qualité de jeu à domicile.\nSon plateau en bois spécial de 19 mm d’épaisseur garantit un rebond précis et une sensation proche des tables de compétition. Sa structure robuste en acier assure une stabilité optimale pendant le jeu, même lors des échanges intensifs.\nGrâce à son système de pliage intelligent, la table peut être rangée facilement sans prendre beaucoup de place. Elle est également équipée de roues pour un déplacement simple et sécurisé.\nLa fonction playback (entraînement solo) permet de relever une moitié de la table pour s’entraîner seul.\n👉 Parfaite pour :\n\nSous-sol / garage\n\nSalle de jeux\n\nUsage familial\n\nEntraînement régulier⚙️ CARACTÉRISTIQUES TECHNIQUES\nTable de ping-pong intérieure uniquement\n\nPlateau en bois spécial 19 mm (excellent rebond)\n\nSurface de jeu anti-reflets\n\nStructure en acier avec revêtement poudre\n\nCadre profilé 50 mm (stabilité renforcée)\n\n4 roues doubles pivotantes pour transport facile\n\nRoues avec revêtement caoutchouc\n\nSystème de pliage sécurisé (SMS / verrouillage automatique)\n\nDéverrouillage facile à une main\n\nFonction entraînement solo (playback)\n\nRéglage des pieds jusqu’à 30 mm (sol irrégulier)\n\nFilet inclus, réglable en hauteur\n\nSupport pour raquettes et balles\n\nDimensions : 274 x 152,5 x 76 cm\n\nDimensions pliée : env. 152,5 x 72 x 155 cm\n\nPoids : env. 60 – 75 kg\n\nFabrication allemande Kettler\n\n👉 ⚠️ Important :\n\nNon adaptée à l’extérieur\n\nSensible à l’humidité et aux UV",
-    "image": "/images/products/table-de-ping-pong-int-rieure-kettler-k5-indoor-pliable-19-m-47.png"
+    "image": "/images/products/table-de-ping-pong-int-rieure-kettler-k5-indoor-pliable-19-m-47.png",
+    "specs": {
+      "Usage": "Intérieur & Extérieur",
+      "Type": "Premium",
+      "Épaisseur du plateau": "19 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Oui",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~80 kg"
+    }
   },
   {
     "id": "pi-48",
@@ -596,7 +1100,17 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "La Kettler K1 Indoor est la table de ping-pong parfaite pour débuter ou jouer en famille à la maison. Conçue pour un usage intérieur, elle offre un excellent compromis entre prix, qualité et praticité.\nSon plateau en bois de 16 mm assure un rebond correct et agréable pour les joueurs occasionnels. Sa surface anti-reflets permet de jouer confortablement, même dans des pièces lumineuses.\nGrâce à son système de pliage simple et sécurisé, la table se range facilement après utilisation. Les roues intégrées permettent de la déplacer sans effort.\nLa fonction entraînement solo (playback) permet de relever une moitié de la table pour jouer seul.\n👉 Idéale pour :\n\nDébutants\n\nFamilles\n\nEnfants / adolescents\n\nUsage occasionnel⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nTable de ping-pong intérieure uniquement\n\nPlateau en bois 16 mm (niveau loisir)\n\nSurface anti-reflets (meilleur confort visuel)\n\nStructure acier avec revêtement poudre\n\nCadre profilé 36 mm\n\n4 roues doubles pivotantes pour transport facile\n\nSystème de pliage sécurisé avec verrouillage\n\nDéverrouillage simple (poignée rotative)\n\nFonction entraînement solo (playback)\n\nFilet inclus\n\nSupport pour raquettes et balles\n\nDimensions : 274 x 152,5 x 76 cm \n\nDimensions pliée : env. 155 x 165 x 74 cm \n\nPoids : env. 45 – 50 kg \n👉 ⚠️ Important :\n\nNon résistante à l’humidité\n\nUsage intérieur uniquement",
-    "image": "/images/products/table-de-ping-pong-int-rieure-kettler-k1-indoor-pliable-16-m-48.png"
+    "image": "/images/products/table-de-ping-pong-int-rieure-kettler-k1-indoor-pliable-16-m-48.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "16 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~90 kg"
+    }
   },
   {
     "id": "pi-55",
@@ -608,7 +1122,17 @@
     "badge": "Promo",
     "rating": 4.6,
     "desc": "La Sponeta S 5-73 E est une table de ping-pong extérieure de fabrication allemande, idéale pour les familles, les joueurs réguliers et les collectivités.\nConçue pour résister aux conditions extérieures, elle est équipée d’un plateau en résine mélamine de 6 mm, garantissant un bon rebond tout en étant totalement résistante à la pluie, au soleil et au gel.\nSon système de pliage sécurisé permet une utilisation simple et rapide, avec la possibilité de jouer en mode solo (playback). Grâce à ses roues pivotantes, elle se déplace facilement sur tous types de surfaces.\n👉 Parfaite pour :\n\njardin\n\nfamilles\n\nécoles / clubs\n\nusage régulier extérieur\n\n👉 Elle appartient à la gamme S5, destinée aux utilisateurs exigeants⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nTable outdoor (résistante aux intempéries) \n\nPlateau en résine mélamine 6 mm \n\nRevêtement anti-reflets \n\nCadre métallique 50 mm (haute stabilité) \n\nPieds acier galvanisé\n\n4 roues doubles pivotantes (128 mm) \n\nSystème de pliage sécurisé\n\nPosition jeu solo (playback) \n\nFilet inclus\n\nDimensions : 274 x 152,5 x 76 cm \n\nPoids : env. 68 – 75 kg \n\nPieds réglables (terrain irrégulier)",
-    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-s-5-73-e-6-mm-pliable--55.png"
+    "image": "",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "6 mm",
+      "Matière du plateau": "Résine mélamine",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~67 kg"
+    }
   },
   {
     "id": "pi-56",
@@ -620,7 +1144,17 @@
     "badge": "Promo",
     "rating": 4.6,
     "desc": "La Sponeta S 5-73 i est une table de ping-pong intérieure haut de gamme conçue pour offrir une excellente qualité de jeu à domicile, en club ou en milieu scolaire.\nContrairement aux modèles outdoor, elle est équipée d’un plateau en bois de 22 mm, offrant un rebond nettement supérieur et plus précis, idéal pour les joueurs exigeants et l’entraînement régulier.\nSa structure robuste et son cadre renforcé garantissent une grande stabilité, même lors de parties intensives. Grâce à son système de pliage sécurisé, elle est facile à ranger et permet également le jeu en solo (mode playback).\n👉 Parfaite pour :\n\nintérieur (maison / salle de jeu)\n\nclubs / écoles\n\njoueurs réguliers\n\nentraînement technique\n\n👉 Elle appartient à la gamme S5, conçue pour des exigences élevées⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : intérieur uniquement (non résistant météo) \n\nPlateau : bois aggloméré 22 mm (rebond élevé) \n\nCadre métallique : 50 mm (stabilité renforcée) \n\nDimensions : 274 x 152,5 x 76 cm (norme ITTF) \n\nPoids : ≈ 90 – 92 kg \n\nSystème de pliage sécurisé (SF1 + CTT) \n\nMode jeu solo (playback) \n\n4 roues pivotantes avec freins \n\nPieds réglables (jusqu’à 30 mm) \n\nPorte raquettes et balles intégré",
-    "image": "/images/products/table-de-ping-pong-int-rieure-sponeta-s-5-73-i-22-mm-pliable-56.png"
+    "image": "/images/products/table-de-ping-pong-int-rieure-sponeta-s-5-73-i-22-mm-pliable-56.png",
+    "specs": {
+      "Usage": "Intérieur & Extérieur",
+      "Type": "Compétition",
+      "Épaisseur du plateau": "22 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Oui",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~80 kg"
+    }
   },
   {
     "id": "pi-57",
@@ -632,7 +1166,17 @@
     "badge": "Promo",
     "rating": 4.7,
     "desc": "La Sponeta S 5-70 E est une table de ping-pong extérieure robuste conçue pour une utilisation régulière en famille, en club ou en collectivité.\nDotée d’un plateau en résine mélamine de 6 mm, elle offre un bon compromis entre qualité de jeu et résistance aux intempéries. Elle peut rester dehors toute l’année sans craindre la pluie, le soleil ou le gel.\nSon système de pliage sécurisé permet une manipulation simple, avec possibilité de jouer en solo (mode playback). Les roues pivotantes facilitent son déplacement même sur terrain irrégulier.\n👉 Idéale pour :\n\njardin\n\nfamilles\n\nécoles / clubs\n\nusage régulier extérieur\n\n👉 Elle fait partie de la gamme S5 → niveau exigeant loisir avancé⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : extérieur (100% résistant météo) \n\nPlateau : résine mélamine 6 mm \n\nCadre métallique : 50 mm (très stable) \n\nDimensions : 274 x 152,5 x 76 cm (norme officielle) \n\nPoids : ≈ 70 kg \n\n4 roues doubles pivotantes (128 mm) \n\nSystème de pliage sécurisé (SMS) \n\nMode jeu solo (playback) \n\nPorte raquettes et balles intégré \n\nPieds réglables (terrain irrégulier) \n\nFilet inclus",
-    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-s-5-70-e-6-mm-pliable--57.png"
+    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-s-5-70-e-6-mm-pliable--57.png",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "6 mm",
+      "Matière du plateau": "Résine mélamine",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "70 kg"
+    }
   },
   {
     "id": "pi-58",
@@ -643,7 +1187,17 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "La Sponeta S 4-70 E est une table de ping-pong extérieure conçue pour les joueurs réguliers recherchant un excellent rapport qualité/prix.Issue de la gamme S4, elle s’adresse aux utilisateurs ayant un niveau intermédiaire �� avancé, souhaitant une table robuste et durable pour un usage en extérieur.Son plateau en résine mélamine de 5 mm assure un bon rebond tout en étant parfaitement résistant aux intempéries (pluie, soleil, humidité).Grâce à son système de pliage sécurisé et sa position playback, elle permet aussi bien de jouer à deux que de s’entraîner seul.👉 Idéale pour :jardinfamillesjoueurs réguliersclubs amateurs👉 Positionnée comme :➡️ table outdoor performante à prix accessible⚙️ CARACTÉRISTIQUES TECHNIQUESUtilisation : extérieur (weatherproof)Plateau : résine mélamine 5 mmRevêtement anti-refletsCadre métallique : profil 50 mm (haute stabilité)Dimensions : 274 x 152,5 x 76 cm (norme officielle)Poids : ≈ 59 – 65 kg4 roues doubles pivotantes (Ø 128 mm)Système de pliage sécurisé SMSMode jeu solo (playback)Pieds réglables (jusqu’à 30 mm)Porte raquettes et balles intégréFilet inclus",
-    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-s-4-70-e-5-mm-pliable--58.png"
+    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-s-4-70-e-5-mm-pliable--58.png",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "5 mm",
+      "Matière du plateau": "Résine mélamine",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~55 kg"
+    }
   },
   {
     "id": "pi-59",
@@ -654,7 +1208,17 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "La Sponeta S 4-72 E est une table de ping-pong extérieure conçue pour les joueurs réguliers souhaitant une qualité supérieure à un prix maîtrisé.\nPositionnée au cœur de la gamme S4, elle offre un excellent compromis entre robustesse, stabilité et confort de jeu.\nSon plateau en résine mélamine de 5 mm assure une bonne qualité de rebond tout en garantissant une résistance totale aux intempéries (pluie, humidité, UV). \nSa structure renforcée avec cadre métallique de 50 mm améliore nettement la stabilité par rapport aux modèles d’entrée de gamme. \nGrâce à son système de pliage sécurisé et sa position playback, elle est parfaite pour jouer seul ou à plusieurs.\n👉 Idéale pour :\n\njardin\n\nfamilles exigeantes\n\njoueurs réguliers\n\nclubs amateurs\n\n👉 Positionnement :\n➡️ le meilleur équilibre S4 entre prix et performance⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : extérieur (100% résistant météo) \n\nPlateau : résine mélamine 5 mm \n\nCadre : profil métallique 50 mm (stabilité renforcée) \n\nDimensions : 274 x 152,5 x 76 cm (norme officielle) \n\nPoids : ≈ 59 – 65 kg \n\n4 roues doubles pivotantes (Ø 128 mm) \n\nStructure acier (tube carré 30 x 30 mm) \n\nSystème de pliage sécurisé (Compact / SMS) \n\nMode jeu solo (playback) \n\nPieds réglables (jusqu’à 30 mm) \n\nPorte raquettes et balles intégré \n\nFilet inclus",
-    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-s-4-72-e-5-mm-pliable--59.png"
+    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-s-4-72-e-5-mm-pliable--59.png",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "5 mm",
+      "Matière du plateau": "Résine mélamine",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~55 kg"
+    }
   },
   {
     "id": "pi-60",
@@ -665,7 +1229,17 @@
     "stock": 10,
     "rating": 4.6,
     "desc": "La Sponeta S 4-73 E est la version la plus avancée de la gamme S4, conçue pour les joueurs exigeants recherchant une table extérieure performante et durable.\nElle est équipée d’un plateau en résine mélamine de 5 mm, offrant un bon rebond tout en garantissant une résistance totale aux intempéries (pluie, UV, humidité). \nGrâce à son cadre métallique renforcé de 50 mm, elle offre une stabilité supérieure aux autres modèles S4, idéale pour un usage intensif. \nSon système de pliage sécurisé permet une manipulation simple, et le mode playback permet de s’entraîner seul efficacement.\n👉 Idéale pour :\n\njardin\n\nfamilles exigeantes\n\njoueurs réguliers\n\nclubs amateurs\n\n👉 Positionnement :\n➡️ le haut de gamme S4 outdoor (quasi niveau S5)⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : extérieur (100% weatherproof) \n\nPlateau : résine mélamine 5 mm \n\nRevêtement anti-reflets\n\nCadre : profil métallique 50 mm (ultra stable) \n\nDimensions : 274 x 152,5 x 76 cm (norme officielle) \n\nPoids : ≈ 59 – 66 kg \n\n4 roues doubles pivotantes (Ø 128 mm) \n\nSystème de pliage sécurisé SMS \n\nMode jeu solo (playback) \n\nPieds réglables (jusqu’à 30 mm) \n\nPorte raquettes et balles intégré \n\nFilet inclus",
-    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-s-4-73-e-5-mm-pliable--60.png"
+    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-s-4-73-e-5-mm-pliable--60.png",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Premium",
+      "Épaisseur du plateau": "5 mm",
+      "Matière du plateau": "Résine mélamine",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~55 kg"
+    }
   },
   {
     "id": "pi-61",
@@ -677,7 +1251,17 @@
     "badge": "Nouveau",
     "rating": 4.6,
     "desc": "La Sponeta S 4-73 i est une table de ping-pong intérieure haut de gamme conçue pour les joueurs réguliers souhaitant un excellent confort de jeu.\nContrairement aux modèles outdoor, elle est équipée d’un plateau en bois 3tecWOOD de 19 mm, offrant un rebond nettement supérieur et une sensation de jeu proche des tables de club. \nDestinée exclusivement à un usage intérieur, elle ne doit pas être exposée à l’humidité ou aux variations de température. \nGrâce à son système de pliage sécurisé et sa position playback, elle permet aussi bien les matchs à deux que l’entraînement individuel.\n👉 Idéale pour :\n\nintérieur (maison, garage, salle de jeu)\n\njoueurs réguliers\n\namateurs exigeants\n\nentraînement sérieux\n\n👉 Positionnement :\n➡️ la meilleure table indoor de la gamme S4⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : intérieur uniquement \n\nPlateau : bois 3tecWOOD 19 mm (meilleur rebond) \n\nCadre : profil métallique 50 mm (stabilité élevée) \n\nDimensions : 274 x 152,5 x 76 cm (norme officielle) \n\nStructure : acier avec revêtement poudré \n\n4 roues doubles pivotantes (Ø 128 mm) \n\nSystème de pliage sécurisé (Compact / SMS) \n\nMode jeu solo (playback) \n\nPieds réglables (jusqu’à 30 mm) \n\nPorte raquettes et balles intégré",
-    "image": "/images/products/table-de-ping-pong-int-rieure-sponeta-s-4-73-i-19-mm-pliable-61.png"
+    "image": "/images/products/table-de-ping-pong-int-rieure-sponeta-s-4-73-i-19-mm-pliable-61.png",
+    "specs": {
+      "Usage": "Intérieur & Extérieur",
+      "Type": "Compétition",
+      "Épaisseur du plateau": "19 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Oui",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~80 kg"
+    }
   },
   {
     "id": "pi-62",
@@ -689,7 +1273,17 @@
     "badge": "Promo",
     "rating": 4.7,
     "desc": "La Sponeta S 6-12 i est une table de ping-pong intérieure haut de gamme conçue pour un usage intensif et un entraînement sérieux.\nElle appartient à la gamme S6, destinée aux joueurs réguliers, clubs amateurs et entraînements avancés.\nSon plateau en bois de 22 mm offre un rebond de très haute qualité, proche des tables de compétition, permettant un jeu fluide, rapide et précis. \nContrairement aux modèles S4, cette table est clairement orientée performance.\n👉 Idéale pour :\n\nentraînement intensif\n\njoueurs avancés\n\nclubs / associations\n\nsalles de sport\n\n👉 Positionnement :\n➡️ niveau pré-compétition / entraînement sérieux⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : intérieur uniquement \n\nPlateau : bois 22 mm (très haut niveau de rebond) \n\nCadre : profil métallique 40 mm (très stable) \n\nDimensions : 274 x 152,5 x 76 cm (norme officielle) \n\nStructure acier renforcée\n\nSystème pliable semi-compact\n\nMode jeu solo (playback) \n\n4 roues pivotantes (dont 2 avec frein) \n\nPieds réglables (jusqu’à 30 mm) \n\nHaute stabilité avec connecteurs de plateau",
-    "image": "/images/products/table-de-ping-pong-int-rieure-sponeta-s-6-12-i-22-mm-entra-n-62.png"
+    "image": "/images/products/table-de-ping-pong-int-rieure-sponeta-s-6-12-i-22-mm-entra-n-62.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Compétition",
+      "Épaisseur du plateau": "22 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Oui",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~80 kg"
+    }
   },
   {
     "id": "pi-63",
@@ -700,7 +1294,17 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "La Sponeta S 6-52 i est une table de ping-pong indoor haut de gamme conçue pour un usage intensif et des performances proches du niveau club.\nElle se distingue par un plateau en bois 22 mm, offrant un rebond précis et puissant, idéal pour un jeu rapide et technique. \nSon véritable point fort est sa structure renforcée avec cadre 60 mm, beaucoup plus rigide que les modèles classiques, garantissant une stabilité exceptionnelle même lors d’échanges intensifs. \n👉 Idéale pour :\n\njoueurs avancés\n\nentraînement régulier\n\nclubs et associations\n\nutilisation intensive\n\n👉 Positionnement :\n➡️ une des tables les plus stables de la gamme Sponeta indoor⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : intérieur uniquement \n\nPlateau : bois 22 mm (rebond haut niveau) \n\nCadre : profil 60 mm (ultra stable) \n\nDimensions : 274 x 152,5 x 76 cm (norme officielle) \n\nStructure acier renforcée\n\n4 roues pivotantes (dont 2 avec frein) \n\nPieds réglables jusqu’à 30 mm \n\nSystème pliable semi-compact\n\nMode entraînement solo (playback) \n\nInstallation rapide (~15 min)",
-    "image": "/images/products/table-de-ping-pong-int-rieure-sponeta-s-6-52-i-22-mm-ultra-s-63.png"
+    "image": "/images/products/table-de-ping-pong-int-rieure-sponeta-s-6-52-i-22-mm-ultra-s-63.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Premium",
+      "Épaisseur du plateau": "22 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~80 kg"
+    }
   },
   {
     "id": "pi-64",
@@ -711,7 +1315,17 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "La Sponeta S 6-66 e est une table de ping-pong extérieure haut de gamme conçue pour une utilisation intensive en extérieur toute l’année.\nElle est équipée d’un plateau en résine mélamine de 10 mm, offrant une excellente résistance aux intempéries (pluie, UV, humidité) ainsi qu’un rebond régulier. \nSa structure est spécialement renforcée pour offrir une stabilité exceptionnelle, avec un cadre métallique galvanisé et une double structure de renfort. \n���� Ce modèle est clairement conçu pour :\n\ncollectivités\n\nhôtels / campings\n\nécoles\n\nusage extérieur intensif\n\n👉 Positionnement :\n➡️ alternative haut de gamme aux tables béton (mais mobile)⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : extérieur (toute l’année) \n\nPlateau : résine mélamine 10 mm (ultra résistant) \n\nRésistance : pluie, UV, humidité\n\nCadre : profil 50 mm renforcé + structure double \n\nStructure : acier galvanisé + peinture poudre\n\nTrès haute stabilité\n\nDimensions : 274 x 152,5 x 76 cm (officiel)\n\nUtilisation intensive / professionnelle",
-    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-s-6-66-e-ultra-r-sista-64.png"
+    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-s-6-66-e-ultra-r-sista-64.png",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Compétition",
+      "Épaisseur du plateau": "10 mm",
+      "Matière du plateau": "Résine mélamine",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~90 kg"
+    }
   },
   {
     "id": "pi-65",
@@ -722,7 +1336,17 @@
     "stock": 10,
     "rating": 4.6,
     "desc": "La Sponeta S 6-80 e est une table de ping-pong extérieure professionnelle conçue pour une utilisation intensive dans les espaces publics.\nElle est équipée d’un plateau en résine mélamine de 10 mm, offrant une excellente résistance aux intempéries et un rebond constant même en extérieur. \nSa structure renforcée avec cadre galvanisé et double renfort assure une stabilité exceptionnelle, même en cas d’utilisation intensive. \n👉 Sa grande particularité :\n➡️ peut être fixée au sol (anti-vol / anti vandalisme) \n👉 Idéale pour :\n\nécoles\n\ncollectivités\n\nhôtels / campings\n\nespaces publics\n\njardins haut de gamme\n\n👉 Positionnement :\n➡️ alternative premium aux tables en béton (mais design + mobilité possible)⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : extérieur toute l’année \n\nPlateau : résine mélamine 10 mm (anti UV, pluie, gel) \n\nCadre : profil 50 mm + double renfort \n\nStructure : acier galvanisé thermolaqué\n\nFilet : acier galvanisé 4 mm (ultra robuste) \n\nFixation au sol possible (sécurité) \n\nDimensions : 274 x 152,5 x 76 cm (norme officielle) \n\nPoids : ≈ 123 kg (très lourd = stabilité max) \n\nUtilisation : intensive / professionnelle",
-    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-s-6-80-e-10-mm-65.png"
+    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-s-6-80-e-10-mm-65.png",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Compétition",
+      "Épaisseur du plateau": "10 mm",
+      "Matière du plateau": "Résine mélamine",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "123 kg"
+    }
   },
   {
     "id": "pi-66",
@@ -734,7 +1358,17 @@
     "badge": "Nouveau",
     "rating": 4.6,
     "desc": "La Sponeta S 2-72 e est une table de ping-pong extérieure conçue pour une utilisation familiale et loisir.\nElle offre un excellent compromis entre prix, robustesse et simplicité d’utilisation, parfaite pour les jardins, terrasses et espaces privés.\nSon plateau en résine mélamine de 4 mm résiste à l’humidité et permet de jouer en extérieur toute l’année. \nGrâce à sa structure compacte et pliable, elle se range facilement et peut être déplacée sans effort.\n👉 Idéale pour :\n\nparticuliers\n\nfamilles\n\ndébutants\n\nusage occasionnel\n\n👉 Positionnement :\n➡️ produit d’entrée de gamme → parfait pour générer du volume⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : extérieur (loisir) \n\nPlateau : résine mélamine 4 mm \n\nRésistance : humidité / usage extérieur modéré \n\nStructure : acier tubulaire 25 mm \n\nCadre : profil L-36 mm \n\nMobilité :\n\n4 roulettes doubles (dont 2 directionnelles) \n\nFonction : position solo (entraînement seul) \n\nAccessoires : porte raquettes et balles intégré",
-    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-s-2-72-e-66.png"
+    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-s-2-72-e-66.png",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "4 mm",
+      "Matière du plateau": "Résine mélamine",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~55 kg"
+    }
   },
   {
     "id": "pi-67",
@@ -745,7 +1379,17 @@
     "stock": 10,
     "rating": 4.7,
     "desc": "La Sponeta S 2-73 i est une table de ping-pong intérieure conçue pour une utilisation loisir à domicile.\nElle dispose d’un plateau en bois aggloméré de 19 mm, offrant un bon rebond pour les joueurs débutants et intermédiaires. \nSon système de pliage compact permet un rangement facile, idéal pour les espaces réduits.\n👉 Elle intègre également :\n\nun système de verrouillage sécurisé (SMS) \n\nune position playback pour jouer seul \n\nun support pour raquettes et balles\n\n👉 Idéale pour :\n\nusage intérieur\n\nfamilles\n\njoueurs occasionnels⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : intérieur \n\nPlateau : bois aggloméré 19 mm \n\nStructure : acier tubulaire 25 mm \n\nSystème : pliable (compact) \n\nRoues :\n\n4 doubles roulettes (Ø 125 mm) \n\nFonction : position solo\n\nFilet : fixe (reste monté)",
-    "image": "/images/products/table-de-ping-pong-int-rieure-sponeta-s-2-73-i-67.png"
+    "image": "/images/products/table-de-ping-pong-int-rieure-sponeta-s-2-73-i-67.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "19 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "152 x 76 x 71,5 cm",
+      "Poids": "~80 kg"
+    }
   },
   {
     "id": "pi-68",
@@ -756,7 +1400,17 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "La Sponeta SDL Black Indoor est une table de ping-pong haut de gamme issue de la Design Line, conçue pour les amateurs de produits élégants et performants.\nSon plateau en bois 22 mm 3tecWOOD premium offre un rebond de haute qualité, proche du niveau compétition. \nCe modèle se distingue par son design minimaliste noir et gris, avec des finitions modernes qui en font un véritable objet décoratif dans un intérieur contemporain. \n👉 Elle intègre également :\n\ntiroirs de rangement intégrés (raquettes + accessoires) \n\nsupport de balles discret\n\nsystème de verrouillage sécurisé (SMS)\n\nstructure renforcée avec pieds massifs\n\n👉 Idéale pour :\n\nintérieur haut de gamme\n\nmaisons modernes / loft\n\nclients premium\n\nhôtels / espaces design\n\n👉 Positionnement :\n➡️ table ping-pong = meuble design + sport 🔥⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : intérieur uniquement \n\nPlateau : bois 22 mm (3tecWOOD premium) \n\nDimensions : 274 x 152,5 x 76 cm \n\nStructure : acier renforcé (60 mm + 45 mm) \n\nRoues :\n\n4 roulettes pivotantes\n\n2 avec frein \n\nFonction playback (jeu solo) \n\nSystème pliable sécurisé (SMS) \n\nRangement intégré (raquettes + balles)",
-    "image": "/images/products/table-de-ping-pong-int-rieure-sponeta-sdl-black-design-premi-68.png"
+    "image": "/images/products/table-de-ping-pong-int-rieure-sponeta-sdl-black-design-premi-68.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Premium",
+      "Épaisseur du plateau": "22 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Oui",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~80 kg"
+    }
   },
   {
     "id": "pi-69",
@@ -767,7 +1421,17 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "La Sponeta SDL Black Outdoor est une table de ping-pong haut de gamme qui allie design moderne et performance professionnelle.\nFabriquée en Allemagne, elle garantit robustesse, stabilité et durabilité exceptionnelle.\nSon plateau en résine mélamine de 10 mm assure un excellent rebond et une résistance totale aux intempéries (pluie, soleil, gel). \nGrâce au système de pliage sécurisé SMS, la table est facile à utiliser et à ranger. Elle est également livrée prémontée pour une mise en service rapide. \nSon design noir élégant en fait un véritable élément premium pour votre extérieur.\n\n🔧 Caractéristiques techniques :\n\nPlateau extérieur résistant (10 mm)\n\nSurface anti-reflet\n\nStructure acier robuste (60 mm)\n\n4 roues pivotantes dont 2 avec frein\n\nPieds réglables (jusqu’à 25 mm)\n\nSystème de pliage sécurisé (SMS)\n\nRangement intégré (raquettes + balles)\n\nDimensions : 274 x 185 x 76 cm",
-    "image": "/images/products/table-de-ping-pong-sponeta-sdl-black-outdoor-design-premium--69.png"
+    "image": "/images/products/table-de-ping-pong-sponeta-sdl-black-outdoor-design-premium--69.png",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Premium",
+      "Épaisseur du plateau": "10 mm",
+      "Matière du plateau": "Résine mélamine",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 185 x 76 cm",
+      "Poids": "~90 kg"
+    }
   },
   {
     "id": "pi-70",
@@ -779,7 +1443,17 @@
     "badge": "Promo",
     "rating": 4.6,
     "desc": "Découvrez une expérience de jeu exceptionnelle avec la Sponeta SDL PRO Indoor 273-9800-L, conçue pour les joueurs exigeants et les passionnés de ping-pong.Son plateau de 25 mm offre un rebond ultra précis, comparable aux tables utilisées en compétition. Sa structure robuste garantit une stabilité parfaite, même lors de parties intensives.Son système pliable permet un rangement facile et la possibilité de s’entraîner seul.👉 Pourquoi choisir ce modèle ?✔ Qualité de jeu professionnelle\n✔ Structure ultra stable\n✔ Design moderne et élégant\n✔ Facile à plier et déplacer\n✔ Idéal usage intensifUne table pensée pour la performance et le plaisir du jeu.⚙️ Caractéristiques techniques\n\nUtilisation : Intérieur uniquement\n\nÉpaisseur plateau : 25 mm (qualit�� compétition)\n\nCouleur : Bleu / Noir (selon version)\n\nCadre : Structure renforcée haute stabilité\n\nSystème pliable : Oui (position playback possible)\n\nRoues : Oui, avec système de verrouillage\n\nFilet : Inclus et réglable\n\nSécurité : Système de verrouillage automatique\n\nTransport : Facile grâce aux roulettes\n\nNiveau : Avancé à professionnel",
-    "image": "/images/products/table-de-ping-pong-int-rieure-sponeta-sdl-pro-plateau-25-mm--70.png"
+    "image": "/images/products/table-de-ping-pong-int-rieure-sponeta-sdl-pro-plateau-25-mm--70.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Compétition",
+      "Épaisseur du plateau": "25 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Oui",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~100 kg"
+    }
   },
   {
     "id": "pi-71",
@@ -790,7 +1464,17 @@
     "stock": 10,
     "rating": 4.6,
     "desc": "La Sponeta SDL RAW Indoor 273-9900-L est une table de ping-pong qui combine design haut de gamme et performance sportive.\nAvec sa finition grise moderne et son style épuré, elle s’intègre parfaitement dans un intérieur contemporain. Son plateau 22 mm assure un excellent rebond, idéal pour un jeu dynamique et précis.\nSa structure robuste et son système Smart Manual System (SMS) garantissent sécurité, stabilité et facilité d’utilisation.\n👉 Pourquoi choisir ce modèle ?\n✔ Design premium unique\n✔ Qualité de jeu proche compétition\n✔ Structure ultra stable\n✔ Mode entraînement solo\n✔ Fabrication allemande haut de gamme\nUn produit parfait pour allier sport et élégance.\n\n⚙️ Caractéristiques techniques\n\nUtilisation : Intérieur uniquement\n\nPlateau : 3tecWOOD premium – 22 mm \n\nCouleur : Gris design\n\nDimensions (jeu) : 274 x 185 x 76 cm \n\nDimensions pliée : 185 x 64 x 159 cm \n\nPoids : 104 kg \n\nStructure : Tubes acier renforcés (60 mm / 45 mm) \n\nRoues : 4 roues pivotantes avec freins \n\nSystème : SMS (Smart Manual System) \n\nFonction playback : Oui (entraînement solo) \n\nRangement : Porte-raquettes + balles intégré \n\nNiveau : Intermédiaire → avancé",
-    "image": "/images/products/table-de-ping-pong-sponeta-sdl-raw-indoor-dition-design-qual-71.png"
+    "image": "/images/products/table-de-ping-pong-sponeta-sdl-raw-indoor-dition-design-qual-71.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Compétition",
+      "Épaisseur du plateau": "22 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Oui",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 185 x 76 cm",
+      "Poids": "104 kg"
+    }
   },
   {
     "id": "pi-72",
@@ -801,7 +1485,17 @@
     "stock": 10,
     "rating": 4.7,
     "desc": "La Sponeta SDL RAW Outdoor 274-9900-L est une table de ping-pong extérieure haut de gamme qui allie design moderne et performance durable.\nSon plateau en résine de mélamine 10 mm, conçu pour résister aux intempéries, garantit une excellente qualité de jeu, même en extérieur. Sa surface anti-reflet permet de jouer confortablement même en plein soleil. \nSa structure robuste et ses finitions premium en font une table idéale pour une utilisation intensive dans un jardin, une terrasse ou un espace professionnel.\n👉 Pourquoi choisir ce modèle ?\n✔ Résistance totale aux intempéries\n✔ Design premium unique (édition RAW)\n✔ Structure ultra stable\n✔ Idéal usage extérieur intensif\n✔ Fabrication allemande\nLe choix parfait pour un extérieur élégant et sportif.\n\n⚙️ Caractéristiques techniques\n\nUtilisation : Extérieur (Outdoor)\n\nPlateau : Résine de mélamine 10 mm (weatherproof) \n\nSurface : Anti-reflet (jeu confortable au soleil) \n\nCouleur : Gris design (RAW Edition)\n\nStructure : Tubes acier renforcés (60 mm / 45 mm) \n\nRoues : 4 roues pivotantes (Ø 125 mm), 2 avec freins \n\nRéglage : Ajustement hauteur jusqu’à 25 mm \n\nSystème : SMS (Smart Manual System) \n\nFonction playback : Oui (entraînement solo) \n\nRangement : Porte-raquettes + balles intégré \n\nMontage : Livrée quasi montée",
-    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-sdl-raw-design-premium-72.png"
+    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-sdl-raw-design-premium-72.png",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Premium",
+      "Épaisseur du plateau": "10 mm",
+      "Matière du plateau": "Mélamine",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~90 kg"
+    }
   },
   {
     "id": "pi-73",
@@ -813,7 +1507,17 @@
     "badge": "Promo",
     "rating": 4.8,
     "desc": "La Sponeta S1-12e Outdoor est une table idéale pour découvrir le ping-pong en toute simplicité.\nGrâce à son plateau en résine mélamine 4 mm, elle résiste parfaitement aux conditions extérieures (pluie, humidité, soleil). \nFacile à plier et à déplacer, elle convient parfaitement pour une utilisation familiale dans le jardin ou sur une terrasse.\n👉 Parfaite pour :\n✔ Familles\n✔ Débutants\n✔ Loisirs en extérieur\n✔ Utilisation occasionnelle\nLe meilleur choix pour allier prix accessible et plaisir immédiat.\n\n⚙️ Caractéristiques techniques\n\nUtilisation : Extérieur\n\nPlateau : Résine mélamine 4 mm (weatherproof) \n\nCouleur : Vert\n\nStructure : Tubes acier Ø 25 mm\n\nCadre : Profil 36 mm\n\nRoues : 4 doubles roues (dont 2 pivotantes) \n\nSystème : Fermeture automatique sécurisée\n\nFonction playback : Oui (jeu solo) \n\nDimensions : 274 x 152,5 x 76 cm \n\nPoids : ~50 kg \n\nNiveau : Débutant / loisir",
-    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-s1-12e-id-ale-d-butant-73.png"
+    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-s1-12e-id-ale-d-butant-73.png",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "4 mm",
+      "Matière du plateau": "Résine mélamine",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "50 kg"
+    }
   },
   {
     "id": "pi-74",
@@ -825,7 +1529,17 @@
     "badge": "Promo",
     "rating": 4.8,
     "desc": "La Sponeta S1-13e Outdoor est une table parfaite pour un usage régulier en extérieur, avec un excellent compromis entre prix et qualité.\nSon plateau en résine mélamine 4 mm est conçu pour résister aux intempéries (pluie, UV, humidité), tout en offrant un rebond correct pour le loisir. \nSa structure renforcée assure une meilleure stabilité que les modèles d’entrée de gamme classiques, ce qui la rend idéale pour une utilisation familiale plus fréquente.\n👉 Pourquoi choisir ce modèle ?\n✔ Résistante aux intempéries\n✔ Plus stable que les modèles basiques\n✔ Facile à déplacer et ranger\n✔ Mode entraînement solo\n✔ Excellent rapport qualité/prix\nLe choix malin pour monter en gamme sans exploser le budget.\n\n⚙️ Caractéristiques techniques\n\nUtilisation : Extérieur\n\nPlateau : Résine mélamine 4 mm (weatherproof) \n\nCouleur : Bleu\n\nCadre : Profil métal 36 mm\n\nStructure : Tubes acier Ø 25 mm\n\nRoues : 4 doubles roues (Ø 125 mm), dont 2 pivotantes \n\nFonction playback : Oui (jeu solo) \n\nSystème de verrouillage : Automatique sécurisé\n\nDimensions : 274 x 152,5 x 76 cm \n\nPoids : ~47,5 kg \n\nNiveau : Débutant → loisir régulier",
-    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-s1-13e-stable-r-sistan-74.png"
+    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-s1-13e-stable-r-sistan-74.png",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "4 mm",
+      "Matière du plateau": "Résine mélamine",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "47,5 kg"
+    }
   },
   {
     "id": "pi-75",
@@ -836,7 +1550,17 @@
     "stock": 10,
     "rating": 4.6,
     "desc": "La Sponeta S1-26i Indoor est une table de ping-pong idéale pour une utilisation à domicile.\nConçue pour les espaces intérieurs (garage, salle de jeux, sous-sol), elle offre une surface de jeu adaptée au loisir. Son système pliable permet de la ranger facilement après utilisation.\n👉 Parfaite pour :\n✔ Débutants\n✔ Familles\n✔ Utilisation occasionnelle\n✔ Espaces intérieurs\nUn excellent choix pour jouer facilement à la maison.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : Intérieur uniquement \n\nPlateau : bois aggloméré (~16 mm typique gamme S1)\n\nNorme : EN 14468-1 \n\nStructure : acier\n\nRoues : oui (transport facile)\n\nSystème pliable : oui\n\nPlayback : oui (entraînement solo)\n\nNiveau : débutant / loisir",
-    "image": "/images/products/table-de-ping-pong-int-rieure-sponeta-s1-26i-compacte-et-id--75.png"
+    "image": "/images/products/table-de-ping-pong-int-rieure-sponeta-s1-26i-compacte-et-id--75.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "16 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~90 kg"
+    }
   },
   {
     "id": "pi-76",
@@ -848,7 +1572,17 @@
     "badge": "Promo",
     "rating": 4.6,
     "desc": "La Sponeta S1-52i Indoor est une excellente alternative aux modèles d’entrée de gamme, avec une meilleure stabilité et un confort de jeu supérieur.\nSa structure renforcée permet une utilisation plus régulière sans perte de stabilité. Son plateau intérieur offre un rebond adapté au loisir avancé.\nFacile à plier et �� déplacer, elle est idéale pour une utilisation dans un garage, une salle de jeux ou un sous-sol.\n👉 Pourquoi choisir ce modèle ?\n✔ Plus stable que S1-26i\n✔ Idéal usage régulier\n✔ Bonne qualité de jeu loisir\n✔ Facile à ranger\n✔ Excellent rapport qualité/prix\nLe choix parfait pour progresser sans passer au haut de gamme.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : Intérieur uniquement \n\nPlateau : bois aggloméré (~16 mm gamme S1)\n\nNorme : EN 14468-1 \n\nStructure : acier renforcé\n\nRoues : 4 roues (transport facile)\n\nSystème pliable : oui\n\nPlayback : oui (entraînement solo)\n\nNiveau : débutant → intermédiaire loisir",
-    "image": "/images/products/table-de-ping-pong-int-rieure-sponeta-s1-52i-plus-stable-pou-76.png"
+    "image": "/images/products/table-de-ping-pong-int-rieure-sponeta-s1-52i-plus-stable-pou-76.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Premium",
+      "Épaisseur du plateau": "16 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~90 kg"
+    }
   },
   {
     "id": "pi-77",
@@ -859,7 +1593,17 @@
     "stock": 10,
     "rating": 4.7,
     "desc": "La Sponeta S2-73e Outdoor est une table de ping-pong conçue pour une utilisation extérieure régulière avec un excellent équilibre entre prix et performance.\nSon plateau en résine mélamine 4 mm est résistant aux intempéries (pluie, UV, humidité) et offre un bon rebond pour le loisir. \nSa structure plus robuste que les modèles S1 garantit une meilleure stabilité, idéale pour jouer plus souvent.\n👉 Pourquoi choisir ce modèle ?\n✔ Résistante aux intempéries\n✔ Plus stable que gamme S1\n✔ Facile à déplacer et ranger\n✔ Mode entraînement solo\n✔ Excellent rapport qualité/prix\nLe choix parfait pour évoluer sans passer au haut de gamme.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : Extérieur (weatherproof) \n\nPlateau : Résine mélamine 4 mm \n\nCadre : profil métal 36 mm \n\nStructure : acier renforcé\n\nRoues : 4 doubles roues (Ø 125 mm) \n\nSystème : SMS (Smart Manual System) \n\nFonction playback : oui\n\nPoids : ~51 kg \n\nDimensions : standard compétition 274 x 152,5 x 76 cm \n\nAccessoires : support raquettes + balles intégré",
-    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-s2-73e-stable-r-sistan-77.png"
+    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-s2-73e-stable-r-sistan-77.png",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Compétition",
+      "Épaisseur du plateau": "4 mm",
+      "Matière du plateau": "Résine mélamine",
+      "Norme ITTF": "Oui",
+      "Pliable": "Oui",
+      "Poids": "51 kg",
+      "Dimensions": "274 x 152,5 x 76 cm"
+    }
   },
   {
     "id": "pi-78",
@@ -870,7 +1614,17 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "La Sponeta S3-46e Outdoor est une table idéale pour les joueurs qui souhaitent passer à un niveau supérieur en termes de stabilité et de qualité de jeu.\nSon plateau en résine mélamine 5 mm offre un meilleur rebond que les modèles d’entrée de gamme, tout en étant résistant aux intempéries (pluie, UV, humidité). \nSa structure renforcée garantit une excellente stabilité, même lors d’une utilisation régulière.\n👉 Pourquoi choisir ce modèle ?\n✔ Meilleure qualité de jeu\n✔ Plateau 5 mm plus performant\n✔ Résistante aux intempéries\n✔ Structure solide\n✔ Idéal usage régulier\nLe choix parfait pour évoluer dans le jeu.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : Extérieur (weatherproof)\n\nPlateau : Résine mélamine 5 mm \n\nCadre : Profil acier 36 mm\n\nStructure : Tubes acier 25x25 mm\n\nRoues : 4 doubles roues (Ø 125 mm)\n\nSystème : verrouillage automatique sécurisé\n\nPlayback : Oui (entraînement solo)\n\nDimensions : 274 x 152,5 x 76 cm (norme officielle) \n\nPoids : ~53 kg \n\nAccessoires : porte raquettes + balles",
-    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-s3-46e-qualit-sup-rieu-78.png"
+    "image": "",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "5 mm",
+      "Matière du plateau": "Résine mélamine",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "53 kg"
+    }
   },
   {
     "id": "pi-79",
@@ -882,7 +1636,17 @@
     "badge": "Promo",
     "rating": 4.8,
     "desc": "La Sponeta S3-72e Outdoor est une table conçue pour un usage intensif en extérieur, avec une stabilité nettement supérieure aux modèles classiques.\nSon plateau 5 mm en résine mélamine offre un rebond plus précis, tandis que sa structure plus lourde garantit une excellente tenue, même lors de parties dynamiques. \nRésistante aux intempéries, elle est idéale pour une installation permanente dans un jardin ou une terrasse.\n👉 Pourquoi choisir ce modèle ?\n✔ Qualité de jeu supérieure\n✔ Plateau 5 mm performant\n✔ Très grande stabilité\n✔ Résistante aux intempéries\n✔ Idéal usage intensif\nUne vraie table pour jouer sérieusement à domicile.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : Extérieur (weatherproof)\n\nPlateau : Résine mélamine 5 mm \n\nCadre : métal 36 mm\n\nStructure : acier renforcé\n\nPoids : ~69 kg (très stable) \n\nRoues : 4 doubles roues Ø125 mm \n\nPlayback : oui\n\nDimensions : 274 x 152,5 x 76 cm \n\nRangement : porte raquettes + balles",
-    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-s3-72e-stabilit-avanc--79.png"
+    "image": "",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "5 mm",
+      "Matière du plateau": "Résine mélamine",
+      "Norme ITTF": "Non",
+      "Pliable": "Non",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "69 kg"
+    }
   },
   {
     "id": "pi-80",
@@ -894,7 +1658,17 @@
     "badge": "Promo",
     "rating": 4.6,
     "desc": "La Sponeta S3-80e Outdoor est une table de ping-pong conçue pour les utilisateurs exigeants recherchant stabilité, durabilité et qualité de jeu supérieure.\nSon plateau en résine mélamine 5 mm offre un excellent rebond, tandis que sa structure renforcée garantit une stabilité optimale même lors d’une utilisation intensive. \nElle est entièrement résistante aux intempéries, ce qui la rend idéale pour une installation permanente en extérieur.\n👉 Pourquoi choisir ce modèle ?\n✔ Plateau 5 mm performant\n✔ Structure renforcée (très stable)\n✔ Résistance totale aux intempéries\n✔ Idéal usage intensif\n✔ Qualité allemande\nUn excellent choix pour jouer sérieusement à domicile.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : Extérieur (weatherproof)\n\nPlateau : Résine mélamine 5 mm \n\nCadre : profil acier 36 mm \n\nChâssis : structure renforcée (40 mm) \n\nRoues : 4 roues doubles Ø128 mm \n\nPoids : ~60 kg (très stable) \n\nSystème : SMS (sécurité + verrouillage) \n\nPlayback : oui\n\nDimensions : 274 x 152,5 x 76 cm \n\nRéglage hauteur : jusqu’à 30 mm (sol irrégulier)",
-    "image": "/images/products/table-de-ping-pong-ext-rieure-sponeta-s3-80e-stabilit-premiu-80.png"
+    "image": "",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Premium",
+      "Épaisseur du plateau": "5 mm",
+      "Matière du plateau": "Résine mélamine",
+      "Norme ITTF": "Non",
+      "Pliable": "Non",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "60 kg"
+    }
   },
   {
     "id": "pi-81",
@@ -905,7 +1679,17 @@
     "stock": 10,
     "rating": 4.6,
     "desc": "La Sponeta S3-80i Indoor est une table conçue pour les joueurs souhaitant une vraie qualité de jeu à domicile.\nSon plateau intérieur offre un rebond précis et fluide, bien supérieur aux modèles outdoor. Sa structure renforcée garantit une excellente stabilité, même lors d’un usage intensif.\n👉 Pourquoi choisir ce modèle ?\n✔ Qualité de jeu supérieure (indoor)\n✔ Très bonne stabilité\n✔ Idéal usage régulier à intensif\n✔ Mode entraînement solo\n✔ Parfait pour progresser\nUne table idéale pour jouer sérieusement à la maison.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : Intérieur uniquement \n\nPlateau : bois aggloméré (≈19 mm gamme S3)\n\nDimensions : 274 x 152,5 x 76 cm \n\nStructure : acier renforcé\n\nRoues : oui (transport facile)\n\nSystème : verrouillage sécurisé\n\nPlayback : oui\n\nNiveau : intermédiaire → avancé",
-    "image": "/images/products/table-de-ping-pong-int-rieure-sponeta-s3-80i-qualit-premium--81.png"
+    "image": "/images/products/table-de-ping-pong-int-rieure-sponeta-s3-80i-qualit-premium--81.png",
+    "specs": {
+      "Usage": "Intérieur & Extérieur",
+      "Type": "Premium",
+      "Épaisseur du plateau": "19 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~80 kg"
+    }
   },
   {
     "id": "pi-82",
@@ -916,7 +1700,17 @@
     "stock": 10,
     "rating": 4.7,
     "desc": "La Sponeta S7-12 Indoor est une table de ping-pong professionnelle conçue pour les compétitions officielles.\nSon plateau 25 mm offre un rebond parfait, identique aux standards utilisés en tournoi. Sa structure massive garantit une stabilité exceptionnelle, même lors de jeux intensifs.\n👉 Pourquoi choisir ce modèle ?\n✔ Norme ITTF (compétition)\n✔ Plateau 25 mm ultra performant\n✔ Stabilité maximale\n✔ Idéal clubs & joueurs exigeants\n✔ Qualité professionnelle\nUne table conçue pour la performance pure.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : Intérieur uniquement \n\nPlateau : 25 mm bois haute densité \n\nNorme : ITTF (compétition officielle) \n\nStructure : acier renforcé 60 x 40 mm \n\nPoids : ~110–120 kg (ultra stable) \n\nRoues : 4 roues Ø100 mm avec frein \n\nPlayback : oui\n\nDimensions : 274 x 152,5 x 76 cm (standard international)",
-    "image": "/images/products/table-de-ping-pong-sponeta-s7-12-qualit-comp-tition-ittf-25--82.png"
+    "image": "",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Compétition",
+      "Épaisseur du plateau": "25 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Oui",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~100 kg"
+    }
   },
   {
     "id": "pi-83",
@@ -927,7 +1721,17 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "La Sponeta S7-22 Indoor est une table de compétition conçue pour les clubs et les joueurs exigeants.\nSon plateau 25 mm garantit un rebond parfait, conforme aux standards utilisés en compétition. Sa structure robuste assure une excellente stabilité lors de jeux intensifs.\nSa conception compacte permet un rangement optimisé, idéale pour les salles ou clubs.\n👉 Pourquoi choisir ce modèle ?\n✔ Qualité compétition\n✔ Plateau 25 mm ultra performant\n✔ Très stable\n✔ Format compact (gain de place)\n✔ Idéal clubs & entraînement\nUne table professionnelle plus accessible que les modèles haut compétition.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : intérieur uniquement \n\nPlateau : 25 mm bois premium (3tecWOOD) \n\nNorme : EN 14468-1 \n\nNiveau : compétition\n\nStructure : acier 60x40 mm \n\nPoids : ~103 kg \n\nRoues : 2 par plateau (transport vertical) \n\nSystème : verrouillage sécurisé\n\nDimensions : 274 x 152,5 x 76 cm",
-    "image": "/images/products/table-de-ping-pong-sponeta-s7-22-qualit-comp-tition-compacte-83.png"
+    "image": "/images/products/table-de-ping-pong-sponeta-s7-22-qualit-comp-tition-compacte-83.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Compétition",
+      "Épaisseur du plateau": "25 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Oui",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "103 kg"
+    }
   },
   {
     "id": "pi-84",
@@ -938,7 +1742,17 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "La Sponeta S7-62 Indoor est une table de ping-pong professionnelle conçue pour la compétition.\nSon plateau 25 mm haute densité garantit un rebond parfait, conforme aux standards ITTF. Sa structure renforcée assure une stabilité exceptionnelle, même lors d’un jeu intensif. \nElle est idéale pour les clubs, les salles sportives et les joueurs avancés.\n👉 Pourquoi choisir ce modèle ?\n✔ Qualité compétition ITTF\n✔ Plateau 25 mm ultra performant\n✔ Stabilité maximale (110 kg+)\n✔ Réglage des pieds (sol irrégulier)\n✔ Usage intensif\nUne table conçue pour la performance pure.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : intérieur uniquement \n\nPlateau : 25 mm bois premium \n\nNorme : ITTF / EN 14468-1 \n\nCadre : profil acier 60 mm \n\nStructure : tubes 40x40 mm renforcés \n\nPoids : ~109–113 kg \n\nRoues : 4 roues Ø100 mm avec freins \n\nRéglage hauteur : jusqu’à 25 mm \n\nPlayback : oui\n\nDimensions : 274 x 152,5 x 76 cm",
-    "image": "/images/products/table-de-ping-pong-sponeta-s7-62-qualit-comp-tition-ittf-sta-84.png"
+    "image": "/images/products/table-de-ping-pong-sponeta-s7-62-qualit-comp-tition-ittf-sta-84.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Compétition",
+      "Épaisseur du plateau": "25 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Oui",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~100 kg"
+    }
   },
   {
     "id": "pi-85",
@@ -949,7 +1763,17 @@
     "stock": 10,
     "rating": 4.6,
     "desc": "La Sponeta S8-36 Indoor représente le plus haut niveau de performance chez Sponeta.\nSon plateau 25 mm garantit un rebond parfait, conforme aux exigences des compétitions internationales. Sa structure renforcée offre une stabilité exceptionnelle, même lors de matchs intensifs. \n👉 Pourquoi choisir ce modèle ?\n✔ Norme ITTF (compétition officielle)\n✔ Qualité de jeu professionnelle\n✔ Stabilité extrême (110 kg+)\n✔ Conçue pour clubs & tournois\n✔ Niveau international\nUne table conçue pour la performance ultime.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : intérieur uniquement \n\nPlateau : 25 mm bois haute densité \n\nCadre : profil acier 60 mm \n\nStructure : tubes 60x40 mm renforcés \n\nPoids : ~109 kg (ultra stable) \n\nRoues : Ø125 mm avec mobilité totale \n\nSystème : verrouillage + ressorts à gaz \n\nRéglage hauteur : jusqu’à 30 mm \n\nDimensions : 274 x 152,5 x 76 cm",
-    "image": "/images/products/table-de-ping-pong-sponeta-s8-36-qualit-comp-tition-mondiale-85.png"
+    "image": "",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Compétition",
+      "Épaisseur du plateau": "25 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Oui",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "109 kg"
+    }
   },
   {
     "id": "pi-86",
@@ -960,7 +1784,17 @@
     "stock": 10,
     "rating": 4.6,
     "desc": "La Sponeta S8-37W Indoor est une table de compétition haut de gamme conçue pour offrir performance et accessibilité.\nSon plateau 25 mm garantit un rebond parfait conforme aux standards internationaux. Sa conception permet également une utilisation adaptée aux personnes en fauteuil roulant, ce qui en fait un choix idéal pour clubs et structures inclusives.\n👉 Pourquoi choisir ce modèle ?\n✔ Norme ITTF (compétition officielle)\n✔ Plateau 25 mm ultra performant\n✔ Accessibilité fauteuil roulant\n✔ Stabilité extrême\n✔ Design compact & professionnel\nUne table élite, pensée pour tous.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : intérieur uniquement \n\nPlateau : 25 mm bois premium \n\nNorme : ITTF / EN 14468-1 \n\nStructure : acier 60 x 40 mm \n\nPoids : ~109–125 kg \n\nRoues : Ø125 mm avec freins \n\nSystème : vérins à gaz + verrouillage auto \n\nPlayback : oui\n\nDimensions : standard compétition (274 x 152,5 x 76 cm)",
-    "image": "/images/products/table-de-ping-pong-sponeta-s8-37w-comp-tition-ittf-accessibi-86.png"
+    "image": "",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Compétition",
+      "Épaisseur du plateau": "25 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Oui",
+      "Pliable": "Oui",
+      "Dimensions": "60 x 40 mm",
+      "Poids": "~100 kg"
+    }
   },
   {
     "id": "pi-87",
@@ -972,7 +1806,17 @@
     "badge": "Promo",
     "rating": 4.7,
     "desc": "La Garlando Garden Outdoor est une table de ping-pong conçue pour un usage intensif en extérieur.\nSa structure extrêmement robuste et son système d’ancrage au sol la rendent idéale pour les lieux publics et collectifs. \n👉 Pourquoi choisir ce modèle ?\n✔ Ultra stable (118 kg)\n✔ Résistance extrême aux intempéries\n✔ Anti-vol / fixation au sol\n✔ Plateau 6 mm durable\n✔ Idéal collectivités\nUne table conçue pour durer des années sans compromis.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : extérieur intensif\n\nPlateau : résine stratifiée 6 mm \n\nCadre : acier 50 mm\n\nStructure : acier renforcé\n\nPoids : 118 kg \n\nDimensions : 274 x 152,5 x 76 cm \n\nFilet : fixe en métal (anti-vandalisme) \n\nFixation : ancrage au sol \n\nNorme : EN 14468-1 Classe B",
-    "image": "/images/products/table-de-ping-pong-garlando-garden-outdoor-ultra-robuste-usa-87.png"
+    "image": "",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "6 mm",
+      "Matière du plateau": "Résine stratifiée",
+      "Norme ITTF": "Non",
+      "Pliable": "Non",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "118 kg"
+    }
   },
   {
     "id": "pi-88",
@@ -984,7 +1828,17 @@
     "badge": "Meilleure Vente",
     "rating": 4.8,
     "desc": "La Garlando Premium Outdoor est une table de ping-pong conçue pour un usage intensif en extérieur, avec un excellent compromis entre performance et praticité.\nSon plateau 6 mm en résine stratifiée offre un bon rebond pour une table outdoor, tandis que sa structure renforcée garantit stabilité et durabilité. \nGrâce à son système ECS ergonomique, elle se plie et se déplie facilement, ce qui la rend idéale pour un usage domestique ou semi-professionnel.\n👉 Pourquoi choisir ce modèle ?\n✔ Bonne qualité de jeu outdoor\n✔ Table pliable et facile à déplacer\n✔ Structure robuste\n✔ Filet intégré réglable\n✔ Idéal usage intensif\nUne table premium pensée pour durer et jouer sérieusement en extérieur.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : extérieur\n\nPlateau : résine stratifiée 6 mm \n\nCadre : acier 50 mm \n\nDimensions : 274 x 152,5 x 76 cm (norme officielle) \n\nPoids : ~70 kg \n\nRoues : 4 doubles roues\n\nSystème : ECS (déverrouillage ergonomique) \n\nFilet : fixe réglable\n\nPliable : oui",
-    "image": "/images/products/table-de-ping-pong-garlando-premium-outdoor-haut-de-gamme-pl-88.png"
+    "image": "/images/products/table-de-ping-pong-garlando-premium-outdoor-haut-de-gamme-pl-88.png",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Premium",
+      "Épaisseur du plateau": "6 mm",
+      "Matière du plateau": "Résine stratifiée",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "70 kg"
+    }
   },
   {
     "id": "pi-89",
@@ -995,7 +1849,17 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "La Garlando Master Outdoor est une table de ping-pong extérieure idéale pour les joueurs réguliers recherchant un excellent compromis entre qualité et prix.\nSon plateau 4 mm en résine offre un bon niveau de jeu pour une utilisation en extérieur, tandis que sa structure robuste garantit stabilité et durabilité face aux intempéries. \nGrâce à son système SMS, elle se plie et se déplie facilement en toute sécurité.\n👉 Pourquoi choisir ce modèle ?\n✔ Bon rebond pour une table outdoor\n✔ Structure solide et stable\n✔ Facile à plier et déplacer\n✔ Résistante aux intempéries\n✔ Excellent rapport qualité/prix\nLa table idéale pour jouer régulièrement en extérieur sans se ruiner.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : extérieur\n\nPlateau : résine stratifiée 4 mm \n\nCadre : profil acier 36 mm \n\nStructure : tubes acier + double renfort \n\nPoids : ≈ 61 kg \n\nRoues : 4 roues doubles Ø125 mm \n\nSystème : SMS (Smart Manual System) \n\nDimensions : 274 x 152,5 x 76 cm \n\nFilet : fixe et réglable",
-    "image": "/images/products/table-de-ping-pong-garlando-master-outdoor-pliable-r-sistant-89.png"
+    "image": "/images/products/table-de-ping-pong-garlando-master-outdoor-pliable-r-sistant-89.png",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "4 mm",
+      "Matière du plateau": "Résine stratifiée",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "61 kg"
+    }
   },
   {
     "id": "pi-90",
@@ -1006,7 +1870,17 @@
     "stock": 10,
     "rating": 4.6,
     "desc": "La Garlando Training Outdoor est une table de ping-pong conçue pour un usage familial et occasionnel en extérieur.\nSon plateau 4 mm permet un bon confort de jeu pour les loisirs, tandis que sa structure pliable avec verrouillage automatique la rend très pratique à utiliser. \nElle permet également de s’entraîner seul en relevant un plateau, ce qui en fait un excellent choix pour progresser. \n👉 Pourquoi choisir ce modèle ?\n✔ Facile à utiliser et à ranger\n✔ Bonne qualité pour débuter\n✔ Utilisation extérieure\n✔ Fonction entraînement solo\n✔ Prix très accessible\nLa meilleure table pour commencer sans se ruiner.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : extérieur\n\nPlateau : résine stratifiée 4 mm \n\nCadre : profil acier 36 mm \n\nStructure : tubes acier 25 mm \n\nPoids : ≈ 52 kg \n\nRoues : 4 doubles roues Ø125 mm \n\nSystème : verrouillage automatique \n\nFilet : fixe\n\nDimensions : 274 x 152,5 x 76 cm",
-    "image": "/images/products/table-de-ping-pong-garlando-training-outdoor-id-ale-d-butant-90.png"
+    "image": "/images/products/table-de-ping-pong-garlando-training-outdoor-id-ale-d-butant-90.png",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "4 mm",
+      "Matière du plateau": "Résine stratifiée",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "52 kg"
+    }
   },
   {
     "id": "pi-91",
@@ -1017,7 +1891,17 @@
     "stock": 10,
     "rating": 4.6,
     "desc": "La Garlando Master Indoor est une table de ping-pong conçue pour les joueurs souhaitant progresser sérieusement.\nSon plateau 19 mm offre un excellent rebond, proche des tables utilisées en club, ce qui la rend idéale pour l’entraînement régulier. \nSa structure renforcée garantit une bonne stabilité, tandis que le système SMS permet un pliage simple et sécurisé. \n👉 Pourquoi choisir ce modèle ?\n✔ Excellent niveau de jeu indoor\n✔ Très bon rebond (19 mm)\n✔ Facile à plier et déplacer\n✔ Structure robuste\n✔ Idéal pour s’entraîner\nUne table parfaite pour progresser à domicile.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : intérieur\n\nPlateau : bois aggloméré 19 mm (melaminé) \n\nCadre : profil acier 36 mm \n\nStructure : tubes acier + double renfort \n\nPoids : ≈ 78 kg \n\nRoues : 4 doubles roues Ø125 mm \n\nSystème : SMS (Smart Manual System) \n\nDimensions : 274 x 152,5 x 76 cm (standard compétition) \n\nFilet : fixe et réglable",
-    "image": "/images/products/table-de-ping-pong-garlando-master-indoor-niveau-entra-nemen-91.png"
+    "image": "",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Compétition",
+      "Épaisseur du plateau": "19 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Oui",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "78 kg"
+    }
   },
   {
     "id": "pi-92",
@@ -1028,7 +1912,17 @@
     "stock": 10,
     "rating": 4.7,
     "desc": "La Garlando Advance Indoor est conçue pour les joueurs souhaitant un niveau de jeu supérieur à domicile.Son plateau 19 mm haute densité offre un excellent rebond, proche des conditions de club, tandis que sa structure renforcée assure une stabilité exceptionnelle. Grâce à son système SMS, elle se plie et se déplie facilement avec un maximum de sécurité. 👉 Pourquoi choisir ce modèle ?✔ Rebond précis et performant\n✔ Structure très stable\n✔ Idéal pour entraînement intensif\n✔ Facile à manipuler\n✔ Qualité proche compétitionLa table parfaite pour les joueurs exigeants.⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : intérieur\n\nPlateau : 19 mm aggloméré haute densité \n\nRevêtement : mélaminé anti-reflet \n\nCadre : acier 36 mm \n\nStructure : tubes acier + double renfort \n\nPoids : ≈ 75 kg \n\nRoues : 4 roues doubles Ø125 mm \n\nSystème : SMS (Smart Manual System) \n\nDimensions : 274 x 152,5 x 76 cm (officiel) \n\nFilet : fixe avec tension",
-    "image": "/images/products/table-de-ping-pong-garlando-advance-indoor-niveau-avanc-ultr-92.png"
+    "image": "/images/products/table-de-ping-pong-garlando-advance-indoor-niveau-avanc-ultr-92.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "19 mm",
+      "Matière du plateau": "Résine stratifiée",
+      "Norme ITTF": "Non",
+      "Pliable": "Non",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "75 kg"
+    }
   },
   {
     "id": "pi-93",
@@ -1040,7 +1934,17 @@
     "badge": "Nouveau",
     "rating": 4.8,
     "desc": "La JOOLA World Cup 25-S ITTF est une table de ping-pong conçue pour les compétitions et les joueurs exigeants.\nSon plateau 25 mm offre un rebond parfait, identique aux standards utilisés dans les tournois officiels. \nSa structure renforcée avec cadre métallique de 50 mm garantit une stabilité exceptionnelle même lors des échanges rapides. \n👉 Pourquoi choisir ce modèle ?\n✔ Qualité compétition ITTF\n✔ Rebond ultra précis\n✔ Structure extrêmement stable\n✔ Idéal clubs et entraînement intensif\n✔ Transport facile avec roulettes\nLa référence pour jouer comme un professionnel.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : intérieur\n\nPlateau : 25 mm MDF compétition \n\nCadre : acier 50 mm \n\nPoids : ≈ 110 kg \n\nDimensions : 274 x 152,5 x 76 cm \n\nRoues : 8 roulettes (avec freins) \n\nSystème : plateaux séparés (pro) \n\nSécurité : double anti-basculement \n\nNorme : EN 14468-1 Classe A (haut niveau)",
-    "image": "/images/products/table-de-ping-pong-joola-world-cup-25-s-ittf-niveau-comp-tit-93.png"
+    "image": "/images/products/table-de-ping-pong-joola-world-cup-25-s-ittf-niveau-comp-tit-93.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Compétition",
+      "Épaisseur du plateau": "25 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Oui",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "110 kg"
+    }
   },
   {
     "id": "pi-94",
@@ -1051,7 +1955,17 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "La JOOLA 3000 SC PRO est une table de ping-pong conçue pour les joueurs exigeants et les environnements professionnels.\nSon plateau 25 mm avec revêtement polyester spécial offre une vitesse de jeu exceptionnelle et un rebond ultra précis. \nSa structure renforcée avec cadre métallique épais garantit une stabilité parfaite, même lors des échanges rapides et intensifs. \n👉 Pourquoi choisir ce modèle ?\n✔ Qualité compétition ITTF\n✔ Rebond ultra rapide\n✔ Stabilité extrême\n✔ Idéal clubs et tournois\n✔ Système compact professionnel\nUne table conçue pour jouer au plus haut niveau.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : intérieur\n\nPlateau : 25 mm MDF compétition \n\nCadre : 60 mm métal \n\nPoids : ≈ 116 – 125 kg \n\nRoues : 4 roulettes (2 avec frein) \n\nSystème : Super Compact \n\nNorme : EN 14468-1 Classe A \n\nCertification : ITTF \n\nFilet : non inclu",
-    "image": "/images/products/table-de-ping-pong-joola-3000-sc-pro-comp-tition-pro-perform-94.png"
+    "image": "/images/products/table-de-ping-pong-joola-3000-sc-pro-comp-tition-pro-perform-94.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Compétition",
+      "Épaisseur du plateau": "25 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Oui",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~100 kg"
+    }
   },
   {
     "id": "pi-95",
@@ -1062,7 +1976,17 @@
     "stock": 10,
     "rating": 4.6,
     "desc": "La JOOLA Rollomat Pro est une table de ping-pong haut de gamme conçue pour les environnements professionnels : clubs, écoles et compétitions.\nSa surface de jeu offre un rebond précis et constant, proche des standards internationaux. Sa structure robuste garantit une stabilité exceptionnelle même lors des échanges les plus intenses.\nSon système pliable permet un rangement rapide ainsi qu’un entraînement en solo. Les roulettes intégrées facilitent le déplacement tout en assurant une sécurité maximale grâce à un système de verrouillage fiable.\n👉 Idéale pour les joueurs exigeants et les espaces professionnels.\n\n⚙️ Caractéristiques techniques\n\nÉpaisseur plateau : 22 mm (qualité compétition)\n\nSurface : finition spéciale anti-reflet\n\nStructure : acier renforcé ultra stable\n\nSystème pliable : oui (mode entraînement possible)\n\nMobilité : roulettes pivotantes avec freins\n\nSécurité : système de verrouillage automatique\n\nUtilisation : intérieur (indoor)\n\nNormes : conforme ITTF (compétition)\n\nCouleur : bleu compétition\n\nFilet : inclus (selon version)",
-    "image": "/images/products/table-de-ping-pong-joola-rollomat-pro-qualit-comp-tition-itt-95.png"
+    "image": "",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Compétition",
+      "Épaisseur du plateau": "22 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Oui",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~80 kg"
+    }
   },
   {
     "id": "pi-96",
@@ -1073,7 +1997,17 @@
     "stock": 10,
     "rating": 4.6,
     "desc": "La JOOLA Inside J18 est une table de ping-pong polyvalente conçue pour les joueurs exigeants, les clubs et les écoles.\nSon plateau de 18 mm garantit un rebond régulier et précis, idéal pour progresser rapidement et profiter d’un jeu fluide. Sa structure robuste assure une excellente stabilité.\nGrâce à son système pliable, elle se range facilement et permet également un entraînement en solo. Les roulettes intégrées facilitent le déplacement en toute sécurité.\n👉 Un excellent compromis entre performance professionnelle et accessibilité.\n\n⚙️ Caractéristiques techniques\n\nÉpaisseur plateau : 18 mm\n\nSurface : MDF haute densité (rebond régulier)\n\nStructure : acier renforcé\n\nSystème pliable : oui (2 plateaux séparés)\n\nMode solo : oui\n\nRoulettes : 8 roues avec freins\n\nPieds réglables : oui\n\nSécurité : double anti-basculement\n\nFilet : inclus\n\nUtilisation : intérieur\n\nMontage : 95% préassemblé (≈15 min)",
-    "image": "/images/products/table-de-ping-pong-joola-inside-j18-plateau-18-mm-pliable-id-96.png"
+    "image": "",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Compétition",
+      "Épaisseur du plateau": "18 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~90 kg"
+    }
   },
   {
     "id": "pi-97",
@@ -1084,7 +2018,17 @@
     "stock": 10,
     "rating": 4.7,
     "desc": "La JOOLA Transport est une table de ping-pong conçue pour une utilisation intensive : clubs, écoles, collectivités ou joueurs exigeants.\nSon plateau de 19 mm offre un rebond précis et régulier, idéal pour un jeu dynamique et performant. Son système unique permet de déplacer chaque demi-table indépendamment grâce à ses roulettes.\nSa structure en acier renforcé garantit une excellente stabilité, même lors d’échanges rapides. Elle se plie facilement pour un rangement optimisé.\n👉 Une table fiable, durable et pensée pour durer dans le temps.\n\n⚙️ Caractéristiques techniques\n\nÉpaisseur plateau : 19 mm (excellent rebond) \n\nSurface : MDF haute densité anti-reflet \n\nStructure : acier renforcé robuste \n\nSystème transport :\n→ 2 plateaux indépendants avec 4 roues chacun \n\nSécurité : double anti-basculement \n\nUtilisation : intérieur\n\nDimensions : 274 x 152,5 x 76 cm \n\nPoids : ~88–95 kg \n\nNorme : EN 14468-1 (clubs / écoles) \n\nFilet : inclus (selon version)",
-    "image": "/images/products/table-de-ping-pong-joola-transport-plateau-19-mm-syst-me-mob-97.png"
+    "image": "/images/products/table-de-ping-pong-joola-transport-plateau-19-mm-syst-me-mob-97.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "19 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~80 kg"
+    }
   },
   {
     "id": "pi-98",
@@ -1095,7 +2039,17 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "La JOOLA Inside 13 est une table de ping-pong idéale pour les débutants et les joueurs occasionnels.\nSon plateau de 12 mm offre un rebond régulier, parfait pour apprendre et progresser. Son système pliable permet un rangement facile et un entraînement en solo.\nGrâce à ses roulettes, elle se déplace facilement tout en restant stable grâce à son système de sécurité.\n👉 Le choix parfait pour un usage à domicile à petit budget.\n\n⚙️ Caractéristiques techniques\n\nÉpaisseur plateau : 12 mm \n\nSurface : MDF (rebond régulier) \n\nStructure : acier peint robuste \n\nSystème pliable : oui (2 plateaux séparés) \n\nMode solo : oui \n\nRoulettes : 8 avec freins \n\nSécurité : anti-basculement \n\nUtilisation : intérieur \n\nMontage : ~15 min \n\nPoids : ~52 kg",
-    "image": "/images/products/table-de-ping-pong-joola-inside-13-plateau-12-mm-id-ale-d-bu-98.png"
+    "image": "/images/products/table-de-ping-pong-joola-inside-13-plateau-12-mm-id-ale-d-bu-98.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Standard",
+      "Épaisseur du plateau": "12 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Poids": "52 kg",
+      "Dimensions": "274 x 152,5 x 76 cm"
+    }
   },
   {
     "id": "pi-99",
@@ -1106,7 +2060,17 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "La JOOLA Black 13i se distingue par son design noir élégant et moderne, idéale pour ceux qui veulent une table esthétique sans sacrifier la performance.\nSon plateau de 12 mm offre un rebond régulier, parfait pour un usage loisir à domicile. Sa structure pliable permet un rangement facile et un entraînement en solo.\n👉 Une table parfaite pour allier style, plaisir et accessibilité.\n\n⚙️ Caractéristiques techniques\n\nPlateau : 12 mm MDF (rebond homogène) \n\nDesign : noir premium moderne \n\nSystème pliable : oui (2 parties séparées) \n\nMode solo : oui \n\nRoulettes : avec freins \n\nPieds réglables : oui \n\nSécurité : double anti-basculement \n\nMontage : ~15 min (préassemblée à 95%) \n\nUtilisation : intérieur",
-    "image": "/images/products/table-de-ping-pong-joola-black-13i-design-noir-premium-plate-99.png"
+    "image": "/images/products/table-de-ping-pong-joola-black-13i-design-noir-premium-plate-99.png",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Premium",
+      "Épaisseur du plateau": "12 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~90 kg"
+    }
   },
   {
     "id": "ba-140",
@@ -1118,7 +2082,16 @@
     "badge": "Populaire",
     "rating": 4.4,
     "desc": "Le baby-foot classique 2 joueurs est la version compacte et accessible du football de table. Idéal pour les débutants et les petits espaces.\n⚡ Points forts\n✔️ Compact et facile à ranger\n✔️ 2 joueurs simultanés\n✔️ Barres lisses et ergonomiques\n✔️ Compteur intégré\n✔️ Prix très accessible\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nDimensions : 120 x 60 x 80 cm\nPoids : 25 kg\nBarres : 1 par joueur\nJoueurs : 11 par équipe",
-    "image": "/images/products/baby-foot-classique-2-joueurs.jpg"
+    "image": "/images/products/baby-foot-classique-2-joueurs.jpg",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Standard",
+      "Matière": "MDF",
+      "Nombre de joueurs": "4",
+      "Barres": "Télescopiques",
+      "Dimensions": "120 x 60 x 80 cm",
+      "Poids": "25 kg"
+    }
   },
   {
     "id": "ba-141",
@@ -1129,7 +2102,16 @@
     "stock": 20,
     "rating": 4.3,
     "desc": "Le baby-foot compact enfants est spécialement conçu pour les plus jeunes. Sa taille réduite et ses barres adaptées permettent aux enfants de jouer en toute sécurité.\n⚡ Points forts\n✔️ Taille adaptée aux enfants\n✔️ Barres épaisseur réduite\n✔️ Pieds stables et larges\n✔️ Couleurs vives et attractives\n✔️ Léger et déplaçable\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nDimensions : 90 x 50 x 70 cm\nPoids : 12 kg\nÂge : 3 ans et +\nCharge max : 30 kg",
-    "image": "/images/products/baby-foot-compact-enfants.jpg"
+    "image": "/images/products/baby-foot-compact-enfants.jpg",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Standard",
+      "Matière": "MDF",
+      "Nombre de joueurs": "4",
+      "Barres": "Télescopiques",
+      "Dimensions": "90 x 50 x 70 cm",
+      "Poids": "12 kg"
+    }
   },
   {
     "id": "ba-142",
@@ -1141,7 +2123,17 @@
     "badge": "Nouveau",
     "rating": 4.6,
     "desc": "Le baby-foot pliable extérieur est conçu pour résister aux intempéries tout en étant facilement rangable. Idéal pour terrasse, jardin ou garáge.\n⚡ Points forts\n✔️ Résistant pluie et UV\n✔️ Système de pliage rapide\n✔️ Roulettes pour déplacement\n✔️ Structure acier galvanisé\n✔️ Plateau épais et durable\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nDimensions : 140 x 70 x 88 cm\nPoids : 45 kg\nPliable : oui\nUsage : intérieur / extérieur\nGarantie : 2 ans",
-    "image": "/images/products/baby-foot-pliable-exterieur.jpg"
+    "image": "/images/products/baby-foot-pliable-exterieur.jpg",
+    "specs": {
+      "Usage": "Intérieur & Extérieur",
+      "Type": "Standard",
+      "Matière": "Acier",
+      "Nombre de joueurs": "4",
+      "Barres": "Télescopiques",
+      "Dimensions": "140 x 70 x 88 cm",
+      "Poids": "45 kg",
+      "Garantie": "2 ans"
+    }
   },
   {
     "id": "ba-143",
@@ -1153,7 +2145,17 @@
     "badge": "Premium",
     "rating": 4.8,
     "desc": "Le baby-foot professionnel 4 joueurs est une table de compétion pour 4 joueurs simultanés. Barres à roulements à billes et structure massive.\n⚡ Points forts\n✔️ 4 joueurs simultanés (2 contre 2)\n✔️ Barres à roulements à billes\n✔️ Joueurs lestés\n✔️ Structure massif d’épiné\n✔️ Niveau semi-professionnel\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nDimensions : 175 x 90 x 92 cm\nPoids : 85 kg\nBarres : sortantes\nGarantie : 3 ans",
-    "image": "/images/products/baby-foot-professionnel-4-joueurs.jpg"
+    "image": "/images/products/baby-foot-professionnel-4-joueurs.jpg",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Compétition",
+      "Matière": "MDF",
+      "Nombre de joueurs": "4",
+      "Barres": "Télescopiques",
+      "Dimensions": "175 x 90 x 92 cm",
+      "Poids": "85 kg",
+      "Garantie": "3 ans"
+    }
   },
   {
     "id": "ba-144",
@@ -1165,7 +2167,17 @@
     "badge": "Nouveau",
     "rating": 4.7,
     "desc": "Le baby-foot vintage bois combine le style rétro avec des finitions soignées en bois massif. Un véritable objet d’élégance pour votre intérieur.\n⚡ Points forts\n✔️ Structure en bois massif\n✔️ Design rétro chic\n✔️ Finitions artisanales\n✔️ Barres chromées\n✔️ Pièce d’intérieur premium\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nDimensions : 145 x 75 x 90 cm\nPoids : 65 kg\nStructure : Hétérea massif\nJoueurs : 4\nGarantie : 5 ans",
-    "image": "/images/products/baby-foot-vintage-bois.jpg"
+    "image": "/images/products/baby-foot-vintage-bois.jpg",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Premium",
+      "Matière": "Hêtre massif",
+      "Nombre de joueurs": "4",
+      "Barres": "Télescopiques",
+      "Dimensions": "145 x 75 x 90 cm",
+      "Poids": "65 kg",
+      "Garantie": "5 ans"
+    }
   },
   {
     "id": "tr-54",
@@ -1177,7 +2189,15 @@
     "badge": "Premium",
     "rating": 4.8,
     "desc": "Le trampoline semi-enterré de 430 cm s'intègre parfaitement dans votre jardin pour un rendu esthétique et moderne. Semi-enterré, il offre un accès facile et une sécurité optimale.\n⚡ Points forts\n✔️ Intégration paysagère discrète\n✔️ Accès facile au niveau du sol\n✔️ Grande surface de saut (430 cm)\n✔️ Structure galvanisée anti-corrosion\n✔️ Filet de protection haute densité\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nDiamètre : 430 cm\nCharge max : 150 kg\nProfondeur de creusage : 80 cm\nRebond professionnel\nLivraison en 3 colis",
-    "image": "/images/products/trampoline-semi-enterre-430cm.jpg"
+    "image": "/images/products/trampoline-semi-enterre-430cm.jpg",
+    "specs": {
+      "Usage": "Extérieur",
+      "Diamètre": "430 cm",
+      "Type": "Jardin",
+      "Matière": "Acier galvanisé",
+      "Sécurité": "Filet de sécurité inclus",
+      "Installation": "Semi-enterré"
+    }
   },
   {
     "id": "tr-39",
@@ -1189,7 +2209,15 @@
     "badge": "Nouveau",
     "rating": 4.8,
     "desc": "🔥 L'innovation qui change tout : sans ressort\nLe Cornilleau Springcare révolutionne le trampoline classique en remplaçant les ressorts par un système d'élastiques haute technologie.\n👉 Résultat : plus de sécurité + plus de confort + moins de choc sur les articulations \n\n⚡ Points forts (TRÈS vendeur)\n✔️ Système sans ressort → aucun risque de blessure\n✔️ Rebond souple et dynamique (plus confortable) \n✔️ Filet de protection haute densité (sécurité enfants) \n✔️ Coussin double épaisseur → absorption maximale des chocs \n✔️ Poteaux incurvés → évite les collisions \n\n⚙️ Caractéristiques techniques\n\nDiamètre : 305 cm\n\nTechnologie : sans ressort (élastiques)\n\nUtilisation : extérieur (jardin)\n\nCharge max : ≈ 100–120 kg \n\nStructure : robuste & testée en laboratoire \n\nMontage : ≈ 1h30 à 2 personnes\n\n⭐ Pourquoi choisir ce trampoline ?\n\n✔️ Produit différenciant (sans ressort 🔥)\n\n✔️ Sécurité maximale enfants\n\n✔️ Très bon argument parents\n\n✔️ Confort supérieur aux trampolines classiques\n\n✔️ Produit très vendeur Allemagne",
-    "image": "/images/products/trampoline-cornilleau-springcare-305-cm-sans-ressort-s-curit-39.png"
+    "image": "",
+    "specs": {
+      "Usage": "Extérieur",
+      "Diamètre": "305 cm",
+      "Type": "Jardin",
+      "Matière": "Acier galvanisé",
+      "Sécurité": "Système sans ressort",
+      "Installation": "Sur pieds"
+    }
   },
   {
     "id": "tr-49",
@@ -1201,7 +2229,15 @@
     "badge": "Promo",
     "rating": 4.8,
     "desc": "Le trampoline Kettler Jump 365 est conçu pour offrir un maximum de plaisir et de sécurité à toute la famille. Avec son grand diamètre de 365 cm, il offre une large surface de saut idéale pour les enfants comme pour les adultes.\nSa structure en acier galvanisé garantit une excellente stabilité et une grande résistance aux intempéries, permettant une utilisation en extérieur toute l'année. Le tapis de saut haute qualité résistant aux UV assure une durabilité optimale et un rebond confortable.\nLe filet de sécurité interne protège efficacement les utilisateurs contre les chutes en évitant tout contact avec les ressorts ou le cadre. Grâce à ses nombreux ressorts en acier, le trampoline offre un excellent dynamisme de saut.\n👉 Parfait pour : Jardins, Familles avec enfants, Activité sportive à domicile, Marché allemand (très demandé)\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nDiamètre : 365 cm \nCharge maximale : 150 kg \nHauteur cadre : env. 90 cm \nHauteur totale avec filet : env. 273 cm \nFilet de sécurité interne (protection maximale) \nTapis de saut résistant UV \nStructure acier galvanisé (anti-corrosion) \n72 ressorts coniques haute performance \nÉchelle incluse \nOutil de montage inclus \nLivraison en 2 colis",
-    "image": "/images/products/trampoline-ext-rieur-kettler-jump-365-365-cm-filet-de-s-curi-49.png"
+    "image": "/images/products/trampoline-ext-rieur-kettler-jump-365-365-cm-filet-de-s-curi-49.png",
+    "specs": {
+      "Usage": "Extérieur",
+      "Diamètre": "365 cm",
+      "Type": "Jardin",
+      "Matière": "Acier galvanisé",
+      "Sécurité": "Filet de sécurité inclus",
+      "Installation": "Sur pieds"
+    }
   },
   {
     "id": "tr-51",
@@ -1212,7 +2248,15 @@
     "stock": 10,
     "rating": 4.7,
     "desc": "Le trampoline 366 cm à 12 pieds offre une surface de saut impressionnante pour toute la famille. Parfait pour les grands jardins, il permet des acrobaties et des sauts en toute sécurité.\n⚡ Points forts\n✔️ Grande surface de saut (366 cm)\n✔️ 12 pieds ultra-stables\n✔️ Structure acier renforcé\n✔️ Filet de protection interne\n✔️ Échelle d'accès incluse\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nDiamètre : 366 cm\nPieds : 12\nCharge max : 150 kg\nRebond dynamique et confortable\nRésistant UV et intempéries",
-    "image": "/images/products/trampoline-jardin-366cm-12-pieds.jpg"
+    "image": "/images/products/trampoline-jardin-366cm-12-pieds.jpg",
+    "specs": {
+      "Usage": "Extérieur",
+      "Diamètre": "366 cm",
+      "Type": "Jardin",
+      "Matière": "Acier",
+      "Sécurité": "Filet de sécurité inclus",
+      "Installation": "Sur pieds"
+    }
   },
   {
     "id": "tr-50",
@@ -1224,7 +2268,15 @@
     "badge": "Promo",
     "rating": 4.6,
     "desc": "Le trampoline jardin 244 cm est idéal pour les familles recherchant un divertissement extérieur sécurisé. Avec un diamètre de 244 cm, il offre un espace de saut généreux tout en restant compact.\n⚡ Points forts\n✔️ Structure robuste en acier galvanisé\n✔️ Filet de protection haute densité\n✔️ Coussin de protection épais\n✔️ 8 pieds stables\n✔️ Résistant aux intempéries\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nDiamètre : 244 cm\nPieds : 8\nCharge max : 120 kg\nHauteur cadre : 80 cm\nTapis de saut résistant UV\nFilet de protection inclus\nLivraison gratuite",
-    "image": "/images/products/trampoline-jardin-244cm-8-pieds.jpg"
+    "image": "/images/products/trampoline-jardin-244cm-8-pieds.jpg",
+    "specs": {
+      "Usage": "Extérieur",
+      "Diamètre": "244 cm",
+      "Type": "Jardin",
+      "Matière": "Acier galvanisé",
+      "Sécurité": "Filet de sécurité inclus",
+      "Installation": "Sur pieds"
+    }
   },
   {
     "id": "tr-53",
@@ -1235,7 +2287,16 @@
     "stock": 10,
     "rating": 4.6,
     "desc": "Le trampoline fitness adulte est l'outil idéal pour un entraînement cardio intensif à domicile. Ses 6 pieds robustes et son rebond élastique offrent un entraînement complet tout en préservant les articulations.\n⚡ Points forts\n✔️ Usage intérieur/extérieur\n✔️ Structure renforcée pour adultes\n✔️ Rebond élastique haute performance\n✔️ Manche d'équilibre optionnel\n✔️ Économie d'espace\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nDiamètre : 110 cm\nCharge max : 120 kg\n6 pieds stables\nPoids : 8 kg\nFacile à ranger",
-    "image": "/images/products/trampoline-fitness-adulte.jpg"
+    "image": "/images/products/trampoline-fitness-adulte.jpg",
+    "specs": {
+      "Usage": "Intérieur & Extérieur",
+      "Diamètre": "110 cm",
+      "Type": "Fitness",
+      "Matière": "Acier galvanisé",
+      "Sécurité": "Système sans ressort",
+      "Installation": "Sur pieds",
+      "Poids": "8 kg"
+    }
   },
   {
     "id": "tr-52",
@@ -1247,7 +2308,16 @@
     "badge": "Nouveau",
     "rating": 4.5,
     "desc": "Le mini trampoline intérieur de 100 cm est conçu spécialement pour les enfants. Compact et sécurisé, il permet aux plus petits de brûler l'énergie en toute sécurité, même à l'intérieur.\n⚡ Points forts\n✔️ Taille compacte (100 cm)\n✔️ Barre d'équilibre incluse\n✔️ Filet de protection intégré\n✔️ Pieds antidérapants\n✔️ Idéal pour enfants de 3 à 10 ans\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nDiamètre : 100 cm\nCharge max : 40 kg\nPoids : 6 kg\nFacile à monter et déplacer",
-    "image": "/images/products/trampoline-enfant-interieur-100cm.jpg"
+    "image": "/images/products/trampoline-enfant-interieur-100cm.jpg",
+    "specs": {
+      "Usage": "Intérieur",
+      "Diamètre": "100 cm",
+      "Type": "Enfant",
+      "Matière": "Acier galvanisé",
+      "Sécurité": "Filet de sécurité inclus",
+      "Installation": "Sur pieds",
+      "Poids": "6 kg"
+    }
   },
   {
     "id": "pi-111",
@@ -1259,7 +2329,17 @@
     "badge": "Nouveau",
     "rating": 4.7,
     "desc": "La table de tennis extérieur premium est conçue pour résister aux intempéries tout en offrant un excellent rebond de jeu. Parfait pour les terrasses et jardins.\n⚡ Points forts\n✔️ Résistance UV et pluie\n✔️ Plateau 6 mm stratifié\n✔️ Système de pliage rapide\n✔️ Roulettes avec frein\n✔️ Filet réglable intégré\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nDimensions : 274 x 152,5 x 76 cm\nPlateau : Résine 6 mm\nPoids : 65 kg\nPliable et mobile\nLivraison gratuite",
-    "image": "/images/products/table-de-tennis-exterieur-premium.jpg"
+    "image": "/images/products/table-de-tennis-exterieur-premium.jpg",
+    "specs": {
+      "Usage": "Extérieur",
+      "Type": "Premium",
+      "Épaisseur du plateau": "6 mm",
+      "Matière du plateau": "Résine stratifiée",
+      "Norme ITTF": "Non",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "65 kg"
+    }
   },
   {
     "id": "pi-112",
@@ -1270,7 +2350,17 @@
     "stock": 10,
     "rating": 4.5,
     "desc": "La table de tennis intérieur standard est idéale pour les familles et les joueurs débutants. Elle offre un bon rapport qualité-prix pour des parties conviviales.\n⚡ Points forts\n✔️ Plateau 16 mm stable\n✔️ Pliable pour un stockage facile\n✔️ Roulettes pour économie d’espace\n✔️ Filet de séparation inclus\n✔️ Conforme normes EN 14468\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nDimensions : 274 x 152,5 x 76 cm\nPlateau : MDF 16 mm\nPoids : 55 kg\nMode compétition ou entraînement",
-    "image": "/images/products/table-de-tennis-interieur-standard.jpg"
+    "image": "/images/products/table-de-tennis-interieur-standard.jpg",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Compétition",
+      "Épaisseur du plateau": "16 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Oui",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "55 kg"
+    }
   },
   {
     "id": "pi-113",
@@ -1282,7 +2372,18 @@
     "badge": "Premium",
     "rating": 4.9,
     "desc": "La table de tennis professionnelle ITTF est homologuée pour les compétitions officielles. Son plateau 25 mm offre un rebond exceptionnel et une qualité de jeu de niveau international.\n⚡ Points forts\n✔️ Homologuée ITTF\n✔️ Plateau 25 mm compétition\n✔️ Cadre acier 50 mm\n✔️ Réglage hauteur micrométrique\n✔️ Système de pliage premium\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nDimensions : 274 x 152,5 x 76 cm\nPlateau : Stratifié 25 mm\nPoids : 130 kg\nNormes ITTF\nGarantie : 5 ans",
-    "image": "/images/products/table-de-tennis-professionnelle-ittf.jpg"
+    "image": "/images/products/table-de-tennis-professionnelle-ittf.jpg",
+    "specs": {
+      "Usage": "Intérieur",
+      "Type": "Compétition",
+      "Épaisseur du plateau": "25 mm",
+      "Matière du plateau": "Bois",
+      "Norme ITTF": "Oui",
+      "Pliable": "Oui",
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "130 kg",
+      "Garantie": "5 ans"
+    }
   },
   {
     "id": "ac-001",
@@ -1294,7 +2395,12 @@
     "badge": "Populaire",
     "rating": 4.4,
     "desc": "Le kit accessoires baby-foot comprend 12 balles professionnelles et 4 couvertures de remplacement. L’équipement essentiel pour profiter pleinement de votre baby-foot.\n⚡ Points forts\n✔️ 12 balles plastiques haute qualité\n✔️ 4 couvertures universelles\n✔️ Compatibilité universelle\n✔️ Rangement dans une pochette\n✔️ Livraison rapide",
-    "image": "/images/products/kit-accessoires-baby-foot.jpg"
+    "image": "/images/products/kit-accessoires-baby-foot.jpg",
+    "specs": {
+      "Compatible avec": "Baby-foot",
+      "Type": "Kit",
+      "Contenu": "Balles / Boules"
+    }
   },
   {
     "id": "ac-002",
@@ -1305,7 +2411,12 @@
     "stock": 15,
     "rating": 4.6,
     "desc": "Le kit accessoires billard pro contient tout l’équipement nécessaire pour jouer au billard. Boules de qualité compétition, queues professionnelles et accessoires complets.\n⚡ Points forts\n✔️ Boules de billard résine 57,2 mm\n✔️ 2 queues débutant + 1 queue pro\n✔️ Craie de qualité premium\n✔️ Triangle de rangement\n✔️ Éponges de nettoyage\n⚙️ Contenu : 16 boules, 3 queues, craies, triangle",
-    "image": "/images/products/kit-accessoires-billard-pro.jpg"
+    "image": "/images/products/kit-accessoires-billard-pro.jpg",
+    "specs": {
+      "Compatible avec": "Billard",
+      "Type": "Kit",
+      "Contenu": "Balles / Boules"
+    }
   },
   {
     "id": "ac-003",
@@ -1316,7 +2427,12 @@
     "stock": 25,
     "rating": 4.3,
     "desc": "Le kit entretien trampoline comprend un nettoyant spécialisé et une crème de protection UV pour prolonger la durée de vie de votre trampoline.\n⚡ Points forts\n✔️ Nettoyant écologique et efficace\n✔️ Crème protection UV longue durée\n✔️ Compatible tous types de tapis\n✔️ Flacon économique 500 ml\n✔️ Facile à appliquer",
-    "image": "/images/products/kit-entretien-trampoline.jpg"
+    "image": "/images/products/kit-entretien-trampoline.jpg",
+    "specs": {
+      "Compatible avec": "Trampoline",
+      "Type": "Kit",
+      "Contenu": "Kit d'entretien"
+    }
   },
   {
     "id": "ac-004",
@@ -1328,7 +2444,12 @@
     "badge": "Nouveau",
     "rating": 4.7,
     "desc": "L’éclairage suspendu LED pour billard allie design moderne et éclairage optimal. Ses 5 lampes LED éclairent uniformément la table pour des parties sans ombres.\n⚡ Points forts\n✔️ 5 lampes LED économiques\n✔️ Régulation de l’intensité\n✔️ Design chromé moderne\n✔️ Hauteur réglable\n✔️ Installation facile\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nLongueur : 120 cm\nPuissance : 60W LED\nTempérature : 4000K (blanc neutre)\nCompatibilité : toutes tables",
-    "image": "/images/products/eclairage-suspension-billard-led.jpg"
+    "image": "/images/products/eclairage-suspension-billard-led.jpg",
+    "specs": {
+      "Compatible avec": "Billard",
+      "Type": "Accessoire",
+      "Contenu": "Éclairage"
+    }
   },
   {
     "id": "ac-005",
@@ -1340,7 +2461,12 @@
     "badge": "Populaire",
     "rating": 4.4,
     "desc": "Le set complet comprend 6 raquettes de ping-pong et 12 balles. Parfait pour les familles et les soirées entre amis.\n⚡ Points forts\n✔️ 6 raquettes ergonomiques\n✔️ 12 balles cellulôðe 40+ mm\n✔️ Poignée antidérapante\n✔️ Qualité compétition\n✔️ Pochette de rangement incluse",
-    "image": "/images/products/set-complet-raquettes-balles.jpg"
+    "image": "/images/products/set-complet-raquettes-balles.jpg",
+    "specs": {
+      "Compatible avec": "Ping-pong",
+      "Type": "Kit",
+      "Contenu": "Balles / Boules"
+    }
   },
   {
     "id": "ac-006",
@@ -1351,18 +2477,13 @@
     "stock": 20,
     "rating": 4.5,
     "desc": "Le tapis de sol gaming anti-fatigue XL protège votre sol et offre un confort optimal pour les longues sessions de jeu. Idéal sous un baby-foot ou une table de jeux.\n⚡ Points forts\n✔️ Mousse épaisse 10 mm\n✔️ Surface antidérapante\n✔️ Résistant aux chocs et éraflures\n✔️ Taille XL (180 x 90 cm)\n✔️ Facile à nettoyer",
-    "image": "/images/products/tapis-de-sol-gaming-anti-fatigue-xl.jpg"
-  },
-  {
-    "id": "ac-007",
-    "name": "Mini Table de Tennis de Table – Version Compact Portable",
-    "category": "accessoires",
-    "brand": "Sony",
-    "priceHT": 58.25,
-    "stock": 15,
-    "rating": 4.3,
-    "desc": "La mini table de tennis de table est une version compacte et portable parfaite pour les petits espaces. Emportez-la partout avec vous pour des parties.\n⚡ Points forts\n✔️ Taille compacte et légère\n✔️ Pliable en 2 secondes\n✔️ Pieds stables et réglables\n✔️ Idéale pour les enfants\n✔️ Poids : 8 kg seulement\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nDimensions : 120 x 60 x 60 cm\nPoids : 8 kg\nPlateau : MDF 12 mm\nFacile à transporter",
-    "image": "/images/products/mini-table-de-tennis.jpg"
+    "image": "/images/products/tapis-de-sol-gaming-anti-fatigue-xl.jpg",
+    "specs": {
+      "Compatible avec": "Baby-foot",
+      "Type": "Accessoire",
+      "Contenu": "Tapis de sol",
+      "Dimensions": "180 x 90 cm"
+    }
   },
   {
     "id": "ac-008",
@@ -1374,7 +2495,13 @@
     "badge": "Premium",
     "rating": 4.6,
     "desc": "Le robot d’entraînement ping-pong multi-vitesse lance des balles à différentes vitesses et angles pour un entraînement complet.\n⚡ Points forts\n✔️ 12 niveaux de vitesse (40-120 balles/min)\n✔️ Rotation 360°\n✔️ Réglage de l’angle de lancer\n✔️ Réservoir de 120 balles\n✔️ Commande à distance\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nCadence : 40-120 balles/min\nAlimentation : 220V\nPoids : 5 kg\nCompatibilité : toutes tables",
-    "image": "/images/products/robot-dentrainement-ping-pong.jpg"
+    "image": "/images/products/robot-dentrainement-ping-pong.jpg",
+    "specs": {
+      "Compatible avec": "Ping-pong",
+      "Type": "Accessoire",
+      "Contenu": "Balles / Boules",
+      "Poids": "5 kg"
+    }
   },
   {
     "id": "co-001",
@@ -1386,7 +2513,13 @@
     "badge": "Nouveau",
     "rating": 4.9,
     "desc": "La PlayStation 5 Pro offre des performances graphiques de nouvelle génération avec un GPU plus puissant, un SSD ultra-rapide et un ray tracing amélioré. L’expérience gaming ultime.\n⚡ Points forts\n✔️ GPU 67% plus rapide\n✔️ SSD 2 To\n✔️ Ray tracing amélioré\n✔️ Résolution 8K supportée\n✔️ Manette DualSense haptique\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nProcesseur : AMD Zen 2\nRAM : 16 Go GDDR6\nStockage : 2 To SSD\nLecteur : Disque + Numérique\nRésolution : Jusqu’à 8K",
-    "image": "/images/products/playstation-5-pro.jpg"
+    "image": "/images/products/playstation-5-pro.jpg",
+    "specs": {
+      "Type": "PS5",
+      "Édition": "Pro",
+      "Stockage": "2 To",
+      "Couleur": "Blanche"
+    }
   },
   {
     "id": "co-002",
@@ -1398,7 +2531,13 @@
     "badge": "Bestseller",
     "rating": 4.8,
     "desc": "La PlayStation 5 Slim avec lecteur de disque offre toute la puissance de la PS5 dans un format plus compact et économe en énergie. Compatible avec les jeux PS5 et PS4.\n⚡ Points forts\n✔️ Design 30% plus compact\n✔️ SSD 1 To intégré\n✔️ Lecteur Blu-ray 4K\n✔️ Manette DualSense incluse\n✔️ Compatible PS4/PS5\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nProcesseur : AMD Zen 2\nRAM : 16 Go GDDR6\nStockage : 1 To SSD\nBlu-ray 4K UHD\nWi-Fi 6",
-    "image": "/images/products/playstation-5-slim-lecteur-disque.jpg"
+    "image": "/images/products/playstation-5-slim-lecteur-disque.jpg",
+    "specs": {
+      "Type": "PS5",
+      "Édition": "Slim",
+      "Stockage": "1 To",
+      "Couleur": "Blanche"
+    }
   },
   {
     "id": "co-003",
@@ -1409,7 +2548,13 @@
     "stock": 15,
     "rating": 4.6,
     "desc": "La PlayStation 4 Slim 500 Go reste une excellente console pour découvrir l’univers PlayStation. Catalogue de jeux immense et prix accessible.\n⚡ Points forts\n✔️ Catalogue 2000+ jeux\n✔️ Compacité et discrétion\n✔️ Wi-Fi 5 et Bluetooth 4.0\n✔️ Manette DualShock 4 incluse\n✔️ Streaming Netflix, YouTube, Twitch\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nProcesseur : AMD Jaguar 8 cœurs\nRAM : 8 Go GDDR5\nStockage : 500 Go HDD\nRésolution : 1080p",
-    "image": "/images/products/playstation-4-slim-500go.jpg"
+    "image": "/images/products/playstation-4-slim-500go.jpg",
+    "specs": {
+      "Type": "PS4",
+      "Édition": "Slim",
+      "Stockage": "500 Go",
+      "Couleur": "—"
+    }
   },
   {
     "id": "co-004",
@@ -1421,7 +2566,13 @@
     "badge": "Nouveau",
     "rating": 4.8,
     "desc": "La Nintendo Switch 2 est la nouvelle console hybride de Nintendo. Jouez à la maison sur TV ou en déplacement en mode portable avec des graphismes améliorés.\n⚡ Points forts\n✔️ Écran OLED 8 pouces\n✔️ Processeur NVIDIA amélioré\n✔️ Compatibilité descendante Switch\n✔️ Manettes Joy-Con améliorées\n✔️ Mode portable et docké\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nÉcran : OLED 8 pouces 1080p\nProcesseur : NVIDIA Tegra\nRAM : 12 Go\nStockage : 256 Go\nAutonomie : 6-8h",
-    "image": "/images/products/nintendo-switch-2.jpg"
+    "image": "/images/products/nintendo-switch-2.jpg",
+    "specs": {
+      "Type": "Nintendo Switch",
+      "Édition": "OLED",
+      "Stockage": "12 Go",
+      "Couleur": "Blanche & Noire"
+    }
   },
   {
     "id": "co-005",
@@ -1432,7 +2583,14 @@
     "stock": 12,
     "rating": 4.7,
     "desc": "La Nintendo Switch OLED offre un écran OLED 7 pouces aux couleurs vibrantes et un mode portable enrichi. Le meilleur compromis entre portable et docké.\n⚡ Points forts\n✔️ Écran OLED 7 pouces\n✔️ Pied adjustable intégré\n✔️ Dock avec port Ethernet\n✔️ Audio amélioré\n✔️ 64 Go de stockage interne\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nÉcran : OLED 7 pouces 720p\nStockage : 64 Go + microSD\nAutonomie : 4,5-9h\nWi-Fi 5\nPoids : 420g",
-    "image": "/images/products/nintendo-switch-oled.jpg"
+    "image": "/images/products/nintendo-switch-oled.jpg",
+    "specs": {
+      "Type": "Nintendo Switch",
+      "Édition": "OLED",
+      "Stockage": "64 Go",
+      "Couleur": "Blanche & Noire",
+      "Poids": "420g"
+    }
   },
   {
     "id": "co-006",
@@ -1443,7 +2601,13 @@
     "stock": 10,
     "rating": 4.8,
     "desc": "La Xbox Series X est la console la plus puissante de Microsoft. Avec son processeur Zen 2 et son SSD NVMe, elle offre des temps de chargement quasi instantanés.\n⚡ Points forts\n✔️ 12 Teraflops GPU\n✔️ SSD NVMe 1 To\n✔️ Ray tracing matériel\n✔️ 120 FPS en 4K\n✔️ Game Pass Ultimate inclus\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nProcesseur : AMD Zen 2 8 cœurs\nGPU : 12 Teraflops\nRAM : 16 Go GDDR6\nStockage : 1 To SSD\nRésolution : 4K / 8K",
-    "image": "/images/products/xbox-series-x.jpg"
+    "image": "/images/products/xbox-series-x.jpg",
+    "specs": {
+      "Type": "Xbox",
+      "Édition": "Series X",
+      "Stockage": "1 To",
+      "Couleur": "Noire"
+    }
   },
   {
     "id": "co-007",
@@ -1454,7 +2618,14 @@
     "stock": 20,
     "rating": 4.5,
     "desc": "Le casque gaming sans fil 7.1 surround offre un son immersif et une liberté de mouvement totale. Compatible PS5, Xbox, PC et Switch.\n⚡ Points forts\n✔️ Audio 7.1 surround virtuel\n✔️ Sans fil Bluetooth 5.0\n✔️ Autonomie 20 heures\n✔️ Micro amovible\n✔️ Compatible multi-plateforme\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nFréquence : 20 Hz – 20 kHz\nImpédance : 32 ohms\nPoids : 280g\nCharge USB-C\nLatence : < 1 ms",
-    "image": "/images/products/casque-gaming-sans-fil-7-1-surround.jpg"
+    "image": "/images/products/casque-gaming-sans-fil-7-1-surround.jpg",
+    "specs": {
+      "Type": "PS5",
+      "Édition": "Standard",
+      "Stockage": "825 Go",
+      "Couleur": "Blanche",
+      "Poids": "280g"
+    }
   },
   {
     "id": "co-008",
@@ -1466,7 +2637,14 @@
     "badge": "Premium",
     "rating": 4.8,
     "desc": "La manette DualSense Edge est la manette premium de Sony pour PS5. Personnalisation complète des commandes, sticks amovibles et étalonnage de précision.\n⚡ Points forts\n✔️ Sticks analogiques amovibles\n✔️ Palettes arrière assignables\n✔️ Profils de commandes personnalisables\n✔️ Vibration haptique avancée\n✔️ Autonomie prolongée\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nConnectique : USB-C / Sans fil\nCompatibilité : PS5, PC\nPoids : 325g\nBatterie : 12 heures\nHaptic feedback adaptatif",
-    "image": "/images/products/manette-pro-ps5-dualsense-edge.jpg"
+    "image": "/images/products/manette-pro-ps5-dualsense-edge.jpg",
+    "specs": {
+      "Type": "PS5",
+      "Édition": "Pro",
+      "Stockage": "2 To",
+      "Couleur": "Blanche",
+      "Poids": "325g"
+    }
   },
   {
     "id": "co-009",
@@ -1477,7 +2655,13 @@
     "stock": 20,
     "rating": 4.4,
     "desc": "La station de recharge double permet de recharger simultanément deux manettes PS5 ou Xbox. Compacte et élégante, elle s’intègre parfaitement dans votre espace gaming.\n⚡ Points forts\n✔️ Double charge simultanée\n✔️ Charge rapide en 2,5h\n✔️ LED de charge indicator\n✔️ Compatible PS5 et Xbox\n✔️ Design compact\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nCharge : 2 manettes simultanément\nTemps de charge : 2,5h\nAlimentation : USB-C\nCompatibilité : DualSense, DualShock 4, Xbox",
-    "image": "/images/products/station-de-recharge-double-ps5-xbox.jpg"
+    "image": "/images/products/station-de-recharge-double-ps5-xbox.jpg",
+    "specs": {
+      "Type": "PS5",
+      "Édition": "Standard",
+      "Stockage": "825 Go",
+      "Couleur": "Blanche"
+    }
   },
   {
     "id": "co-010",
@@ -1488,7 +2672,14 @@
     "stock": 15,
     "rating": 4.5,
     "desc": "Le support mural pour console et rangement de jeux permet d’organiser votre espace gaming de manière élégante. Compatible PS5, Xbox et Switch.\n⚡ Points forts\n✔️ Support mural solide\n✔️ Rangement pour 12 jeux\n✔️ Compatible PS5, Xbox, Switch\n✔️ Gain de place optimal\n✔️ Installation facile\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nCharge max : 5 kg\nRangement : 12 jeux\nMatériau : Métal + MDF\nFixation murale incluse\nDimensions : 35 x 25 x 10 cm",
-    "image": "/images/products/support-mural-console-rangement-jeux.jpg"
+    "image": "/images/products/support-mural-console-rangement-jeux.jpg",
+    "specs": {
+      "Type": "PS5",
+      "Édition": "Standard",
+      "Stockage": "825 Go",
+      "Couleur": "Blanche",
+      "Dimensions": "35 x 25 x 10 cm"
+    }
   },
   {
     "id": "co-011",
@@ -1500,6 +2691,12 @@
     "badge": "Pack",
     "rating": 4.6,
     "desc": "Le pack accessoires gaming complet réunit un casque sans fil, une manette supplémentaire et un support de rangement. L’équipement idéal pour compléter votre setup.\n⚡ Points forts\n✔️ Casque gaming sans fil 7.1\n✔️ Manette wireless compatible multi-plateforme\n✔️ Support de rangement mural\n✔️ Économie vs achat séparé\n✔️ Compatible PS5 / Xbox / PC\n⚙️ Contenu : 1 casque, 1 manette, 1 support",
-    "image": "/images/products/pack-accessoires-gaming-complet.jpg"
+    "image": "/images/products/pack-accessoires-gaming-complet.jpg",
+    "specs": {
+      "Type": "PS5",
+      "Édition": "Standard",
+      "Stockage": "825 Go",
+      "Couleur": "Blanche"
+    }
   }
 ]
