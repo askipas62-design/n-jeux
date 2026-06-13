@@ -5,7 +5,6 @@ import ProductCard from "../components/ProductCard";
 import CountdownTimer from "../components/CountdownTimer";
 import { BabyFootIcon, PingPongIcon, BillardIcon, TrampolineIcon, AccessoriesIcon, ConsoleIcon } from "../components/CategoryIcons";
 
-import { products as allProducts } from "../data/products";
 import { reviewService } from "../services/reviewService";
 
 function ReviewSection() {
@@ -153,21 +152,29 @@ function ReviewSection() {
 
 export default function Home() {
   const [featuredProducts, setFeaturedProducts] = useState<any[]>([]);
+  const [allProducts, setAllProducts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const heroRef = useRef(null);
 
-  const bestSellers = useMemo(() => {
-    return allProducts
-      .filter(p => p && (p.badge === "Bestseller" || p.rating >= 4.7))
-      .sort((a, b) => b.rating - a.rating)
-      .slice(0, 4);
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const mod = await import("../data/products");
+      const products = mod.products.filter(Boolean);
+      if (cancelled) return;
+      setAllProducts(products);
+      setFeaturedProducts(products.slice(0, 8));
+      setLoading(false);
+    })();
+    return () => { cancelled = true; };
   }, []);
 
-  useEffect(() => {
-    // Les produits sont locaux
-    setFeaturedProducts(allProducts.filter(Boolean).slice(0, 8));
-    setLoading(false);
-  }, []);
+  const bestSellers = useMemo(() => {
+    return allProducts
+      .filter((p: any) => p && (p.badge === "Bestseller" || p.rating >= 4.7))
+      .sort((a: any, b: any) => b.rating - a.rating)
+      .slice(0, 4);
+  }, [allProducts]);
 
   const categoryDefs = [
     { name: "Baby-Foot", slug: "baby-foot", icon: <BabyFootIcon className="w-8 h-8" />, image: "/images/categories/baby-foot.jpg", gradient: "from-[#FF6B35] to-[#FF8C42]" },
@@ -180,11 +187,11 @@ export default function Home() {
 
   const categoryCounts = useMemo(() => {
     const counts: Record<string, number> = {};
-    allProducts.forEach((p) => {
+    allProducts.forEach((p: any) => {
       if (p?.category) counts[p.category] = (counts[p.category] || 0) + 1;
     });
     return counts;
-  }, []);
+  }, [allProducts]);
 
   const categories = categoryDefs.map((cat) => ({
     ...cat,

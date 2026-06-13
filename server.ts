@@ -249,7 +249,7 @@ async function startServer() {
   
   // Robust CORS configuration
   app.use(cors({
-    origin: true, // Reflect request origin
+    origin: true,
     credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With", "Accept"]
@@ -677,9 +677,41 @@ async function startServer() {
     app.use(vite.middlewares);
   } else {
     const distPath = path.join(process.cwd(), "dist", "public");
-    app.use(express.static(distPath));
+
+    // Cache hashed assets for 1 year (files with hash in name)
+    app.use(/\/assets\/.+\.[a-f0-9]{8}\./, express.static(distPath, {
+      maxAge: "365d",
+      immutable: true,
+      setHeaders: (res) => {
+        res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+      }
+    }));
+
+    // Cache images for 1 week
+    app.use("/images", express.static(path.join(distPath, "images"), {
+      maxAge: "7d",
+      setHeaders: (res) => {
+        res.setHeader("Cache-Control", "public, max-age=604800");
+      }
+    }));
+
+    // Default static serving with shorter cache
+    app.use(express.static(distPath, {
+      maxAge: "1h",
+      setHeaders: (res, filePath) => {
+        if (filePath.endsWith(".html")) {
+          res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        } else if (filePath.endsWith(".js") || filePath.endsWith(".css")) {
+          res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+        }
+      }
+    }));
+
+    // SPA fallback - serve index.html for all other routes
     app.get("*", (req, res) => {
-      res.sendFile(path.join(distPath, "index.html"));
+      res.sendFile(path.join(distPath, "index.html"), {
+        headers: { "Cache-Control": "no-cache, no-store, must-revalidate" }
+      });
     });
   }
 
