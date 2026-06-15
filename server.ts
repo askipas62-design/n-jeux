@@ -573,6 +573,18 @@ async function startServer() {
     }
   });
 
+  app.get("/api/products/:id", async (req, res) => {
+    try {
+      const products = readProducts();
+      const product = products.find((p: any) => p.id === req.params.id);
+      if (!product) return res.status(404).json({ error: "Produit non trouvé" });
+      res.json(product);
+    } catch (e: any) {
+      console.error("[GET /api/products/:id] Error:", e.message);
+      res.status(500).json({ error: "Erreur lors de la lecture du produit" });
+    }
+  });
+
   app.get("/api/admin/products", async (req, res) => {
     const user = await getAuthUser(req);
     if (!user?.isAdmin) return res.status(403).json({ error: "Accès refusé" });

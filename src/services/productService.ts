@@ -20,9 +20,8 @@ export const productService = {
   },
 
   async getById(id: string): Promise<Product> {
-    const products = await this.getAll();
-    const product = products.find(p => p.id === id);
-    if (!product) throw new Error("Product not found");
-    return product;
+    const res = await fetch(`${API_URL}/api/products/${id}`);
+    if (!res.ok) throw new Error("Product not found");
+    return res.json();
   }
 };

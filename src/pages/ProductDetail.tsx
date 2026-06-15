@@ -17,7 +17,6 @@ export default function ProductDetail() {
   const [product, setProduct] = useState<any>(null);
   const [related, setRelated] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
-  const [updatingCart, setUpdatingCart] = useState(false);
   const [quantity, setQuantity] = useState(1);
   const [reviews, setReviews] = useState<any[]>([]);
   const [reviewsLoading, setReviewsLoading] = useState(true);
@@ -64,15 +63,10 @@ export default function ProductDetail() {
     setLoading(true);
     (async () => {
       try {
-        const [foundProduct, allProducts] = await Promise.all([
-          productService.getById(id),
-          productService.getAll({ category: undefined }),
-        ]);
+        const foundProduct = await productService.getById(id);
         setProduct(foundProduct);
-        const relatedData = allProducts
-          .filter(p => p.category === foundProduct.category && p.id !== id)
-          .slice(0, 4);
-        setRelated(relatedData);
+        const sameCategory = await productService.getAll({ category: foundProduct.category });
+        setRelated(sameCategory.filter(p => p.id !== id).slice(0, 4));
         fetchReviews();
       } catch {
         navigate("/boutique");
@@ -111,12 +105,8 @@ export default function ProductDetail() {
   if (!product) return null;
 
   const handleAddToCart = () => {
-    setUpdatingCart(true);
-    setTimeout(() => {
-      for (let i = 0; i < quantity; i++) addToCart(product);
-      addToast(`${quantity} x ${product.name} ajouté au panier !`, "success");
-      setUpdatingCart(false);
-    }, 600);
+    for (let i = 0; i < quantity; i++) addToCart(product);
+    addToast(`${quantity} x ${product.name} ajouté au panier !`, "success");
   };
 
   const getProductImage = (category: string) => {
@@ -260,11 +250,10 @@ export default function ProductDetail() {
                 </div>
                 <button
                   onClick={handleAddToCart}
-                  disabled={updatingCart}
-                  className="flex-grow bg-brand-dark py-3 px-6 rounded-xl text-white font-black text-[10px] uppercase tracking-[0.15em] flex items-center justify-center gap-2 shadow-xl hover:bg-brand-orange transition-all active:scale-95 disabled:opacity-70"
+                  className="flex-grow bg-brand-dark py-3 px-6 rounded-xl text-white font-black text-[10px] uppercase tracking-[0.15em] flex items-center justify-center gap-2 shadow-xl hover:bg-brand-orange transition-all active:scale-95"
                 >
-                  {updatingCart ? <Loader2 className="animate-spin" size={14} /> : <ShoppingCart size={14} />}
-                  {updatingCart ? "..." : "Ajouter au panier"}
+                  <ShoppingCart size={14} />
+                  Ajouter au panier
                 </button>
                 <button
                   onClick={() => toggleWishlist(id || "")}
