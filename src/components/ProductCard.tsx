@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ShoppingCart, Star, Heart, Trophy, Zap, CircleDot, Orbit, Headset, Gamepad2, RefreshCw, Loader2 } from "lucide-react";
+import { ShoppingCart, Star, Heart, Trophy, Zap, CircleDot, Orbit, Headset, Gamepad2, RefreshCw } from "lucide-react";
 import { useCart } from "../context/CartContext";
 import { useWishlist } from "../context/WishlistContext";
 import { useToast } from "./ui/Toast";
@@ -34,7 +34,6 @@ export default function ProductCard({ product }: ProductCardProps) {
   const { toggleWishlist, isInWishlist, processingId } = useWishlist();
   const { addToast } = useToast();
   const [quickViewOpen, setQuickViewOpen] = useState(false);
-  const [isAdding, setIsAdding] = useState(false);
   const [imgError, setImgError] = useState(false);
 
   if (!product) return null;
@@ -43,12 +42,8 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setIsAdding(true);
-    setTimeout(() => {
-      addToCart(product);
-      addToast(`${product.name} ajouté au panier !`, "success");
-      setIsAdding(false);
-    }, 600);
+    addToCart(product);
+    addToast(`${product.name} ajouté au panier !`, "success");
   };
 
   const handleWishlist = (e: React.MouseEvent) => {
@@ -195,11 +190,10 @@ export default function ProductCard({ product }: ProductCardProps) {
           <div className="flex items-center gap-2">
             <button 
               onClick={handleAddToCart}
-              disabled={isAdding}
-              className="flex-grow bg-gradient-to-r from-brand-orange to-brand-yellow text-white py-2 rounded-xl font-bold text-[10px] shadow-lg hover:shadow-brand-orange/40 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-wait"
+              className="flex-grow bg-gradient-to-r from-brand-orange to-brand-yellow text-white py-2 rounded-xl font-bold text-[10px] shadow-lg hover:shadow-brand-orange/40 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2"
             >
-              {isAdding ? <Loader2 className="animate-spin" size={12} /> : <ShoppingCart size={12} />}
-              {isAdding ? "AJOUT..." : "AJOUTER"}
+              <ShoppingCart size={12} />
+              AJOUTER
             </button>
             <button 
               onClick={handleWishlist}

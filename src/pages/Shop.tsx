@@ -27,15 +27,14 @@ export default function Shop() {
   const query = searchParams.get("q") || "";
   const sortBy = searchParams.get("sort") || "default";
 
+  const q = normalizeQuery(query);
+
   useEffect(() => {
     let cancelled = false;
     (async () => {
       setLoading(true);
       try {
-        const filters: any = {};
-        if (category) filters.category = category;
-        if (query) filters.q = query;
-        const data = await productService.getAll(Object.keys(filters).length ? filters : undefined);
+        const data = await productService.getAll();
         if (!cancelled) setAllProducts(data);
       } catch {
         if (!cancelled) setAllProducts([]);
@@ -44,17 +43,22 @@ export default function Shop() {
       }
     })();
     return () => { cancelled = true; };
-  }, [category, query]);
+  }, []);
 
   const products = useMemo(() => {
     const filtered = allProducts.filter(Boolean);
-    let result = [...filtered];
-    if (brand) {
-      result = result.filter((product) => {
+    let result = filtered.filter((product) => {
+      if (category && product.category !== category) return false;
+      if (brand) {
         const productBrand = getProductBrand(product);
-        return isSameBrand(productBrand, brand);
-      });
-    }
+        if (!isSameBrand(productBrand, brand)) return false;
+      }
+      if (q) {
+        const haystack = `${product.name} ${product.desc} ${product.category} ${product.brand || ""}`.toLowerCase();
+        if (!haystack.includes(q)) return false;
+      }
+      return true;
+    });
     if (sortBy === "price-asc") {
       result.sort((a, b) => a.priceHT * 1.2 - b.priceHT * 1.2);
     } else if (sortBy === "price-desc") {
@@ -65,7 +69,7 @@ export default function Shop() {
       result.sort((a, b) => b.rating - a.rating);
     }
     return result;
-  }, [brand, allProducts, sortBy]);
+  }, [brand, category, q, allProducts, sortBy]);
 
   const setParam = (key: string, value: string) => {
     const next = new URLSearchParams(searchParams);
