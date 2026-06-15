@@ -1,8 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
-import { ShoppingCart, User, LogOut, LayoutDashboard, Menu, X, Sparkles, Search, Heart, ChevronDown, ChevronUp } from "lucide-react";
+import { ShoppingCart, User, LogOut, LayoutDashboard, Menu, X, Sparkles, Search, Heart, ChevronDown } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 import { useCart } from "../context/CartContext";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // Structure of navigation categories and their respective brands
 const navigationMenu = [
@@ -15,6 +15,7 @@ const navigationMenu = [
       { label: "René Pierre", href: "/boutique?category=baby-foot&brand=Ren%C3%A9%20Pierre" },
       { label: "Stella", href: "/boutique?category=baby-foot&brand=Stella" },
       { label: "Leonhart", href: "/boutique?category=baby-foot&brand=Leonhart" },
+      { label: "Bonzini", href: "/boutique?category=baby-foot&brand=Bonzini" },
     ]
   },
   {
@@ -47,7 +48,7 @@ const navigationMenu = [
       { label: "BERG", href: "/boutique?category=trampoline&brand=BERG" },
       { label: "Jump'In", href: "/boutique?category=trampoline&brand=Jump%27In" },
       { label: "Springfree", href: "/boutique?category=trampoline&brand=Springfree" },
-      { label: "Kettler", href: "/boutique?category=ping-pong&brand=Kettler" },
+      { label: "Kettler", href: "/boutique?category=trampoline&brand=Kettler" },
     ]
   },
   {
@@ -86,6 +87,14 @@ export default function Header() {
     navigate("/connexion");
   };
 
+  const toggleMobileCat = (slug: string) => {
+    if (expandedMobileCat === slug) {
+      setExpandedMobileCat(null);
+    } else {
+      setExpandedMobileCat(slug);
+    }
+  };
+
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
@@ -95,13 +104,25 @@ export default function Header() {
     }
   };
 
-  const toggleMobileCat = (slug: string) => {
-    if (expandedMobileCat === slug) {
-      setExpandedMobileCat(null);
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
     } else {
-      setExpandedMobileCat(slug);
+      document.body.style.overflow = "";
     }
-  };
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsMenuOpen(false);
+    };
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, [isMenuOpen]);
 
   return (
     <header className="sticky top-0 z-40 bg-[#1B1B2F] text-white shadow-lg">
@@ -232,84 +253,99 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile backdrop + menu */}
       {isMenuOpen && (
-          <div className="lg:hidden bg-[#1B1B2F] border-t border-white/10 overflow-hidden">
-            <div className="container mx-auto px-4 py-6 flex flex-col gap-5 text-lg font-bold">
-              {/* Search in Mobile */}
-              <form onSubmit={handleSearch} className="relative bg-white/5 rounded-2xl p-3 flex items-center gap-3 border border-white/10">
-                <Search size={20} className="text-brand-orange" />
-                <input 
-                  type="text" 
-                  placeholder="Rechercher un produit..."
+        <>
+          <div
+            className="fixed inset-0 z-30 bg-black/60 lg:hidden"
+            onClick={() => setIsMenuOpen(false)}
+          />
+          <div className="lg:hidden relative z-40 animate-slide-down border-t border-white/5">
+            <div className="container mx-auto px-4 pb-4 pt-2 flex flex-col gap-1 text-sm text-brand-cream/80">
+              <form onSubmit={handleSearch} className="relative bg-white/5 rounded-xl px-3 py-2.5 flex items-center gap-2 mb-1">
+                <Search size={16} className="text-white/30 shrink-0" />
+                <input
+                  type="text"
+                  placeholder="Rechercher..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="bg-transparent border-none outline-none text-white placeholder:text-white/40 font-black w-full text-base"
+                  className="bg-transparent border-none outline-none text-white placeholder:text-white/30 w-full text-sm"
                 />
               </form>
-              
-              <Link to="/" onClick={() => setIsMenuOpen(false)} className="hover:text-brand-orange transition-colors py-1">Accueil</Link>
-              
-              {/* Categories Accordions (inspired by Freizeitshop24 mobile) */}
-              <div className="flex flex-col gap-3 py-1">
-                <p className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-orange">Nos Univers</p>
+
+              <div className="flex flex-col">
                 {navigationMenu.map((cat) => (
-                  <div key={`mobile-cat-${cat.slug}`} className="border-b border-white/5 pb-2">
-                    <button 
+                  <div key={`mobile-cat-${cat.slug}`} className="border-b border-white/5">
+                    <button
                       onClick={() => toggleMobileCat(cat.slug)}
-                      className="w-full flex items-center justify-between text-base text-brand-cream/90 hover:text-brand-orange py-1"
+                      className="w-full flex items-center justify-between py-2.5 px-1 hover:text-brand-orange transition-colors"
                     >
                       <span>{cat.label}</span>
-                      {expandedMobileCat === cat.slug ? <ChevronUp size={16} className="text-brand-orange" /> : <ChevronDown size={16} />}
+                      <ChevronDown
+                        size={14}
+                        className={`text-white/20 transition-transform duration-200 ${
+                          expandedMobileCat === cat.slug ? "rotate-180" : ""
+                        }`}
+                      />
                     </button>
-                    
-                      {expandedMobileCat === cat.slug && (
-                          <div className="pl-4 mt-2 space-y-2 overflow-hidden flex flex-col border-l border-brand-orange/20">
-                          {cat.brands.map((brand) => (
-                            <Link
-                              key={`mobile-brand-${brand.label}`}
-                              to={brand.href}
-                              onClick={() => setIsMenuOpen(false)}
-                              className="text-sm text-brand-cream/70 hover:text-brand-orange py-1.5 uppercase font-medium tracking-wide"
-                            >
-                              {brand.label}
-                            </Link>
-                          ))}
-                          <Link 
-                            to={cat.href}
+                    <div
+                      className={`overflow-hidden transition-all duration-200 ${
+                        expandedMobileCat === cat.slug
+                          ? "max-h-[300px] opacity-100 pb-2"
+                          : "max-h-0 opacity-0"
+                      }`}
+                    >
+                      <div className="pl-4 flex flex-col gap-0.5">
+                        {cat.brands.map((brand) => (
+                          <Link
+                            key={`mobile-brand-${brand.label}`}
+                            to={brand.href}
                             onClick={() => setIsMenuOpen(false)}
-                            className="text-xs font-black text-brand-orange hover:text-brand-yellow uppercase tracking-widest pt-2"
+                            className="text-sm text-brand-cream/50 hover:text-brand-orange py-1.5 transition-colors"
                           >
-                            Voir tout {cat.label} →
+                            {brand.label}
                           </Link>
-            </div>
-        )}
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
-              
-              <Link to="/a-propos" onClick={() => setIsMenuOpen(false)} className="hover:text-brand-orange transition-colors py-1">L'Entreprise</Link>
-              <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="hover:text-brand-orange transition-colors py-1">Contact</Link>
 
-              {user && (
-                <Link to="/client/dashboard" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-3 hover:text-brand-orange transition-colors py-1 border-t border-white/5 pt-3">
-                  <Heart size={20} className="text-brand-orange" />
-                  <span>Favoris</span>
-                </Link>
-              )}
-              
+              <Link to="/a-propos" onClick={() => setIsMenuOpen(false)} className="py-2.5 px-1 hover:text-brand-orange transition-colors border-b border-white/5">
+                L'Entreprise
+              </Link>
+              <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="py-2.5 px-1 hover:text-brand-orange transition-colors border-b border-white/5">
+                Contact
+              </Link>
+
               {!user ? (
-                <Link to="/connexion" onClick={() => setIsMenuOpen(false)} className="text-brand-orange py-1">Connexion</Link>
+                <Link to="/connexion" onClick={() => setIsMenuOpen(false)} className="py-2.5 px-1 text-brand-orange/90 hover:text-brand-orange transition-colors font-bold">
+                  Connexion
+                </Link>
               ) : (
-                <div className="border-t border-white/5 pt-3 flex flex-col gap-3">
-                  <Link to="/client/dashboard" onClick={() => setIsMenuOpen(false)} className="text-brand-yellow py-1">Mon Espace Client</Link>
-                  {user.isAdmin && <Link to="/admin/dashboard" onClick={() => setIsMenuOpen(false)} className="text-brand-orange py-1">Dashboard Admin</Link>}
-                  <button onClick={() => { handleLogout(); setIsMenuOpen(false); }} className="text-left text-red-400 py-1">Déconnexion</button>
+                <div className="flex flex-col pt-1 pb-2">
+                  <Link to="/client/dashboard" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2 py-2.5 px-1 hover:text-brand-orange transition-colors border-b border-white/5">
+                    <Heart size={16} className="text-white/30" />
+                    <span>Favoris</span>
+                  </Link>
+                  <Link to="/client/dashboard" onClick={() => setIsMenuOpen(false)} className="py-2.5 px-1 text-brand-yellow/90 hover:text-brand-yellow transition-colors border-b border-white/5">
+                    Mon Espace
+                  </Link>
+                  {user.isAdmin && (
+                    <Link to="/admin/dashboard" onClick={() => setIsMenuOpen(false)} className="py-2.5 px-1 text-brand-orange/80 hover:text-brand-orange transition-colors border-b border-white/5">
+                      Admin
+                    </Link>
+                  )}
+                  <button onClick={() => { handleLogout(); setIsMenuOpen(false); }} className="text-left py-2.5 px-1 text-white/40 hover:text-red-400 transition-colors">
+                    Déconnexion
+                  </button>
                 </div>
               )}
             </div>
-                        </div>
-                      )}
+          </div>
+        </>
+      )}
     </header>
   );
 }

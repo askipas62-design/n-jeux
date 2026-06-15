@@ -27,6 +27,8 @@ const FAQ = lazy(() => import("./pages/FAQ"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Cookies = lazy(() => import("./pages/Cookies"));
 const Returns = lazy(() => import("./pages/Returns"));
+const ForgotPassword = lazy(() => import("./pages/ForgotPassword"));
+const VerifyCode = lazy(() => import("./pages/VerifyCode"));
 
 // Protected Route components
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
@@ -82,6 +84,8 @@ export default function App() {
                     <Route path="/politique-de-confidentialite" element={<Privacy />} />
                     <Route path="/cookies" element={<Cookies />} />
                     <Route path="/retour-colis" element={<Returns />} />
+                    <Route path="/mot-de-passe-oublie" element={<ForgotPassword />} />
+                    <Route path="/verifier-code" element={<VerifyCode />} />
                     <Route path="*" element={<Navigate to="/" />} />
                   </Routes>
                 </Suspense>

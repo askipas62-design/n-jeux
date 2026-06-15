@@ -56,7 +56,7 @@ export default function Payment() {
       await orderService.uploadProof(orderId, file);
       addToast("Preuve de virement reçue ! Nous validons cela rapidement.", "success");
       clearCart();
-      setTimeout(() => navigate("/dashboard"), 1500);
+      setTimeout(() => navigate("/client/dashboard"), 1500);
     } catch (err) {
       addToast("Erreur lors de l'envoi de la preuve", "error");
     } finally {
@@ -227,7 +227,7 @@ export default function Payment() {
                   Envoyer la preuve
                 </button>
 
-                <button onClick={() => navigate("/dashboard")} className="mt-3 text-gray-400 font-bold hover:text-[#FF6B35] underline transition-colors uppercase text-[8px] tracking-widest">
+                <button onClick={() => navigate("/client/dashboard")} className="mt-3 text-gray-400 font-bold hover:text-[#FF6B35] underline transition-colors uppercase text-[8px] tracking-widest">
                   Plus tard via mon compte
                 </button>
               </div>

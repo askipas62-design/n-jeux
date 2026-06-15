@@ -9,8 +9,24 @@ import { getImageSrc } from "../lib/images";
 
 interface ProductCardProps {
   product: any;
-  key?: any;
 }
+
+const getBrandInitials = (brand: string) => {
+  if (!brand || brand === "Générique") return "N/J";
+  return brand.split(" ").map(w => w[0]).join("").toUpperCase().slice(0, 2);
+};
+
+const getBrandColor = (brand: string) => {
+  const colors = [
+    ["#f97316", "#ea580c"], ["#22c55e", "#16a34a"], ["#3b82f6", "#2563eb"],
+    ["#a855f7", "#9333ea"], ["#ec4899", "#db2777"], ["#14b8a6", "#0d9488"],
+    ["#eab308", "#ca8a04"], ["#f43f5e", "#e11d48"], ["#6366f1", "#4f46e5"],
+    ["#84cc16", "#65a30d"], ["#06b6d4", "#0891b2"], ["#d946ef", "#c026d3"],
+  ];
+  let hash = 0;
+  for (let i = 0; i < brand.length; i++) hash = brand.charCodeAt(i) + ((hash << 5) - hash);
+  return colors[Math.abs(hash) % colors.length];
+};
 
 export default function ProductCard({ product }: ProductCardProps) {
   const { addToCart } = useCart();
@@ -18,8 +34,11 @@ export default function ProductCard({ product }: ProductCardProps) {
   const { addToast } = useToast();
   const [quickViewOpen, setQuickViewOpen] = useState(false);
   const [isAdding, setIsAdding] = useState(false);
+  const [imgError, setImgError] = useState(false);
 
   if (!product) return null;
+
+  const hasImage = !!product.image;
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -57,6 +76,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       case "billard": return "/images/products/table-de-billard-americain-7-pieds.jpg";
       case "trampoline": return "/images/products/trampoline-jardin-244cm-8-pieds.jpg";
       case "consoles": return "/images/products/playstation-5-pro.jpg";
+      case "accessoires": return "/images/products/kit-accessoires-baby-foot.jpg";
       default: return "/images/hero-bg.jpg";
     }
   };
@@ -84,8 +104,9 @@ export default function ProductCard({ product }: ProductCardProps) {
 
       {/* Image Section */}
       <Link to={`/boutique/${product.id}`} className="relative h-48 overflow-hidden bg-gray-100 flex items-center justify-center group-hover:bg-brand-cream transition-colors duration-500">
+        {hasImage && !imgError ? (
          <img 
-           src={getImageSrc(product.image || getCategoryImage(product.category))} 
+           src={getImageSrc(product.image)} 
            alt={product.name} 
            width={400}
            height={300}
@@ -93,7 +114,18 @@ export default function ProductCard({ product }: ProductCardProps) {
            decoding="async"
            className="absolute inset-0 w-full h-full object-cover transition-all duration-700" 
            referrerPolicy="no-referrer"
+           onError={() => setImgError(true)}
          />
+        ) : (() => {
+          const [c1, c2] = getBrandColor(product.brand);
+          const initials = getBrandInitials(product.brand);
+          return (
+            <div className="absolute inset-0 flex flex-col items-center justify-center" style={{ background: `linear-gradient(135deg, ${c1}, ${c2})` }}>
+              <span className="text-white/90 font-black text-3xl tracking-tight">{initials}</span>
+              <span className="text-white/60 text-[10px] font-bold uppercase tracking-widest mt-1">{product.brand || product.category}</span>
+            </div>
+          );
+        })()}
 
          <div className="absolute inset-0 bg-brand-orange/5 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-4">
             <button 

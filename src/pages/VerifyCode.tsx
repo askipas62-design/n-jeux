@@ -129,7 +129,7 @@ export default function VerifyCode() {
   if (!email) {
     return (
       <div className="min-h-[calc(100vh-80px)] flex items-center justify-center p-4 bg-[#FFF8F0]">
-        <div className="w-full max-w-xl bg-white rounded-[48px] shadow-2xl p-12 md:p-16 text-center">
+        <div className="w-full max-w-xl bg-white rounded-[24px] md:rounded-[48px] shadow-2xl p-6 md:p-16 text-center">
           <p className="text-gray-500 mb-6">Aucun email fourni pour la vérification.</p>
           <Link to="/connexion" className="text-[#FF6B35] font-bold hover:underline">
             Retour à la connexion
@@ -144,14 +144,14 @@ export default function VerifyCode() {
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#FF6B35] rounded-full blur-[200px] opacity-10 -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#FFD23F] rounded-full blur-[200px] opacity-10 translate-y-1/2 -translate-x-1/2" />
 
-      <div className="w-full max-w-xl bg-white rounded-[48px] shadow-2xl overflow-hidden relative border border-gray-100 p-12 md:p-16 animate-fade-in-up"
+      <div className="w-full max-w-xl bg-white rounded-[24px] md:rounded-[48px] shadow-2xl overflow-hidden relative border border-gray-100 p-6 md:p-16 animate-fade-in-up"
       >
-        <div className="text-center mb-12">
-          <Link to={type === "signup" ? "/inscription" : "/mot-de-passe-oublie"} className="inline-flex items-center gap-2 mb-8">
-            <div className="w-12 h-12 bg-[#FF6B35] rounded-2xl flex items-center justify-center font-bold text-xl text-white shadow-lg">A</div>
-            <span className="text-2xl font-black font-display text-brand-dark uppercase tracking-tight">Appiotti <span className="text-brand-orange">Game Shop</span></span>
+        <div className="text-center mb-6 md:mb-12">
+          <Link to={type === "signup" ? "/inscription" : "/mot-de-passe-oublie"} className="inline-flex items-center gap-2 mb-6 md:mb-8">
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-[#FF6B35] rounded-2xl flex items-center justify-center font-bold text-lg md:text-xl text-white shadow-lg">A</div>
+            <span className="text-lg md:text-2xl font-black font-display text-brand-dark uppercase tracking-tight">Appiotti <span className="text-brand-orange">Game Shop</span></span>
           </Link>
-          <h1 className="text-3xl md:text-5xl font-black text-brand-dark mb-4 font-display uppercase tracking-tighter">
+          <h1 className="text-2xl md:text-5xl font-black text-brand-dark mb-3 md:mb-4 font-display uppercase tracking-tighter">
             {success ? "Vérifié !" : "Entrez le code"}
           </h1>
           <p className="text-gray-500 font-medium">

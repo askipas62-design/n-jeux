@@ -40,9 +40,9 @@ export default function ResetPassword() {
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#FF6B35] rounded-full blur-[200px] opacity-10 -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#FFD23F] rounded-full blur-[200px] opacity-10 translate-y-1/2 -translate-x-1/2" />
 
-      <div className="w-full max-w-xl bg-white rounded-[32px] md:rounded-[48px] shadow-2xl overflow-hidden relative border border-gray-100 p-6 md:p-12 animate-scale-in"
+      <div className="w-full max-w-xl bg-white rounded-[24px] md:rounded-[48px] shadow-2xl overflow-hidden relative border border-gray-100 p-6 md:p-12 animate-scale-in"
       >
-        <div className="text-center mb-8 md:mb-12">
+        <div className="text-center mb-6 md:mb-12">
           <h1 className="text-2xl md:text-5xl font-black text-brand-dark mb-3 md:mb-4 font-display uppercase tracking-tighter">
             {success ? "Félicitations !" : "Espace Sécurisé"}
           </h1>

@@ -18,6 +18,7 @@ export default function Shop() {
   const minPrice = searchParams.get("min") || "";
   const maxPrice = searchParams.get("max") || "";
   const query = searchParams.get("q") || "";
+  const badge = searchParams.get("badge") || "";
   const sortBy = searchParams.get("sort") || "default";
 
   const categories = useMemo(
@@ -45,6 +46,10 @@ export default function Shop() {
       }
       if (minPrice && product.priceHT * 1.2 < Number(minPrice)) return false;
       if (maxPrice && product.priceHT * 1.2 > Number(maxPrice)) return false;
+      if (badge) {
+        const productBadge = (product.badge || "").toLowerCase().trim();
+        if (productBadge !== badge.toLowerCase().trim()) return false;
+      }
       if (q) {
         const haystack = `${product.name} ${product.desc} ${product.category} ${product.brand || ""}`.toLowerCase();
         if (!haystack.includes(q)) return false;
@@ -57,13 +62,13 @@ export default function Shop() {
     } else if (sortBy === "price-desc") {
       result.sort((a, b) => b.priceHT * 1.2 - a.priceHT * 1.2);
     } else if (sortBy === "popularity") {
-      result.sort((a, b) => b.rating - a.rating);
+      result.sort((a, b) => b.rating - a.rating || b.stock - a.stock);
     } else {
       result.sort((a, b) => b.rating - a.rating);
     }
 
     return result;
-  }, [brand, category, maxPrice, minPrice, query, sortBy]);
+  }, [badge, brand, category, maxPrice, minPrice, query, sortBy]);
 
   useEffect(() => {
     setLoading(true);
@@ -137,7 +142,21 @@ export default function Shop() {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-12">
-          <aside className={`lg:w-72 space-y-12 transition-all ${showFilters ? "block" : "hidden lg:block"}`}>
+          {/* Mobile filter backdrop */}
+          {showFilters && (
+            <div
+              className="fixed inset-0 z-30 bg-black/50 lg:hidden"
+              onClick={() => setShowFilters(false)}
+            />
+          )}
+
+          <aside className={`
+            lg:w-72 space-y-12
+            ${showFilters 
+              ? "fixed inset-x-0 top-20 bottom-0 z-50 overflow-y-auto bg-brand-cream p-6 animate-slide-down lg:static lg:z-auto lg:bg-transparent lg:p-0 lg:overflow-y-visible lg:animate-none lg:block" 
+              : "hidden lg:block"
+            }`}
+          >
             <div className="bg-white p-8 rounded-[32px] shadow-xl border border-gray-100">
               <h3 className="text-lg font-black mb-8 border-b pb-4 flex items-center gap-2 font-display">
                 <Filter size={20} className="text-brand-orange" /> Catégories

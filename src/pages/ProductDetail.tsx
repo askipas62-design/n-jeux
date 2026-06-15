@@ -24,6 +24,7 @@ export default function ProductDetail() {
   const [reviewsLoading, setReviewsLoading] = useState(true);
   const [submittingReview, setSubmittingReview] = useState(false);
   const [newReview, setNewReview] = useState({ rating: 5, comment: "" });
+  const [imgError, setImgError] = useState(false);
 
   const { addToCart } = useCart();
   const { toggleWishlist, isInWishlist, processingId } = useWishlist();
@@ -60,21 +61,19 @@ export default function ProductDetail() {
 
   useEffect(() => {
     setLoading(true);
-    setTimeout(() => {
-      const foundProduct = allProducts.find(p => p.id === id);
-      if (foundProduct) {
-        setProduct(foundProduct);
-        const relatedData = allProducts
-          .filter(p => p.category === foundProduct.category && p.id !== id)
-          .slice(0, 4);
-        setRelated(relatedData);
-        setLoading(false);
-        fetchReviews();
-      } else {
-        setLoading(false);
-        navigate("/boutique");
-      }
-    }, 400);
+    const foundProduct = allProducts.find(p => p.id === id);
+    if (foundProduct) {
+      setProduct(foundProduct);
+      const relatedData = allProducts
+        .filter(p => p.category === foundProduct.category && p.id !== id)
+        .slice(0, 4);
+      setRelated(relatedData);
+      setLoading(false);
+      fetchReviews();
+    } else {
+      setLoading(false);
+      navigate("/boutique");
+    }
   }, [id, navigate]);
 
   const handleSubmitReview = async (e: FormEvent) => {
@@ -121,8 +120,26 @@ export default function ProductDetail() {
       case "billard": return "/images/products/table-de-billard-americain-7-pieds.jpg";
       case "trampoline": return "/images/products/trampoline-jardin-244cm-8-pieds.jpg";
       case "consoles": return "/images/products/playstation-5-pro.jpg";
+      case "accessoires": return "/images/products/kit-accessoires-baby-foot.jpg";
       default: return "/images/hero-bg.jpg";
     }
+  };
+
+  const getBrandInitials = (brand: string) => {
+    if (!brand || brand === "Générique") return "N/J";
+    return brand.split(" ").map(w => w[0]).join("").toUpperCase().slice(0, 2);
+  };
+
+  const getBrandColor = (brand: string) => {
+    const colors = [
+      ["#f97316", "#ea580c"], ["#22c55e", "#16a34a"], ["#3b82f6", "#2563eb"],
+      ["#a855f7", "#9333ea"], ["#ec4899", "#db2777"], ["#14b8a6", "#0d9488"],
+      ["#eab308", "#ca8a04"], ["#f43f5e", "#e11d48"], ["#6366f1", "#4f46e5"],
+      ["#84cc16", "#65a30d"], ["#06b6d4", "#0891b2"], ["#d946ef", "#c026d3"],
+    ];
+    let hash = 0;
+    for (let i = 0; i < brand.length; i++) hash = brand.charCodeAt(i) + ((hash << 5) - hash);
+    return colors[Math.abs(hash) % colors.length];
   };
 
   return (
@@ -147,8 +164,9 @@ export default function ProductDetail() {
               <div
                 className="relative w-full aspect-square rounded-[24px] overflow-hidden shadow-xl border-2 border-white max-h-[50vh] animate-fade-in-up"
               >
+                {product.image && !imgError ? (
                 <img
-                  src={getImageUrl(product.image || getProductImage(product.category))}
+                  src={getImageUrl(product.image)}
                   alt={product.name}
                   width={600}
                   height={600}
@@ -156,7 +174,19 @@ export default function ProductDetail() {
                   decoding="async"
                   className="absolute inset-0 w-full h-full object-cover"
                   referrerPolicy="no-referrer"
+                  onError={() => setImgError(true)}
                 />
+                ) : (() => {
+                    const [c1, c2] = getBrandColor(product.brand);
+                    const initials = getBrandInitials(product.brand);
+                    return (
+                      <div className="w-full h-full flex flex-col items-center justify-center" style={{ background: `linear-gradient(135deg, ${c1}, ${c2})` }}>
+                        <span className="text-white/90 font-black text-5xl tracking-tight">{initials}</span>
+                        <span className="text-white/60 text-xs font-bold uppercase tracking-widest mt-2">{product.brand || product.category}</span>
+                      </div>
+                    );
+                  })()
+                }
                 <div className="absolute top-3 left-3 bg-brand-orange text-white px-3 py-1 rounded-xl font-black text-[8px] shadow-lg uppercase tracking-widest border border-white/20">
                   {product.category}
                 </div>

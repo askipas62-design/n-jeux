@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { HelpCircle, ChevronDown } from "lucide-react";
 
 const faqs = [
@@ -53,12 +54,12 @@ export default function FAQ() {
         <div className="mt-20 text-center bg-brand-dark text-white p-10 rounded-3xl">
           <h2 className="text-2xl font-black mb-4 uppercase">Encore des questions ?</h2>
           <p className="text-brand-cream/70 mb-8 font-medium">Hervé est à votre disposition pour vous répondre directement.</p>
-          <a 
-            href="/contact" 
+          <Link
+            to="/contact"
             className="inline-block px-8 py-4 bg-brand-orange text-white font-black uppercase tracking-widest rounded-xl hover:bg-brand-yellow hover:text-brand-dark transition-all transform hover:scale-105"
           >
             Contactez-nous
-          </a>
+          </Link>
         </div>
       </div>
     </div>

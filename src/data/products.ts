@@ -205,7 +205,7 @@ export const products: Product[] = [
   },
   {
     id: "bi-132",
-    name: "Table de Billard Américain 7 Pieds – Billard Professionnel",
+    name: "René Pierre Table de Billard Américain 7 Pieds – Billard Professionnel",
     category: "billard",
     brand: "René Pierre",
     priceHT: 1249.17,
@@ -227,7 +227,7 @@ export const products: Product[] = [
   },
   {
     id: "bi-134",
-    name: "Table de Billard Mixte Pool Snooker – Double Jeu",
+    name: "Garlando Table de Billard Mixte Pool Snooker – Double Jeu",
     category: "billard",
     brand: "Garlando",
     priceHT: 1665.83,
@@ -268,7 +268,7 @@ export const products: Product[] = [
   },
   {
     id: "bi-133",
-    name: "Table de Billard Anglais 6 Pieds – Style Classique",
+    name: "Garlando Table de Billard Anglais 6 Pieds – Style Classique",
     category: "billard",
     brand: "Garlando",
     priceHT: 832.5,
@@ -353,7 +353,7 @@ export const products: Product[] = [
   },
   {
     id: "bi-135",
-    name: "Mini Billard de Salon 4 Pieds – Compact et Accessible",
+    name: "Garlando Mini Billard de Salon 4 Pieds – Compact et Accessible",
     category: "billard",
     brand: "Garlando",
     priceHT: 291.67,
@@ -750,7 +750,7 @@ export const products: Product[] = [
     stock: 10,
     rating: 4.8,
     desc: "Le baby-foot Leonhart Professional ITSF représente l’excellence absolue en matière de football de table. Conçu pour les compétitions officielles, il est utilisé comme table professionnelle de référence dans de nombreux tournois.\nSa structure ultra robuste et son poids élevé garantissent une stabilité parfaite, même lors des matchs les plus intenses. Les barres professionnelles plus légères permettent une vitesse de jeu exceptionnelle et un contrôle précis de la balle.\nCe modèle se distingue par un niveau de finition et de performance inégalé, offrant une expérience de jeu identique à celle des compétitions internationales.\n👉 C’est une table officielle de tournoi (ITSF) \n👉 Idéal pour :\n\nclubs professionnels\n\njoueurs avancés\n\ncompétitions\n\nentraînement intensif⚙️ CARACTÉRISTIQUES TECHNIQUES\nDimensions : 143 x 74 x 92 cm \n\nPoids : ≈ 120 kg (ultra stable) \n\nStructure : MDF mélaminé haute densité \n\nPieds en acier robustes\n\nBarres sortantes compétition (plus légères, plus rapides) \n\nJoueurs haute précision\n\nSurface de jeu : ≈ 111 x 68 cm \n\nLivré avec balles ITSF\n\nQualité allemande 🇩🇪\n\n👉 Particularité :\n\nGardien avec accès complet derrière le but → contrôle total",
-    image: "",
+    image: "/images/products/baby-foot-leonhart-professional-itsf-table-comp-tition-offic-54.png",
     specs: {
       "Usage": "Intérieur",
       "Type": "Compétition",
@@ -792,7 +792,7 @@ export const products: Product[] = [
     stock: 10,
     rating: 4.6,
     desc: "La JOOLA Rally TL Outdoor est une table conçue pour jouer toute l’année en extérieur, quelles que soient les conditions.\nSon plateau en aluminium composite de 6 mm offre un rebond régulier et une excellente résistance aux intempéries. \nSa structure robuste et ses pieds réglables assurent une stabilité optimale, même sur un terrain irrégulier.\n👉 Idéale pour les jardins, terrasses, campings ou collectivités.\n\n⚙️ Caractéristiques techniques\n\nPlateau : 6 mm aluminium composite (outdoor) \n\nRésistance : intempéries (pluie, soleil, humidité) \n\nStructure : acier renforcé robuste \n\nPieds réglables : oui (terrain irrégulier) \n\nMode solo : oui (demi-table relevable) \n\nFilet : inclus et résistant aux intempéries \n\nMontage : ~15 minutes \n\nUtilisation : extérieur toute l’année",
-    image: "",
+    image: "/images/products/table-de-ping-pong-ext-rieure-joola-rally-tl-r-sistante-stab-101.png",
     specs: {
       "Usage": "Extérieur",
       "Type": "Standard",
@@ -813,7 +813,7 @@ export const products: Product[] = [
     stock: 10,
     rating: 4.7,
     desc: "La JOOLA J500X Outdoor est une table extérieure haut de gamme conçue pour durer.\nSon plateau en aluminium composite résiste aux intempéries et garantit un rebond régulier. Elle peut être utilisée toute l’année, quelles que soient les conditions météo. \nSa structure renforcée assure une stabilité optimale, idéale pour un usage fréquent.\n👉 Parfaite pour les jardins, familles et utilisateurs exigeants.\n\n⚙️ Caractéristiques techniques\n\nPlateau : aluminium composite (outdoor) \n\nRésistance : pluie / soleil / humidité \n\nStructure : acier robuste renforcé \n\nSystème pliable : oui\n\nMode solo : oui\n\nRoues : mobilité facile\n\nUtilisation : extérieur toute l’année\n\nDimensions standard compétition : 274 x 152,5 x 76 cm",
-    image: "",
+    image: "/images/products/table-de-ping-pong-ext-rieure-joola-j500x-qualit-premium-r-s-102.png",
     specs: {
       "Usage": "Extérieur",
       "Type": "Premium",
@@ -834,7 +834,7 @@ export const products: Product[] = [
     stock: 10,
     rating: 4.8,
     desc: "La JOOLA Nova Pro combine design moderne et performance pour une utilisation extérieure optimale.\nSon plateau en aluminium composite de 6 mm garantit un rebond régulier et une résistance aux intempéries, idéal pour jouer toute l’année. \nSa structure robuste, ses roues et ses pieds réglables assurent une stabilité parfaite sur tous les terrains.\n👉 Une table parfaite pour allier style, plaisir et durabilité.\n\n⚙️ Caractéristiques techniques\n\nPlateau : 6 mm aluminium composite outdoor \n\nRésistance : pluie / soleil / humidité \n\nRoues : 8 grandes roulettes verrouillables \n\nMode solo : oui (demi-table relevable) \n\nPieds réglables : oui (terrain irrégulier) \n\nFilet : inclus et résistant aux intempéries \n\nUtilisation : extérieur toute l’année",
-    image: "",
+    image: "/images/products/table-de-ping-pong-ext-rieure-joola-nova-pro-design-moderne--103.png",
     specs: {
       "Usage": "Extérieur",
       "Type": "Standard",
@@ -855,7 +855,7 @@ export const products: Product[] = [
     stock: 10,
     rating: 4.8,
     desc: "La JOOLA Midsize FA est la solution idéale pour jouer au ping-pong même dans un espace réduit.\nSon format compact (152 cm) permet de l’utiliser facilement en intérieur sans avoir besoin d’une grande pièce. Elle se plie rapidement et se transporte comme une valise. \n👉 Parfaite pour :\n\nappartement\n\nbureau\n\nsalle de jeux\n\nmoments entre amis\n\n⚙️ Caractéristiques techniques\n\nFormat : table compacte (midsize) \n\nDimensions : ~152 x 76 x 71,5 cm \n\nPliable : oui (format valise) \n\nTransport : poignée intégrée \n\nMontage : ultra rapide\n\nUtilisation : intérieur uniquement\n\nDesign : moderne (noir / gris / accents orange)",
-    image: "",
+    image: "/images/products/table-de-ping-pong-joola-midsize-fa-compacte-pliable-id-ale--104.png",
     specs: {
       "Usage": "Intérieur",
       "Type": "Standard",
@@ -877,7 +877,7 @@ export const products: Product[] = [
     badge: "Promo",
     rating: 4.6,
     desc: "La TIBHAR 9000W est une table conçue pour un usage intensif en club, école ou compétition.\nElle offre un rebond précis et rapide, proche des standards professionnels. Sa structure robuste garantit une stabilité optimale même lors d’échanges intensifs.\n👉 Idéale pour les joueurs exigeants et les environnements professionnels.\n\n⚙️ Caractéristiques techniques (typique compétition)\n\nPlateau : 22 mm ou 25 mm (selon version)\n\nNorme : ITTF / compétition\n\nStructure : acier renforcé professionnel\n\nRoulettes : transport facile\n\nSystème pliable : oui\n\nUtilisation : intérieur\n\nNiveau : club / compétition\n\n💡 Les tables compétition ont souvent :\n\nrebond plus rapide\n\nmeilleure précision\n\ndurabilité élevée",
-    image: "",
+    image: "/images/products/table-de-ping-pong-tibhar-9000w-qualit-comp-tition-norme-itt-105.png",
     specs: {
       "Usage": "Intérieur",
       "Type": "Compétition",
@@ -919,7 +919,7 @@ export const products: Product[] = [
     stock: 10,
     rating: 4.7,
     desc: "La TIBHAR 6000W est une table de ping-pong ultra robuste conçue pour une installation permanente en extérieur.\nSon plateau en résine mélamine de 10 mm offre une excellente qualité de jeu tout en résistant aux intempéries. Sa structure massive avec filet en acier intégré garantit une durabilité exceptionnelle. \n👉 C’est l’alternative moderne aux tables en béton.\n\n⚙️ Caractéristiques techniques\n\nPlateau : 10 mm mélamine (très épais) \n\nRésistance : pluie / UV / humidité \n\nStructure : acier galvanisé thermolaqué \n\nFilet : acier intégré (anti-vandalisme) \n\nInstallation : fixe / ancrable au sol \n\nPoids : ~120 kg \n\nUtilisation : extérieur permanent",
-    image: "",
+    image: "/images/products/table-de-ping-pong-tibhar-6000w-ultra-robuste-fixe-id-ale-es-107.png",
     specs: {
       "Usage": "Extérieur",
       "Type": "Standard",
@@ -940,7 +940,7 @@ export const products: Product[] = [
     stock: 10,
     rating: 4.6,
     desc: "🏆 Le haut niveau en extérieur\nLa Cornilleau 700X Outdoor est l’une des meilleures tables outdoor du marché, offrant une qualité de jeu proche d’une table de compétition.\n👉 On est ici sur un produit premium ultra complet.\n✔️ Plateau 8 mm → rebond exceptionnel (niveau quasi compétition) \n✔️ Encadrement 60 mm → stabilité maximale \n✔️ Revêtement MATTOP → anti-reflet (idéal soleil) \n✔️ Résistance totale intempéries (pluie, UV, froid) \n\n⚡ Équipements premium (gros point de vente)\n✔️ Compteurs de points intégrés \n✔️ Porte-gobelets rétractables \n✔️ Rangements raquettes + distributeur de balles \n✔️ Filet automatique réglable \n✔️ 16 points de verrouillage + 4 freins \n\n⚙️ Caractéristiques techniques\n\nPlateau : résine stratifiée 8 mm (haut niveau) \n\nEncadrement : 60 mm Aluzinc (ultra robuste) \n\nPoids : ≈ 90 kg \n\nUtilisation : extérieur intensif\n\nGarantie : 10 ans / réparabilité 20 ans \n\n⭐ Pourquoi choisir ce modèle ?\n\n✔️ Meilleure table outdoor loisir 🔥\n\n✔️ Sensation proche compétition\n\n✔️ Ultra complète (équipements)\n\n✔️ Produit premium qui valorise ton site\n\n✔️ Très forte valeur perçue",
-    image: "",
+    image: "/images/products/table-de-ping-pong-cornilleau-700x-outdoor-niveau-comp-titio-36.png",
     specs: {
       "Usage": "Extérieur",
       "Type": "Compétition",
@@ -963,7 +963,7 @@ export const products: Product[] = [
     badge: "Promo",
     rating: 4.7,
     desc: "🎨 La table design qui fait la différence\nLa Cornilleau Black Code ID Outdoor est une table unique qui combine design moderne, personnalisation et robustesse outdoor.\n👉 C’est un modèle parfait pour les clients qui veulent un produit beau + performant.\n✔️ Plateau stratifié 5 mm → rebond adapté loisir avancé \n✔️ Encadrement 50 mm → excellente stabilité \n✔️ Design personnalisable (couleurs des éléments) \n✔️ Résistance totale aux intempéries + garantie 10 ans \n\n⚡ Points forts\n✔️ 16 points de verrouillage → sécurité maximale \n✔️ Filet rabattable réglable → pratique et compact \n✔️ Rangements intégrés (raquettes + balles) \n✔️ Pieds réglables → s’adapte à tous terrains \n✔️ Grandes roues → déplacement facile \n\n⚙️ Caractéristiques techniques\n\nPlateau : résine stratifiée 5 mm\n\nEncadrement : 50 mm Aluzinc\n\nUtilisation : extérieur (jardin, terrasse, Airbnb…)\n\nSécurité : 16 verrous + freins\n\nGarantie : 10 ans / réparabilité 20 ans \n\n⭐ Pourquoi choisir ce modèle ?\n\n✔️ Design moderne (gros argument marketing 🔥)\n\n✔️ Personnalisable → effet premium\n\n✔️ Idéal clients “maison moderne / villa”\n\n✔️ Très bon rapport style / prix\n\n✔️ Produit différenciant (moins banal que 300X)",
-    image: "",
+    image: "/images/products/table-de-ping-pong-cornilleau-black-code-id-outdoor-design-p-37.png",
     specs: {
       "Usage": "Extérieur",
       "Type": "Premium",
@@ -1136,7 +1136,7 @@ export const products: Product[] = [
     badge: "Promo",
     rating: 4.6,
     desc: "La Sponeta S 5-73 E est une table de ping-pong extérieure de fabrication allemande, idéale pour les familles, les joueurs réguliers et les collectivités.\nConçue pour résister aux conditions extérieures, elle est équipée d’un plateau en résine mélamine de 6 mm, garantissant un bon rebond tout en étant totalement résistante à la pluie, au soleil et au gel.\nSon système de pliage sécurisé permet une utilisation simple et rapide, avec la possibilité de jouer en mode solo (playback). Grâce à ses roues pivotantes, elle se déplace facilement sur tous types de surfaces.\n👉 Parfaite pour :\n\njardin\n\nfamilles\n\nécoles / clubs\n\nusage régulier extérieur\n\n👉 Elle appartient à la gamme S5, destinée aux utilisateurs exigeants⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nTable outdoor (résistante aux intempéries) \n\nPlateau en résine mélamine 6 mm \n\nRevêtement anti-reflets \n\nCadre métallique 50 mm (haute stabilité) \n\nPieds acier galvanisé\n\n4 roues doubles pivotantes (128 mm) \n\nSystème de pliage sécurisé\n\nPosition jeu solo (playback) \n\nFilet inclus\n\nDimensions : 274 x 152,5 x 76 cm \n\nPoids : env. 68 – 75 kg \n\nPieds réglables (terrain irrégulier)",
-    image: "",
+    image: "/images/products/table-de-ping-pong-ext-rieure-sponeta-s-5-73-e-6-mm-pliable--55.png",
     specs: {
       "Usage": "Extérieur",
       "Type": "Standard",
@@ -1628,7 +1628,7 @@ export const products: Product[] = [
     stock: 10,
     rating: 4.8,
     desc: "La Sponeta S3-46e Outdoor est une table idéale pour les joueurs qui souhaitent passer à un niveau supérieur en termes de stabilité et de qualité de jeu.\nSon plateau en résine mélamine 5 mm offre un meilleur rebond que les modèles d’entrée de gamme, tout en étant résistant aux intempéries (pluie, UV, humidité). \nSa structure renforcée garantit une excellente stabilité, même lors d’une utilisation régulière.\n👉 Pourquoi choisir ce modèle ?\n✔ Meilleure qualité de jeu\n✔ Plateau 5 mm plus performant\n✔ Résistante aux intempéries\n✔ Structure solide\n✔ Idéal usage régulier\nLe choix parfait pour évoluer dans le jeu.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : Extérieur (weatherproof)\n\nPlateau : Résine mélamine 5 mm \n\nCadre : Profil acier 36 mm\n\nStructure : Tubes acier 25x25 mm\n\nRoues : 4 doubles roues (Ø 125 mm)\n\nSystème : verrouillage automatique sécurisé\n\nPlayback : Oui (entraînement solo)\n\nDimensions : 274 x 152,5 x 76 cm (norme officielle) \n\nPoids : ~53 kg \n\nAccessoires : porte raquettes + balles",
-    image: "",
+    image: "/images/products/table-de-ping-pong-ext-rieure-sponeta-s3-46e-qualit-sup-rieu-78.png",
     specs: {
       "Usage": "Extérieur",
       "Type": "Standard",
@@ -1650,7 +1650,7 @@ export const products: Product[] = [
     badge: "Promo",
     rating: 4.8,
     desc: "La Sponeta S3-72e Outdoor est une table conçue pour un usage intensif en extérieur, avec une stabilité nettement supérieure aux modèles classiques.\nSon plateau 5 mm en résine mélamine offre un rebond plus précis, tandis que sa structure plus lourde garantit une excellente tenue, même lors de parties dynamiques. \nRésistante aux intempéries, elle est idéale pour une installation permanente dans un jardin ou une terrasse.\n👉 Pourquoi choisir ce modèle ?\n✔ Qualité de jeu supérieure\n✔ Plateau 5 mm performant\n✔ Très grande stabilité\n✔ Résistante aux intempéries\n✔ Idéal usage intensif\nUne vraie table pour jouer sérieusement à domicile.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : Extérieur (weatherproof)\n\nPlateau : Résine mélamine 5 mm \n\nCadre : métal 36 mm\n\nStructure : acier renforcé\n\nPoids : ~69 kg (très stable) \n\nRoues : 4 doubles roues Ø125 mm \n\nPlayback : oui\n\nDimensions : 274 x 152,5 x 76 cm \n\nRangement : porte raquettes + balles",
-    image: "",
+    image: "/images/products/table-de-ping-pong-ext-rieure-sponeta-s3-72e-stabilit-avanc--79.png",
     specs: {
       "Usage": "Extérieur",
       "Type": "Standard",
@@ -1672,7 +1672,7 @@ export const products: Product[] = [
     badge: "Promo",
     rating: 4.6,
     desc: "La Sponeta S3-80e Outdoor est une table de ping-pong conçue pour les utilisateurs exigeants recherchant stabilité, durabilité et qualité de jeu supérieure.\nSon plateau en résine mélamine 5 mm offre un excellent rebond, tandis que sa structure renforcée garantit une stabilité optimale même lors d’une utilisation intensive. \nElle est entièrement résistante aux intempéries, ce qui la rend idéale pour une installation permanente en extérieur.\n👉 Pourquoi choisir ce modèle ?\n✔ Plateau 5 mm performant\n✔ Structure renforcée (très stable)\n✔ Résistance totale aux intempéries\n✔ Idéal usage intensif\n✔ Qualité allemande\nUn excellent choix pour jouer sérieusement à domicile.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : Extérieur (weatherproof)\n\nPlateau : Résine mélamine 5 mm \n\nCadre : profil acier 36 mm \n\nChâssis : structure renforcée (40 mm) \n\nRoues : 4 roues doubles Ø128 mm \n\nPoids : ~60 kg (très stable) \n\nSystème : SMS (sécurité + verrouillage) \n\nPlayback : oui\n\nDimensions : 274 x 152,5 x 76 cm \n\nRéglage hauteur : jusqu’à 30 mm (sol irrégulier)",
-    image: "",
+    image: "/images/products/table-de-ping-pong-ext-rieure-sponeta-s3-80e-stabilit-premiu-80.png",
     specs: {
       "Usage": "Extérieur",
       "Type": "Premium",
@@ -1714,7 +1714,7 @@ export const products: Product[] = [
     stock: 10,
     rating: 4.7,
     desc: "La Sponeta S7-12 Indoor est une table de ping-pong professionnelle conçue pour les compétitions officielles.\nSon plateau 25 mm offre un rebond parfait, identique aux standards utilisés en tournoi. Sa structure massive garantit une stabilité exceptionnelle, même lors de jeux intensifs.\n👉 Pourquoi choisir ce modèle ?\n✔ Norme ITTF (compétition)\n✔ Plateau 25 mm ultra performant\n✔ Stabilité maximale\n✔ Idéal clubs & joueurs exigeants\n✔ Qualité professionnelle\nUne table conçue pour la performance pure.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : Intérieur uniquement \n\nPlateau : 25 mm bois haute densité \n\nNorme : ITTF (compétition officielle) \n\nStructure : acier renforcé 60 x 40 mm \n\nPoids : ~110–120 kg (ultra stable) \n\nRoues : 4 roues Ø100 mm avec frein \n\nPlayback : oui\n\nDimensions : 274 x 152,5 x 76 cm (standard international)",
-    image: "",
+    image: "/images/products/table-de-ping-pong-sponeta-s7-12-qualit-comp-tition-ittf-25--82.png",
     specs: {
       "Usage": "Intérieur",
       "Type": "Compétition",
@@ -1777,7 +1777,7 @@ export const products: Product[] = [
     stock: 10,
     rating: 4.6,
     desc: "La Sponeta S8-36 Indoor représente le plus haut niveau de performance chez Sponeta.\nSon plateau 25 mm garantit un rebond parfait, conforme aux exigences des compétitions internationales. Sa structure renforcée offre une stabilité exceptionnelle, même lors de matchs intensifs. \n👉 Pourquoi choisir ce modèle ?\n✔ Norme ITTF (compétition officielle)\n✔ Qualité de jeu professionnelle\n✔ Stabilité extrême (110 kg+)\n✔ Conçue pour clubs & tournois\n✔ Niveau international\nUne table conçue pour la performance ultime.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : intérieur uniquement \n\nPlateau : 25 mm bois haute densité \n\nCadre : profil acier 60 mm \n\nStructure : tubes 60x40 mm renforcés \n\nPoids : ~109 kg (ultra stable) \n\nRoues : Ø125 mm avec mobilité totale \n\nSystème : verrouillage + ressorts à gaz \n\nRéglage hauteur : jusqu’à 30 mm \n\nDimensions : 274 x 152,5 x 76 cm",
-    image: "",
+    image: "/images/products/table-de-ping-pong-sponeta-s8-36-qualit-comp-tition-mondiale-85.png",
     specs: {
       "Usage": "Intérieur",
       "Type": "Compétition",
@@ -1798,7 +1798,7 @@ export const products: Product[] = [
     stock: 10,
     rating: 4.6,
     desc: "La Sponeta S8-37W Indoor est une table de compétition haut de gamme conçue pour offrir performance et accessibilité.\nSon plateau 25 mm garantit un rebond parfait conforme aux standards internationaux. Sa conception permet également une utilisation adaptée aux personnes en fauteuil roulant, ce qui en fait un choix idéal pour clubs et structures inclusives.\n👉 Pourquoi choisir ce modèle ?\n✔ Norme ITTF (compétition officielle)\n✔ Plateau 25 mm ultra performant\n✔ Accessibilité fauteuil roulant\n✔ Stabilité extrême\n✔ Design compact & professionnel\nUne table élite, pensée pour tous.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : intérieur uniquement \n\nPlateau : 25 mm bois premium \n\nNorme : ITTF / EN 14468-1 \n\nStructure : acier 60 x 40 mm \n\nPoids : ~109–125 kg \n\nRoues : Ø125 mm avec freins \n\nSystème : vérins à gaz + verrouillage auto \n\nPlayback : oui\n\nDimensions : standard compétition (274 x 152,5 x 76 cm)",
-    image: "",
+    image: "/images/products/table-de-ping-pong-sponeta-s8-37w-comp-tition-ittf-accessibi-86.png",
     specs: {
       "Usage": "Intérieur",
       "Type": "Compétition",
@@ -1820,7 +1820,7 @@ export const products: Product[] = [
     badge: "Promo",
     rating: 4.7,
     desc: "La Garlando Garden Outdoor est une table de ping-pong conçue pour un usage intensif en extérieur.\nSa structure extrêmement robuste et son système d’ancrage au sol la rendent idéale pour les lieux publics et collectifs. \n👉 Pourquoi choisir ce modèle ?\n✔ Ultra stable (118 kg)\n✔ Résistance extrême aux intempéries\n✔ Anti-vol / fixation au sol\n✔ Plateau 6 mm durable\n✔ Idéal collectivités\nUne table conçue pour durer des années sans compromis.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : extérieur intensif\n\nPlateau : résine stratifiée 6 mm \n\nCadre : acier 50 mm\n\nStructure : acier renforcé\n\nPoids : 118 kg \n\nDimensions : 274 x 152,5 x 76 cm \n\nFilet : fixe en métal (anti-vandalisme) \n\nFixation : ancrage au sol \n\nNorme : EN 14468-1 Classe B",
-    image: "",
+    image: "/images/products/table-de-ping-pong-garlando-garden-outdoor-ultra-robuste-usa-87.png",
     specs: {
       "Usage": "Extérieur",
       "Type": "Standard",
@@ -1905,7 +1905,7 @@ export const products: Product[] = [
     stock: 10,
     rating: 4.6,
     desc: "La Garlando Master Indoor est une table de ping-pong conçue pour les joueurs souhaitant progresser sérieusement.\nSon plateau 19 mm offre un excellent rebond, proche des tables utilisées en club, ce qui la rend idéale pour l’entraînement régulier. \nSa structure renforcée garantit une bonne stabilité, tandis que le système SMS permet un pliage simple et sécurisé. \n👉 Pourquoi choisir ce modèle ?\n✔ Excellent niveau de jeu indoor\n✔ Très bon rebond (19 mm)\n✔ Facile à plier et déplacer\n✔ Structure robuste\n✔ Idéal pour s’entraîner\nUne table parfaite pour progresser à domicile.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : intérieur\n\nPlateau : bois aggloméré 19 mm (melaminé) \n\nCadre : profil acier 36 mm \n\nStructure : tubes acier + double renfort \n\nPoids : ≈ 78 kg \n\nRoues : 4 doubles roues Ø125 mm \n\nSystème : SMS (Smart Manual System) \n\nDimensions : 274 x 152,5 x 76 cm (standard compétition) \n\nFilet : fixe et réglable",
-    image: "",
+    image: "/images/products/table-de-ping-pong-garlando-master-indoor-niveau-entra-nemen-91.png",
     specs: {
       "Usage": "Intérieur",
       "Type": "Compétition",
@@ -1990,7 +1990,7 @@ export const products: Product[] = [
     stock: 10,
     rating: 4.6,
     desc: "La JOOLA Rollomat Pro est une table de ping-pong haut de gamme conçue pour les environnements professionnels : clubs, écoles et compétitions.\nSa surface de jeu offre un rebond précis et constant, proche des standards internationaux. Sa structure robuste garantit une stabilité exceptionnelle même lors des échanges les plus intenses.\nSon système pliable permet un rangement rapide ainsi qu’un entraînement en solo. Les roulettes intégrées facilitent le déplacement tout en assurant une sécurité maximale grâce à un système de verrouillage fiable.\n👉 Idéale pour les joueurs exigeants et les espaces professionnels.\n\n⚙️ Caractéristiques techniques\n\nÉpaisseur plateau : 22 mm (qualité compétition)\n\nSurface : finition spéciale anti-reflet\n\nStructure : acier renforcé ultra stable\n\nSystème pliable : oui (mode entraînement possible)\n\nMobilité : roulettes pivotantes avec freins\n\nSécurité : système de verrouillage automatique\n\nUtilisation : intérieur (indoor)\n\nNormes : conforme ITTF (compétition)\n\nCouleur : bleu compétition\n\nFilet : inclus (selon version)",
-    image: "",
+    image: "/images/products/table-de-ping-pong-joola-rollomat-pro-qualit-comp-tition-itt-95.png",
     specs: {
       "Usage": "Intérieur",
       "Type": "Compétition",
@@ -2011,7 +2011,7 @@ export const products: Product[] = [
     stock: 10,
     rating: 4.6,
     desc: "La JOOLA Inside J18 est une table de ping-pong polyvalente conçue pour les joueurs exigeants, les clubs et les écoles.\nSon plateau de 18 mm garantit un rebond régulier et précis, idéal pour progresser rapidement et profiter d’un jeu fluide. Sa structure robuste assure une excellente stabilité.\nGrâce à son système pliable, elle se range facilement et permet également un entraînement en solo. Les roulettes intégrées facilitent le déplacement en toute sécurité.\n👉 Un excellent compromis entre performance professionnelle et accessibilité.\n\n⚙️ Caractéristiques techniques\n\nÉpaisseur plateau : 18 mm\n\nSurface : MDF haute densité (rebond régulier)\n\nStructure : acier renforcé\n\nSystème pliable : oui (2 plateaux séparés)\n\nMode solo : oui\n\nRoulettes : 8 roues avec freins\n\nPieds réglables : oui\n\nSécurité : double anti-basculement\n\nFilet : inclus\n\nUtilisation : intérieur\n\nMontage : 95% préassemblé (≈15 min)",
-    image: "",
+    image: "/images/products/table-de-ping-pong-joola-inside-j18-plateau-18-mm-pliable-id-96.png",
     specs: {
       "Usage": "Intérieur",
       "Type": "Compétition",
@@ -2101,7 +2101,7 @@ export const products: Product[] = [
       "Usage": "Intérieur",
       "Type": "Standard",
       "Matière": "MDF",
-      "Nombre de joueurs": "4",
+      "Nombre de joueurs": "2",
       "Barres": "Télescopiques",
       "Dimensions": "120 x 60 x 80 cm",
       "Poids": "25 kg"
@@ -2151,7 +2151,7 @@ export const products: Product[] = [
   },
   {
     id: "ba-143",
-    name: "Baby-Foot Professionnel 4 Joueurs – Niveau Compétition",
+    name: "Leonhart Baby-Foot Professionnel 4 Joueurs – Niveau Compétition",
     category: "baby-foot",
     brand: "Leonhart",
     priceHT: 832.5,
@@ -2195,7 +2195,7 @@ export const products: Product[] = [
   },
   {
     id: "tr-54",
-    name: "Trampoline Semi-Enterré 430 cm – Intégration Jardin Premium",
+    name: "BERG Trampoline Semi-Enterré 430 cm – Intégration Jardin Premium",
     category: "trampoline",
     brand: "BERG",
     priceHT: 541.67,
@@ -2217,13 +2217,13 @@ export const products: Product[] = [
     id: "tr-39",
     name: "Trampoline Cornilleau Springcare 305 cm – Sans ressort & sécurité maximale (extérieur)",
     category: "trampoline",
-    brand: "Springfree",
+    brand: "Cornilleau",
     priceHT: 208.33,
     stock: 10,
     badge: "Nouveau",
     rating: 4.8,
     desc: "🔥 L'innovation qui change tout : sans ressort\nLe Cornilleau Springcare révolutionne le trampoline classique en remplaçant les ressorts par un système d'élastiques haute technologie.\n👉 Résultat : plus de sécurité + plus de confort + moins de choc sur les articulations \n\n⚡ Points forts (TRÈS vendeur)\n✔️ Système sans ressort → aucun risque de blessure\n✔️ Rebond souple et dynamique (plus confortable) \n✔️ Filet de protection haute densité (sécurité enfants) \n✔️ Coussin double épaisseur → absorption maximale des chocs \n✔️ Poteaux incurvés → évite les collisions \n\n⚙️ Caractéristiques techniques\n\nDiamètre : 305 cm\n\nTechnologie : sans ressort (élastiques)\n\nUtilisation : extérieur (jardin)\n\nCharge max : ≈ 100–120 kg \n\nStructure : robuste & testée en laboratoire \n\nMontage : ≈ 1h30 à 2 personnes\n\n⭐ Pourquoi choisir ce trampoline ?\n\n✔️ Produit différenciant (sans ressort 🔥)\n\n✔️ Sécurité maximale enfants\n\n✔️ Très bon argument parents\n\n✔️ Confort supérieur aux trampolines classiques\n\n✔️ Produit très vendeur Allemagne",
-    image: "",
+    image: "/images/products/trampoline-cornilleau-springcare-305-cm-sans-ressort-s-curit-39.png",
     specs: {
       "Usage": "Extérieur",
       "Diamètre": "305 cm",
@@ -2255,7 +2255,7 @@ export const products: Product[] = [
   },
   {
     id: "tr-51",
-    name: "Trampoline Jardin 366 cm – 12 Pieds Grande Taille",
+    name: "BERG Trampoline Jardin 366 cm – 12 Pieds Grande Taille",
     category: "trampoline",
     brand: "BERG",
     priceHT: 208.33,
@@ -2274,7 +2274,7 @@ export const products: Product[] = [
   },
   {
     id: "tr-50",
-    name: "Trampoline Jardin 244 cm – 8 Pieds Familial",
+    name: "BERG Trampoline Jardin 244 cm – 8 Pieds Familial",
     category: "trampoline",
     brand: "BERG",
     priceHT: 124.17,
@@ -2294,7 +2294,7 @@ export const products: Product[] = [
   },
   {
     id: "tr-53",
-    name: "Trampoline Fitness Adulte – Rebond Intensif et Tonifiant",
+    name: "Jump'In Trampoline Fitness Adulte – Rebond Intensif et Tonifiant",
     category: "trampoline",
     brand: "Jump'In",
     priceHT: 83.33,
@@ -2314,7 +2314,7 @@ export const products: Product[] = [
   },
   {
     id: "tr-52",
-    name: "Trampoline Enfant Intérieur 100 cm – Mini Rebond Sécurisé",
+    name: "Jump'In Trampoline Enfant Intérieur 100 cm – Mini Rebond Sécurisé",
     category: "trampoline",
     brand: "Jump'In",
     priceHT: 41.67,
@@ -2335,7 +2335,7 @@ export const products: Product[] = [
   },
   {
     id: "pi-111",
-    name: "Table de Tennis Extérieur Premium – Résistante aux Intempéries",
+    name: "Cornilleau Table de Tennis Extérieur Premium – Résistante aux Intempéries",
     category: "ping-pong",
     brand: "Cornilleau",
     priceHT: 665.83,
@@ -2357,7 +2357,7 @@ export const products: Product[] = [
   },
   {
     id: "pi-112",
-    name: "Table de Tennis Intérieur Standard – Usage Familial",
+    name: "Sponeta Table de Tennis Intérieur Standard – Usage Familial",
     category: "ping-pong",
     brand: "Sponeta",
     priceHT: 249.17,
@@ -2378,7 +2378,7 @@ export const products: Product[] = [
   },
   {
     id: "pi-113",
-    name: "Table de Tennis Professionnelle ITTF – Niveau Compétition",
+    name: "Cornilleau Table de Tennis Professionnelle ITTF – Niveau Compétition",
     category: "ping-pong",
     brand: "Cornilleau",
     priceHT: 1665.83,
@@ -2401,9 +2401,9 @@ export const products: Product[] = [
   },
   {
     id: "ac-001",
-    name: "Kit Accessoires Baby-Foot – 12 Balles + 4 Couvertures",
+    name: "Logitech Kit Accessoires Baby-Foot – 12 Balles + 4 Couvertures",
     category: "accessoires",
-    brand: "Logitech",
+    brand: "Générique",
     priceHT: 16.58,
     stock: 20,
     badge: "Populaire",
@@ -2418,9 +2418,9 @@ export const products: Product[] = [
   },
   {
     id: "ac-002",
-    name: "Kit Accessoires Billard Pro – Boules, Cues, Craie et Filet",
+    name: "Corsair Kit Accessoires Billard Pro – Boules, Cues, Craie et Filet",
     category: "accessoires",
-    brand: "Corsair",
+    brand: "Générique",
     priceHT: 66.58,
     stock: 15,
     rating: 4.6,
@@ -2434,9 +2434,9 @@ export const products: Product[] = [
   },
   {
     id: "ac-003",
-    name: "Kit Entretien Trampoline – Nettoyant + Protection UV",
+    name: "Razer Kit Entretien Trampoline – Nettoyant + Protection UV",
     category: "accessoires",
-    brand: "Razer",
+    brand: "Générique",
     priceHT: 20.83,
     stock: 25,
     rating: 4.3,
@@ -2450,9 +2450,9 @@ export const products: Product[] = [
   },
   {
     id: "ac-004",
-    name: "Éclairage Suspendu Billard LED – Design Moderne",
+    name: "Corsair Éclairage Suspendu Billard LED – Design Moderne",
     category: "accessoires",
-    brand: "Corsair",
+    brand: "Générique",
     priceHT: 166.58,
     stock: 10,
     badge: "Nouveau",
@@ -2467,9 +2467,9 @@ export const products: Product[] = [
   },
   {
     id: "ac-005",
-    name: "Set Complet Raquettes et Balles Ping-Pong – 6 Raquettes",
+    name: "Logitech Set Complet Raquettes et Balles Ping-Pong – 6 Raquettes",
     category: "accessoires",
-    brand: "Logitech",
+    brand: "Générique",
     priceHT: 24.92,
     stock: 30,
     badge: "Populaire",
@@ -2484,7 +2484,7 @@ export const products: Product[] = [
   },
   {
     id: "ac-006",
-    name: "Tapis de Sol Gaming Anti-Fatigue XL – Protection et Confort",
+    name: "Razer Tapis de Sol Gaming Anti-Fatigue XL – Protection et Confort",
     category: "accessoires",
     brand: "Razer",
     priceHT: 37.42,
@@ -2500,9 +2500,9 @@ export const products: Product[] = [
     },
   },  {
     id: "ac-008",
-    name: "Robot d'Entraînement Ping-Pong – Multi-Vitesse",
+    name: "Sony Robot d'Entraînement Ping-Pong – Multi-Vitesse",
     category: "accessoires",
-    brand: "Sony",
+    brand: "Générique",
     priceHT: 374.17,
     stock: 8,
     badge: "Premium",
@@ -2518,7 +2518,7 @@ export const products: Product[] = [
   },
   {
     id: "co-001",
-    name: "PlayStation 5 Pro – Console Ultime Haute Performance",
+    name: "Sony PlayStation 5 Pro – Console Ultime Haute Performance",
     category: "consoles",
     brand: "Sony",
     priceHT: 749.17,
@@ -2536,7 +2536,7 @@ export const products: Product[] = [
   },
   {
     id: "co-002",
-    name: "PlayStation 5 Slim – Lecteur Disque – Design Compact",
+    name: "Sony PlayStation 5 Slim – Lecteur Disque – Design Compact",
     category: "consoles",
     brand: "Sony",
     priceHT: 457.5,
@@ -2554,7 +2554,7 @@ export const products: Product[] = [
   },
   {
     id: "co-003",
-    name: "PlayStation 4 Slim 500 Go – La Référence Gaming",
+    name: "Sony PlayStation 4 Slim 500 Go – La Référence Gaming",
     category: "consoles",
     brand: "Sony",
     priceHT: 208.33,
@@ -2607,7 +2607,7 @@ export const products: Product[] = [
   },
   {
     id: "co-006",
-    name: "Xbox Series X – La Plus Puissante",
+    name: "Microsoft Xbox Series X – La Plus Puissante",
     category: "consoles",
     brand: "Microsoft",
     priceHT: 416.67,
@@ -2625,7 +2625,7 @@ export const products: Product[] = [
   {
     id: "co-007",
     name: "Casque Gaming Sans Fil 7.1 Surround – Audio Immersif",
-    category: "consoles",
+    category: "accessoires",
     brand: "Générique",
     priceHT: 74.92,
     stock: 20,
@@ -2642,8 +2642,8 @@ export const products: Product[] = [
   },
   {
     id: "co-008",
-    name: "Manette Pro PS5 DualSense Edge – Haute Précision",
-    category: "consoles",
+    name: "Sony Manette Pro PS5 DualSense Edge – Haute Précision",
+    category: "accessoires",
     brand: "Sony",
     priceHT: 183.25,
     stock: 10,
@@ -2662,7 +2662,7 @@ export const products: Product[] = [
   {
     id: "co-009",
     name: "Station de Recharge Double PS5 / Xbox – Charge Rapide",
-    category: "consoles",
+    category: "accessoires",
     brand: "Générique",
     priceHT: 33.25,
     stock: 20,
@@ -2679,7 +2679,7 @@ export const products: Product[] = [
   {
     id: "co-010",
     name: "Support Mural Console + Rangement Jeux – Organisation Gaming",
-    category: "consoles",
+    category: "accessoires",
     brand: "Générique",
     priceHT: 49.92,
     stock: 15,
@@ -2697,7 +2697,7 @@ export const products: Product[] = [
   {
     id: "co-011",
     name: "Pack Accessoires Gaming Complet – Casque + Manette + Support",
-    category: "consoles",
+    category: "accessoires",
     brand: "Générique",
     priceHT: 124.92,
     stock: 10,

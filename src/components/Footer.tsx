@@ -34,10 +34,10 @@ export default function Footer() {
             <h4 className="text-brand-orange font-black uppercase tracking-widest text-sm mb-6">Boutique</h4>
             <ul className="flex flex-col gap-4 text-sm font-bold opacity-80">
               <li><Link to="/boutique" className="hover:text-brand-orange transition-all">Tous les produits</Link></li>
-              <li><Link to="/boutique?category=cartes" className="hover:text-brand-orange transition-all">Cartes Pokémon</Link></li>
-              <li><Link to="/boutique?category=jeux-societe" className="hover:text-brand-orange transition-all">Jeux de Société</Link></li>
-              <li><Link to="/boutique?category=accessories" className="hover:text-brand-orange transition-all">Accessoires</Link></li>
-              <li><Link to="/boutique?category=limited" className="hover:text-brand-orange transition-all">Éditions Limitées</Link></li>
+              <li><Link to="/boutique?category=baby-foot" className="hover:text-brand-orange transition-all">Baby-foot</Link></li>
+              <li><Link to="/boutique?category=ping-pong" className="hover:text-brand-orange transition-all">Ping-Pong / Tennis de table</Link></li>
+              <li><Link to="/boutique?category=billard" className="hover:text-brand-orange transition-all">Billards</Link></li>
+              <li><Link to="/boutique?category=trampoline" className="hover:text-brand-orange transition-all">Trampolines</Link></li>
             </ul>
           </div>
 
