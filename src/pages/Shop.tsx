@@ -78,14 +78,6 @@ export default function Shop() {
     setSearchParams(next);
   };
 
-  const categoryCounts = useMemo(() => {
-    const counts: Record<string, number> = {};
-    for (const p of allProducts) {
-      if (p.category) counts[p.category] = (counts[p.category] || 0) + 1;
-    }
-    return counts;
-  }, [allProducts]);
-
   const activeTags: { label: string; onRemove: () => void }[] = [];
   if (category) {
     const cat = categories.find((c) => c.id === category);
@@ -139,7 +131,6 @@ export default function Shop() {
         <div className="flex flex-wrap gap-3 mb-8">
           {categories.map((cat) => {
             const isActive = category === cat.id;
-            const count = categoryCounts[cat.id] || 0;
             return (
               <button
                 key={cat.id}
@@ -152,11 +143,6 @@ export default function Shop() {
               >
                 <span className={isActive ? "text-white" : "text-brand-orange"}>{cat.icon}</span>
                 {cat.name}
-                <span className={`text-xs px-2 py-0.5 rounded-full font-bold ${
-                  isActive ? "bg-white/20 text-white" : "bg-gray-100 text-gray-400"
-                }`}>
-                  {count}
-                </span>
               </button>
             );
           })}
