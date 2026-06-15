@@ -11,11 +11,11 @@ const navigationMenu = [
     slug: "baby-foot",
     href: "/boutique?category=baby-foot",
     brands: [
-      
+      { label: "Bonzini", href: "/boutique?category=baby-foot&brand=Bonzini" },
+      { label: "Cornilleau", href: "/boutique?category=baby-foot&brand=Cornilleau" },
+      { label: "Leonhart", href: "/boutique?category=baby-foot&brand=Leonhart" },
       { label: "René Pierre", href: "/boutique?category=baby-foot&brand=Ren%C3%A9%20Pierre" },
       { label: "Stella", href: "/boutique?category=baby-foot&brand=Stella" },
-      { label: "Leonhart", href: "/boutique?category=baby-foot&brand=Leonhart" },
-      { label: "Bonzini", href: "/boutique?category=baby-foot&brand=Bonzini" },
     ]
   },
   {
@@ -23,9 +23,8 @@ const navigationMenu = [
     slug: "billard",
     href: "/boutique?category=billard",
     brands: [
-      { label: "Garlando", href: "/boutique?category=billard&brand=Garlando" },
       { label: "Cornilleau", href: "/boutique?category=billard&brand=Cornilleau" },
-      { label: "René Pierre", href: "/boutique?category=billard&brand=Ren%C3%A9%20Pierre" },
+      { label: "Garlando", href: "/boutique?category=billard&brand=Garlando" },
     ]
   },
   {
@@ -34,10 +33,11 @@ const navigationMenu = [
     href: "/boutique?category=ping-pong",
     brands: [
       { label: "Cornilleau", href: "/boutique?category=ping-pong&brand=Cornilleau" },
-      { label: "Sponeta", href: "/boutique?category=ping-pong&brand=Sponeta" },
+      { label: "Garlando", href: "/boutique?category=ping-pong&brand=Garlando" },
+      { label: "JOOLA", href: "/boutique?category=ping-pong&brand=JOOLA" },
       { label: "Kettler", href: "/boutique?category=ping-pong&brand=Kettler" },
-      { label: "Joola", href: "/boutique?category=ping-pong&brand=Joola" },
-      { label: "Tibhar", href: "/boutique?category=ping-pong&brand=Tibhar" },
+      { label: "Sponeta", href: "/boutique?category=ping-pong&brand=Sponeta" },
+      { label: "TIBHAR", href: "/boutique?category=ping-pong&brand=TIBHAR" },
     ]
   },
   {
@@ -45,32 +45,11 @@ const navigationMenu = [
     slug: "trampoline",
     href: "/boutique?category=trampoline",
     brands: [
-      { label: "BERG", href: "/boutique?category=trampoline&brand=BERG" },
-      { label: "Jump'In", href: "/boutique?category=trampoline&brand=Jump%27In" },
+      { label: "Cornilleau", href: "/boutique?category=trampoline&brand=Cornilleau" },
       { label: "Kettler", href: "/boutique?category=trampoline&brand=Kettler" },
     ]
   },
-  {
-    label: "Consoles",
-    slug: "consoles",
-    href: "/boutique?category=consoles",
-    brands: [
-      { label: "Sony PlayStation", href: "/boutique?category=consoles&brand=Sony" },
-      { label: "Microsoft Xbox", href: "/boutique?category=consoles&brand=Microsoft" },
-      { label: "Nintendo", href: "/boutique?category=consoles&brand=Nintendo" },
-      { label: "Valve", href: "/boutique?category=consoles&brand=Valve" },
-    ]
-  },
-  {
-    label: "Accessoires",
-    slug: "accessoires",
-    href: "/boutique?category=accessoires",
-    brands: [
-      { label: "Sony", href: "/boutique?category=accessoires&brand=Sony" },
-      { label: "Razer", href: "/boutique?category=accessoires&brand=Razer" },
-      { label: "Générique", href: "/boutique?category=accessoires&brand=G%C3%A9n%C3%A9rique" },
-    ]
-  }
+
 ];
 
 export default function Header() {
@@ -154,19 +133,23 @@ export default function Header() {
               {/* Dropdown Menu (on hover) */}
               <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-full mt-0 w-[280px] rounded-b-3xl border border-white/10 bg-[#1B1B2F]/95 p-4 text-left shadow-2xl backdrop-blur-xl group-hover:pointer-events-auto group-hover:block hidden">
                 <div className="flex flex-col">
-                  <p className="mb-3 text-[10px] font-black uppercase tracking-[0.25em] text-brand-orange border-b border-white/5 pb-1.5">Nos Marques</p>
-                  <div className="space-y-1">
-                    {cat.brands.map((brand) => (
-                      <Link
-                        key={brand.label}
-                        to={brand.href}
-                        className="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-bold text-brand-cream/90 hover:bg-white/5 hover:text-brand-orange transition-all"
-                      >
-                        <span>{brand.label}</span>
-                        <span className="text-[10px] text-brand-orange/50">→</span>
-                      </Link>
-                    ))}
-                  </div>
+                  {cat.brands.length > 0 && (
+                    <>
+                      <p className="mb-3 text-[10px] font-black uppercase tracking-[0.25em] text-brand-orange border-b border-white/5 pb-1.5">Nos Marques</p>
+                      <div className="space-y-1">
+                        {cat.brands.map((brand) => (
+                          <Link
+                            key={brand.label}
+                            to={brand.href}
+                            className="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-bold text-brand-cream/90 hover:bg-white/5 hover:text-brand-orange transition-all"
+                          >
+                            <span>{brand.label}</span>
+                            <span className="text-[10px] text-brand-orange/50">→</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </>
+                  )}
                   
                   {/* View All category link */}
                   <Link

@@ -116,7 +116,6 @@ export default function ProductDetail() {
       case "billard": return "/images/products/table-de-billard-americain-7-pieds.jpg";
       case "trampoline": return "/images/products/trampoline-jardin-244cm-8-pieds.jpg";
       case "consoles": return "/images/products/playstation-5-pro.jpg";
-      case "accessoires": return "/images/products/kit-accessoires-baby-foot.jpg";
       default: return "/images/hero-bg.jpg";
     }
   };
@@ -191,6 +190,9 @@ export default function ProductDetail() {
                     {product.badge}
                   </div>
                 )}
+                <div className="absolute top-3 right-3 bg-brand-yellow text-brand-dark px-3 py-1 rounded-xl font-black text-[8px] shadow-lg uppercase tracking-widest border border-white/20">
+                  Kit complet
+                </div>
               </div>
             </div>
 

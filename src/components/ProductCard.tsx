@@ -72,7 +72,6 @@ export default function ProductCard({ product }: ProductCardProps) {
       case "billard": return "/images/products/table-de-billard-americain-7-pieds.jpg";
       case "trampoline": return "/images/products/trampoline-jardin-244cm-8-pieds.jpg";
       case "consoles": return "/images/products/playstation-5-pro.jpg";
-      case "accessoires": return "/images/products/kit-accessoires-baby-foot.jpg";
       default: return "/images/hero-bg.jpg";
     }
   };
@@ -83,7 +82,6 @@ export default function ProductCard({ product }: ProductCardProps) {
       case "ping-pong": return "shadow-card-green";
       case "billard": return "shadow-card-dark";
       case "trampoline": return "shadow-card-yellow";
-      case "accessoires": return "shadow-card-green";
       case "consoles": return "shadow-card-purple";
       default: return "shadow-xl";
     }
@@ -102,9 +100,16 @@ export default function ProductCard({ product }: ProductCardProps) {
       onClick={navigateToDetail}
     >
       {/* Category Badge */}
-      <div className={`absolute top-4 left-4 z-10 px-2 py-0.5 rounded-md text-[10px] font-bold text-white uppercase tracking-tighter bg-brand-orange shadow-lg`}>
-        {product?.badge || ""}
-      </div>
+      {product?.badge && product.badge !== "Kit complet" && (
+        <div className={`absolute top-4 left-4 z-10 px-2 py-0.5 rounded-md text-[10px] font-bold text-white uppercase tracking-tighter bg-brand-orange shadow-lg`}>
+          {product.badge}
+        </div>
+      )}
+      {product.badge === "Kit complet" && (
+        <div className="absolute top-4 right-4 z-10 px-2 py-0.5 rounded-md text-[9px] font-bold text-brand-dark uppercase tracking-tighter bg-brand-yellow shadow-lg">
+          Kit complet
+        </div>
+      )}
 
       {/* Image Section */}
       <div className="relative h-48 overflow-hidden bg-gray-100 flex items-center justify-center group-hover:bg-brand-cream transition-colors duration-500">
@@ -120,7 +125,7 @@ export default function ProductCard({ product }: ProductCardProps) {
            referrerPolicy="no-referrer"
            onError={() => setImgError(true)}
          />
-        ) : (() => {
+         ) : (() => {
           const [c1, c2] = getBrandColor(product.brand);
           const initials = getBrandInitials(product.brand);
           return (
