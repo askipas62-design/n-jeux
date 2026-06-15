@@ -23,15 +23,16 @@ export const products: Product[] = [
     badge: "Nouveau",
     rating: 4.8,
     desc: "Le baby-foot Stella Star Outdoor incarne l’alliance parfaite entre design haut de gamme, résistance et plaisir de jeu. Conçu spécialement pour une utilisation extérieure, il résiste aux intempéries, UV et variations climatiques, tout en conservant ses performances et son esthétique. Son design élégant en fait un véritable élément décoratif pour terrasse, jardin ou espace premium. 👉 Idéal pour les particuliers exigeants ou les professionnels souhaitant offrir une expérience de jeu haut de gamme. ",
-    image: "",
+    image: "/images/products/ba-131.png",
     specs: {
       "Usage": "Extérieur",
       "Type": "Premium",
-      "Matière": "Polyéthylène",
+      "Matière": "HPL stratifié compact",
       "Nombre de joueurs": "4",
       "Barres": "Télescopiques",
       "Garantie": "5 ans",
-      "Dimensions": "143 x 74 x 92 cm"
+      "Dimensions": "158 x 100 x 93 cm",
+        "Poids": "90 kg"
     },
   },
   {
@@ -47,11 +48,12 @@ export const products: Product[] = [
     specs: {
       "Usage": "Extérieur",
       "Type": "Standard",
-      "Matière": "Polyéthylène",
+      "Matière": "HPL stratifié compact",
       "Nombre de joueurs": "4",
       "Barres": "Télescopiques",
       "Garantie": "5 ans",
-      "Dimensions": "143 x 74 x 92 cm"
+      "Dimensions": "158 x 100 x 93 cm",
+        "Poids": "80 kg"
     },
   },
   {
@@ -67,11 +69,12 @@ export const products: Product[] = [
     specs: {
       "Usage": "Extérieur",
       "Type": "Premium",
-      "Matière": "Polyéthylène",
+      "Matière": "HPL stratifié compact",
       "Nombre de joueurs": "4",
       "Barres": "Télescopiques",
       "Garantie": "5 ans",
-      "Dimensions": "143 x 74 x 92 cm"
+      "Dimensions": "158 x 100 x 93 cm",
+        "Poids": "100 kg"
     },
   },
   {
@@ -89,7 +92,7 @@ export const products: Product[] = [
       "Usage": "Intérieur & Extérieur",
       "Type": "Américain",
       "Taille": "7 pieds",
-      "Matière du plateau": "Ardoise naturelle",
+      "Matière du plateau": "HPL 12 mm",
       "Dimensions": "215 x 120 x 78 cm",
       "Poids": "110 kg",
       "Convertible": "Oui (table à manger)",
@@ -109,12 +112,12 @@ export const products: Product[] = [
     specs: {
       "Usage": "Intérieur & Extérieur",
       "Type": "Américain",
-      "Taille": "7 pieds",
+      "Taille": "7,2 pieds",
       "Matière du plateau": "HPL",
       "Convertible": "Oui (table à manger)",
       "Garantie": "5 ans",
-      "Dimensions": "234 x 122 cm",
-      "Poids": "~280 kg"
+      "Dimensions": "215 x 120 x 76 cm",
+      "Poids": "112 kg"
     },
   },
   {
@@ -132,7 +135,7 @@ export const products: Product[] = [
       "Usage": "Intérieur & Extérieur",
       "Type": "Américain",
       "Taille": "7 pieds",
-      "Matière du plateau": "Ardoise naturelle",
+      "Matière du plateau": "HPL 12 mm",
       "Dimensions": "215 x 120 x 78 cm",
       "Poids": "102 kg",
       "Convertible": "Oui (table à manger)",
@@ -153,11 +156,11 @@ export const products: Product[] = [
       "Usage": "Intérieur",
       "Type": "Américain",
       "Taille": "9 pieds",
-      "Matière du plateau": "Ardoise naturelle",
+      "Matière du plateau": "Ardoise naturelle 22 mm",
       "Convertible": "Non",
       "Garantie": "3 ans",
-      "Dimensions": "274 x 137 cm",
-      "Poids": "~400 kg"
+      "Dimensions": "288 x 161 x 81 cm",
+      "Poids": "520 kg"
     },
   },
   {
@@ -174,11 +177,11 @@ export const products: Product[] = [
       "Usage": "Intérieur",
       "Type": "Américain",
       "Taille": "8 pieds",
-      "Matière du plateau": "Ardoise naturelle",
-      "Dimensions": "258 x 146 cm",
+      "Matière du plateau": "Ardoise naturelle 19 mm",
+      "Dimensions": "258 x 146 x 81 cm",
       "Convertible": "Non",
       "Garantie": "3 ans",
-      "Poids": "~300 kg"
+      "Poids": "390 kg"
     },
   },
   {
@@ -196,11 +199,11 @@ export const products: Product[] = [
       "Usage": "Intérieur",
       "Type": "Américain",
       "Taille": "6 pieds",
-      "Matière du plateau": "Ardoise naturelle",
+      "Matière du plateau": "Ardoise naturelle 19 mm",
       "Convertible": "Non",
       "Garantie": "3 ans",
-      "Dimensions": "183 x 91 cm",
-      "Poids": "~180 kg"
+      "Dimensions": "214 x 124 x 81 cm",
+      "Poids": "300 kg"
     },
   },
   {
@@ -219,8 +222,8 @@ export const products: Product[] = [
       "Type": "Américain",
       "Taille": "7 pieds",
       "Matière du plateau": "Ardoise naturelle",
-      "Dimensions": "234 x 122 cm",
-      "Poids": "280 kg",
+      "Dimensions": "228 x 128 x 81 cm",
+      "Poids": "260 kg",
       "Convertible": "Non",
       "Garantie": "5 ans"
     },
@@ -260,10 +263,10 @@ export const products: Product[] = [
       "Type": "Américain",
       "Taille": "7 pieds",
       "Matière du plateau": "MDF",
-      "Dimensions": "225 x 125 cm",
+      "Dimensions": "225 x 125 x 79 cm",
       "Convertible": "Oui (table à manger)",
       "Garantie": "3 ans",
-      "Poids": "~280 kg"
+      "Poids": "135 kg"
     },
   },
   {
@@ -281,8 +284,8 @@ export const products: Product[] = [
       "Type": "Anglais",
       "Taille": "6 pieds",
       "Matière du plateau": "Ardoise",
-      "Dimensions": "183 x 91 cm",
-      "Poids": "180 kg",
+      "Dimensions": "205 x 115 x 79 cm",
+      "Poids": "85 kg",
       "Convertible": "Non",
       "Garantie": "3 ans"
     },
@@ -302,11 +305,11 @@ export const products: Product[] = [
       "Usage": "Intérieur",
       "Type": "Américain",
       "Taille": "7 pieds",
-      "Matière du plateau": "Ardoise",
+      "Matière du plateau": "MDF 18 mm",
       "Convertible": "Non",
       "Garantie": "3 ans",
-      "Dimensions": "234 x 122 cm",
-      "Poids": "~280 kg"
+      "Dimensions": "225 x 125 x 79 cm",
+      "Poids": "100 kg"
     },
   },
   {
@@ -323,11 +326,11 @@ export const products: Product[] = [
       "Usage": "Intérieur",
       "Type": "Américain",
       "Taille": "7 pieds",
-      "Matière du plateau": "Ardoise",
+      "Matière du plateau": "MDF 22 mm",
       "Convertible": "Oui (table à manger)",
       "Garantie": "3 ans",
-      "Dimensions": "234 x 122 cm",
-      "Poids": "~280 kg"
+      "Dimensions": "225 x 125 x 79 cm",
+      "Poids": "125 kg"
     },
   },
   {
@@ -347,8 +350,8 @@ export const products: Product[] = [
       "Matière du plateau": "MDF",
       "Convertible": "Non",
       "Garantie": "3 ans",
-      "Dimensions": "122 x 66 cm",
-      "Poids": "~45 kg"
+      "Dimensions": "156 x 86 x 79 cm",
+      "Poids": "48 kg"
     },
   },
   {
@@ -367,8 +370,8 @@ export const products: Product[] = [
       "Type": "Américain",
       "Taille": "4 pieds",
       "Matière du plateau": "MDF",
-      "Dimensions": "122 x 66 cm",
-      "Poids": "45 kg",
+      "Dimensions": "156 x 86 x 79 cm",
+      "Poids": "48 kg",
       "Convertible": "Non"
     },
   },
@@ -385,11 +388,12 @@ export const products: Product[] = [
     specs: {
       "Usage": "Intérieur",
       "Type": "Premium",
-      "Matière": "Fenix",
+      "Matière": "Fenix nanotech",
       "Nombre de joueurs": "4",
       "Barres": "Télescopiques",
       "Garantie": "5 ans",
-      "Dimensions": "145 x 76 x 93 cm"
+      "Dimensions": "154 x 109 x 92 cm",
+        "Poids": "74 kg",
     },
   },
   {
@@ -405,11 +409,12 @@ export const products: Product[] = [
     specs: {
       "Usage": "Intérieur",
       "Type": "Premium",
-      "Matière": "Acier",
+      "Matière": "Panneau mélaminé",
       "Nombre de joueurs": "4",
       "Barres": "Télescopiques",
       "Garantie": "5 ans",
-      "Dimensions": "145 x 76 x 93 cm"
+      "Dimensions": "153 x 105 x 95 cm",
+        "Poids": "75 kg",
     },
   },
   {
@@ -429,7 +434,8 @@ export const products: Product[] = [
       "Nombre de joueurs": "4",
       "Barres": "Télescopiques",
       "Garantie": "5 ans",
-      "Dimensions": "145 x 76 x 93 cm"
+      "Dimensions": "154 x 107 x 95 cm",
+        "Poids": "80 kg"
     },
   },
   {
@@ -445,11 +451,12 @@ export const products: Product[] = [
     specs: {
       "Usage": "Intérieur",
       "Type": "Standard",
-      "Matière": "MDF",
+      "Matière": "Mélaminé",
       "Nombre de joueurs": "4",
       "Barres": "Télescopiques",
       "Garantie": "5 ans",
-      "Dimensions": "145 x 76 x 93 cm"
+      "Dimensions": "153 x 105 x 93 cm",
+        "Poids": "70 kg",
     },
   },
   {
@@ -466,11 +473,12 @@ export const products: Product[] = [
     specs: {
       "Usage": "Intérieur",
       "Type": "Premium",
-      "Matière": "MDF",
+      "Matière": "Bois mélaminé",
       "Nombre de joueurs": "4",
       "Barres": "Télescopiques",
       "Garantie": "5 ans",
-      "Dimensions": "145 x 76 x 93 cm"
+      "Dimensions": "150 x 105 x 95 cm",
+        "Poids": "72 kg",
     },
   },
   {
@@ -487,11 +495,12 @@ export const products: Product[] = [
     specs: {
       "Usage": "Intérieur",
       "Type": "Standard",
-      "Matière": "MDF",
+      "Matière": "Panneau mélaminé",
       "Nombre de joueurs": "4",
       "Barres": "Télescopiques",
       "Garantie": "5 ans",
-      "Dimensions": "145 x 76 x 93 cm"
+      "Dimensions": "153 x 105 x 95 cm",
+        "Poids": "75 kg",
     },
   },
   {
@@ -507,11 +516,12 @@ export const products: Product[] = [
     specs: {
       "Usage": "Intérieur",
       "Type": "Premium",
-      "Matière": "MDF",
+      "Matière": "Panneau laqué noir",
       "Nombre de joueurs": "4",
       "Barres": "Télescopiques",
       "Garantie": "5 ans",
-      "Dimensions": "145 x 76 x 93 cm"
+      "Dimensions": "153 x 105 x 90 cm",
+        "Poids": "73 kg",
     },
   },
   {
@@ -527,11 +537,12 @@ export const products: Product[] = [
     specs: {
       "Usage": "Intérieur",
       "Type": "Premium",
-      "Matière": "Acier",
+      "Matière": "Bois mélaminé",
       "Nombre de joueurs": "4",
       "Barres": "Télescopiques",
       "Garantie": "5 ans",
-      "Dimensions": "145 x 76 x 93 cm"
+      "Dimensions": "153 x 105 x 95 cm",
+        "Poids": "73 kg",
     },
   },
   {
@@ -543,7 +554,7 @@ export const products: Product[] = [
     stock: 10,
     rating: 4.8,
     desc: "Le baby-foot Tahiti 6 joueurs René Pierre est un modèle extérieur haut de gamme pensé pour les grands moments de convivialité. La fiche officielle le présente comme un baby-foot d’extérieur pour des moments d’été conviviaux, en version 6 joueurs, avec grande résistance aux intempéries et fabrication française. Son meuble est en polyéthylène haute densité, ce qui le rend imputrescible et résistant à l’eau, aux UV, aux insectes, ainsi qu’aux températures basses ou élevées. C’est donc un vrai produ",
-    image: "",
+    image: "/images/products/ba-113.png",
     specs: {
       "Usage": "Extérieur",
       "Type": "Premium",
@@ -551,7 +562,8 @@ export const products: Product[] = [
       "Nombre de joueurs": "6",
       "Barres": "Télescopiques",
       "Garantie": "5 ans",
-      "Dimensions": "150 x 80 x 95 cm"
+      "Dimensions": "223 x 107 x 95 cm",
+        "Poids": "107 kg"
     },
   },
   {
@@ -563,15 +575,16 @@ export const products: Product[] = [
     stock: 10,
     rating: 4.8,
     desc: "Le baby-foot Bora Bora René Pierre est conçu pour une utilisation extérieure régulière. Son meuble en bois stratifié traité de 25 mm résiste : à l’humidité aux UV aux variations de température Ses barres télescopiques en acier chromé anticorrosion assurent sécurité et durabilité. 👉 Résultat : un baby-foot fiable, solide et durable pour le jardin ou la terrasse. ⚙️ CARACTÉRISTIQUES Structure : bois stratifié traité extérieur Pieds : acier laqué résine Barres : télescopiques 16 mm anticorrosion Jo",
-    image: "",
+    image: "/images/products/ba-112.jpg",
     specs: {
       "Usage": "Extérieur",
       "Type": "Standard",
-      "Matière": "Acier",
+      "Matière": "Bois stratifié 25mm",
       "Nombre de joueurs": "4",
       "Barres": "Télescopiques",
       "Garantie": "5 ans",
-      "Dimensions": "150 x 80 x 95 cm"
+      "Dimensions": "146 x 111 x 89 cm",
+        "Poids": "62 kg",
     },
   },
   {
@@ -584,7 +597,7 @@ export const products: Product[] = [
     badge: "Promo",
     rating: 4.6,
     desc: "Le baby-foot Tahiti René Pierre est conçu pour une utilisation extérieure intensive. Son meuble en polyéthylène haute densité le rend totalement résistant : à la pluie aux UV aux variations de température aux insectes 👉 Résultat : un baby-foot que tu peux laisser dehors toute l’année. Ses barres en acier chromé et ses joueurs en métal offrent une excellente précision de jeu. ⚙️ CARACTÉRISTIQUES Matériau : polyéthylène haute densité Résistance : eau / UV / gel / chaleur Barres : acier triple chro",
-    image: "",
+    image: "/images/products/ba-111.jpg",
     specs: {
       "Usage": "Extérieur",
       "Type": "Standard",
@@ -592,7 +605,8 @@ export const products: Product[] = [
       "Nombre de joueurs": "4",
       "Barres": "Télescopiques",
       "Garantie": "5 ans",
-      "Dimensions": "150 x 80 x 95 cm"
+      "Dimensions": "156 x 100 x 95 cm",
+        "Poids": "70 kg"
     },
   },
   {
@@ -604,7 +618,7 @@ export const products: Product[] = [
     stock: 10,
     rating: 4.6,
     desc: "La TIBHAR Smash 28 Black Line est une table de compétition haut de gamme qui allie performance et design premium. Son plateau de 28 mm offre un rebond ultra précis, conforme aux standards ITTF. Son design noir élégant en fait une table unique, parfaite pour : clubs premium salles modernes installations haut de gamme 👉 Une table qui impressionne autant par son look que par ses performances. ⚙️ Caractéristiques techniques Plateau : 28 mm (compétition) Norme : ITTF (compétition officielle) Structur",
-    image: "",
+    image: "/images/products/pi-110.jpg",
     specs: {
       "Usage": "Intérieur",
       "Type": "Compétition",
@@ -613,7 +627,7 @@ export const products: Product[] = [
       "Norme ITTF": "Oui",
       "Pliable": "Oui",
       "Dimensions": "274 x 152,5 x 76 cm",
-      "Poids": "~100 kg"
+      "Poids": "~120 kg"
     },
   },
   {
@@ -625,7 +639,7 @@ export const products: Product[] = [
     stock: 10,
     rating: 4.6,
     desc: "La TIBHAR Smash 28 est une table haut de gamme conçue pour la compétition et l’entraînement intensif. Son plateau en bois de 28 mm offre un rebond extrêmement précis et rapide, proche des standards professionnels. Sa structure renforcée garantit une stabilité parfaite. 👉 Idéale pour : clubs compétitions joueurs avancés ⚙️ Caractéristiques techniques Plateau : 28 mm (niveau compétition) Norme : agréée ITTF Surface : bois haute densité traité polyester Cadre : acier renforcé A60 Mobilité : demi-ta",
-    image: "",
+    image: "/images/products/pi-109.jpg",
     specs: {
       "Usage": "Intérieur",
       "Type": "Compétition",
@@ -634,7 +648,7 @@ export const products: Product[] = [
       "Norme ITTF": "Oui",
       "Pliable": "Oui",
       "Dimensions": "274 x 152,5 x 76 cm",
-      "Poids": "~100 kg"
+      "Poids": "127 kg"
     },
   },
   {
@@ -655,7 +669,7 @@ export const products: Product[] = [
       "Norme ITTF": "Non",
       "Pliable": "Oui",
       "Dimensions": "274 x 152,5 x 76 cm",
-      "Poids": "~80 kg"
+      "Poids": "71 kg"
     },
   },
   {
@@ -675,8 +689,9 @@ export const products: Product[] = [
       "Matière": "MDF",
       "Nombre de joueurs": "4",
       "Barres": "Télescopiques",
-      "Dimensions": "143 x 74 x 92 cm",
-      "Garantie": "3 ans"
+      "Dimensions": "143 x 74 x 90 cm",
+      "Garantie": "3 ans",
+        "Poids": "110 kg"
     },
   },
   {
@@ -697,7 +712,8 @@ export const products: Product[] = [
       "Nombre de joueurs": "4",
       "Barres": "Télescopiques",
       "Garantie": "3 ans",
-      "Dimensions": "143 x 74 x 92 cm"
+      "Dimensions": "143 x 74 x 90 cm",
+        "Poids": "80 kg"
     },
   },
   {
@@ -737,7 +753,7 @@ export const products: Product[] = [
       "Nombre de joueurs": "4",
       "Barres": "Télescopiques",
       "Dimensions": "143 x 74 x 92 cm",
-      "Poids": "72 kg",
+      "Poids": "85 kg",
       "Garantie": "3 ans"
     },
   },
@@ -757,7 +773,7 @@ export const products: Product[] = [
       "Matière": "MDF",
       "Nombre de joueurs": "4",
       "Barres": "Télescopiques",
-      "Dimensions": "143 x 74 x 92 cm",
+      "Dimensions": "143 x 74 x 90 cm",
       "Poids": "120 kg",
       "Garantie": "3 ans"
     },
@@ -780,7 +796,7 @@ export const products: Product[] = [
       "Norme ITTF": "Non",
       "Pliable": "Oui",
       "Dimensions": "274 x 152,5 x 76 cm",
-      "Poids": "67 kg"
+      "Poids": "87,5 kg"
     },
   },
   {
@@ -843,7 +859,7 @@ export const products: Product[] = [
       "Norme ITTF": "Non",
       "Pliable": "Oui",
       "Dimensions": "274 x 152,5 x 76 cm",
-      "Poids": "~67 kg"
+      "Poids": "75,3 kg"
     },
   },
   {
@@ -948,10 +964,9 @@ export const products: Product[] = [
       "Matière du plateau": "Résine stratifiée",
       "Norme ITTF": "Oui",
       "Pliable": "Oui",
-      "Poids": "90 kg",
+      "Poids": "89 kg",
       "Garantie": "10 ans / réparabilité 20 ans",
-      "Dimensions": "274 x 152,5 x 76 cm"
-    },
+      "Dimensions": "274 x 167 x 76 cm"   },
   },
   {
     id: "pi-37",
@@ -972,8 +987,8 @@ export const products: Product[] = [
       "Norme ITTF": "Non",
       "Pliable": "Oui",
       "Garantie": "10 ans",
-      "Dimensions": "152 x 76 x 71,5 cm",
-      "Poids": "~55 kg"
+      "Dimensions": "274 x 167 x 76 cm",
+      "Poids": "66 kg"
     },
   },
   {
@@ -993,9 +1008,9 @@ export const products: Product[] = [
       "Matière du plateau": "Résine stratifiée",
       "Norme ITTF": "Non",
       "Pliable": "Oui",
-      "Garantie": "10 ans → gros argument confiance",
-      "Dimensions": "274 x 152,5 x 76 cm",
-      "Poids": "~55 kg"
+      "Garantie": "10 ans / réparabilité 20 ans",
+      "Dimensions": "274 x 167 x 76 cm",
+      "Poids": "54 kg"
     },
   },
   {
@@ -1037,7 +1052,7 @@ export const products: Product[] = [
       "Matière du plateau": "Résine mélamine",
       "Norme ITTF": "Non",
       "Pliable": "Oui",
-      "Poids": "59 kg",
+      "Poids": "59,5 kg",
       "Dimensions": "274 x 152,5 x 76 cm"
     },
   },
@@ -1058,7 +1073,7 @@ export const products: Product[] = [
       "Matière du plateau": "Résine mélamine",
       "Norme ITTF": "Non",
       "Pliable": "Oui",
-      "Dimensions": "60 x 20 mm",
+      "Dimensions": "274 x 152,5 x 76 cm",
       "Poids": "113 kg"
     },
   },
@@ -1078,9 +1093,9 @@ export const products: Product[] = [
       "Épaisseur du plateau": "10 mm",
       "Matière du plateau": "Résine mélamine",
       "Norme ITTF": "Non",
-      "Pliable": "Oui",
+      "Pliable": "Non",
       "Dimensions": "274 x 152,5 x 76 cm",
-      "Poids": "~90 kg"
+      "Poids": "127 kg"
     },
   },
   {
@@ -1095,14 +1110,14 @@ export const products: Product[] = [
     desc: "La Kettler K5 Indoor est une table de ping-pong haut de gamme conçue pour une utilisation en intérieur, idéale pour les particuliers, les familles et les joueurs réguliers souhaitant une excellente qualité de jeu à domicile.\nSon plateau en bois spécial de 19 mm d’épaisseur garantit un rebond précis et une sensation proche des tables de compétition. Sa structure robuste en acier assure une stabilité optimale pendant le jeu, même lors des échanges intensifs.\nGrâce à son système de pliage intelligent, la table peut être rangée facilement sans prendre beaucoup de place. Elle est également équipée de roues pour un déplacement simple et sécurisé.\nLa fonction playback (entraînement solo) permet de relever une moitié de la table pour s’entraîner seul.\n👉 Parfaite pour :\n\nSous-sol / garage\n\nSalle de jeux\n\nUsage familial\n\nEntraînement régulier⚙️ CARACTÉRISTIQUES TECHNIQUES\nTable de ping-pong intérieure uniquement\n\nPlateau en bois spécial 19 mm (excellent rebond)\n\nSurface de jeu anti-reflets\n\nStructure en acier avec revêtement poudre\n\nCadre profilé 50 mm (stabilité renforcée)\n\n4 roues doubles pivotantes pour transport facile\n\nRoues avec revêtement caoutchouc\n\nSystème de pliage sécurisé (SMS / verrouillage automatique)\n\nDéverrouillage facile à une main\n\nFonction entraînement solo (playback)\n\nRéglage des pieds jusqu’à 30 mm (sol irrégulier)\n\nFilet inclus, réglable en hauteur\n\nSupport pour raquettes et balles\n\nDimensions : 274 x 152,5 x 76 cm\n\nDimensions pliée : env. 152,5 x 72 x 155 cm\n\nPoids : env. 60 – 75 kg\n\nFabrication allemande Kettler\n\n👉 ⚠️ Important :\n\nNon adaptée à l’extérieur\n\nSensible à l’humidité et aux UV",
     image: "/images/products/table-de-ping-pong-int-rieure-kettler-k5-indoor-pliable-19-m-47.png",
     specs: {
-      "Usage": "Intérieur & Extérieur",
+      "Usage": "Intérieur",
       "Type": "Premium",
       "Épaisseur du plateau": "19 mm",
       "Matière du plateau": "Bois",
-      "Norme ITTF": "Oui",
+      "Norme ITTF": "Non",
       "Pliable": "Oui",
       "Dimensions": "274 x 152,5 x 76 cm",
-      "Poids": "~80 kg"
+      "Poids": "~76 kg"
     },
   },
   {
@@ -1113,7 +1128,7 @@ export const products: Product[] = [
     priceHT: 208.33,
     stock: 10,
     rating: 4.8,
-    desc: "La Kettler K1 Indoor est la table de ping-pong parfaite pour débuter ou jouer en famille à la maison. Conçue pour un usage intérieur, elle offre un excellent compromis entre prix, qualité et praticité.\nSon plateau en bois de 16 mm assure un rebond correct et agréable pour les joueurs occasionnels. Sa surface anti-reflets permet de jouer confortablement, même dans des pièces lumineuses.\nGrâce à son système de pliage simple et sécurisé, la table se range facilement après utilisation. Les roues intégrées permettent de la déplacer sans effort.\nLa fonction entraînement solo (playback) permet de relever une moitié de la table pour jouer seul.\n👉 Idéale pour :\n\nDébutants\n\nFamilles\n\nEnfants / adolescents\n\nUsage occasionnel⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nTable de ping-pong intérieure uniquement\n\nPlateau en bois 16 mm (niveau loisir)\n\nSurface anti-reflets (meilleur confort visuel)\n\nStructure acier avec revêtement poudre\n\nCadre profilé 36 mm\n\n4 roues doubles pivotantes pour transport facile\n\nSystème de pliage sécurisé avec verrouillage\n\nDéverrouillage simple (poignée rotative)\n\nFonction entraînement solo (playback)\n\nFilet inclus\n\nSupport pour raquettes et balles\n\nDimensions : 274 x 152,5 x 76 cm \n\nDimensions pliée : env. 155 x 165 x 74 cm \n\nPoids : env. 45 – 50 kg \n👉 ⚠️ Important :\n\nNon résistante à l’humidité\n\nUsage intérieur uniquement",
+    desc: "La Kettler K1 Indoor est la table de ping-pong parfaite pour débuter ou jouer en famille à la maison. Conçue pour un usage intérieur, elle offre un excellent compromis entre prix, qualité et praticité.\nSon plateau en bois de 16 mm assure un rebond correct et agréable pour les joueurs occasionnels. Sa surface anti-reflets permet de jouer confortablement, même dans des pièces lumineuses.\nGrâce à son système de pliage simple et sécurisé, la table se range facilement après utilisation. Les roues intégrées permettent de la déplacer sans effort.\nLa fonction entraînement solo (playback) permet de relever une moitié de la table pour jouer seul.\n👉 Idéale pour :\n\nDébutants\n\nFamilles\n\nEnfants / adolescents\n\nUsage occasionnel⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nTable de ping-pong intérieure uniquement\n\nPlateau en bois 16 mm (niveau loisir)\n\nSurface anti-reflets (meilleur confort visuel)\n\nStructure acier avec revêtement poudre\n\nCadre profilé 36 mm\n\n4 roues doubles pivotantes pour transport facile\n\nSystème de pliage sécurisé avec verrouillage\n\nDéverrouillage simple (poignée rotative)\n\nFonction entraînement solo (playback)\n\nFilet inclus\n\nSupport pour raquettes et balles\n\nDimensions : 274 x 152,5 x 76 cm \n\nDimensions pliée : env. 155 x 165 x 74 cm \n\nPoids : env. 45 – 50 kg \n👉 ⚠️ Important :\n\nNon résistante à l'humidité\n\nUsage intérieur uniquement",
     image: "/images/products/table-de-ping-pong-int-rieure-kettler-k1-indoor-pliable-16-m-48.png",
     specs: {
       "Usage": "Intérieur",
@@ -1123,7 +1138,7 @@ export const products: Product[] = [
       "Norme ITTF": "Non",
       "Pliable": "Oui",
       "Dimensions": "274 x 152,5 x 76 cm",
-      "Poids": "~90 kg"
+      "Poids": "~45 – 50 kg"
     },
   },
   {
@@ -1167,7 +1182,7 @@ export const products: Product[] = [
       "Norme ITTF": "Oui",
       "Pliable": "Oui",
       "Dimensions": "274 x 152,5 x 76 cm",
-      "Poids": "~80 kg"
+      "Poids": "91 kg"
     },
   },
   {
@@ -1210,7 +1225,7 @@ export const products: Product[] = [
       "Norme ITTF": "Non",
       "Pliable": "Oui",
       "Dimensions": "274 x 152,5 x 76 cm",
-      "Poids": "~55 kg"
+      "Poids": "59,5 kg"
     },
   },
   {
@@ -1231,7 +1246,7 @@ export const products: Product[] = [
       "Norme ITTF": "Non",
       "Pliable": "Oui",
       "Dimensions": "274 x 152,5 x 76 cm",
-      "Poids": "~55 kg"
+      "Poids": "59,5 kg"
     },
   },
   {
@@ -1252,7 +1267,7 @@ export const products: Product[] = [
       "Norme ITTF": "Non",
       "Pliable": "Oui",
       "Dimensions": "274 x 152,5 x 76 cm",
-      "Poids": "~55 kg"
+      "Poids": "59,5 kg"
     },
   },
   {
@@ -1274,7 +1289,7 @@ export const products: Product[] = [
       "Norme ITTF": "Oui",
       "Pliable": "Oui",
       "Dimensions": "274 x 152,5 x 76 cm",
-      "Poids": "~80 kg"
+      "Poids": "77 kg"
     },
   },
   {
@@ -1296,7 +1311,7 @@ export const products: Product[] = [
       "Norme ITTF": "Oui",
       "Pliable": "Oui",
       "Dimensions": "274 x 152,5 x 76 cm",
-      "Poids": "~80 kg"
+      "Poids": "95,5 kg"
     },
   },
   {
@@ -1317,7 +1332,7 @@ export const products: Product[] = [
       "Norme ITTF": "Non",
       "Pliable": "Oui",
       "Dimensions": "274 x 152,5 x 76 cm",
-      "Poids": "~80 kg"
+      "Poids": "101 kg"
     },
   },
   {
@@ -1336,9 +1351,9 @@ export const products: Product[] = [
       "Épaisseur du plateau": "10 mm",
       "Matière du plateau": "Résine mélamine",
       "Norme ITTF": "Non",
-      "Pliable": "Oui",
+      "Pliable": "Non",
       "Dimensions": "274 x 152,5 x 76 cm",
-      "Poids": "~90 kg"
+      "Poids": "112,5 kg"
     },
   },
   {
@@ -1381,7 +1396,7 @@ export const products: Product[] = [
       "Norme ITTF": "Non",
       "Pliable": "Oui",
       "Dimensions": "274 x 152,5 x 76 cm",
-      "Poids": "~55 kg"
+      "Poids": "51 kg"
     },
   },
   {
@@ -1401,8 +1416,8 @@ export const products: Product[] = [
       "Matière du plateau": "Bois",
       "Norme ITTF": "Non",
       "Pliable": "Oui",
-      "Dimensions": "152 x 76 x 71,5 cm",
-      "Poids": "~80 kg"
+      "Dimensions": "274 x 152,5 x 76 cm",
+      "Poids": "~61,5 kg"
     },
   },
   {
@@ -1573,7 +1588,7 @@ export const products: Product[] = [
       "Norme ITTF": "Non",
       "Pliable": "Oui",
       "Dimensions": "274 x 152,5 x 76 cm",
-      "Poids": "~90 kg"
+      "Poids": "50 kg"
     },
   },
   {
@@ -1595,7 +1610,7 @@ export const products: Product[] = [
       "Norme ITTF": "Non",
       "Pliable": "Oui",
       "Dimensions": "274 x 152,5 x 76 cm",
-      "Poids": "~90 kg"
+      "Poids": "50 kg"
     },
   },
   {
@@ -1695,7 +1710,7 @@ export const products: Product[] = [
     desc: "La Sponeta S3-80i Indoor est une table conçue pour les joueurs souhaitant une vraie qualité de jeu à domicile.\nSon plateau intérieur offre un rebond précis et fluide, bien supérieur aux modèles outdoor. Sa structure renforcée garantit une excellente stabilité, même lors d’un usage intensif.\n👉 Pourquoi choisir ce modèle ?\n✔ Qualité de jeu supérieure (indoor)\n✔ Très bonne stabilité\n✔ Idéal usage régulier à intensif\n✔ Mode entraînement solo\n✔ Parfait pour progresser\nUne table idéale pour jouer sérieusement à la maison.\n\n⚙️ CARACTÉRISTIQUES TECHNIQUES\n\nUtilisation : Intérieur uniquement \n\nPlateau : bois aggloméré (≈19 mm gamme S3)\n\nDimensions : 274 x 152,5 x 76 cm \n\nStructure : acier renforcé\n\nRoues : oui (transport facile)\n\nSystème : verrouillage sécurisé\n\nPlayback : oui\n\nNiveau : intermédiaire → avancé",
     image: "/images/products/table-de-ping-pong-int-rieure-sponeta-s3-80i-qualit-premium--81.png",
     specs: {
-      "Usage": "Intérieur & Extérieur",
+      "Usage": "Intérieur",
       "Type": "Premium",
       "Épaisseur du plateau": "19 mm",
       "Matière du plateau": "Bois",
@@ -1723,7 +1738,7 @@ export const products: Product[] = [
       "Norme ITTF": "Oui",
       "Pliable": "Oui",
       "Dimensions": "274 x 152,5 x 76 cm",
-      "Poids": "~100 kg"
+      "Poids": "115 kg"
     },
   },
   {
@@ -1765,7 +1780,7 @@ export const products: Product[] = [
       "Norme ITTF": "Oui",
       "Pliable": "Oui",
       "Dimensions": "274 x 152,5 x 76 cm",
-      "Poids": "~100 kg"
+      "Poids": "110 kg"
     },
   },
   {
@@ -1806,7 +1821,7 @@ export const products: Product[] = [
       "Matière du plateau": "Bois",
       "Norme ITTF": "Oui",
       "Pliable": "Oui",
-      "Dimensions": "60 x 40 mm",
+      "Dimensions": "274 x 152,5 x 76 cm",
       "Poids": "~100 kg"
     },
   },
@@ -1978,7 +1993,7 @@ export const products: Product[] = [
       "Norme ITTF": "Oui",
       "Pliable": "Oui",
       "Dimensions": "274 x 152,5 x 76 cm",
-      "Poids": "~100 kg"
+      "Poids": "120 kg"
     },
   },
   {
@@ -2210,7 +2225,8 @@ export const products: Product[] = [
       "Type": "Jardin",
       "Matière": "Acier galvanisé",
       "Sécurité": "Filet de sécurité inclus",
-      "Installation": "Semi-enterré"
+      "Installation": "Semi-enterré",
+        "Poids max utilisateur": "120 kg"
     },
   },
   {
@@ -2230,7 +2246,8 @@ export const products: Product[] = [
       "Type": "Jardin",
       "Matière": "Acier galvanisé",
       "Sécurité": "Système sans ressort",
-      "Installation": "Sur pieds"
+      "Installation": "Sur pieds",
+        "Poids max utilisateur": "120 kg"
     },
   },
   {
@@ -2309,7 +2326,8 @@ export const products: Product[] = [
       "Matière": "Acier galvanisé",
       "Sécurité": "Système sans ressort",
       "Installation": "Sur pieds",
-      "Poids": "8 kg"
+      "Poids": "8 kg",
+        "Poids max utilisateur": "120 kg"
     },
   },
   {
@@ -2330,7 +2348,8 @@ export const products: Product[] = [
       "Matière": "Acier galvanisé",
       "Sécurité": "Filet de sécurité inclus",
       "Installation": "Sur pieds",
-      "Poids": "6 kg"
+      "Poids": "6 kg",
+        "Poids max utilisateur": "40 kg"
     },
   },
   {
@@ -2633,15 +2652,14 @@ export const products: Product[] = [
     desc: "Le casque gaming sans fil 7.1 surround offre un son immersif et une liberté de mouvement totale. Compatible PS5, Xbox, PC et Switch.\n⚡ Points forts\n✔️ Audio 7.1 surround virtuel\n✔️ Sans fil Bluetooth 5.0\n✔️ Autonomie 20 heures\n✔️ Micro amovible\n✔️ Compatible multi-plateforme\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nFréquence : 20 Hz – 20 kHz\nImpédance : 32 ohms\nPoids : 280g\nCharge USB-C\nLatence : < 1 ms",
     image: "/images/products/casque-gaming-sans-fil-7-1-surround.jpg",
     specs: {
-      "Type": "PS5",
-      "Édition": "Standard",
-      "Stockage": "825 Go",
-      "Couleur": "Blanche",
-      "Poids": "280g"
+      "Type": "Casque gaming",
+      "Type d'accessoire": "Casque sans fil",
+      "Marque": "Générique",
+      "Poids": "~350 g"
     },
   },
   {
-    id: "co-008",
+     id: "co-008",
     name: "Sony Manette Pro PS5 DualSense Edge – Haute Précision",
     category: "accessoires",
     brand: "Sony",
@@ -2670,14 +2688,14 @@ export const products: Product[] = [
     desc: "La station de recharge double permet de recharger simultanément deux manettes PS5 ou Xbox. Compacte et élégante, elle s’intègre parfaitement dans votre espace gaming.\n⚡ Points forts\n✔️ Double charge simultanée\n✔️ Charge rapide en 2,5h\n✔️ LED de charge indicator\n✔️ Compatible PS5 et Xbox\n✔️ Design compact\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nCharge : 2 manettes simultanément\nTemps de charge : 2,5h\nAlimentation : USB-C\nCompatibilité : DualSense, DualShock 4, Xbox",
     image: "/images/products/station-de-recharge-double-ps5-xbox.jpg",
     specs: {
-      "Type": "PS5",
-      "Édition": "Standard",
-      "Stockage": "825 Go",
-      "Couleur": "Blanche"
+      "Type": "Station de recharge",
+      "Marque": "Générique",
+      "Dimensions": "52 x 62 x 159 mm",
+      "Poids": "180 g"
     },
   },
   {
-    id: "co-010",
+     id: "co-010",
     name: "Support Mural Console + Rangement Jeux – Organisation Gaming",
     category: "accessoires",
     brand: "Générique",
@@ -2687,11 +2705,11 @@ export const products: Product[] = [
     desc: "Le support mural pour console et rangement de jeux permet d’organiser votre espace gaming de manière élégante. Compatible PS5, Xbox et Switch.\n⚡ Points forts\n✔️ Support mural solide\n✔️ Rangement pour 12 jeux\n✔️ Compatible PS5, Xbox, Switch\n✔️ Gain de place optimal\n✔️ Installation facile\n⚙️ CARACTÉRISTIQUES TECHNIQUES\nCharge max : 5 kg\nRangement : 12 jeux\nMatériau : Métal + MDF\nFixation murale incluse\nDimensions : 35 x 25 x 10 cm",
     image: "/images/products/support-mural-console-rangement-jeux.jpg",
     specs: {
-      "Type": "PS5",
-      "Édition": "Standard",
-      "Stockage": "825 Go",
-      "Couleur": "Blanche",
-      "Dimensions": "35 x 25 x 10 cm"
+      "Type": "Support mural",
+      "Marque": "Générique",
+      "Dimensions": "35 x 25 x 10 cm",
+      "Charge max": "5 kg",
+      "Matériau": "Métal + MDF"
     },
   },
   {
@@ -2706,10 +2724,47 @@ export const products: Product[] = [
     desc: "Le pack accessoires gaming complet réunit un casque sans fil, une manette supplémentaire et un support de rangement. L’équipement idéal pour compléter votre setup.\n⚡ Points forts\n✔️ Casque gaming sans fil 7.1\n✔️ Manette wireless compatible multi-plateforme\n✔️ Support de rangement mural\n✔️ Économie vs achat séparé\n✔️ Compatible PS5 / Xbox / PC\n⚙️ Contenu : 1 casque, 1 manette, 1 support",
     image: "/images/products/pack-accessoires-gaming-complet.jpg",
     specs: {
-      "Type": "PS5",
-      "Édition": "Standard",
-      "Stockage": "825 Go",
-      "Couleur": "Blanche"
+      "Type": "Pack gaming",
+      "Contenu": "Casque 7.1 + Manette + Support mural",
+      "Marque": "Générique",
+      "Poids total": "~1,5 kg"
+    },
+  },
+  {
+    id: "co-022",
+    name: "Valve Steam Deck OLED 1 To – Édition Limitée, Stockage Maximal",
+    category: "consoles",
+    brand: "Valve",
+    priceHT: 765.83,
+    stock: 3,
+    badge: "Premium",
+    rating: 4.9,
+    desc: "Le Steam Deck OLED 1 To est la version ultimate de la console portable Valve. Écran HDR OLED 7,4\" 90Hz, SSD NVMe 1 To, Wi-Fi 6E, batterie 50Wh et étui exclusif à liner amovible.\n⚡ Points forts\n✔️ SSD 1 To NVMe – immense stockage\n✔️ Écran OLED HDR 7,4\" 90Hz\n✔️ APU AMD 6 nm – performances optimisées\n✔️ Wi-Fi 6E + Bluetooth 5.3\n✔️ Batterie 50Wh – 3 à 12h d'autonomie\n✔️ Étui exclusive avec liner amovible\n⚙️ RAM : 16 Go LPDDR5\nPoids : 640 g",
+    image: "/images/products/steam-deck-oled.jpg",
+    specs: {
+      "Type": "Steam Deck",
+      "Édition": "OLED",
+      "Stockage": "1 To",
+      "Couleur": "Noire"
+    },
+  },
+  {
+    id: "co-023",
+    name: "Valve Index VR Kit – Casque Réalité Virtuelle Haut de Gamme, 144Hz",
+    category: "consoles",
+    brand: "Valve",
+    priceHT: 833.33,
+    stock: 3,
+    badge: "Premium",
+    rating: 4.7,
+    desc: "Le Valve Index VR Kit est un casque de réalité virtuelle PC haut de gamme offrant une expérience immersive exceptionnelle. Écran 144Hz, audio off-ear, contrôleurs Knuckles à détection digitale.\n⚡ Points forts\n✔️ Rafraîchissement 144Hz – immersion fluide\n✔️ Audio off-ear – sons spatiaux naturels\n✔️ Contrôleurs Knuckles – suivi digital\n✔️ Champ de vision 130° élargi\n✔️ Stations de base SteamVR Tracking 2.0\n⚙️ Résolution : 1440×1600 par œil\nConnectique : DisplayPort 1.2 + USB 3.0",
+    image: "/images/products/valley-index-vr-kit.jpg",
+    specs: {
+      "Type": "Steam Deck",
+      "Type d'accessoire": "Casque VR",
+      "Marque": "Valve",
+      "Poids": "~1,8 kg",
+      "Couleur": "Noire"
     },
   },
 ];

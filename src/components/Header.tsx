@@ -47,7 +47,6 @@ const navigationMenu = [
     brands: [
       { label: "BERG", href: "/boutique?category=trampoline&brand=BERG" },
       { label: "Jump'In", href: "/boutique?category=trampoline&brand=Jump%27In" },
-      { label: "Springfree", href: "/boutique?category=trampoline&brand=Springfree" },
       { label: "Kettler", href: "/boutique?category=trampoline&brand=Kettler" },
     ]
   },
@@ -59,6 +58,7 @@ const navigationMenu = [
       { label: "Sony PlayStation", href: "/boutique?category=consoles&brand=Sony" },
       { label: "Microsoft Xbox", href: "/boutique?category=consoles&brand=Microsoft" },
       { label: "Nintendo", href: "/boutique?category=consoles&brand=Nintendo" },
+      { label: "Valve", href: "/boutique?category=consoles&brand=Valve" },
     ]
   },
   {
@@ -68,8 +68,7 @@ const navigationMenu = [
     brands: [
       { label: "Sony", href: "/boutique?category=accessoires&brand=Sony" },
       { label: "Razer", href: "/boutique?category=accessoires&brand=Razer" },
-      { label: "Corsair", href: "/boutique?category=accessoires&brand=Corsair" },
-      { label: "Logitech", href: "/boutique?category=accessoires&brand=Logitech" },
+      { label: "Générique", href: "/boutique?category=accessoires&brand=G%C3%A9n%C3%A9rique" },
     ]
   }
 ];

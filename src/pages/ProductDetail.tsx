@@ -60,6 +60,7 @@ export default function ProductDetail() {
   }, [reviews]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     setLoading(true);
     const foundProduct = allProducts.find(p => p.id === id);
     if (foundProduct) {

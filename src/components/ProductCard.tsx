@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ShoppingCart, Star, Heart, Trophy, Zap, CircleDot, Orbit, Headset, Gamepad2, RefreshCw, Loader2 } from "lucide-react";
 import { useCart } from "../context/CartContext";
 import { useWishlist } from "../context/WishlistContext";
@@ -29,6 +29,7 @@ const getBrandColor = (brand: string) => {
 };
 
 export default function ProductCard({ product }: ProductCardProps) {
+  const navigate = useNavigate();
   const { addToCart } = useCart();
   const { toggleWishlist, isInWishlist, processingId } = useWishlist();
   const { addToast } = useToast();
@@ -41,7 +42,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   const hasImage = !!product.image;
 
   const handleAddToCart = (e: React.MouseEvent) => {
-    e.preventDefault();
+    e.stopPropagation();
     setIsAdding(true);
     setTimeout(() => {
       addToCart(product);
@@ -51,7 +52,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   };
 
   const handleWishlist = (e: React.MouseEvent) => {
-    e.preventDefault();
+    e.stopPropagation();
     toggleWishlist(product.id);
   };
 
@@ -95,15 +96,23 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   const cardShadow = getShadowColor(product.category);
 
+  const navigateToDetail = () => {
+    window.scrollTo(0, 0);
+    navigate(`/boutique/${product.id}`);
+  };
+
   return (
-    <div className={`group relative bg-white rounded-[24px] overflow-hidden ${cardShadow} animate-fade-in-up hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 flex flex-col h-full border border-gray-100`}>
+    <div
+      className={`group relative bg-white rounded-[24px] overflow-hidden ${cardShadow} animate-fade-in-up hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 flex flex-col h-full border border-gray-100 cursor-pointer`}
+      onClick={navigateToDetail}
+    >
       {/* Category Badge */}
       <div className={`absolute top-4 left-4 z-10 px-2 py-0.5 rounded-md text-[10px] font-bold text-white uppercase tracking-tighter bg-brand-orange shadow-lg`}>
         {product?.badge || ""}
       </div>
 
       {/* Image Section */}
-      <Link to={`/boutique/${product.id}`} className="relative h-48 overflow-hidden bg-gray-100 flex items-center justify-center group-hover:bg-brand-cream transition-colors duration-500">
+      <div className="relative h-48 overflow-hidden bg-gray-100 flex items-center justify-center group-hover:bg-brand-cream transition-colors duration-500">
         {hasImage && !imgError ? (
          <img 
            src={getImageSrc(product.image)} 
@@ -127,20 +136,20 @@ export default function ProductCard({ product }: ProductCardProps) {
           );
         })()}
 
-         <div className="absolute inset-0 bg-brand-orange/5 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-4">
+         <div className="absolute inset-0 bg-brand-orange/5 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-4 pointer-events-none">
             <button 
               onClick={(e) => {
-                e.preventDefault();
+                e.stopPropagation();
                 setQuickViewOpen(true);
               }}
-              className="px-8 py-3 bg-white/90 backdrop-blur-md rounded-full text-[10px] font-black uppercase tracking-widest text-brand-dark transform translate-y-10 group-hover:translate-y-0 transition-all hover:bg-brand-dark hover:text-white shadow-xl"
+              className="pointer-events-auto px-8 py-3 bg-white/90 backdrop-blur-md rounded-full text-[10px] font-black uppercase tracking-widest text-brand-dark transform translate-y-10 group-hover:translate-y-0 transition-all hover:bg-brand-dark hover:text-white shadow-xl"
             >
               Vue Rapide
             </button>
             <button 
               onClick={handleWishlist}
               disabled={isWishlistLoading}
-              className={`p-4 rounded-xl transform translate-y-10 group-hover:translate-y-0 transition-all shadow-xl hover:scale-110 active:scale-95 disabled:opacity-50 disabled:cursor-wait ${
+              className={`pointer-events-auto p-4 rounded-xl transform translate-y-10 group-hover:translate-y-0 transition-all shadow-xl hover:scale-110 active:scale-95 disabled:opacity-50 disabled:cursor-wait ${
                 isFavorite 
                   ? "bg-brand-orange text-white" 
                   : "bg-white/90 backdrop-blur-sm text-brand-orange hover:bg-brand-orange hover:text-white"
@@ -155,7 +164,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                )}
             </button>
          </div>
-      </Link>
+      </div>
 
       <QuickViewModal 
         product={product} 
@@ -165,7 +174,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
       {/* Info Section */}
       <div className="p-4 flex flex-col flex-grow bg-white">
-        <h4 className="font-semibold text-brand-dark text-[13px] mb-1 group-hover:text-brand-orange transition-colors leading-tight">
+        <h4 className="font-semibold text-brand-dark text-[13px] mb-1 hover:text-brand-orange transition-colors leading-tight">
           {product.name}
         </h4>
         <div className="flex text-brand-yellow text-[10px] mb-2">
