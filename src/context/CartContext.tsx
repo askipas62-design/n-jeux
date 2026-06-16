@@ -7,6 +7,7 @@ interface CartItem {
   quantity: number;
   category: string;
   image?: string;
+  selectedOption?: string;
 }
 
 interface CartContextType {
@@ -33,12 +34,22 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
   }, [items]);
 
   const addToCart = (product: any) => {
+    const option = product.selectedOption;
+    const uniqueId = option ? `${product.id}-${option}` : product.id;
     setItems((prev) => {
-      const existing = prev.find((i) => i.id === product.id);
+      const existing = prev.find((i) => i.id === uniqueId);
       if (existing) {
-        return prev.map((i) => (i.id === product.id ? { ...i, quantity: i.quantity + 1 } : i));
+        return prev.map((i) => (i.id === uniqueId ? { ...i, quantity: i.quantity + 1 } : i));
       }
-      return [...prev, { id: product.id, name: product.name, priceHT: product.priceHT, category: product.category, quantity: 1, image: product.image || product.image_url }];
+      return [...prev, {
+        id: uniqueId,
+        name: product.name,
+        priceHT: product.priceHT,
+        category: product.category,
+        quantity: 1,
+        image: product.image || product.image_url,
+        selectedOption: option,
+      }];
     });
   };
 

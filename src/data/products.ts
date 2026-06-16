@@ -1,3 +1,8 @@
+export interface ProductOption {
+  label: string;
+  value: string;
+}
+
 export interface Product {
   id: string;
   name: string;
@@ -10,6 +15,7 @@ export interface Product {
   desc: string;
   image: string;
   specs: Record<string, string>;
+  options?: ProductOption[];
 }
 
 export const products: Product[] = [
@@ -109,6 +115,10 @@ export const products: Product[] = [
   "7 ft": "225 x 125 x 79 cm",
   "Contenu": "Queues, billes, triangle, craies et brosse inclus"
 },
+    options: [
+      { label: "6 ft (205×115×79 cm)", value: "6ft" },
+      { label: "7 ft (225×125×79 cm)", value: "7ft" },
+    ],
   },
   {
     id: "bi-002",

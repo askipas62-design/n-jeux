@@ -49,6 +49,9 @@ export default function Cart() {
                       <div className="min-w-0">
                         <span className="text-[8px] md:text-[10px] font-black text-gray-400 uppercase tracking-widest">{item.category}</span>
                         <h3 className="text-sm md:text-xl font-black text-brand-dark font-display uppercase tracking-tight truncate">{item.name}</h3>
+                        {item.selectedOption && (
+                          <span className="text-[9px] font-black text-brand-orange uppercase tracking-widest">Taille : {item.selectedOption}</span>
+                        )}
                       </div>
                       <button 
                         onClick={() => removeFromCart(item.id)}

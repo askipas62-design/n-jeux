@@ -94,7 +94,11 @@
       "6 ft": "205 x 115 x 79 cm",
       "7 ft": "225 x 125 x 79 cm",
       "Contenu": "Queues, billes, triangle, craies et brosse inclus"
-    }
+    },
+    "options": [
+      { "label": "6 ft (205×115×79 cm)", "value": "6ft" },
+      { "label": "7 ft (225×125×79 cm)", "value": "7ft" }
+    ]
   },
   {
     "id": "bi-002",

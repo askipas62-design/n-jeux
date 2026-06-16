@@ -354,8 +354,9 @@ export default function ClientDashboard() {
                                              )}
                                            </div>
                                            <div>
-                                             <p className="font-black text-brand-dark uppercase tracking-tight text-xl">{item.name}</p>
-                                             <p className="text-[10px] font-bold text-gray-400 uppercase">Quantité: {item.quantity || 1} | {((item.priceHT || 0)).toFixed(2)}€ HT</p>
+                                              <p className="font-black text-brand-dark uppercase tracking-tight text-xl">{item.name}</p>
+                                              {item.selectedOption && <p className="text-[9px] font-black text-brand-orange uppercase">Taille : {item.selectedOption}</p>}
+                                              <p className="text-[10px] font-bold text-gray-400 uppercase">Quantité: {item.quantity || 1} | {((item.priceHT || 0)).toFixed(2)}€ HT</p>
                                            </div>
                                          </div>
                                          <div className="flex flex-row sm:flex-col items-center sm:items-end justify-between sm:justify-center gap-4">

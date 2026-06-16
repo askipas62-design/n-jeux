@@ -18,6 +18,7 @@ export default function ProductDetail() {
   const [related, setRelated] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [quantity, setQuantity] = useState(1);
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [reviews, setReviews] = useState<any[]>([]);
   const [reviewsLoading, setReviewsLoading] = useState(true);
   const [submittingReview, setSubmittingReview] = useState(false);
@@ -105,8 +106,12 @@ export default function ProductDetail() {
   if (!product) return null;
 
   const handleAddToCart = () => {
-    for (let i = 0; i < quantity; i++) addToCart(product);
-    addToast(`${quantity} x ${product.name} ajouté au panier !`, "success");
+    const item = product.options && selectedOption
+      ? { ...product, selectedOption }
+      : product;
+    for (let i = 0; i < quantity; i++) addToCart(item);
+    const suffix = selectedOption ? ` (${selectedOption})` : "";
+    addToast(`${quantity} x ${product.name}${suffix} ajouté au panier !`, "success");
   };
 
   const getProductImage = (category: string) => {
@@ -238,6 +243,27 @@ export default function ProductDetail() {
                   {product.stock > 0 ? "En stock — Prêt à expédier" : "Indisponible"}
                 </span>
               </div>
+
+              {product.options && product.options.length > 0 && (
+                <div className="mb-4">
+                  <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">Taille disponible</p>
+                  <div className="flex gap-2">
+                    {product.options.map((opt: any) => (
+                      <button
+                        key={opt.value}
+                        onClick={() => setSelectedOption(opt.value)}
+                        className={`px-4 py-2 rounded-xl border-2 text-[10px] font-black uppercase tracking-wider transition-all ${
+                          selectedOption === opt.value
+                            ? "border-brand-orange bg-brand-orange/5 text-brand-orange"
+                            : "border-gray-100 text-gray-400 hover:border-brand-orange hover:text-brand-orange"
+                        }`}
+                      >
+                        {opt.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* Actions */}
               <div className="flex items-center gap-3 mb-4">
