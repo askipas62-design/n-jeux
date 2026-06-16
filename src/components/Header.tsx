@@ -142,7 +142,7 @@ export default function Header() {
                     <>
                       <p className="mb-3 text-[10px] font-black uppercase tracking-[0.25em] text-brand-orange border-b border-white/5 pb-1.5">Nos Marques</p>
                       <div className="space-y-1">
-                        {cat.brands.map((brand) => (
+                        {cat.brands?.map((brand) => (
                           <Link
                             key={brand.label}
                             to={brand.href}
@@ -283,7 +283,7 @@ export default function Header() {
                       }`}
                     >
                       <div className="pl-4 flex flex-col gap-0.5">
-                        {cat.brands.map((brand) => (
+                        {cat.brands?.map((brand) => (
                           <Link
                             key={`mobile-brand-${brand.label}`}
                             to={brand.href}
