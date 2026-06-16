@@ -19,6 +19,10 @@ export default function ResetPassword() {
       addToast("Les mots de passe ne correspondent pas.", "error");
       return;
     }
+    if (password.length < 6) {
+      addToast("Le mot de passe doit contenir au moins 6 caractères.", "error");
+      return;
+    }
     
     setLoading(true);
     try {
@@ -29,7 +33,7 @@ export default function ResetPassword() {
       addToast("Mot de passe mis à jour !", "success");
       setTimeout(() => navigate("/connexion"), 3000);
     } catch (err: any) {
-      addToast(err.message || "Erreur de mise à jour", "error");
+      addToast("Erreur lors de la mise à jour du mot de passe. Veuillez réessayer.", "error");
     } finally {
       setLoading(false);
     }

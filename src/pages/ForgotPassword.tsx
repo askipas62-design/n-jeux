@@ -16,7 +16,7 @@ export default function ForgotPassword() {
     setLoading(true);
 
     try {
-      const { error } = await supabase.auth.signInWithOtp({ email });
+      const { error } = await supabase.auth.resetPasswordForEmail(email);
       if (error) throw error;
 
       addToast("Un code de réinitialisation à 6 chiffres a été envoyé à votre email.", "success");
@@ -25,7 +25,7 @@ export default function ForgotPassword() {
       if (err.message.includes("User not found")) {
         addToast("Aucun compte associé à cet email. Vérifiez et réessayez.", "error");
       } else {
-        addToast(err.message || "Erreur lors de l'envoi du code", "error");
+        addToast("Erreur lors de l'envoi du code. Veuillez réessayer.", "error");
       }
     } finally {
       setLoading(false);

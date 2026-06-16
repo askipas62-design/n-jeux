@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { supabase } from "../lib/supabase";
 import { User as SupabaseUser } from "@supabase/supabase-js";
+import { isAdminEmail } from "../config/admin";
 
 interface User {
   id: string;
@@ -28,18 +29,12 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const mapUser = (supabaseUser: SupabaseUser | null): User | null => {
     if (!supabaseUser) return null;
     const email = (supabaseUser.email || "").toLowerCase().trim();
-    const adminEmails = [
-      "askipas62@gmail.com",
-      "zakaz@forumles.ru",
-      "admin@appiotti.com",
-      "herve@appiotti.com"
-    ];
     return {
       id: supabaseUser.id,
       email: email,
       firstName: supabaseUser.user_metadata?.firstName || "",
       lastName: supabaseUser.user_metadata?.lastName || "",
-      isAdmin: adminEmails.includes(email)
+      isAdmin: isAdminEmail(email)
     };
   };
 
@@ -81,6 +76,16 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     });
     
     if (error) throw error;
+    
+    if (data.user) {
+      await supabase.from("profiles").upsert({
+        id: data.user.id,
+        first_name: firstName,
+        last_name: lastName,
+        email: data.user.email,
+        updated_at: new Date().toISOString(),
+      });
+    }
     
     setUser(mapUser(data.user));
   };

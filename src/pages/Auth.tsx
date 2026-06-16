@@ -3,6 +3,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Mail, Lock, User, UserPlus, LogIn, ArrowRight, ShieldCheck, Loader2, Eye, EyeOff } from "lucide-react";
 import { supabase } from "../lib/supabase";
 import { useToast } from "../components/ui/Toast";
+import { isAdminEmail } from "../config/admin";
 
 
 export default function Auth({ mode: initialMode }: { mode: "login" | "signup" }) {
@@ -44,16 +45,14 @@ export default function Auth({ mode: initialMode }: { mode: "login" | "signup" }
       addToast(`Bienvenue ${data.user.user_metadata?.firstName || 'Aventurier'} ! Heureux de vous revoir !`, "success");
       
       const userEmail = (data.user.email || "").toLowerCase().trim();
-      const adminEmails = [
-        "askipas62@gmail.com",
-        "zakaz@forumles.ru",
-        "admin@appiotti.com",
-        "herve@appiotti.com"
-      ];
-      const isAdmin = adminEmails.includes(userEmail);
-      navigate(isAdmin ? "/admin/dashboard" : from, { replace: true });
+      navigate(isAdminEmail(userEmail) ? "/admin/dashboard" : from, { replace: true });
     } catch (err: any) {
-      addToast(err.message || "Erreur de connexion", "error");
+      const msg = err.message || "";
+      if (msg.includes("Email ou mot de passe incorrect")) {
+        addToast(msg, "error");
+      } else {
+        addToast("Erreur de connexion. Veuillez réessayer.", "error");
+      }
     } finally {
       setLoading(false);
     }
@@ -61,6 +60,12 @@ export default function Auth({ mode: initialMode }: { mode: "login" | "signup" }
 
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (password.length < 6) {
+      addToast("Le mot de passe doit contenir au moins 6 caractères.", "error");
+      return;
+    }
+    
     setLoading(true);
 
     try {
@@ -76,7 +81,16 @@ export default function Auth({ mode: initialMode }: { mode: "login" | "signup" }
         if (error.message.includes("User already registered")) {
           throw new Error("Cet email est déjà utilisé. Essayez de vous connecter.");
         }
-        throw error;
+        throw new Error("Erreur lors de l'inscription. Veuillez réessayer.");
+      }
+
+      if (data.user) {
+        await supabase.from("profiles").insert({
+          id: data.user.id,
+          first_name: firstName,
+          last_name: lastName,
+          email: email,
+        });
       }
 
       addToast("Bienvenue dans l'univers Appiotti ! Vérifiez vos emails si nécessaire.", "success");
@@ -84,11 +98,17 @@ export default function Auth({ mode: initialMode }: { mode: "login" | "signup" }
       // Auto-login after signup if possible
       if (data.session) {
         localStorage.setItem("token", data.session.access_token);
+        navigate(from, { replace: true });
+      } else {
+        navigate(`/verifier-code?email=${encodeURIComponent(email)}&type=signup`, { replace: true });
       }
-      
-      navigate(from, { replace: true });
     } catch (err: any) {
-      addToast(err.message || "Erreur d'inscription", "error");
+      const msg = err.message || "";
+      if (msg.includes("déjà utilisé")) {
+        addToast(msg, "error");
+      } else {
+        addToast("Erreur d'inscription. Veuillez réessayer.", "error");
+      }
     } finally {
       setLoading(false);
     }

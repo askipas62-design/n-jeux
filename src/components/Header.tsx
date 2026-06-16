@@ -49,6 +49,11 @@ const navigationMenu = [
       { label: "Kettler", href: "/boutique?category=trampoline&brand=Kettler" },
     ]
   },
+  {
+    label: "Accessoires",
+    slug: "accessoires",
+    href: "/boutique?category=accessoires",
+  },
 
 ];
 
@@ -133,7 +138,7 @@ export default function Header() {
               {/* Dropdown Menu (on hover) */}
               <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-full mt-0 w-[280px] rounded-b-3xl border border-white/10 bg-[#1B1B2F]/95 p-4 text-left shadow-2xl backdrop-blur-xl group-hover:pointer-events-auto group-hover:block hidden">
                 <div className="flex flex-col">
-                  {cat.brands.length > 0 && (
+                  {cat.brands?.length > 0 && (
                     <>
                       <p className="mb-3 text-[10px] font-black uppercase tracking-[0.25em] text-brand-orange border-b border-white/5 pb-1.5">Nos Marques</p>
                       <div className="space-y-1">

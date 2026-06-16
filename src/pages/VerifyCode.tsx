@@ -99,7 +99,7 @@ export default function VerifyCode() {
         setTimeout(() => navigate("/reset-password", { replace: true }), 1500);
       }
     } catch (err: any) {
-      addToast(err.message || "Erreur de vérification", "error");
+      addToast("Erreur de vérification. Veuillez réessayer.", "error");
       setDigits(["", "", "", "", "", ""]);
       inputRefs.current[0]?.focus();
     } finally {
@@ -120,7 +120,7 @@ export default function VerifyCode() {
       addToast("Nouveau code envoyé ! Vérifiez votre boîte de réception.", "success");
       setCooldown(60);
     } catch (err: any) {
-      addToast(err.message || "Erreur lors de l'envoi", "error");
+      addToast("Erreur lors de l'envoi du code. Veuillez réessayer.", "error");
     } finally {
       setResending(false);
     }

@@ -3,7 +3,7 @@ import { ArrowRight, Truck, ShieldCheck, Star, Users, Phone, Loader2, Gamepad2, 
 import { useEffect, useState, useRef, useMemo } from "react";
 import ProductCard from "../components/ProductCard";
 import CountdownTimer from "../components/CountdownTimer";
-import { BabyFootIcon, PingPongIcon, BillardIcon, TrampolineIcon } from "../components/CategoryIcons";
+import { BabyFootIcon, PingPongIcon, BillardIcon, TrampolineIcon, AccessoiresIcon } from "../components/CategoryIcons";
 import { productService } from "../services/productService";
 import { reviewService } from "../services/reviewService";
 
@@ -185,6 +185,7 @@ export default function Home() {
     { name: "Tennis de Table", slug: "ping-pong", icon: <PingPongIcon className="w-8 h-8" />, image: "/images/categories/tennis-de-table.jpg", gradient: "from-[#06D6A0] to-[#0EA5E9]" },
     { name: "Billard", slug: "billard", icon: <BillardIcon className="w-8 h-8" />, image: "/images/categories/billard.jpg", gradient: "from-[#1B1B2F] to-[#3D3D6B]" },
     { name: "Trampoline", slug: "trampoline", icon: <TrampolineIcon className="w-8 h-8" />, image: "/images/categories/trampoline.jpg", gradient: "from-[#FFD23F] to-[#FF6B35]" },
+    { name: "Accessoires", slug: "accessoires", icon: <AccessoiresIcon className="w-8 h-8" />, image: "/images/categories/accessoires.jpg", gradient: "from-[#8B5CF6] to-[#EC4899]" },
 
   ];
 
