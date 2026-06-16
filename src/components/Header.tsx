@@ -54,7 +54,11 @@ const navigationMenu = [
     slug: "accessoires",
     href: "/boutique?category=accessoires",
   },
-
+  {
+    label: "Consoles",
+    slug: "consoles",
+    href: "/boutique?category=consoles",
+  },
 ];
 
 export default function Header() {
