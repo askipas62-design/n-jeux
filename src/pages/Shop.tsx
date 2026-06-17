@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Search, X } from "lucide-react";
 import ProductCard from "../components/ProductCard";
-import { BabyFootIcon, PingPongIcon, BillardIcon, TrampolineIcon, AccessoiresIcon, ConsoleIcon } from "../components/CategoryIcons";
+import { BabyFootIcon, PingPongIcon, BillardIcon, TrampolineIcon, AccessoiresIcon } from "../components/CategoryIcons";
 import { productService } from "../services/productService";
 import { getProductBrand, isSameBrand } from "../lib/catalog";
 
@@ -14,7 +14,6 @@ const categories = [
   { id: "billard", name: "Billard", icon: <BillardIcon className="w-5 h-5" /> },
   { id: "trampoline", name: "Trampolines", icon: <TrampolineIcon className="w-5 h-5" /> },
   { id: "accessoires", name: "Accessoires", icon: <AccessoiresIcon className="w-5 h-5" /> },
-  { id: "consoles", name: "Consoles", icon: <ConsoleIcon className="w-5 h-5" /> },
 ];
 
 export default function Shop() {

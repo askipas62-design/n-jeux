@@ -120,7 +120,6 @@ export default function ProductDetail() {
       case "ping-pong": return "/images/hero-bg.jpg";
       case "billard": return "/images/products/table-de-billard-americain-7-pieds.jpg";
       case "trampoline": return "/images/products/trampoline-jardin-244cm-8-pieds.jpg";
-      case "consoles": return "/images/products/playstation-5-pro.jpg";
       default: return "/images/hero-bg.jpg";
     }
   };

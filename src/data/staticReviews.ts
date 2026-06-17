@@ -30,11 +30,6 @@ export const staticReviews: StaticReview[] = [
   // Trampoline
   { id: "sr-14", productId: "tr-1", userName: "Emma F.", rating: 5, comment: "Les enfants sont en sécurité, le filet est très solide.", createdAt: "2025-03-02T10:00:00Z" },
   { id: "sr-15", productId: "tr-2", userName: "Paul T.", rating: 5, comment: "Très grand, on peut y aller à plusieurs sans soucis.", createdAt: "2025-03-10T11:30:00Z" },
-
-  // Consoles
-  { id: "sr-16", productId: "co-2", userName: "Kevin L.", rating: 5, comment: "Expédition rapide, console bien emballée. Merci Appiotti !", createdAt: "2025-03-25T09:00:00Z" },
-  { id: "sr-17", productId: "co-3", userName: "Alex M.", rating: 5, comment: "La claque graphique ! Rien à dire sur la PS5 Pro.", createdAt: "2025-03-28T21:00:00Z" },
-  { id: "sr-18", productId: "co-5", userName: "Mélanie J.", rating: 5, comment: "La Switch 2 est top, l'écran est géant !", createdAt: "2025-04-01T14:00:00Z" },
 ];
 
 export const getStaticReviewsForProduct = (productId: string) => {

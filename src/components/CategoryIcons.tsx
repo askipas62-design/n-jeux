@@ -50,18 +50,6 @@ export const TrampolineIcon = ({ className = "w-full h-full" }: IconProps) => (
   </svg>
 );
 
-export const ConsoleIcon = ({ className = "w-full h-full" }: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <rect x="2" y="6" width="20" height="12" rx="3" />
-    <rect x="6" y="9" width="3" height="1" />
-    <rect x="7" y="8" width="1" height="3" />
-    <circle cx="15.5" cy="12" r="1.5" fill="currentColor" stroke="none" />
-    <circle cx="18.5" cy="12" r="1.5" fill="currentColor" stroke="none" />
-    <path d="M2 12h2" />
-    <path d="M20 12h2" />
-  </svg>
-);
-
 export const AccessoiresIcon = ({ className = "w-full h-full" }: IconProps) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
     <path d="M12 2v4" />

@@ -74,7 +74,7 @@ export default function About() {
                   <h3 className="text-2xl md:text-4xl font-black font-display uppercase tracking-widest text-brand-orange">Hervé APPIOTTI</h3>
                   <p className="text-[10px] md:text-xs font-bold text-brand-yellow uppercase tracking-[0.3em]">Fondateur & Propriétaire</p>
                   <p className="text-sm md:text-lg text-gray-400 leading-relaxed font-medium">
-                    Entrepreneur passionné par l'univers du jeu et du commerce de proximité, Hervé gère Appiotti Game Shop avec un souci constant de la satisfaction client. Basé au cœur de la Charente, il sélectionne personnellement chaque référence de consoles et de jeux de plein air.
+                    Entrepreneur passionné par l'univers du jeu et du commerce de proximité, Hervé gère Appiotti Game Shop avec un souci constant de la satisfaction client. Basé au cœur de la Charente, il sélectionne personnellement chaque référence de jeux de plein air.
                  </p>
                  <div className="flex flex-wrap gap-8 pt-8">
                     <div className="flex items-center gap-3">

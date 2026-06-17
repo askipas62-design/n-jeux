@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ShoppingCart, Star, Heart, Trophy, Zap, CircleDot, Orbit, Headset, Gamepad2, RefreshCw } from "lucide-react";
+import { ShoppingCart, Star, Heart, Trophy, Zap, CircleDot, Orbit, Headset, RefreshCw } from "lucide-react";
 import { useCart } from "../context/CartContext";
 import { useWishlist } from "../context/WishlistContext";
 import { useToast } from "./ui/Toast";
@@ -59,7 +59,6 @@ export default function ProductCard({ product }: ProductCardProps) {
       case "ping-pong": return <Zap size={48} />;
       case "billard": return <CircleDot size={48} />;
       case "trampoline": return <Orbit size={48} />;
-      case "consoles": return <Gamepad2 size={48} />;
       default: return <Headset size={48} />;
     }
   };
@@ -70,7 +69,6 @@ export default function ProductCard({ product }: ProductCardProps) {
       case "ping-pong": return "/images/hero-bg.jpg";
       case "billard": return "/images/products/table-de-billard-americain-7-pieds.jpg";
       case "trampoline": return "/images/products/trampoline-jardin-244cm-8-pieds.jpg";
-      case "consoles": return "/images/products/playstation-5-pro.jpg";
       default: return "/images/hero-bg.jpg";
     }
   };
@@ -81,7 +79,6 @@ export default function ProductCard({ product }: ProductCardProps) {
       case "ping-pong": return "shadow-card-green";
       case "billard": return "shadow-card-dark";
       case "trampoline": return "shadow-card-yellow";
-      case "consoles": return "shadow-card-purple";
       default: return "shadow-xl";
     }
   };

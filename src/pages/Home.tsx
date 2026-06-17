@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Truck, ShieldCheck, Star, Users, Phone, Loader2, Gamepad2, Trophy, Zap, CircleDot, Orbit, Headset, Sparkles, Timer, Mail, MapPin } from "lucide-react";
+import { ArrowRight, Truck, ShieldCheck, Star, Users, Phone, Loader2, Trophy, Zap, CircleDot, Orbit, Headset, Sparkles, Timer, Mail, MapPin } from "lucide-react";
 import { useEffect, useState, useRef, useMemo } from "react";
 import ProductCard from "../components/ProductCard";
 import CountdownTimer from "../components/CountdownTimer";
