@@ -244,34 +244,69 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile backdrop + menu */}
-      {isMenuOpen && (
-        <>
-          <div
-            className="fixed inset-0 z-30 bg-black/60 lg:hidden"
-            onClick={() => setIsMenuOpen(false)}
-          />
-          <div className="lg:hidden relative z-40 animate-slide-down border-t border-white/5">
-            <div className="container mx-auto px-4 pb-4 pt-2 flex flex-col gap-1 text-sm text-brand-cream/80">
-              <form onSubmit={handleSearch} className="relative bg-white/5 rounded-xl px-3 py-2.5 flex items-center gap-2 mb-1">
-                <Search size={16} className="text-white/30 shrink-0" />
-                <input
-                  type="text"
-                  placeholder="Rechercher..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="bg-transparent border-none outline-none text-white placeholder:text-white/30 w-full text-sm"
-                />
-              </form>
+      {/* Mobile side drawer (lateral menu) */}
+      <div
+        className={`fixed inset-0 z-50 lg:hidden transition-all duration-300 ease-in-out ${
+          isMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'
+        }`}
+      >
+        {/* Backdrop */}
+        <div
+          className={`absolute inset-0 bg-black/60 transition-opacity duration-300 ${
+            isMenuOpen ? 'opacity-100' : 'opacity-0'
+          }`}
+          onClick={() => setIsMenuOpen(false)}
+        />
 
-              <div className="flex flex-col">
-                {navigationMenu.map((cat) => (
-                  <div key={`mobile-cat-${cat.slug}`} className="border-b border-white/5">
+        {/* Drawer panel */}
+        <div
+          className={`absolute top-0 left-0 h-full w-[300px] max-w-[85vw] bg-[#1B1B2F] shadow-2xl transition-transform duration-300 ease-in-out ${
+            isMenuOpen ? 'translate-x-0' : '-translate-x-full'
+          } flex flex-col`}
+        >
+          {/* Drawer header */}
+          <div className="flex items-center justify-between px-5 py-5 border-b border-white/5 shrink-0">
+            <Link to="/" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-3">
+              <div className="w-9 h-9 bg-brand-orange rounded-xl flex items-center justify-center shadow-[0_0_15px_rgba(255,107,53,0.5)]">
+                <Sparkles className="text-white" size={20} />
+              </div>
+              <span className="text-lg font-black font-display tracking-tight">
+                Appiotti
+              </span>
+            </Link>
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="p-2 hover:bg-white/10 rounded-full transition-colors"
+            >
+              <X size={22} />
+            </button>
+          </div>
+
+          {/* Search */}
+          <div className="px-4 pt-4 pb-2 shrink-0">
+            <form onSubmit={handleSearch} className="relative bg-white/5 rounded-xl px-3 py-2.5 flex items-center gap-2 border border-white/10 focus-within:border-brand-orange/50 transition-all">
+              <Search size={16} className="text-white/30 shrink-0" />
+              <input
+                type="text"
+                placeholder="Rechercher..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="bg-transparent border-none outline-none text-white placeholder:text-white/30 w-full text-sm font-medium"
+              />
+            </form>
+          </div>
+
+          {/* Navigation links (scrollable) */}
+          <div className="flex-1 overflow-y-auto px-4 py-2 space-y-1 text-sm text-brand-cream/80">
+            {navigationMenu.map((cat) => (
+              <div key={`mobile-cat-${cat.slug}`} className="border-b border-white/5 last:border-0">
+                {cat.brands ? (
+                  <>
                     <button
                       onClick={() => toggleMobileCat(cat.slug)}
-                      className="w-full flex items-center justify-between py-2.5 px-1 hover:text-brand-orange transition-colors"
+                      className="w-full flex items-center justify-between py-3 px-1 hover:text-brand-orange transition-colors text-left"
                     >
-                      <span>{cat.label}</span>
+                      <span className="font-semibold">{cat.label}</span>
                       <ChevronDown
                         size={14}
                         className={`text-white/20 transition-transform duration-200 ${
@@ -287,56 +322,99 @@ export default function Header() {
                       }`}
                     >
                       <div className="pl-4 flex flex-col gap-0.5">
-                        {cat.brands?.map((brand) => (
+                        {cat.brands.map((brand) => (
                           <Link
                             key={`mobile-brand-${brand.label}`}
                             to={brand.href}
                             onClick={() => setIsMenuOpen(false)}
-                            className="text-sm text-brand-cream/50 hover:text-brand-orange py-1.5 transition-colors"
+                            className="text-sm text-brand-cream/50 hover:text-brand-orange py-2 px-2 rounded-lg hover:bg-white/5 transition-all"
                           >
                             {brand.label}
                           </Link>
                         ))}
+                        <Link
+                          to={cat.href}
+                          onClick={() => setIsMenuOpen(false)}
+                          className="text-sm text-brand-orange/80 hover:text-brand-orange py-2 px-2 rounded-lg hover:bg-white/5 transition-all font-semibold"
+                        >
+                          Voir tout →
+                        </Link>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  </>
+                ) : (
+                  <Link
+                    to={cat.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="w-full flex items-center justify-between py-3 px-1 hover:text-brand-orange transition-colors font-semibold"
+                  >
+                    {cat.label}
+                  </Link>
+                )}
               </div>
+            ))}
 
-              <Link to="/a-propos" onClick={() => setIsMenuOpen(false)} className="py-2.5 px-1 hover:text-brand-orange transition-colors border-b border-white/5">
+            <div className="pt-2 space-y-1 border-t border-white/5">
+              <Link to="/a-propos" onClick={() => setIsMenuOpen(false)} className="block py-3 px-1 hover:text-brand-orange transition-colors font-semibold">
                 L'Entreprise
               </Link>
-              <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="py-2.5 px-1 hover:text-brand-orange transition-colors border-b border-white/5">
+              <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="block py-3 px-1 hover:text-brand-orange transition-colors font-semibold">
                 Contact
               </Link>
-
-              {!user ? (
-                <Link to="/connexion" onClick={() => setIsMenuOpen(false)} className="py-2.5 px-1 text-brand-orange/90 hover:text-brand-orange transition-colors font-bold">
-                  Connexion
-                </Link>
-              ) : (
-                <div className="flex flex-col pt-1 pb-2">
-                  <Link to="/client/dashboard" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-2 py-2.5 px-1 hover:text-brand-orange transition-colors border-b border-white/5">
-                    <Heart size={16} className="text-white/30" />
-                    <span>Favoris</span>
-                  </Link>
-                  <Link to="/client/dashboard" onClick={() => setIsMenuOpen(false)} className="py-2.5 px-1 text-brand-yellow/90 hover:text-brand-yellow transition-colors border-b border-white/5">
-                    Mon Espace
-                  </Link>
-                  {user.isAdmin && (
-                    <Link to="/admin/dashboard" onClick={() => setIsMenuOpen(false)} className="py-2.5 px-1 text-brand-orange/80 hover:text-brand-orange transition-colors border-b border-white/5">
-                      Admin
-                    </Link>
-                  )}
-                  <button onClick={() => { handleLogout(); setIsMenuOpen(false); }} className="text-left py-2.5 px-1 text-white/40 hover:text-red-400 transition-colors">
-                    Déconnexion
-                  </button>
-                </div>
-              )}
             </div>
           </div>
-        </>
-      )}
+
+          {/* User area (bottom) */}
+          <div className="shrink-0 border-t border-white/5 px-4 py-4">
+            {!user ? (
+              <Link
+                to="/connexion"
+                onClick={() => setIsMenuOpen(false)}
+                className="flex items-center gap-3 w-full rounded-xl bg-brand-orange/10 hover:bg-brand-orange/20 px-4 py-3 text-brand-orange font-bold transition-all"
+              >
+                <User size={18} />
+                <span>Connexion</span>
+              </Link>
+            ) : (
+              <div className="space-y-1">
+                <Link
+                  to="/client/dashboard"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="flex items-center gap-3 w-full rounded-xl px-4 py-3 text-brand-cream/80 hover:text-brand-yellow hover:bg-white/5 font-semibold transition-all"
+                >
+                  <Heart size={18} className="text-white/40" />
+                  <span>Mes Favoris</span>
+                </Link>
+                <Link
+                  to="/client/dashboard"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="flex items-center gap-3 w-full rounded-xl px-4 py-3 text-brand-yellow/90 hover:bg-white/5 font-semibold transition-all"
+                >
+                  <User size={18} />
+                  <span>Mon Espace</span>
+                </Link>
+                {user.isAdmin && (
+                  <Link
+                    to="/admin/dashboard"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="flex items-center gap-3 w-full rounded-xl px-4 py-3 text-brand-orange/80 hover:bg-white/5 font-semibold transition-all"
+                  >
+                    <LayoutDashboard size={18} />
+                    <span>Administration</span>
+                  </Link>
+                )}
+                <button
+                  onClick={() => { handleLogout(); setIsMenuOpen(false); }}
+                  className="flex items-center gap-3 w-full rounded-xl px-4 py-3 text-white/40 hover:text-red-400 hover:bg-white/5 font-semibold transition-all text-left"
+                >
+                  <LogOut size={18} />
+                  <span>Déconnexion</span>
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
     </header>
   );
 }
