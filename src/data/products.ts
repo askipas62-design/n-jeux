@@ -529,8 +529,8 @@ export const products: Product[] = [
   "Dimensions": "156 x 107 x 93 cm",
   "Poids": "~78 kg",
   "Contenu": "2 balles incluses"
+
 },
-  },
   {
     id: "pp-001",
     name: "Table de ping-pong TIBHAR Smash 28 Black Line – compétition premium au design élégant",
@@ -1797,9 +1797,10 @@ export const products: Product[] = [
   "Dimensions": "143 x 74 x 92 cm",
   "Surface de jeu": "111 x 68 cm",
   "Poids": "72 kg",
-  "Contenu": "2 balles incluses"
+  "Contenu": "4 balles incluses"
 },
   },
+
   {
     id: "bf-017",
     name: "Baby-foot Leonhart Soccer Home – Table premium design pour maison intérieur & extérieur",
@@ -2305,9 +2306,10 @@ export const products: Product[] = [
   "Terrain": "Gerflex haute qualité",
   "Accessoires": "10 balles incluses",
   "Garantie": "5 ans (réparable 20 ans)",
-  "Contenu": "2 balles incluses"
+  "Contenu": "10 balles incluses"
 },
   },
+
   {
     id: "bf-021",
     name: "Baby-foot Bonzini B90 Collector PSG Premium – Édition luxe Paris Saint-Germain (pièce d’exception Made in France)",
@@ -2419,9 +2421,10 @@ export const products: Product[] = [
   "Joueurs": "aluminium peints à la main",
   "Retour de balle": "des deux côtés",
   "Accessoires": "6 balles incluses",
-  "Contenu": "2 balles incluses"
+  "Contenu": "6 balles incluses"
 },
   },
+
   {
     id: "bf-026",
     name: "Baby-foot Bonzini B90 Tapis Gris & Rampes Noires – Design moderne haut de gamme",
@@ -2443,7 +2446,7 @@ export const products: Product[] = [
   "Joueurs": "aluminium peints à la main",
   "Retour de balle": "des deux côtés",
   "Accessoires": "6 balles incluses",
-  "Contenu": "2 balles incluses"
+  "Contenu": "6 balles incluses"
 },
   },
   {
@@ -2488,7 +2491,7 @@ export const products: Product[] = [
   "Buts": "aluminium poli",
   "Pieds": "bois massif démontables",
   "Accessoires": "6 balles incluses",
-  "Contenu": "2 balles incluses"
+  "Contenu": "6 balles incluses"
 },
   },
   {
