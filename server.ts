@@ -354,41 +354,120 @@ async function startServer() {
 
       console.log("[POST /api/orders] Order inserted successfully:", orderId);
 
-      // Send confirmation email (Stateless version)
+      // Compute derived values for emails
+      const totalHT = orderData.items.reduce((sum: number, item: any) => sum + (item.priceHT || 0) * item.quantity, 0);
+      const tva = orderData.total_ttc - totalHT;
+      const now = new Date().toLocaleString("fr-FR", { timeZone: "Europe/Paris" });
+
+      const emailBaseStyle = `font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 20px; max-width: 640px; margin: 0 auto; background: #ffffff;`;
+      const emailHeaderStyle = `background: linear-gradient(135deg, #1B1B2F, #2a2a4a); color: #fff; padding: 24px; border-radius: 16px 16px 0 0; text-align: center;`;
+      const tableStyle = `width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13px;`;
+      const thStyle = `background: #f8f8f8; text-align: left; padding: 10px 12px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #666; border-bottom: 2px solid #eee;`;
+      const tdStyle = `padding: 10px 12px; border-bottom: 1px solid #f0f0f0;`;
+      const totalRowStyle = `font-weight: 700; font-size: 14px;`;
+      const grandTotalStyle = `font-weight: 900; font-size: 16px; color: #FF6B35;`;
+
+      const itemsTable = `
+        <table style="${tableStyle}">
+          <thead>
+            <tr>
+              <th style="${thStyle}">Produit</th>
+              <th style="${thStyle}">Catégorie</th>
+              <th style="${thStyle}">Option</th>
+              <th style="${thStyle}">Qté</th>
+              <th style="${thStyle}">Prix HT</th>
+              <th style="${thStyle}">Prix TTC</th>
+              <th style="${thStyle}">Sous-total HT</th>
+              <th style="${thStyle}">Sous-total TTC</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${orderData.items.map((item: any) => {
+              const itemPriceHT = item.priceHT || 0;
+              const itemPriceTTC = itemPriceHT * 1.2;
+              const subHT = itemPriceHT * item.quantity;
+              const subTTC = itemPriceTTC * item.quantity;
+              return `<tr>
+                <td style="${tdStyle}"><strong>${item.name}</strong></td>
+                <td style="${tdStyle}">${item.category || '-'}</td>
+                <td style="${tdStyle}">${item.selectedOption || '-'}</td>
+                <td style="${tdStyle}">x${item.quantity}</td>
+                <td style="${tdStyle}">${itemPriceHT.toFixed(2)}€</td>
+                <td style="${tdStyle}">${itemPriceTTC.toFixed(2)}€</td>
+                <td style="${tdStyle}">${subHT.toFixed(2)}€</td>
+                <td style="${tdStyle}">${subTTC.toFixed(2)}€</td>
+              </tr>`;
+            }).join('')}
+          </tbody>
+        </table>
+        <div style="margin-top: 8px; text-align: right;">
+          <p style="margin: 4px 0; font-size: 13px;">Total HT : <strong>${totalHT.toFixed(2)}€</strong></p>
+          <p style="margin: 4px 0; font-size: 13px;">TVA (20%) : <strong>${tva.toFixed(2)}€</strong></p>
+          <p style="${grandTotalStyle} margin: 8px 0 0; padding-top: 8px; border-top: 2px solid #eee;">Total TTC : <strong>${orderData.total_ttc.toFixed(2)}€</strong></p>
+        </div>`;
+
+      const clientBlock = `
+        <div style="margin: 16px 0; padding: 16px; background: #f9f9f9; border-radius: 12px; font-size: 13px;">
+          <p style="margin: 4px 0;"><strong>Client :</strong> ${user.firstName} ${user.lastName}</p>
+          <p style="margin: 4px 0;"><strong>Email :</strong> ${user.email}</p>
+          <p style="margin: 4px 0;"><strong>ID client :</strong> ${user.id}</p>
+          <p style="margin: 4px 0;"><strong>Date :</strong> ${now}</p>
+          <p style="margin: 4px 0;"><strong>Statut :</strong> ${orderData.status}</p>
+        </div>`;
+
       if (resend) {
-        console.log(`[POST /api/orders] Sending confirmation emails to ${ORDERS_RECIPIENT}...`);
+        console.log(`[POST /api/orders] Sending confirmation emails...`);
         try {
+          // Email #1: Confirmation (admin only)
           await resend.emails.send({
             from: "Appiotti <onboarding@resend.dev>",
             to: [ORDERS_RECIPIENT],
-            subject: `Confirmation de commande ${orderId}`,
+            subject: `Confirmation de commande #${orderId}`,
             html: `
-              <div style="font-family: sans-serif; padding: 20px;">
-                <h2>Merci pour votre commande !</h2>
-                <p>Votre commande <strong>#${orderId}</strong> est en attente de virement.</p>
-                <p>Montant total : <strong>${orderData.total_ttc.toFixed(2)}€</strong></p>
-                <p>Veuillez effectuer le virement avec le motif <strong>#${orderId}</strong>.</p>
-                <hr/>
-                <p>Note: Cet email a été envoyé à l'administration (${ORDERS_RECIPIENT}) comme demandé.</p>
+              <div style="${emailBaseStyle}">
+                <div style="${emailHeaderStyle}">
+                  <h1 style="margin: 0; font-size: 22px;">🛍️ Merci pour votre commande !</h1>
+                  <p style="margin: 8px 0 0; opacity: 0.8;">Récapitulatif complet de votre commande</p>
+                </div>
+                <div style="padding: 20px;">
+                  <p style="font-size: 13px; color: #555;">Bonjour <strong>${user.firstName}</strong>,</p>
+                  <p style="font-size: 13px; color: #555;">Votre commande a bien été enregistrée. Vous trouverez ci-dessous tous les détails.</p>
+                  ${clientBlock}
+                  <h3 style="margin: 20px 0 8px; font-size: 15px;">Détail des articles</h3>
+                  ${itemsTable}
+                  <div style="margin: 24px 0; padding: 16px; background: #fff8f0; border: 2px solid #FF6B35; border-radius: 12px; text-align: center;">
+                    <p style="margin: 0 0 8px; font-size: 13px; font-weight: 700;">📋 Instructions de paiement</p>
+                    <p style="margin: 4px 0; font-size: 13px;">Effectuez votre virement de <strong style="color: #FF6B35;">${orderData.total_ttc.toFixed(2)}€</strong> avec le motif :</p>
+                    <p style="margin: 8px 0; font-size: 20px; font-weight: 900; color: #FF6B35; letter-spacing: 2px;">#${orderId}</p>
+                    <p style="margin: 4px 0; font-size: 12px; color: #888;">à l'ordre de <strong>MONSIEUR HERVÉ APPIOTTI</strong></p>
+                    <p style="margin: 4px 0; font-size: 12px; color: #888;">IBAN : FR76 1234 5678 9012 3456 7890 123</p>
+                    <p style="margin: 4px 0; font-size: 12px; color: #888;">BIC : APPIFR2X</p>
+                  </div>
+                  <p style="font-size: 12px; color: #999; text-align: center;">Une fois le virement effectué, téléchargez votre preuve depuis votre espace client.</p>
+                </div>
               </div>
             `
           });
 
-          // Send notification email to admin
+          // Email #2: Detailed notification to admin
           await resend.emails.send({
             from: "Alertes Appiotti <onboarding@resend.dev>",
             to: [ORDERS_RECIPIENT],
             subject: `NOUVELLE COMMANDE - ${orderId}`,
             html: `
-              <div style="font-family: sans-serif; padding: 20px;">
-                <h1>Nouvelle commande reçue !</h1>
-                <p>ID: <strong>${orderId}</strong></p>
-                <p>Client: ${user.firstName} ${user.lastName} (${user.email})</p>
-                <p>Total: ${orderData.total_ttc.toFixed(2)}€</p>
-                <h3>Produits:</h3>
-                <ul>
-                  ${orderData.items.map((item: any) => `<li>${item.name} x${item.quantity}</li>`).join('')}
-                </ul>
+              <div style="${emailBaseStyle}">
+                <div style="${emailHeaderStyle}">
+                  <h1 style="margin: 0; font-size: 22px;">🆕 Nouvelle commande reçue</h1>
+                  <p style="margin: 8px 0 0; opacity: 0.8;">${orderId}</p>
+                </div>
+                <div style="padding: 20px;">
+                  ${clientBlock}
+                  <h3 style="margin: 20px 0 8px; font-size: 15px;">Détail des articles</h3>
+                  ${itemsTable}
+                  <div style="margin: 20px 0; padding: 12px; background: #fff0e6; border-radius: 8px; font-size: 13px; text-align: center;">
+                    <strong>📌 Note :</strong> Cette commande est en attente de virement. Le client doit envoyer sa preuve de paiement.
+                  </div>
+                </div>
               </div>
             `
           });
@@ -651,20 +730,91 @@ async function startServer() {
       console.error("[ProofUpload] Error updating proof status in Supabase:", e);
     }
 
+    // Fetch full order data for the email
+    let orderDataForEmail: any = null;
+    try {
+      const { data } = await supabase.from("orders").select("*").eq("id", orderId).single();
+      orderDataForEmail = data;
+    } catch (e) {
+      console.error("[ProofUpload] Could not fetch order data:", e);
+    }
+
     if (resend) {
       try {
         console.log(`[ProofUpload] Sending proof email to ${ORDERS_RECIPIENT} for order ${orderId}...`);
+
+        // Build items table if order data is available
+        let itemsTableHtml = '';
+        if (orderDataForEmail?.items?.length) {
+          const items = orderDataForEmail.items;
+          const totalHT = items.reduce((sum: number, item: any) => sum + (item.priceHT || 0) * item.quantity, 0);
+          const totalTTC = orderDataForEmail.total_ttc || totalHT * 1.2;
+          const tva = totalTTC - totalHT;
+          const tableStyle = `width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13px;`;
+          const thStyle = `background: #f8f8f8; text-align: left; padding: 10px 12px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #666; border-bottom: 2px solid #eee;`;
+          const tdStyle = `padding: 10px 12px; border-bottom: 1px solid #f0f0f0;`;
+
+          itemsTableHtml = `
+            <table style="${tableStyle}">
+              <thead>
+                <tr>
+                  <th style="${thStyle}">Produit</th>
+                  <th style="${thStyle}">Option</th>
+                  <th style="${thStyle}">Qté</th>
+                  <th style="${thStyle}">Prix HT</th>
+                  <th style="${thStyle}">Sous-total HT</th>
+                  <th style="${thStyle}">Sous-total TTC</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${items.map((item: any) => {
+                  const itemPriceHT = item.priceHT || 0;
+                  const subHT = itemPriceHT * item.quantity;
+                  const subTTC = subHT * 1.2;
+                  return `<tr>
+                    <td style="${tdStyle}"><strong>${item.name}</strong></td>
+                    <td style="${tdStyle}">${item.selectedOption || '-'}</td>
+                    <td style="${tdStyle}">x${item.quantity}</td>
+                    <td style="${tdStyle}">${itemPriceHT.toFixed(2)}€</td>
+                    <td style="${tdStyle}">${subHT.toFixed(2)}€</td>
+                    <td style="${tdStyle}">${subTTC.toFixed(2)}€</td>
+                  </tr>`;
+                }).join('')}
+              </tbody>
+            </table>
+            <div style="margin-top: 8px; text-align: right;">
+              <p style="margin: 4px 0; font-size: 13px;">Total HT : <strong>${totalHT.toFixed(2)}€</strong></p>
+              <p style="margin: 4px 0; font-size: 13px;">TVA (20%) : <strong>${tva.toFixed(2)}€</strong></p>
+              <p style="font-weight: 900; font-size: 16px; color: #FF6B35; margin: 8px 0 0; padding-top: 8px; border-top: 2px solid #eee;">Total TTC : <strong>${totalTTC.toFixed(2)}€</strong></p>
+            </div>`;
+        }
+
         await resend.emails.send({
           from: "Alertes Appiotti <onboarding@resend.dev>",
           to: [ORDERS_RECIPIENT],
           subject: `PREUVE DE VIREMENT - Commande ${orderId}`,
           html: `
-            <div style="font-family: sans-serif; padding: 20px;">
-              <h1 style="color: #FF6B35;">Nouvelle preuve de virement</h1>
-              <p>Une preuve de virement a été soumise pour la commande <strong>#${orderId}</strong>.</p>
-              <p>Client : <strong>${clientInfo}</strong></p>
-              <hr style="border: 1px solid #eee; margin: 20px 0;"/>
-              <p style="font-size: 12px; color: #666;">La preuve est jointe à cet email.</p>
+            <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 20px; max-width: 640px; margin: 0 auto; background: #ffffff;">
+              <div style="background: linear-gradient(135deg, #FF6B35, #ff8c42); color: #fff; padding: 24px; border-radius: 16px 16px 0 0; text-align: center;">
+                <h1 style="margin: 0; font-size: 22px;">✅ Nouvelle preuve de virement</h1>
+                <p style="margin: 8px 0 0; opacity: 0.9;">Commande <strong>#${orderId}</strong></p>
+              </div>
+              <div style="padding: 20px;">
+                <div style="margin: 0 0 16px; padding: 16px; background: #f9f9f9; border-radius: 12px; font-size: 13px;">
+                  <p style="margin: 4px 0;"><strong>Client :</strong> ${clientInfo}</p>
+                  <p style="margin: 4px 0;"><strong>Date de soumission :</strong> ${new Date().toLocaleString("fr-FR", { timeZone: "Europe/Paris" })}</p>
+                  <p style="margin: 4px 0;"><strong>Statut :</strong> Preuve soumise</p>
+                  ${orderDataForEmail ? `<p style="margin: 4px 0;"><strong>Date de commande :</strong> ${new Date(orderDataForEmail.created_at || orderDataForEmail.createdAt).toLocaleString("fr-FR", { timeZone: "Europe/Paris" })}</p>` : ''}
+                </div>
+                ${itemsTableHtml ? `
+                  <h3 style="margin: 20px 0 8px; font-size: 15px;">Détail de la commande</h3>
+                  ${itemsTableHtml}
+                ` : `
+                  <p style="font-size: 13px; color: #666;">Détails de la commande non disponibles.</p>
+                `}
+                <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
+                <p style="font-size: 12px; color: #666;">La preuve de virement est jointe à cet email.</p>
+              </div>
             </div>
           `,
           attachments: proofBase64 ? [
