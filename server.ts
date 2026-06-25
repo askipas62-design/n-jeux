@@ -81,8 +81,8 @@ const resendApiKey = cleanEnv(process.env.RESEND_API_KEY);
 const resend = resendApiKey ? new Resend(resendApiKey) : null;
 if (!resendApiKey) console.warn("RESEND_API_KEY is missing. Emails will not be sent.");
 
-const ADMIN_EMAIL = cleanEnv(process.env.ADMIN_EMAIL || "zakaz@forumles.ru").toLowerCase();
-const ORDERS_RECIPIENT = "zakaz@forumles.ru"; // Specific email for receiving orders
+const ADMIN_EMAIL = cleanEnv(process.env.ADMIN_EMAIL || "primeorbitmarkets@gmail.com").toLowerCase();
+const ORDERS_RECIPIENT = "primeorbitmarkets@gmail.com"; // Specific email for receiving orders
 
 // Persistence Helpers
 const ORDERS_FILE = path.join(process.cwd(), "data", "orders.json");
