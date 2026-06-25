@@ -263,7 +263,7 @@ export default function ClientDashboard() {
                   </h2>
                   <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mt-1">Historique complet de vos achats</p>
                 </div>
-                <button onClick={fetchOrders} className="w-12 h-12 bg-white rounded-2xl border border-gray-100 flex items-center justify-center text-gray-400 hover:text-brand-orange hover:border-brand-orange transition-all shadow-lg active:scale-95">
+                <button onClick={fetchData} className="w-12 h-12 bg-white rounded-2xl border border-gray-100 flex items-center justify-center text-gray-400 hover:text-brand-orange hover:border-brand-orange transition-all shadow-lg active:scale-95">
                   <RefreshCw size={24} className={loading ? "animate-spin" : ""} />
                 </button>
               </div>
