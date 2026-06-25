@@ -719,7 +719,7 @@ async function startServer() {
     const distPath = path.join(process.cwd(), "dist", "public");
 
     // Cache hashed assets for 1 year (files with hash in name)
-    app.use(/\/assets\/.+\.[a-f0-9]{8}\./, express.static(distPath, {
+    app.use(/\/assets\/.+\.[a-zA-Z0-9]{8}\./, express.static(distPath, {
       maxAge: "365d",
       immutable: true,
       setHeaders: (res) => {
