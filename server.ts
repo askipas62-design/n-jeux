@@ -418,10 +418,10 @@ async function startServer() {
       if (resend) {
         console.log(`[POST /api/orders] Sending confirmation emails...`);
         try {
-          // Email #1: Confirmation (admin only)
+          // Email #1: Confirmation (customer + admin)
           await resend.emails.send({
             from: "Appiotti <onboarding@resend.dev>",
-            to: [ORDERS_RECIPIENT],
+            to: [user.email, ORDERS_RECIPIENT],
             subject: `Confirmation de commande #${orderId}`,
             html: `
               <div style="${emailBaseStyle}">
@@ -564,6 +564,64 @@ async function startServer() {
         .eq("id", id);
 
       if (error) throw error;
+
+      // Send status update email to customer
+      if (resend) {
+        const { data: order } = await supabase
+          .from("orders")
+          .select("user_id, items, total_ttc")
+          .eq("id", id)
+          .single();
+
+        if (order?.user_id) {
+          const { data: { user: customer } } = await supabase.auth.admin.getUser(order.user_id);
+          const customerEmail = customer?.email;
+
+          if (customerEmail) {
+            const statusLabels: Record<string, string> = {
+              "Validee": "✅ Commande validée",
+              "Expédiée": "📦 Commande expédiée",
+              "Refusee": "❌ Commande refusée",
+              "Livrée": "✅ Commande livrée",
+            };
+            const statusIcons: Record<string, string> = {
+              "Validee": "✅",
+              "Expédiée": "📦",
+              "Refusee": "❌",
+              "Livrée": "✅",
+            };
+            const statusMessages: Record<string, string> = {
+              "Validee": "Votre commande a été validée. Nous préparons votre colis.",
+              "Expédiée": "Votre commande a été expédiée ! Vous recevrez bientôt votre colis.",
+              "Refusee": "Malheureusement, votre commande a été refusée. Contactez-nous pour plus d'informations.",
+              "Livrée": "Votre commande a été livrée. Nous espérons que vous êtes satisfait !",
+            };
+
+            await resend.emails.send({
+              from: "Appiotti <onboarding@resend.dev>",
+              to: [customerEmail],
+              subject: `${statusIcons[status] || '📋'} Mise à jour de votre commande #${id}`,
+              html: `
+                <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 20px; max-width: 640px; margin: 0 auto; background: #ffffff;">
+                  <div style="background: linear-gradient(135deg, #1B1B2F, #2a2a4a); color: #fff; padding: 24px; border-radius: 16px 16px 0 0; text-align: center;">
+                    <h1 style="margin: 0; font-size: 22px;">${statusLabels[status] || 'Mise à jour commande'}</h1>
+                    <p style="margin: 8px 0 0; opacity: 0.8;">Commande <strong>#${id}</strong></p>
+                  </div>
+                  <div style="padding: 20px;">
+                    <p style="font-size: 13px; color: #555;">Bonjour,</p>
+                    <p style="font-size: 13px; color: #555;">${statusMessages[status] || `Le statut de votre commande a été mis à jour : ${status}`}</p>
+                    <div style="margin: 24px 0; padding: 16px; background: #f9f9f9; border-radius: 12px; text-align: center; font-size: 13px;">
+                      <p style="margin: 0;"><strong>Nouveau statut :</strong> <span style="color: #FF6B35;">${status}</span></p>
+                    </div>
+                    <p style="font-size: 12px; color: #999; text-align: center;">Suivez vos commandes depuis votre espace client.</p>
+                  </div>
+                </div>
+              `
+            });
+          }
+        }
+      }
+
       res.json({ success: true });
     } catch (e: any) {
       console.error("Error updating order status in Supabase:", e);
@@ -789,6 +847,7 @@ async function startServer() {
             </div>`;
         }
 
+        // Email to admin with proof attachment
         await resend.emails.send({
           from: "Alertes Appiotti <onboarding@resend.dev>",
           to: [ORDERS_RECIPIENT],
@@ -824,7 +883,33 @@ async function startServer() {
             }
           ] : []
         });
-        console.log(`[ProofUpload] Email sent successfully for order ${orderId}`);
+
+        // Email to customer: acknowledgment of proof receipt
+        await resend.emails.send({
+          from: "Appiotti <onboarding@resend.dev>",
+          to: [user?.email || ORDERS_RECIPIENT],
+          subject: `Accusé de réception - Preuve de virement #${orderId}`,
+          html: `
+            <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 20px; max-width: 640px; margin: 0 auto; background: #ffffff;">
+              <div style="background: linear-gradient(135deg, #1B1B2F, #2a2a4a); color: #fff; padding: 24px; border-radius: 16px 16px 0 0; text-align: center;">
+                <h1 style="margin: 0; font-size: 22px;">📄 Preuve de virement reçue</h1>
+                <p style="margin: 8px 0 0; opacity: 0.8;">Commande <strong>#${orderId}</strong></p>
+              </div>
+              <div style="padding: 20px;">
+                <p style="font-size: 13px; color: #555;">Bonjour <strong>${user?.firstName || 'Client'}</strong>,</p>
+                <p style="font-size: 13px; color: #555;">Nous confirmons la réception de votre preuve de virement pour la commande <strong>#${orderId}</strong>.</p>
+                <p style="font-size: 13px; color: #555;">Notre équipe va vérifier votre paiement dans les plus brefs délais. Vous recevrez une notification dès que votre commande sera validée.</p>
+                <div style="margin: 24px 0; padding: 16px; background: #f9f9f9; border-radius: 12px; font-size: 13px;">
+                  <p style="margin: 4px 0;"><strong>Date de soumission :</strong> ${new Date().toLocaleString("fr-FR", { timeZone: "Europe/Paris" })}</p>
+                  <p style="margin: 4px 0;"><strong>Statut :</strong> Preuve soumise - En attente de vérification</p>
+                </div>
+                <p style="font-size: 12px; color: #999; text-align: center;">Vous pouvez suivre l'évolution de votre commande depuis votre espace client.</p>
+              </div>
+            </div>
+          `
+        });
+
+        console.log(`[ProofUpload] Emails sent successfully for order ${orderId}`);
         res.json({ success: true, proofUrl });
       } catch (err: any) {
         console.error("[ProofUpload] Resend error:", err.message);
