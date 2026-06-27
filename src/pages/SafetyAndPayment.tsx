@@ -74,7 +74,7 @@ export default function SafetyAndPayment() {
           <p className="text-gray-400 text-sm md:text-lg mb-8 md:mb-12 relative z-10">Je suis disponible personnellement pour vous rassurer sur notre processus.</p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 relative z-10">
-            <a href="tel:0648591386" className="w-full sm:w-auto bg-brand-orange text-white px-8 md:px-10 py-4 md:py-6 rounded-[20px] md:rounded-[24px] font-black text-xs uppercase tracking-widest hover:bg-brand-yellow hover:text-brand-dark transition-all shadow-xl text-center">
+            <a href="tel:+33757847508" className="w-full sm:w-auto bg-brand-orange text-white px-8 md:px-10 py-4 md:py-6 rounded-[20px] md:rounded-[24px] font-black text-xs uppercase tracking-widest hover:bg-brand-yellow hover:text-brand-dark transition-all shadow-xl text-center">
               Appeler Hervé
             </a>
             <Link to="/contact" className="w-full sm:w-auto bg-white/10 text-white px-8 md:px-10 py-4 md:py-6 rounded-[20px] md:rounded-[24px] font-black text-xs uppercase tracking-widest hover:bg-white/20 transition-all text-center">

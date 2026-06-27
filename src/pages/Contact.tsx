@@ -56,7 +56,7 @@ export default function Contact() {
                        </div>
                        <div>
                           <h4 className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-2 opacity-60">Appelez-nous</h4>
-                          <p className="text-sm md:text-lg font-bold font-display uppercase tracking-tight">06 48 59 13 86</p>
+                          <p className="text-sm md:text-lg font-bold font-display uppercase tracking-tight">+33 7 57 84 75 08</p>
                        </div>
                     </div>
 
