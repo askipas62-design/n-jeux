@@ -21,6 +21,10 @@ export default function Footer() {
               <Phone size={16} className="text-brand-orange shrink-0" />
               <span>+33 7 57 84 75 08</span>
             </p>
+            <p className="flex items-center gap-2">
+              <Mail size={16} className="text-brand-orange shrink-0" />
+              <a href="mailto:info@appiotti-jeux.com" className="hover:text-brand-orange transition-all">info@appiotti-jeux.com</a>
+            </p>
 
           </div>
         </div>

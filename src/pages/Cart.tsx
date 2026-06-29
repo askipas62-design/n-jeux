@@ -120,7 +120,7 @@ export default function Cart() {
 
                 <div className="flex flex-col gap-3 md:gap-4 text-[8px] md:text-[10px] font-black text-gray-500 uppercase tracking-[0.2em]">
                    <div className="flex items-center gap-3 py-3 md:py-4 px-4 md:px-5 bg-white/5 rounded-xl md:rounded-2xl border border-white/10"><ShieldCheck className="text-brand-green shrink-0" size={16} /> Protection acheteur</div>
-                   <div className="flex items-center gap-3 py-3 md:py-4 px-4 md:px-5 bg-white/5 rounded-xl md:rounded-2xl border border-white/10"><CreditCard className="text-brand-yellow shrink-0" size={16} /> Virement bancaire pro</div>
+                   <div className="flex items-center gap-3 py-3 md:py-4 px-4 md:px-5 bg-white/5 rounded-xl md:rounded-2xl border border-white/10"><CreditCard className="text-brand-yellow shrink-0" size={16} /> Virement bancaire</div>
                 </div>
              </div>
              
